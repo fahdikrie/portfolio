@@ -21,73 +21,31 @@ const HeadTags = () => {
 
       <link
         rel="preload"
-        href="fonts/San\ Francisco\ Pro/SF-Pro-Display-Light.otf"
+        href="/fonts/San Francisco Pro/SF-Pro-Display-Bold.ttf"
         as="font"
         crossOrigin=""
       />
       <link
         rel="preload"
-        href="fonts/San\ Francisco\ Pro/SF-Pro-Display-LightItalic.otf"
+        href="/fonts/San Francisco Pro/SF-Pro-Display-BoldItalic.ttf"
         as="font"
         crossOrigin=""
       />
       <link
         rel="preload"
-        href="fonts/San\ Francisco\ Pro/SF-Pro-Display-Regular.otf"
+        href="/fonts/San Francisco Pro/SF-Pro-Display-Black.ttf"
         as="font"
         crossOrigin=""
       />
       <link
         rel="preload"
-        href="fonts/San\ Francisco\ Pro/SF-Pro-Display-RegularItalic.otf"
+        href="/fonts/Ubuntu/Ubuntu-R.ttf"
         as="font"
         crossOrigin=""
       />
       <link
         rel="preload"
-        href="fonts/San\ Francisco\ Pro/SF-Pro-Display-Bold.otf"
-        as="font"
-        crossOrigin=""
-      />
-      <link
-        rel="preload"
-        href="fonts/San\ Francisco\ Pro/SF-Pro-Display-BoldItalic.otf"
-        as="font"
-        crossOrigin=""
-      />
-      <link
-        rel="preload"
-        href="fonts/San\ Francisco\ Pro/SF-Pro-Display-Black.otf"
-        as="font"
-        crossOrigin=""
-      />
-      <link
-        rel="preload"
-        href="fonts/San\ Francisco\ Pro/SF-Pro-Display-BlackItalic.otf"
-        as="font"
-        crossOrigin=""
-      />
-      <link
-        rel="preload"
-        href="fonts/Ubuntu/Ubuntu-R.ttf"
-        as="font"
-        crossOrigin=""
-      />
-      <link
-        rel="preload"
-        href="fonts/Ubuntu/Ubuntu-RI.ttf"
-        as="font"
-        crossOrigin=""
-      />
-      <link
-        rel="preload"
-        href="fonts/Ubuntu/Ubuntu-B.ttf"
-        as="font"
-        crossOrigin=""
-      />
-      <link
-        rel="preload"
-        href="fonts/Ubuntu/Ubuntu-BI.ttf"
+        href="/fonts/Ubuntu/Ubuntu-B.ttf"
         as="font"
         crossOrigin=""
       />
