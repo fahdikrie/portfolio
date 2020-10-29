@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const NavWrapper = styled.div`
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
   margin: 0;
   padding: 0px 3%;
-  width: auto;
+  width: calc(100% - 6%);
   height: 10vh;
 
   color: white;

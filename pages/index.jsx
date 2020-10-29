@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
-import Layout from '../components/Layout/index';
+import Layout from 'components/Layout/index';
 import {
   HomepageWrapper,
   Heading
-} from '../styles/index.style'
+} from 'styles/index.style'
 
 
 export default function Home() {
@@ -12,10 +12,12 @@ export default function Home() {
     <>
       <Layout>
         <HomepageWrapper>
-          <Heading>
-            badi, <br/>
-            at your service!
-          </Heading>
+          <div className="title-section">
+            <Heading>
+              badi, <br/>
+              at your service!
+            </Heading>
+          </div>
         </HomepageWrapper>
       </Layout>
     </>
