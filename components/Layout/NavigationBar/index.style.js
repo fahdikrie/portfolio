@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import { fallbackFonts } from 'public/fonts/fonts'
 
 export const NavWrapper = styled.div`
   position: absolute;
@@ -12,7 +13,7 @@ export const NavWrapper = styled.div`
   height: 10vh;
 
   color: white;
-  font-family: 'San Francisco Pro Bold';
+  font-family: 'San Francisco Pro Bold', ${fallbackFonts};
 
   & ul.nav-items {
     display: flex;

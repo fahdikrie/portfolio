@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { fallbackFonts } from 'public/fonts/fonts'
 
 export const GlobalStyle = createGlobalStyle`
   ::selection {
@@ -20,9 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
 
-    // keeping this as a fallback
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'San Francisco Pro Bold', ${fallbackFonts};
   }
 
   html {
@@ -39,5 +38,27 @@ export const GlobalStyle = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+
+  h1, h2, h3, p, li {
+      cursor: default;
+  }
+
+  h1, h2 {
+    font-family: 'San Francisco Pro Black', ${fallbackFonts};
+  }
+
+  h3 {
+    font-family: 'San Francisco Pro Bold', ${fallbackFonts};
+  }
+
+  img {
+    /* user-drag: none; */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
   }
 `
