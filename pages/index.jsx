@@ -1,12 +1,22 @@
 import Head from 'next/head'
 
 import Layout from '../components/Layout/index';
+import {
+  HomepageWrapper,
+  Heading
+} from '../styles/index.style'
+
 
 export default function Home() {
   return (
     <>
       <Layout>
-        <h1>haha hahahahah</h1>
+        <HomepageWrapper>
+          <Heading>
+            badi, <br/>
+            at your service!
+          </Heading>
+        </HomepageWrapper>
       </Layout>
     </>
 

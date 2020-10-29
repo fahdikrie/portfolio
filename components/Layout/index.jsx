@@ -3,6 +3,7 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
 import NavigationBar from './NavigationBar/index'
+// import VantaLayout from './VantaLayout/index'
 
 // importing VantaLayout using dynamic non-ssr import
 const VantaLayout = dynamic(
@@ -14,6 +15,7 @@ const Layout = (props) => {
   return (
     <>
       <Head>
+        {/* import THREE using cdn */}
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js">
         </script>

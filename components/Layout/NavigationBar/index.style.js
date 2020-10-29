@@ -14,4 +14,13 @@ export const NavWrapper = styled.div`
   color: white;
   font-family: 'San Francisco Pro Bold';
 
+  & ul.nav-items {
+    display: flex;
+    list-style-type: none;
+
+    & li.nav-items__nav-item {
+      margin-left: 50px;
+      letter-spacing: 1px;
+    }
+  }
 `

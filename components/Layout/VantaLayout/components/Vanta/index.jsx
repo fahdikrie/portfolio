@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
+
 import HALO from '../../assets/vanta/vanta.halo'
-import classes from './index.module.css'
+import {
+  VantaWrapper
+} from './index.style'
+
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
 const Vanta = (props) => {
@@ -31,7 +35,10 @@ const Vanta = (props) => {
     }
   }, [vantaEffect, backgroundColorVanta, sizeVanta, xOffsetVanta])
 
-  return <div ref={myRef} className={classes.vantablack}/>
+  // return <div ref={myRef} className={classes.vantablack}/>
+  return (
+    <VantaWrapper ref={myRef} />
+  )
 }
 
 export default Vanta;
