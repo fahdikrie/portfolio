@@ -4,8 +4,8 @@ import { GlobalFonts } from 'public/fonts/fonts'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GlobalFonts/>
       <GlobalStyle/>
+      <GlobalFonts/>
       <Component {...pageProps} />
     </>
   )
