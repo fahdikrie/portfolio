@@ -19,7 +19,7 @@ const HeadTags = () => {
         src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js">
       </script>
 
-      <link
+      {/* <link
         rel="preload"
         href="/fonts/San Francisco Pro/SF-Pro-Display-Bold.ttf"
         as="font"
@@ -48,7 +48,7 @@ const HeadTags = () => {
         href="/fonts/Ubuntu/Ubuntu-B.ttf"
         as="font"
         crossOrigin=""
-      />
+      /> */}
     </Head>
   )
 }
