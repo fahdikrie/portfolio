@@ -20,6 +20,10 @@ export default function Home() {
               at your service!
             </Heading>
           </div>
+
+          <div className="about-section">
+
+          </div>
         </HomepageWrapper>
       </Layout>
     </>

@@ -3,6 +3,7 @@ import { fallbackFonts } from 'public/fonts/fonts'
 
 export const NavWrapper = styled.div`
   position: absolute;
+  z-index: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -18,11 +19,19 @@ export const NavWrapper = styled.div`
   & ul.nav-items {
     display: flex;
     list-style-type: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     & li.nav-items__nav-item {
       margin-left: 50px;
       letter-spacing: 1px;
+      filter: opacity(0.75);
+      cursor: pointer;
+
+      &:hover {
+        filter: opacity(1);
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+      }
     }
 
     @media (min-width: 1660px) {
@@ -34,10 +43,16 @@ export const NavWrapper = styled.div`
     }
 
     @media (max-width: 525px) {
-      font-size: 1.2rem;
+      font-size: 1rem;
 
       & li.nav-items__nav-item {
         margin-left: 25px;
+      }
+    }
+
+    @media (max-width: 370px) {
+      & li.nav-items__nav-item {
+        margin-left: 20px;
       }
     }
   }
