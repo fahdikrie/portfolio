@@ -4,12 +4,17 @@ import {
   NavWrapper
 } from './index.style'
 
-const NavigationBar = () => {
+const NavigationBar = (props) => {
   return (
     <NavWrapper>
       <ul className="nav-items">
+        {(props.currentPage !== "index")
+          ? <li className="nav-items__nav-item">home</li>
+          : ""}
         <li className="nav-items__nav-item">cv</li>
-        <li className="nav-items__nav-item">activities</li>
+        {(props.currentPage !== "activities")
+          ? <li className="nav-items__nav-item">activities</li>
+          : ""}
         <li className="nav-items__nav-item">journal</li>
       </ul>
     </NavWrapper>

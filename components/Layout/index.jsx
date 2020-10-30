@@ -58,8 +58,10 @@ const Layout = (props) => {
     <>
       <HeadTags/>
 
-      <VantaLayout/>
-      <NavigationBar/>
+      {/* <VantaLayout/> */}
+      <NavigationBar
+        currentPage={props.currentPage}
+      />
       {props.children}
     </>
   )

@@ -10,7 +10,9 @@ import {
 export default function Home() {
   return (
     <>
-      <Layout>
+      <Layout
+        currentPage="index"
+      >
         <HomepageWrapper>
           <div className="title-section">
             <Heading>

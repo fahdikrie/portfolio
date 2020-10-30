@@ -18,10 +18,33 @@ export const NavWrapper = styled.div`
   & ul.nav-items {
     display: flex;
     list-style-type: none;
+    font-size: 1rem;
 
     & li.nav-items__nav-item {
       margin-left: 50px;
       letter-spacing: 1px;
     }
+
+    @media (min-width: 1660px) {
+      font-size: 1.65rem;
+
+      & li.nav-items__nav-item {
+        margin-left: 70px;
+      }
+    }
+
+    @media (max-width: 525px) {
+      font-size: 1.2rem;
+
+      & li.nav-items__nav-item {
+        margin-left: 25px;
+      }
+    }
   }
+`
+
+export const MobileNavWrapper = styled(NavWrapper)`
+
+
+
 `
