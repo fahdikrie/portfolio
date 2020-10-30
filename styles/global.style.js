@@ -15,6 +15,15 @@ export const GlobalStyle = createGlobalStyle`
     background: transparent;  /* Optional: just make scrollbar invisible */
   }
 
+  * {
+    /* user-drag: none; */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+  }
+
   html,
   body {
     background-color: black;
@@ -51,14 +60,5 @@ export const GlobalStyle = createGlobalStyle`
 
   h3 {
     font-family: 'San Francisco Pro Bold', ${fallbackFonts};
-  }
-
-  * {
-    /* user-drag: none; */
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-drag: none;
   }
 `
