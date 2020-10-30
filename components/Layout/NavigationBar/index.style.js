@@ -105,7 +105,7 @@ export const NavWrapper = styled.div`
       justify-content: space-between;
 
       height: fit-content;
-      width: 57.5px;
+      width: 60px;
 
       & img {
         width: calc(1rem * 1.5);
@@ -113,14 +113,6 @@ export const NavWrapper = styled.div`
         &.nav-socials__nav-social.github {
           width: calc(1rem * 1.5);
         }
-      }
-    }
-
-    & ${NavItemsWrapper} {
-      font-size: 1rem;
-
-      & li.nav-items__nav-item {
-        margin-left: 25px;
       }
     }
   }
@@ -132,7 +124,7 @@ export const NavWrapper = styled.div`
       font-size: 1rem;
 
       & li.nav-items__nav-item {
-        margin-left: 25px;
+        margin-left: 20px;
       }
     }
   }
@@ -142,7 +134,7 @@ export const NavWrapper = styled.div`
       font-size: 0.9rem;
 
       & li.nav-items__nav-item {
-        margin-left: 20px;
+        margin-left: 15px;
       }
     }
   }
