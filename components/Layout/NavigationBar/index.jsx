@@ -12,14 +12,14 @@ const NavigationBar = (props) => {
     <NavWrapper>
       <div className="nav-socials">
         <img
+          className="nav-socials__nav-social github"
           src={GithubIcon}
           alt="github"
-          width="30px"
         />
         <img
+          className="nav-socials__nav-social linkedin"
           src={LinkedInIcon}
           alt="linkedin"
-          width="30px"
         />
       </div>
 
@@ -27,7 +27,7 @@ const NavigationBar = (props) => {
         {(props.currentPage !== "index")
           ? <li className="nav-items__nav-item">home</li>
           : ""}
-        <li className="nav-items__nav-item">cv</li>
+        <li className="nav-items__nav-item">resume</li>
         {(props.currentPage !== "activities")
           ? <li className="nav-items__nav-item">activities</li>
           : ""}
