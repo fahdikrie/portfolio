@@ -105,7 +105,7 @@ export const NavWrapper = styled.div`
       justify-content: space-between;
 
       height: fit-content;
-      width: 62.5px;
+      width: 60px;
 
       & img {
         width: calc(1rem * 1.5);

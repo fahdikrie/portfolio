@@ -61,4 +61,8 @@ export const GlobalStyle = createGlobalStyle`
   h3 {
     font-family: 'San Francisco Pro Bold', ${fallbackFonts};
   }
+
+  img {
+    display: block;
+  }
 `
