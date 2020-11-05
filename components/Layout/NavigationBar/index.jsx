@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import Link from 'next/link'
 
 import GithubIcon from 'public/assets/github1.svg'
 import LinkedInIcon from 'public/assets/linkedin1.svg'
@@ -27,13 +28,29 @@ const NavigationBar = (props) => {
 
       <NavItemsWrapper className="nav-items">
         {(props.currentPage !== "index")
-          ? <li className="nav-items__nav-item"><a href="/">home</a></li>
+          ? <li className="nav-items__nav-item">
+              <Link href="/">
+                home
+              </Link>
+            </li>
           : ""}
-        <li className="nav-items__nav-item"><a href="/">resume</a></li>
         {(props.currentPage !== "activities")
-          ? <li className="nav-items__nav-item"><a href="/activities">activities</a></li>
+          ? <li className="nav-items__nav-item">
+              <Link href="/activities">
+                activities
+              </Link>
+            </li>
           : ""}
-        <li className="nav-items__nav-item"><a href="/">journal</a></li>
+        <li className="nav-items__nav-item">
+          <Link href="/">
+            resume
+          </Link>
+        </li>
+        <li className="nav-items__nav-item">
+          <Link href="/">
+            journal
+          </Link>
+        </li>
       </NavItemsWrapper>
     </NavWrapper>
   )
