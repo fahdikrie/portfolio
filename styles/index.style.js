@@ -3,8 +3,9 @@ import styled from 'styled-components'
 export const HomepageWrapper = styled.div`
   position: relative;
   width: 100%;
+  color: white;
 
-  & .title-section {
+  & div.title-section {
     width: calc(100% - 8%);
     height: 100vh;
     padding-left: 8%;
@@ -39,10 +40,20 @@ export const HomepageWrapper = styled.div`
     }
   }
 
+  & div.about-section {
+    width: calc(60% - 8%);
+    padding-left: 8%;
 
+    font-size: 1.35rem;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
 `
 
 export const Heading = styled.h1`
-  color: white;
   margin: 0;
+`
+
+export const Paragraph = styled.p`
+  font-family: 'San Francisco Pro Regular';
 `

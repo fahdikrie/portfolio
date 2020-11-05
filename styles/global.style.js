@@ -59,7 +59,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h3 {
-    font-family: 'San Francisco Pro Bold', ${fallbackFonts};
+    font-family: 'San Francisco Pro Light', ${fallbackFonts};
   }
 
   img {
