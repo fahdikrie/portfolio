@@ -58,7 +58,7 @@ const Layout = (props) => {
     <>
       <HeadTags/>
 
-      <VantaLayout/>
+      {/* <VantaLayout/> */}
       <NavigationBar
         currentPage={props.currentPage}
       />
