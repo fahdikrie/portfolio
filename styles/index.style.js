@@ -46,7 +46,7 @@ export const HomepageWrapper = styled.div`
 
     font-size: 1.15rem;
     line-height: 2;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 
     @media (min-width: 1660px) {
       font-size: 2rem;

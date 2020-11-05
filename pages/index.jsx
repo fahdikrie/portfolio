@@ -1,6 +1,10 @@
 import Head from 'next/head'
 
-import Layout from 'components/Layout/index';
+import {
+  fetchMainProjects,
+  fetchSoloProjects
+} from 'utils/selectors'
+import Layout from 'components/Layout/index'
 import {
   Heading,
   HomepageWrapper,
@@ -9,6 +13,9 @@ import {
 
 
 export default function Home() {
+  const { mainProjects } = fetchMainProjects('/api/main-projects')
+  const { soloProjects } = fetchSoloProjects('/api/solo-projects')
+
   return (
     <>
       <Layout
@@ -42,17 +49,24 @@ export default function Home() {
 
           <div className="projects-section">
             <div className="main-projects">
-
+              {mainProjects
+                ? mainProjects.map(
+                    el => console.log(el)
+                  )
+                : ""}
             </div>
 
             <div className="solo-projects">
-
+              {soloProjects
+                  ? soloProjects.map(
+                      el => console.log(el)
+                    )
+                  : ""}
             </div>
 
           </div>
         </HomepageWrapper>
       </Layout>
     </>
-
   )
 }
