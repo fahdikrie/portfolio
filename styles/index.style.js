@@ -20,11 +20,11 @@ export const HomepageWrapper = styled.div`
     }
 
     @media (max-width: 1440px) {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
 
     @media (max-width: 1024px) {
-      font-size: 3rem;
+      font-size: 2.75rem;
     }
 
     @media (max-width: 768px) {
@@ -41,12 +41,30 @@ export const HomepageWrapper = styled.div`
   }
 
   & div.about-section {
-    width: calc(60% - 8%);
+    width: calc(55% - 8%);
     padding-left: 8%;
 
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     line-height: 2;
     letter-spacing: 1px;
+
+    @media (min-width: 1660px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      width: calc(85% - 8%);
+    }
+
+    @media (max-width: 525px) {
+      font-size: 1.05rem;
+      letter-spacing: normal;
+      line-height: 1.75;
+    }
   }
 `
 

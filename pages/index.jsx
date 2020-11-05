@@ -23,7 +23,7 @@ export default function Home() {
 
           <div className="about-section">
             <h3>
-              A 19 years old sophomore student majoring CS 💻 at the University of Indonesia 🎓
+              A 19 years old sophomore student currently majoring CS 💻 at the University of Indonesia 🧑‍🎓
               Meet Fahdii Ajmalal Fikrie! 👋
 
               <br/><br/>
