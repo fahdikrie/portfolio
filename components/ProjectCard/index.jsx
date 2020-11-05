@@ -3,7 +3,13 @@ import {
   ProjectCardWrapper
 } from './index.style'
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  image,
+  name,
+  time,
+  desc,
+  stacks
+}) => {
   return (
     <ProjectCardWrapper>
       

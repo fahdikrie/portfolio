@@ -1,10 +1,11 @@
 import Head from 'next/head'
 
+import Layout from 'components/Layout/index'
+import ProjectCard from 'components/ProjectCard/index'
 import {
   fetchMainProjects,
   fetchSoloProjects
 } from 'utils/selectors'
-import Layout from 'components/Layout/index'
 import {
   Heading,
   HomepageWrapper,
@@ -39,11 +40,11 @@ export default function Home() {
               Fahdii is very passionate when it comes to taking naps 💤 and watching movies 🍿
               His current favorite movies are Good Morning (1959) 🌄 and The Makioka Sisters (1983) 🎎
 
-              <br/> <br/>
+              <br/><br/>
 
               All the funsies aside 🎭 Fahdii is currently a software engineer in the making 🧑‍💻
-              He's looking forward to be able to do big things 💯 and partake in the vast & rapid
-              growing world of technology 🚀
+              Having great interest in full-stack web development technologies 🌐 He's looking forward to be able
+              to do big things 💯 and partake in this vast & rapid growing world of tech-industry 🚀
             </h3>
           </div>
 
@@ -51,17 +52,29 @@ export default function Home() {
             <div className="main-projects">
               {mainProjects
                 ? mainProjects.map(
-                    el => console.log(el)
-                  )
+                    el => (
+                      <div
+                        className="main-projects__project-card"
+                        key={el.id}
+                      >
+                        {/* {el.name} */}
+                      </div>
+                    ))
                 : ""}
             </div>
 
             <div className="solo-projects">
               {soloProjects
-                  ? soloProjects.map(
-                      el => console.log(el)
-                    )
-                  : ""}
+                ? soloProjects.map(
+                    el =>(
+                      <div
+                        className="solo-projects__project-card"
+                        key={el.id}
+                      >
+                          {/* {el.name} */}
+                      </div>
+                    ))
+                : ""}
             </div>
 
           </div>
