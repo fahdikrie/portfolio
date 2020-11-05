@@ -33,8 +33,8 @@ export default function Home() {
 
               <br/> <br/>
 
-              All the funsies aside 🎭 Fahdii is a software engineer in the making 🧑‍💻
-              He looks forward to be able to give significant contributions
+              All the funsies aside 🎭 Fahdii is currently a software engineer in the making 🧑‍💻
+              He's looking forward to be able to give significant contributions
               to the vast & rapid growing world of technology 💯
             </h3>
           </div>

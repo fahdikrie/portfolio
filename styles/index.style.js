@@ -61,9 +61,9 @@ export const HomepageWrapper = styled.div`
     }
 
     @media (max-width: 525px) {
-      font-size: 1.05rem;
-      letter-spacing: normal;
+      font-size: 0.95rem;
       line-height: 1.75;
+      letter-spacing: normal;
     }
   }
 `

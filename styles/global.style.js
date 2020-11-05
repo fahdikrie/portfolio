@@ -26,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html,
   body {
+    display: block;
     background-color: black;
     padding: 0;
     margin: 0;
