@@ -2,8 +2,9 @@ import Head from 'next/head'
 
 import Layout from 'components/Layout/index';
 import {
+  Heading,
   HomepageWrapper,
-  Heading
+  Title
 } from 'styles/index.style'
 
 
@@ -15,10 +16,10 @@ export default function Home() {
       >
         <HomepageWrapper>
           <div className="title-section">
-            <Heading>
+            <Title>
               badi, <br/>
               at your service!
-            </Heading>
+            </Title>
           </div>
 
           <div className="about-section">
@@ -28,15 +29,26 @@ export default function Home() {
 
               <br/><br/>
 
-              Fahdii is very passionate when it comes to taking nap 💤 and watching movies 🍿
+              Fahdii is very passionate when it comes to taking naps 💤 and watching movies 🍿
               His current favorite movies are Good Morning (1959) 🌄 and The Makioka Sisters (1983) 🎎
 
               <br/> <br/>
 
               All the funsies aside 🎭 Fahdii is currently a software engineer in the making 🧑‍💻
-              He's looking forward to be able to give significant contributions
+              He's looking forward to be able to do big things 🚀 and give significant contributions 💪
               to the vast & rapid growing world of technology 💯
             </h3>
+          </div>
+
+          <div className="projects-section">
+            <div className="main-projects">
+
+            </div>
+
+            <div className="solo-projects">
+
+            </div>
+
           </div>
         </HomepageWrapper>
       </Layout>

@@ -68,8 +68,12 @@ export const HomepageWrapper = styled.div`
   }
 `
 
-export const Heading = styled.h1`
+export const Title = styled.h1`
   margin: 0;
+`
+
+export const Heading = styled.h2`
+
 `
 
 export const Paragraph = styled.p`
