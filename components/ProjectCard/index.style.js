@@ -4,8 +4,8 @@ export const ProjectCardWrapper = styled.div`
   width: 100%;
   border-radius: 10px;
 
-  backdrop-filter: blur(75px);
-  -webkit-backdrop-filter: blur(75px);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 
   &:hover {
     transform: scale(1.01);
