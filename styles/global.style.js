@@ -24,6 +24,10 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-user-drag: none;
   }
 
+  *:focus {
+    outline: none;
+  }
+
   html,
   body {
     display: block;
@@ -50,17 +54,8 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-
   h1, h2, h3, p, li {
       cursor: default;
-  }
-
-  h1, h2 {
-    font-family: 'San Francisco Pro Black', ${fallbackFonts};
-  }
-
-  h3 {
-    font-family: 'San Francisco Pro Light', ${fallbackFonts};
   }
 
   img {

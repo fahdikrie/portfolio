@@ -5,7 +5,7 @@ import Vanta from './components/Vanta/index';
 const VantaLayout = () => {
   // Declare a new state variable with the "useState" Hook
   const [width, setWidth] = React.useState(window.innerWidth);
-  const breakpoint = 768;
+  const breakpoint = 525;
 
   React.useEffect(() => {
     /* Inside of a "useEffect" hook add an event listener that updates

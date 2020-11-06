@@ -3,54 +3,76 @@ import { fallbackFonts } from 'public/fonts/fonts'
 
 
 export const NavSocialsWrapper = styled.div`
-  & {
-    position: fixed;
-    bottom: 40px;
-    left: 20px;
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
 
-    height: 80px;
+  height: 80px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    & img {
-      width: 30px;
-      filter: opacity(0.75);
-      cursor: pointer;
+  & img {
+    width: 30px;
+    filter: opacity(0.75);
+    cursor: pointer;
 
-      &:hover {
-        filter: opacity(1);
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-      }
+    &:hover {
+      filter: opacity(1);
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+    }
 
-      &.nav-socials__nav-social.github {
-        width: 35px;
-      }
+    &.nav-socials__nav-social.github {
+      width: 35px;
     }
   }
 `
 
 export const NavItemsWrapper = styled.ul`
-   & {
-    display: flex;
-    list-style-type: none;
-    font-size: 1.1rem;
-    padding: 0;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0px;
 
-    & li.nav-items__nav-item {
-      margin-left: 50px;
-      letter-spacing: 1px;
-      filter: opacity(0.75);
-      cursor: pointer;
+  & li.nav-items__nav-item {
+    margin-left: 50px;
+    letter-spacing: 1px;
+    filter: opacity(0.75);
+    cursor: pointer;
 
-      &:hover {
-        filter: opacity(1);
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-      }
+    &:hover {
+      filter: opacity(1);
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
     }
+  }
+
+  @media (max-width: 525px) {
+    margin: 14px 0px;
+  }
+
+  @media (max-width: 325px) {
+    margin: 12px 0px;
+  }
+`
+
+export const NavItem = styled.li`
+  margin: 0;
+  font-family: 'San Francisco Pro Bold', ${fallbackFonts};
+  font-size: calc(1rem + 0.1vw);
+
+  @media (min-width: 1920px) {
+    font-size: calc(1rem + 0.5vw);
+  }
+
+  @media (max-width: 525px) {
+    font-size: calc(0.85rem + 0.1vw);
+  }
+
+  @media (max-width: 325px) {
+    font-size: calc(0.75rem + 0.1vw);
   }
 `
 
@@ -66,9 +88,8 @@ export const NavWrapper = styled.div`
   padding: 15px 3%;
 
   color: white;
-  font-family: 'San Francisco Pro Bold', ${fallbackFonts};
 
-  @media (min-width: 1660px) {
+  @media (min-width: 1920px) {
     width: calc(100% - 6%);
     padding: 35px 3%;
 
@@ -87,8 +108,6 @@ export const NavWrapper = styled.div`
     }
 
     & ${NavItemsWrapper} {
-      font-size: 1.65rem;
-
       & li.nav-items__nav-item {
         margin-left: 70px;
       }
@@ -127,8 +146,6 @@ export const NavWrapper = styled.div`
     padding: 10px 3%;
 
     & ${NavItemsWrapper} {
-      font-size: 1rem;
-
       & li.nav-items__nav-item {
         margin-left: 17.5px;
       }
@@ -137,8 +154,6 @@ export const NavWrapper = styled.div`
 
   @media (max-width: 376px) {
     & ${NavItemsWrapper} {
-      font-size: 0.9rem;
-
       & li.nav-items__nav-item {
         margin-left: 12.5px;
       }
@@ -148,10 +163,6 @@ export const NavWrapper = styled.div`
   @media (max-width: 330px) {
     & ${NavSocialsWrapper} {
       width: 57.5px;
-    }
-
-    & ${NavItemsWrapper} {
-      font-size: 0.75rem;
     }
   }
 `

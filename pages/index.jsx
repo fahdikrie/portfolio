@@ -1,15 +1,19 @@
 import Head from 'next/head'
 
-import Layout from 'components/Layout/index'
-import ProjectCard from 'components/ProjectCard/index'
+import Layout from 'components/Layout'
+import ProjectCard from 'components/ProjectCard'
 import {
   fetchMainProjects,
   fetchSoloProjects
 } from 'utils/selectors'
 import {
-  Heading,
   HomepageWrapper,
-  Title
+  TitleSection,
+  Title,
+  AboutSection,
+  About,
+  ProjectsSection,
+  Heading,
 } from 'styles/index.style'
 
 
@@ -23,15 +27,15 @@ export default function Home() {
         currentPage="index"
       >
         <HomepageWrapper>
-          <div className="title-section">
+          <TitleSection className="title-section">
             <Title>
               badi, <br/>
               at your service!
             </Title>
-          </div>
+          </TitleSection>
 
-          <div className="about-section">
-            <h3>
+          <AboutSection className="about-section">
+            <About>
               A 19 years old sophomore student currently majoring CS 💻 at the University of Indonesia 🧑‍🎓
               Meet Fahdii Ajmalal Fikrie! 👋
 
@@ -42,25 +46,38 @@ export default function Home() {
 
               <br/><br/>
 
-              All the funsies aside 🎭 Fahdii is currently a software engineer in the making 🧑‍💻
-              Having great interest in full-stack web development technologies 🌐 He's looking forward to be able
+              All the funsies aside 🎭 Fahdii is a software engineer in the making 🧑‍💻
+              Having great interest in full-stack web development technologies 🌐 He looks forward to be able
               to do big things 💯 and partake in this vast & rapid growing world of tech-industry 🚀
-            </h3>
-          </div>
+            </About>
+          </AboutSection>
 
-          <div className="projects-section">
-            <div className="main-projects">
-              {mainProjects
-                ? mainProjects.map(
-                    el => (
-                      <div
-                        className="main-projects__project-card"
-                        key={el.id}
-                      >
-                        {/* {el.name} */}
-                      </div>
-                    ))
-                : ""}
+          <ProjectsSection className="projects-section">
+            <div className="main-projects-wrapper">
+              <Heading>Projects I've Participated in.</Heading>
+              <div className="main-projects">
+                {mainProjects
+                  ? mainProjects.map(
+                      el => (
+                        <div
+                          className="main-projects__project-card"
+                          key={el.id}
+                        >
+                          {(
+                          console.log(el)
+                          ,
+                          <ProjectCard
+                            key={el.id}
+                            image={el.image}
+                            name={el.name}
+                            time={el.time}
+                            desc={el.desc}
+                            stacks={el.stacks}
+                          />)}
+                        </div>
+                      ))
+                  : ""}
+              </div>
             </div>
 
             <div className="solo-projects">
@@ -76,8 +93,7 @@ export default function Home() {
                     ))
                 : ""}
             </div>
-
-          </div>
+          </ProjectsSection>
         </HomepageWrapper>
       </Layout>
     </>

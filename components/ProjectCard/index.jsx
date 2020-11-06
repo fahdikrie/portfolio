@@ -1,6 +1,11 @@
 import React from 'react'
 import {
-  ProjectCardWrapper
+  ProjectCardWrapper,
+  Image,
+  Title,
+  Time,
+  Desc,
+  Stacks
 } from './index.style'
 
 const ProjectCard = ({
@@ -11,8 +16,31 @@ const ProjectCard = ({
   stacks
 }) => {
   return (
-    <ProjectCardWrapper>
-      
+    <ProjectCardWrapper className="project-card">
+      <Image
+        src={image}
+        alt={name}
+      />
+
+      <div className="project-card__info">
+        <Title>
+          {name}
+        </Title>
+
+        <Time>
+          {time}
+        </Time>
+
+        <Desc
+          dangerouslySetInnerHTML={{__html: desc}}
+        />
+
+        <Stacks>
+          {stacks.join(" ⋅ ")}
+        </Stacks>
+      </div>
     </ProjectCardWrapper>
   )
 }
+
+export default ProjectCard

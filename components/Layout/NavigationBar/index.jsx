@@ -8,6 +8,7 @@ import {
   NavWrapper,
   NavSocialsWrapper,
   NavItemsWrapper,
+  NavItem
 } from './index.style'
 
 const NavigationBar = (props) => {
@@ -28,29 +29,32 @@ const NavigationBar = (props) => {
 
       <NavItemsWrapper className="nav-items">
         {(props.currentPage !== "index")
-          ? <li className="nav-items__nav-item">
+          ? <NavItem className="nav-items__nav-item">
               <Link href="/">
                 home
               </Link>
-            </li>
+            </NavItem>
           : ""}
+
         {(props.currentPage !== "activities")
-          ? <li className="nav-items__nav-item">
+          ? <NavItem className="nav-items__nav-item">
               <Link href="/activities">
                 activities
               </Link>
-            </li>
+            </NavItem>
           : ""}
-        <li className="nav-items__nav-item">
+
+        <NavItem className="nav-items__nav-item">
           <Link href="/">
             resume
           </Link>
-        </li>
-        <li className="nav-items__nav-item">
+        </NavItem>
+
+        <NavItem className="nav-items__nav-item">
           <Link href="/">
             journal
           </Link>
-        </li>
+        </NavItem>
       </NavItemsWrapper>
     </NavWrapper>
   )
