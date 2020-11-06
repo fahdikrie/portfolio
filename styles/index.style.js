@@ -32,9 +32,6 @@ export const AboutSection = styled.section`
   line-height: 2;
   letter-spacing: 1.5px;
 
-  @media (max-width: 768px) {
-  }
-
   @media (max-width: 525px) {
     width: calc(87.5% - 8%);
     line-height: 1.75;
@@ -45,12 +42,16 @@ export const AboutSection = styled.section`
 export const About = styled.h3`
   font-family: 'San Francisco Pro Light';
   font-size: calc(1rem + 0.3vw);
+
+  @media (min-width: 1920px) {
+    font-size: calc(1rem + 0.75vw);
+  }
 `
 
 export const ProjectsSection = styled.section`
   width: calc(85% - 8%);
   padding-left: 8%;
-  margin-top: 10rem;
+  margin-top: 20rem;
 
   & .main-projects-wrapper {
     & .main-projects {
@@ -66,6 +67,7 @@ export const ProjectsSection = styled.section`
   @media (max-width: 768px) {
     width: calc(92% - 8%);
     padding-left: 8%;
+    margin-top: 10rem;
 
     & .main-projects-wrapper {
       & .main-projects {
