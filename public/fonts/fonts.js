@@ -16,7 +16,7 @@ export const GlobalFonts = createGlobalStyle`
     font-weight: 400;
     src: url('./fonts/San\ Francisco\ Pro/SF-Pro-Display-LightItalic.ttf');
     font-display: block;
-  }
+  } */
 
   @font-face {
     font-family: 'San Francisco Pro Regular';
@@ -26,7 +26,7 @@ export const GlobalFonts = createGlobalStyle`
     font-display: block;
   }
 
-  @font-face {
+  /* @font-face {
     font-family: 'San Francisco Pro Regular';
     font-style: italic;
     font-weight: 500;

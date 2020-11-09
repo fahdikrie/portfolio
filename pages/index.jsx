@@ -3,8 +3,7 @@ import Head from 'next/head'
 import Layout from 'components/Layout'
 import ProjectCard from 'components/ProjectCard'
 import {
-  fetchMainProjects,
-  fetchSoloProjects
+  fetchMainProjects
 } from 'utils/selectors'
 import {
   HomepageWrapper,
@@ -19,7 +18,6 @@ import {
 
 export default function Home() {
   const { mainProjects } = fetchMainProjects('/api/main-projects')
-  const { soloProjects } = fetchSoloProjects('/api/solo-projects')
 
   return (
     <>
@@ -75,20 +73,6 @@ export default function Home() {
                       ))
                   : ""}
               </div>
-            </div>
-
-            <div className="solo-projects">
-              {soloProjects
-                ? soloProjects.map(
-                    el =>(
-                      <div
-                        className="solo-projects__project-card"
-                        key={el.id}
-                      >
-                          {/* {el.name} */}
-                      </div>
-                    ))
-                : ""}
             </div>
           </ProjectsSection>
         </HomepageWrapper>
