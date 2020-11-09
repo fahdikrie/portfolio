@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import Head from 'next/head'
 
 import Vanta from './components/Vanta/index';
 
@@ -17,17 +18,15 @@ const VantaLayout = () => {
        We only want the listener to be added once */
   }, []);
 
-  return width < breakpoint ?
-            <Vanta
-              sizeVanta={0}
-              backgroundColorVanta={0x0}
-              xOffsetVanta={0.70}
-            />
-          :
-            <Vanta
-              sizeVanta={1.10}
-              backgroundColorVanta={0x0}
-              xOffsetVanta={0.30}
-            />;}
+  return width > breakpoint
+    ? <>
+        <Vanta
+          sizeVanta={1.10}
+          backgroundColorVanta={0x0}
+          xOffsetVanta={0.30}
+        />
+      </>
+    : null
+  }
 
   export default VantaLayout;

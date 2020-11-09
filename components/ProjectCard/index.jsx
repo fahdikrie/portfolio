@@ -27,8 +27,8 @@ const ProjectCard = ({
           src={image}
           alt={name}
           layout="responsive"
-          width="100"
-          height="50"
+          width="2"
+          height="1"
           loading="lazy"
         />
       </div>

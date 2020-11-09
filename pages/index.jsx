@@ -63,9 +63,6 @@ export default function Home() {
                           className="main-projects__project-card"
                           key={el.id}
                         >
-                          {(
-                          console.log(el)
-                          ,
                           <ProjectCard
                             key={el.id}
                             image={el.image}
@@ -73,7 +70,7 @@ export default function Home() {
                             time={el.time}
                             desc={el.desc}
                             stacks={el.stacks}
-                          />)}
+                          />
                         </div>
                       ))
                   : ""}
