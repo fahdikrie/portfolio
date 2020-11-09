@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { lazy } from 'react'
+import Image from 'next/image'
+
 import {
   ProjectCardWrapper,
-  Image,
+  // Image,
   Title,
   Time,
   Desc,
@@ -17,10 +19,19 @@ const ProjectCard = ({
 }) => {
   return (
     <ProjectCardWrapper className="project-card">
-      <Image
-        src={image}
-        alt={name}
-      />
+      <div
+        className="project-card__image-wrapper"
+      >
+        <Image
+          className="project-card__image"
+          src={image}
+          alt={name}
+          layout="responsive"
+          width="100"
+          height="50"
+          loading="lazy"
+        />
+      </div>
 
       <div className="project-card__info">
         <Title>

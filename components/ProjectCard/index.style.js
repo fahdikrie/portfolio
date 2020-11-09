@@ -7,9 +7,22 @@ export const ProjectCardWrapper = styled.div`
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
 
-  &:hover {
-    transform: scale(1.01);
+  & .project-card__image-wrapper {
+    width: calc(100% - 6px);
+    padding: 3px;
+
+    & .project-card__image {
+      width: calc(100% - 6px);
+
+      border-radius: 10px;
+      border: 3px solid transparent;
+
+      @media (max-width: 525px) {
+        border-radius: 3px;
+      }
+    }
   }
+
 
   & .project-card__info {
     width: calc(100% - 20px);
@@ -23,16 +36,6 @@ export const ProjectCardWrapper = styled.div`
       width: calc(100% - 6px);
       padding: 5px 3px;
     }
-  }
-`
-
-export const Image = styled.img`
-  width: calc(100% - 6px);
-  border-radius: 10px;
-  border: 3px solid transparent;
-
-  @media (max-width: 525px) {
-    border-radius: 3px;
   }
 `
 
