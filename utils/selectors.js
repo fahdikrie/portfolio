@@ -11,13 +11,3 @@ export const fetchMainProjects = path => {
 
   return { mainProjects, error }
 }
-
-export const fetchSoloProjects = path => {
-  if (!path) {
-    throw new Error("Path is required")
-  }
-
-  const { data: soloProjects, error } = useSWR(path, fetcher)
-
-  return { soloProjects, error }
-}
