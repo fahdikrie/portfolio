@@ -37,18 +37,6 @@ const HeadTags = () => {
         as="font"
         crossOrigin=""
       />
-      <link
-        rel="preload"
-        href="/fonts/Ubuntu/Ubuntu-R.ttf"
-        as="font"
-        crossOrigin=""
-      />
-      <link
-        rel="preload"
-        href="/fonts/Ubuntu/Ubuntu-B.ttf"
-        as="font"
-        crossOrigin=""
-      />
     </Head>
   )
 }
