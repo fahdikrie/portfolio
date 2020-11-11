@@ -84,10 +84,11 @@ export const PostersTitle = styled.h6`
   }
 
   @media (max-width: 768px) {
+    font-size: calc(0.65rem + 0.5vw);
     letter-spacing: 1px;
   }
 
   @media (max-width: 525px) {
-    letter-spacing: 0.75px;
+    letter-spacing: 0.5px;
   }
 `
