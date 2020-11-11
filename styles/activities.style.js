@@ -59,6 +59,11 @@ export const PosterCardsWrapper = styled.div`
         margin: 5px 0;
       }
     }
+
+    & .goodreads-cards__cards,
+    & .letterboxd-cards__cards {
+      grid-gap: 5px;
+    }
   }
 `
 
