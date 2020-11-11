@@ -52,6 +52,7 @@ export const PosterCardsWrapper = styled.div`
     grid-gap: 10px;
 
     ${props => props.loading ? `grid-template-columns: auto;` : ``}
+    ${props => props.error ? `grid-template-columns: auto;` : ``}
   }
 
   @media (max-width: 525px) {
@@ -101,7 +102,40 @@ export const PostersTitle = styled.h6`
 
 export const PostersLoading = styled.div`
   width: calc(100% - 4px);
-  height: 30vh;
+  height: calc(10vw * 3 / 2);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  filter: opacity(75%);
+
+  & h5 {
+    width: 100%;
+    color: white;
+
+    font-family: 'San Francisco Pro Light';
+    font-size: calc(0.55rem + 0.5vw);
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 768px) {
+    height: calc(23.5vw * 3 / 2);
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 525px) {
+    letter-spacing: 0.5px;
+  }
+`
+
+export const PostersError = styled.div`
+  width: calc(100% - 4px);
+  height: calc(10vw * 3 / 2);
+  margin: 0 auto;
 
   display: flex;
   justify-content: center;
@@ -119,7 +153,12 @@ export const PostersLoading = styled.div`
     letter-spacing: 2px;
   }
 
+  @media (max-width: 768px) {
+    height: calc(23.5vw * 3 / 2);
+    letter-spacing: 1px;
+  }
+
   @media (max-width: 525px) {
-    height: 20vh;
+    letter-spacing: 0.5px;
   }
 `
