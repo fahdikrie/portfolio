@@ -45,6 +45,8 @@ export const fetchGoodreads = async () => {
 
       const el = feed.items[i]
 
+      console.log(el.content)
+
       let html = document.createElement('html');
       html.innerHTML = el.content
 
@@ -52,7 +54,7 @@ export const fetchGoodreads = async () => {
       bookData.link = el.link
       bookData.title = el.title
       bookData.rating = intToStars(el.content.split("<br/>")[5].split(":")[1].trim())
-      bookData.date = el.pubDate.split(" ")[1] + " " + el.pubDate.split(" ")[2]
+      bookData.date = el.pubDate.split(" ")[2] + " " + el.pubDate.split(" ")[1]
 
       data.items.push(bookData)
     }
@@ -83,6 +85,9 @@ export const fetchLetterboxd = async () => {
 
       const el = feed.items[i]
 
+      console.log(el)
+      console.log(el.content)
+
       let html = document.createElement('html');
       html.innerHTML = el.content
 
@@ -90,7 +95,7 @@ export const fetchLetterboxd = async () => {
       movieData.link = el.link
       movieData.title = el.title
       movieData.rating = el.title.split("-")[el.title.split("-").length - 1]
-      movieData.date = el.pubDate.split(" ")[1] + " " + el.pubDate.split(" ")[2]
+      movieData.date = el.pubDate.split(" ")[2] + " " + el.pubDate.split(" ")[1]
 
       data.items.push(movieData)
     }

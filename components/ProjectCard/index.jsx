@@ -1,4 +1,4 @@
-import React, { lazy } from 'react'
+import React from 'react'
 import Image from 'next/image'
 
 import {
@@ -33,22 +33,13 @@ const ProjectCard = ({
         />
       </div>
 
-      <div className="project-card__info">
-        <Title>
-          {name}
-        </Title>
-
-        <Time>
-          {time}
-        </Time>
-
-        <Desc
-          dangerouslySetInnerHTML={{__html: desc}}
-        />
-
-        <Stacks>
-          {stacks.join(" ⋅ ")}
-        </Stacks>
+      <div
+        className="project-card__info"
+      >
+        <Title>{name}</Title>
+        <Time>{time}</Time>
+        <Desc dangerouslySetInnerHTML={{__html: desc}} />
+        <Stacks>{stacks.join(" ⋅ ")}</Stacks>
       </div>
     </ProjectCardWrapper>
   )

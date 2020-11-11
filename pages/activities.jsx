@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 
-import Layout from 'components/Layout/index';
+import Layout from 'components/Layout'
+import PosterCard from 'components/PosterCard'
 import {
   fetchGoodreads,
   fetchLetterboxd
 } from 'utils/selectors'
+import {
+  ActivitiesWrapper,
+  PosterCardsContainer,
+  PosterCardsWrapper
+} from 'styles/activities.style'
 
 export default function Activities() {
   const [goodreads, setGoodreads] = useState({
@@ -45,38 +51,53 @@ export default function Activities() {
       <Layout
         currentPage="activities"
       >
-        <div>
-          {!goodreads.loading || !goodreads.items
-            ? !goodreads.error
-                ? goodreads.items.map((el, i) => {
+        <ActivitiesWrapper>
+          <PosterCardsContainer>
+            <PosterCardsWrapper
+              className="goodreads-cards-wrapper"
+            >
+              {!goodreads.loading || !goodreads.items
+                ? !goodreads.error
+                    ? goodreads.items.map((el, i) => {
 
-                  return (
-                    <div key={i}>
-                      <img src={el.image} alt={i} width="150px"/>
-                      <p style={{color: "white"}}>{el.rating}</p>
-                    </div>
-                  )
-                })
-                : <p style={{color: "white"}}>there seem to be errors on goodreads end</p>
-            : <h1 style={{color: "white"}}>loading...</h1>}
-        </div>
+                      return (
+                        <PosterCard
+                          key={i}
+                          image={el.image}
+                          link={el.link}
+                          title={el.title}
+                          rating={el.rating}
+                          date={el.date}
+                        />
+                      )
+                    })
+                    : <p style={{color: "white"}}>there seem to be errors on goodreads end</p>
+                : <h1 style={{color: "white"}}>loading...</h1>}
+            </PosterCardsWrapper>
 
-        <div>
-          {!letterboxd.loading || !letterboxd.items
-            ? !letterboxd.error
-                ? letterboxd.items.map((el, i) => {
+            <PosterCardsWrapper
+              className="letterboxd-cards-wrapper"
+            >
+              {!letterboxd.loading || !letterboxd.items
+                ? !letterboxd.error
+                    ? letterboxd.items.map((el, i) => {
 
-                  return (
-                    <div key={i}>
-                      <img src={el.image} alt={i} width="150px"/>
-                      <p style={{color: "white"}}>{el.rating}</p>
-                    </div>
-                  )
-                })
-
-                : <p style={{color: "white"}}>there seem to be errors on letterboxd end</p>
-            : <h1 style={{color: "white"}}>loading...</h1>}
-        </div>
+                      return (
+                        <PosterCard
+                          key={i}
+                          image={el.image}
+                          link={el.link}
+                          title={el.title}
+                          rating={el.rating}
+                          date={el.date}
+                        />
+                      )
+                    })
+                    : <p style={{color: "white"}}>there seem to be errors on letterboxd end</p>
+                : <h1 style={{color: "white"}}>loading...</h1>}
+            </PosterCardsWrapper>
+          </PosterCardsContainer>
+        </ActivitiesWrapper>
       </Layout>
     </>
   )
