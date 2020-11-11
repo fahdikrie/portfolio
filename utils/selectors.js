@@ -45,8 +45,6 @@ export const fetchGoodreads = async () => {
 
       const el = feed.items[i]
 
-      console.log(el.content)
-
       let html = document.createElement('html');
       html.innerHTML = el.content
 
@@ -84,9 +82,6 @@ export const fetchLetterboxd = async () => {
       }
 
       const el = feed.items[i]
-
-      console.log(el)
-      console.log(el.content)
 
       let html = document.createElement('html');
       html.innerHTML = el.content

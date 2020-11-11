@@ -11,7 +11,8 @@ import {
   ActivitiesWrapper,
   PosterCardsContainer,
   PosterCardsWrapper,
-  PostersTitle
+  PostersTitle,
+  PostersLoading,
 } from 'styles/activities.style'
 
 export default function Activities() {
@@ -56,6 +57,7 @@ export default function Activities() {
           <PosterCardsContainer>
             <PosterCardsWrapper
               className="goodreads-cards"
+              loading={goodreads.loading}
             >
               <div className="goodreads-cards__header">
                 <PostersTitle>
@@ -84,12 +86,15 @@ export default function Activities() {
                         )
                       })
                       : <p style={{color: "white"}}>there seem to be errors on goodreads end</p>
-                  : <h1 style={{color: "white"}}>loading...</h1>}
+                  : <PostersLoading>
+                      <h5>loading...</h5>
+                    </PostersLoading>}
               </div>
             </PosterCardsWrapper>
 
             <PosterCardsWrapper
               className="letterboxd-cards"
+              loading={letterboxd.loading}
             >
               <div className="letterboxd-cards__header">
               <PostersTitle>
@@ -118,7 +123,9 @@ export default function Activities() {
                         )
                       })
                       : <p style={{color: "white"}}>there seem to be errors on letterboxd end</p>
-                  : <h1 style={{color: "white"}}>loading...</h1>}
+                  : <PostersLoading>
+                      <h5>loading...</h5>
+                    </PostersLoading>}
               </div>
             </PosterCardsWrapper>
           </PosterCardsContainer>

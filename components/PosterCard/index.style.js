@@ -16,7 +16,7 @@ export const PosterCardWrapper = styled.div`
 
   & .poster-card__image-wrapper .poster-card__image {
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 3px;
   }
 
   & .poster-card__info {
@@ -24,7 +24,8 @@ export const PosterCardWrapper = styled.div`
     margin: 0 auto;
 
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: center;
   }
 `
 

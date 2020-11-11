@@ -50,6 +50,8 @@ export const PosterCardsWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+
+    ${props => props.loading ? `grid-template-columns: auto;` : ``}
   }
 
   @media (max-width: 525px) {
@@ -80,7 +82,6 @@ export const PostersTitle = styled.h6`
   justify-content: space-between;
 
   & .link {
-    /* text-decoration: underline; */
     cursor: pointer;
   }
 
@@ -95,5 +96,30 @@ export const PostersTitle = styled.h6`
 
   @media (max-width: 525px) {
     letter-spacing: 0.5px;
+  }
+`
+
+export const PostersLoading = styled.div`
+  width: calc(100% - 4px);
+  height: 30vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  filter: opacity(75%);
+
+  & h5 {
+    width: 100%;
+    color: white;
+
+    font-family: 'San Francisco Pro Light';
+    font-size: calc(0.55rem + 0.5vw);
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 525px) {
+    height: 20vh;
   }
 `
