@@ -46,7 +46,7 @@ const Layout = (props) => {
     <>
       <HeadTags/>
 
-      <VantaLayout/>
+      {props.currentPage === "index" ? <VantaLayout/> : null}
       <NavigationBar
         currentPage={props.currentPage}
       />

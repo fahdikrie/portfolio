@@ -10,26 +10,30 @@ import {
 export default function Activities() {
   const [goodreads, setGoodreads] = useState({
     items: [],
-    error: false
+    error: false,
+    loading: true,
   })
 
   const [letterboxd, setLetterboxd] = useState({
     items: [],
-    error: false
+    error: false,
+    loading: true,
   })
 
   useEffect(() => {
     async function fetchAsync() {
       const goodreadsData = await fetchGoodreads()
+      const letterboxdData = await fetchLetterboxd()
+
       setGoodreads({
         items: goodreadsData.items,
-        error: goodreadsData.error
+        error: goodreadsData.error,
+        loading: false,
       })
-
-      const letterboxdData = await fetchLetterboxd()
       setLetterboxd({
         items: letterboxdData.items,
-        error: letterboxdData.error
+        error: letterboxdData.error,
+        loading: false,
       })
     }
 
@@ -38,38 +42,42 @@ export default function Activities() {
 
   return (
     <>
-      <div>
-        {goodreads.items
-          ? !goodreads.error
-              ? goodreads.items.map((el, i) => {
+      <Layout
+        currentPage="activities"
+      >
+        <div>
+          {!goodreads.loading || !goodreads.items
+            ? !goodreads.error
+                ? goodreads.items.map((el, i) => {
 
-                return (
-                  <>
-                    <img src={el.image} alt={i} width="150px"/>
-                    <p style={{color: "white"}}>{el.title}</p>
-                  </>
-                )
-              })
-              : <p style={{color: "white"}}>"there seem to be errors on goodreads end"</p>
-          : <p style={{color: "white"}}>"loading"</p>}
-      </div>
+                  return (
+                    <div key={i}>
+                      <img src={el.image} alt={i} width="150px"/>
+                      <p style={{color: "white"}}>{el.title}</p>
+                    </div>
+                  )
+                })
+                : <p style={{color: "white"}}>there seem to be errors on goodreads end</p>
+            : <h1 style={{color: "white"}}>loading...</h1>}
+        </div>
 
-      <div>
-        {letterboxd.items
-          ? !letterboxd.error
-              ? letterboxd.items.map((el, i) => {
+        <div>
+          {!letterboxd.loading || !letterboxd.items
+            ? !letterboxd.error
+                ? letterboxd.items.map((el, i) => {
 
-                return (
-                  <>
-                    <img src={el.image} alt={i} width="150px"/>
-                    <p style={{color: "white"}}>{el.title}</p>
-                  </>
-                )
-              })
+                  return (
+                    <div key={i}>
+                      <img src={el.image} alt={i} width="150px"/>
+                      <p style={{color: "white"}}>{el.title}</p>
+                    </div>
+                  )
+                })
 
-              : <p>"there seem to be errors on goodreads end"</p>
-          : <p>"loading"</p>}
-      </div>
+                : <p style={{color: "white"}}>there seem to be errors on letterboxd end</p>
+            : <h1 style={{color: "white"}}>loading...</h1>}
+        </div>
+      </Layout>
     </>
   )
 }

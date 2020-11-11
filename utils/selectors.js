@@ -30,7 +30,7 @@ export const fetchGoodreads = async () => {
   try {
     let feed = await parser.parseURL(CORS_PROXY + GOODREADS_RSS)
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
       let bookData = {
         image: "",
         link: "",
@@ -72,7 +72,7 @@ export const fetchLetterboxd = async () => {
   try {
     let feed = await parser.parseURL(CORS_PROXY + LETTERBOXD_RSS)
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
       let movieData = {
         image: "",
         link: "",
