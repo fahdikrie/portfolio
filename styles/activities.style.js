@@ -113,15 +113,6 @@ export const PostersLoading = styled.div`
 
   filter: opacity(75%);
 
-  & h5 {
-    width: 100%;
-    color: white;
-
-    font-family: 'San Francisco Pro Light';
-    font-size: calc(0.55rem + 0.5vw);
-    letter-spacing: 2px;
-  }
-
   @media (max-width: 768px) {
     height: calc(23.5vw * 3 / 2);
     letter-spacing: 1px;
