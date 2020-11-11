@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
-import RSSParser from 'rss-parser'
 
 import Layout from 'components/Layout/index';
 import {
@@ -27,41 +26,50 @@ export default function Activities() {
         error: goodreadsData.error
       })
 
-      fetchLetterboxd()
+      const letterboxdData = await fetchLetterboxd()
+      setLetterboxd({
+        items: letterboxdData.items,
+        error: letterboxdData.error
+      })
     }
 
     fetchAsync()
   }, [])
 
-  useEffect(() => {
-    console.log(goodreads)
-  }, [goodreads])
-
   return (
-    !goodreads.error
-      ? <>
-          {/* {feed.items.map((el, i) => {
-            let stars = el.title.split(" - ")[el.title.split(" - ").length - 1]
-            // console.log(stars)
+    <>
+      <div>
+        {goodreads.items
+          ? !goodreads.error
+              ? goodreads.items.map((el, i) => {
 
-            return (
-              <p key={i} style={{color:"white"}}>{stars}</p>
-            )
-          })} */}
+                return (
+                  <>
+                    <img src={el.image} alt={i} width="150px"/>
+                    <p style={{color: "white"}}>{el.title}</p>
+                  </>
+                )
+              })
+              : <p style={{color: "white"}}>"there seem to be errors on goodreads end"</p>
+          : <p style={{color: "white"}}>"loading"</p>}
+      </div>
 
-          {!goodreads.error
-          ? 
-          goodreads.items?.map((el, i) => {
-            let stars = el.title.split(" - ")[el.title.split(" - ").length - 1]
-            // console.log(stars)
+      <div>
+        {letterboxd.items
+          ? !letterboxd.error
+              ? letterboxd.items.map((el, i) => {
 
-            return (
-              <p key={i} style={{color:"white"}}>{stars}</p>
-            )
-          })
-          : ""}
-        </>
+                return (
+                  <>
+                    <img src={el.image} alt={i} width="150px"/>
+                    <p style={{color: "white"}}>{el.title}</p>
+                  </>
+                )
+              })
 
-      : <h1 style={{color:"white"}}>loading...</h1>
+              : <p>"there seem to be errors on goodreads end"</p>
+          : <p>"loading"</p>}
+      </div>
+    </>
   )
 }

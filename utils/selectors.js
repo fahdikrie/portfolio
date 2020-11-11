@@ -50,6 +50,10 @@ export const fetchGoodreads = async () => {
       bookData.rating = intToStars(el.content.split("<br/>")[5].split(":")[1].trim())
       bookData.date = el.pubDate.split(" ")[1] + " " + el.pubDate.split(" ")[2]
 
+      let image = bookData.image.split(".")
+      image.splice(bookData.image.split(".").length - 2, 1)
+      bookData.image = image.join(".")
+
       data.items.push(bookData)
     }
 
