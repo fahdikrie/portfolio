@@ -62,7 +62,7 @@ export const PosterCardsWrapper = styled.div`
 
     & .goodreads-cards__cards,
     & .letterboxd-cards__cards {
-      grid-gap: 5px;
+      grid-gap: 3px;
     }
   }
 `
@@ -80,7 +80,7 @@ export const PostersTitle = styled.h6`
   justify-content: space-between;
 
   & .link {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     cursor: pointer;
   }
 
