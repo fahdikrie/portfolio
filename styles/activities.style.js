@@ -38,7 +38,8 @@ export const PosterCardsWrapper = styled.div`
     & hr {
       background-color: white;
       height: 0.1px;
-      border: none;
+      border: 0.1px solid white;
+      border-bottom: 0px;
 
       filter: opacity(75%);
     }
@@ -75,5 +76,9 @@ export const PostersTitle = styled.h6`
 
   @media (max-width: 768px) {
     letter-spacing: 1px;
+  }
+
+  @media (max-width: 525px) {
+    letter-spacing: 0.75px;
   }
 `
