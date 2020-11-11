@@ -3,37 +3,63 @@ import Head from 'next/head'
 import RSSParser from 'rss-parser'
 
 import Layout from 'components/Layout/index';
+import {
+  fetchGoodreads,
+  fetchLetterboxd
+} from 'utils/selectors'
 
 export default function Activities() {
-  const [feed, setFeed] = useState({ title: '', items: [] })
+  const [goodreads, setGoodreads] = useState({
+    items: [],
+    error: false
+  })
 
-  const rssData = async () => {
-    const CORS_PROXY = "https://cors.bbbadi.tech/"
-    let parser = new RSSParser();
+  const [letterboxd, setLetterboxd] = useState({
+    items: [],
+    error: false
+  })
 
-    try {
-      const feed = await parser.parseURL(`${CORS_PROXY}https://letterboxd.com/fahdikrie/rss/`)
-      setFeed(feed)
-      console.log(feed)
-    } catch (error) {
-      console.log(error)
-    }
-  }
   useEffect(() => {
-    rssData()
+    async function fetchAsync() {
+      const goodreadsData = await fetchGoodreads()
+      setGoodreads({
+        items: goodreadsData.items,
+        error: goodreadsData.error
+      })
+
+      fetchLetterboxd()
+    }
+
+    fetchAsync()
   }, [])
 
-  return (
-    feed
-      ? <>
-            {feed.items.map((el, i) => {
-              let stars = el.title.split(" - ")[el.title.split(" - ").length - 1]
-              console.log(stars)
+  useEffect(() => {
+    console.log(goodreads)
+  }, [goodreads])
 
-              return (
-                <p key={i} style={{color:"white"}}>{stars}</p>
-              )
-            })}
+  return (
+    !goodreads.error
+      ? <>
+          {/* {feed.items.map((el, i) => {
+            let stars = el.title.split(" - ")[el.title.split(" - ").length - 1]
+            // console.log(stars)
+
+            return (
+              <p key={i} style={{color:"white"}}>{stars}</p>
+            )
+          })} */}
+
+          {!goodreads.error
+          ? 
+          goodreads.items?.map((el, i) => {
+            let stars = el.title.split(" - ")[el.title.split(" - ").length - 1]
+            // console.log(stars)
+
+            return (
+              <p key={i} style={{color:"white"}}>{stars}</p>
+            )
+          })
+          : ""}
         </>
 
       : <h1 style={{color:"white"}}>loading...</h1>
