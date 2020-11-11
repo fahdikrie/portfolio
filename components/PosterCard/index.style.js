@@ -20,6 +20,9 @@ export const PosterCardWrapper = styled.div`
   }
 
   & .poster-card__info {
+    width: calc(100% - 4px);
+    margin: 0 auto;
+
     display: flex;
     justify-content: space-between
   }
@@ -34,5 +37,9 @@ export const Info = styled.p`
 
   @media (max-width: 768px) {
     font-size: calc(0.25rem + 1vw);
+  }
+
+  @media (max-width: 525px) {
+    margin: 3px 0 0;
   }
 `
