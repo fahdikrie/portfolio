@@ -10,7 +10,8 @@ import {
 import {
   ActivitiesWrapper,
   PosterCardsContainer,
-  PosterCardsWrapper
+  PosterCardsWrapper,
+  PostersTitle
 } from 'styles/activities.style'
 
 export default function Activities() {
@@ -54,47 +55,71 @@ export default function Activities() {
         <ActivitiesWrapper>
           <PosterCardsContainer>
             <PosterCardsWrapper
-              className="goodreads-cards-wrapper"
+              className="goodreads-cards"
             >
-              {!goodreads.loading || !goodreads.items
-                ? !goodreads.error
-                    ? goodreads.items.map((el, i) => {
+              <div className="goodreads-cards__header">
+                <PostersTitle>
+                  <span>badi's recent reads<span className="purple">*</span></span>
 
-                      return (
-                        <PosterCard
-                          key={i}
-                          image={el.image}
-                          link={el.link}
-                          title={el.title}
-                          rating={el.rating}
-                          date={el.date}
-                        />
-                      )
-                    })
-                    : <p style={{color: "white"}}>there seem to be errors on goodreads end</p>
-                : <h1 style={{color: "white"}}>loading...</h1>}
+                  <span className="link"><a href="https://www.goodreads.com/review/list/100267901?shelf=read" target="_blank">see more!</a></span>
+                </PostersTitle>
+
+                <hr/>
+              </div>
+
+              <div className="goodreads-cards__cards">
+                {!goodreads.loading || !goodreads.items
+                  ? !goodreads.error
+                      ? goodreads.items.map((el, i) => {
+
+                        return (
+                          <PosterCard
+                            key={i}
+                            image={el.image}
+                            link={el.link}
+                            title={el.title}
+                            rating={el.rating}
+                            date={el.date}
+                          />
+                        )
+                      })
+                      : <p style={{color: "white"}}>there seem to be errors on goodreads end</p>
+                  : <h1 style={{color: "white"}}>loading...</h1>}
+              </div>
             </PosterCardsWrapper>
 
             <PosterCardsWrapper
-              className="letterboxd-cards-wrapper"
+              className="letterboxd-cards"
             >
-              {!letterboxd.loading || !letterboxd.items
-                ? !letterboxd.error
-                    ? letterboxd.items.map((el, i) => {
+              <div className="letterboxd-cards__header">
+              <PostersTitle>
+                <span>badi's recent movies<span className="purple">*</span></span>
 
-                      return (
-                        <PosterCard
-                          key={i}
-                          image={el.image}
-                          link={el.link}
-                          title={el.title}
-                          rating={el.rating}
-                          date={el.date}
-                        />
-                      )
-                    })
-                    : <p style={{color: "white"}}>there seem to be errors on letterboxd end</p>
-                : <h1 style={{color: "white"}}>loading...</h1>}
+                <span className="link"><a href="https://letterboxd.com/fahdikrie/films/diary/" target="_blank">see more!</a></span>
+              </PostersTitle>
+
+                <hr/>
+              </div>
+
+              <div className="letterboxd-cards__cards">
+                {!letterboxd.loading || !letterboxd.items
+                  ? !letterboxd.error
+                      ? letterboxd.items.map((el, i) => {
+
+                        return (
+                          <PosterCard
+                            key={i}
+                            image={el.image}
+                            link={el.link}
+                            title={el.title}
+                            rating={el.rating}
+                            date={el.date}
+                          />
+                        )
+                      })
+                      : <p style={{color: "white"}}>there seem to be errors on letterboxd end</p>
+                  : <h1 style={{color: "white"}}>loading...</h1>}
+              </div>
             </PosterCardsWrapper>
           </PosterCardsContainer>
         </ActivitiesWrapper>
