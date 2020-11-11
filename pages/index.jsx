@@ -3,9 +3,6 @@ import Head from 'next/head'
 import Layout from 'components/Layout'
 import ProjectCard from 'components/ProjectCard'
 import {
-  fetchMainProjects
-} from 'utils/selectors'
-import {
   HomepageWrapper,
   TitleSection,
   Title,
@@ -14,6 +11,9 @@ import {
   ProjectsSection,
   Heading,
 } from 'styles/index.style'
+import {
+  fetchMainProjects
+} from 'utils/selectors'
 
 
 export default function Home() {
