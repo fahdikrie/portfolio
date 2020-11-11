@@ -14,3 +14,10 @@ export const intToStars = (rating) => {
       return "★★★★★"
   }
 }
+
+export const getUncompressedURL = (url) => {
+  let imageUrl = url.split(".")
+  imageUrl.splice(url.split(".").length - 2, 1)
+
+  return imageUrl.join(".")
+}

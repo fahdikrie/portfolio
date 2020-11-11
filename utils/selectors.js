@@ -1,7 +1,10 @@
 import useSWR from "swr"
 import RSSParser from 'rss-parser'
 
-import { intToStars } from 'utils/utils'
+import {
+  intToStars,
+  getUncompressedURL
+} from 'utils/utils'
 import {
   CORS_PROXY,
   GOODREADS_RSS,
@@ -11,11 +14,12 @@ import {
 const fetcher = url => fetch(url).then(res => res.json())
 
 export const fetchMainProjects = path => {
-  if (!path) {
-    throw new Error("Path is required")
-  }
+  if (!path) throw new Error("Path is required")
 
-  const { data: mainProjects, error } = useSWR(path, fetcher)
+  const {
+    data: mainProjects,
+    error
+  } = useSWR(path, fetcher)
 
   return { mainProjects, error }
 }
@@ -44,15 +48,11 @@ export const fetchGoodreads = async () => {
       let html = document.createElement('html');
       html.innerHTML = el.content
 
-      bookData.image = html.getElementsByTagName('img')[0].src
+      bookData.image = getUncompressedURL(html.getElementsByTagName('img')[0].src)
       bookData.link = el.link
       bookData.title = el.title
       bookData.rating = intToStars(el.content.split("<br/>")[5].split(":")[1].trim())
       bookData.date = el.pubDate.split(" ")[1] + " " + el.pubDate.split(" ")[2]
-
-      let image = bookData.image.split(".")
-      image.splice(bookData.image.split(".").length - 2, 1)
-      bookData.image = image.join(".")
 
       data.items.push(bookData)
     }

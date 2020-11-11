@@ -53,7 +53,7 @@ export default function Activities() {
                   return (
                     <div key={i}>
                       <img src={el.image} alt={i} width="150px"/>
-                      <p style={{color: "white"}}>{el.title}</p>
+                      <p style={{color: "white"}}>{el.rating}</p>
                     </div>
                   )
                 })
@@ -69,7 +69,7 @@ export default function Activities() {
                   return (
                     <div key={i}>
                       <img src={el.image} alt={i} width="150px"/>
-                      <p style={{color: "white"}}>{el.title}</p>
+                      <p style={{color: "white"}}>{el.rating}</p>
                     </div>
                   )
                 })
