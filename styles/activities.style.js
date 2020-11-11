@@ -51,6 +51,15 @@ export const PosterCardsWrapper = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
   }
+
+  @media (max-width: 525px) {
+    & .goodreads-cards__header,
+    & .letterboxd-cards__header {
+      & hr {
+        margin: 5px 0;
+      }
+    }
+  }
 `
 
 export const PostersTitle = styled.h6`
