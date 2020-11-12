@@ -46,7 +46,7 @@ export const fetchGoodreads = async () => {
 
       const el = feed.items[i]
 
-      console.log(el.content)
+      console.log(el.title)
 
       let html = document.createElement('html');
       html.innerHTML = el.content
@@ -105,13 +105,38 @@ export const fetchLetterboxd = async () => {
       let html = document.createElement('html');
       html.innerHTML = el.content
 
-      movieData.image = html.getElementsByTagName('img')[0].src
+      movieData.image = (
+        html
+          .getElementsByTagName('img')[0]
+          .src
+      )
       movieData.link = el.link
-      movieData.title = el.title
-      movieData.rating = el.title.split("-")[el.title.split("-").length - 1]
-      movieData.date = el.content.split("<p>").pop().split(" ")[3].substring(0, 3)
-                       + " "
-                       + el.content.split("<p>").pop().split(" ")[4].slice(0, -1)
+      movieData.title = (
+        el
+          .title
+          .split("-")
+          .splice(0, el.title.split("-").length - 1)
+          .join("-")
+      )
+      movieData.rating = (
+        el
+          .title
+          .split("-")[el.title.split("-").length - 1]
+        )
+      movieData.date = (
+        el
+          .content
+          .split("<p>")
+          .pop()
+          .split(" ")[3]
+          .substring(0, 3)
+        + " "
+        + el
+            .content
+            .split("<p>")
+            .pop()
+            .split(" ")[4].slice(0, -1)
+      )
 
       data.items.push(movieData)
     }
