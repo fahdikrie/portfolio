@@ -90,7 +90,9 @@ export const fetchLetterboxd = async () => {
       movieData.link = el.link
       movieData.title = el.title
       movieData.rating = el.title.split("-")[el.title.split("-").length - 1]
-      movieData.date = el.pubDate.split(" ")[2] + " " + el.pubDate.split(" ")[1]
+      movieData.date = el.content.split("<p>").pop().split(" ")[3].substring(0, 3)
+                       + " "
+                       + el.content.split("<p>").pop().split(" ")[4].slice(0, -1)
 
       data.items.push(movieData)
     }
