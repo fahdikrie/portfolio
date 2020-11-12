@@ -3,7 +3,8 @@ import RSSParser from 'rss-parser'
 
 import {
   intToStars,
-  getUncompressedURL
+  getUncompressedURL,
+  convertDateFormat
 } from 'utils/utils'
 import {
   CORS_PROXY,
@@ -45,14 +46,32 @@ export const fetchGoodreads = async () => {
 
       const el = feed.items[i]
 
+      console.log(el.content)
+
       let html = document.createElement('html');
       html.innerHTML = el.content
 
-      bookData.image = getUncompressedURL(html.getElementsByTagName('img')[0].src)
+      bookData.image = getUncompressedURL(
+        html
+          .getElementsByTagName('img')[0]
+          .src
+      )
       bookData.link = el.link
       bookData.title = el.title
-      bookData.rating = intToStars(el.content.split("<br/>")[5].split(":")[1].trim())
-      bookData.date = el.pubDate.split(" ")[2] + " " + el.pubDate.split(" ")[1]
+      bookData.rating = intToStars(
+        el
+          .content
+          .split("<br/>")[5]
+          .split(":")[1]
+          .trim()
+      )
+      bookData.date = convertDateFormat(
+        html
+          .getElementsByTagName('body')[0]
+          .innerHTML
+          .split("read at:")[1]
+          .split("<br>")[0]
+      )
 
       data.items.push(bookData)
     }
