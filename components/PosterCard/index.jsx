@@ -15,8 +15,8 @@ const PosterCard = ({
 }) => {
 
   return (
-    <a href={link} target="_blank">
-      <PosterCardWrapper>
+    <PosterCardWrapper>
+      <a href={link} target="_blank">
         <div
           className="poster-card__image-wrapper"
         >
@@ -30,15 +30,15 @@ const PosterCard = ({
             loading="lazy"
           />
         </div>
+      </a>
 
-        <div
-          className="poster-card__info"
-        >
-          <Info>{rating}</Info>
-          <Info>{date}</Info>
-        </div>
-      </PosterCardWrapper>
-    </a>
+      <div
+        className="poster-card__info"
+      >
+        <Info>{rating}</Info>
+        <Info>{date}</Info>
+      </div>
+    </PosterCardWrapper>
   )
 }
 
