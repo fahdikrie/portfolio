@@ -30,23 +30,29 @@ export default function Activities() {
   })
 
   useEffect(() => {
+    let mounted = true
+
     async function fetchAsync() {
       const goodreadsData = await fetchGoodreads()
       const letterboxdData = await fetchLetterboxd()
 
-      setGoodreads({
-        items: goodreadsData.items,
-        error: goodreadsData.error,
-        loading: false,
-      })
-      setLetterboxd({
-        items: letterboxdData.items,
-        error: letterboxdData.error,
-        loading: false,
-      })
+      if (mounted) {
+        setGoodreads({
+          items: goodreadsData.items,
+          error: goodreadsData.error,
+          loading: false,
+        })
+        setLetterboxd({
+          items: letterboxdData.items,
+          error: letterboxdData.error,
+          loading: false,
+        })
+      }
     }
 
     fetchAsync()
+
+    return () => mounted = false
   }, [])
 
   return (
@@ -132,7 +138,7 @@ export default function Activities() {
             >
               <div className="letterboxd-cards__header">
                 <PostersTitle>
-                  <span>badi's recent movies<span className="purple">*</span></span>
+                  <span>badi's recent watches<span className="purple">*</span></span>
 
                   <span className="link"><a href="https://letterboxd.com/fahdikrie/films/diary/" target="_blank">see more</a></span>
                 </PostersTitle>

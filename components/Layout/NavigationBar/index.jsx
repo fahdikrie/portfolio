@@ -38,7 +38,10 @@ const NavigationBar = (props) => {
 
         {(props.currentPage !== "activities")
           ? <NavItem className="nav-items__nav-item">
-              <Link href="/activities">
+              <Link
+                href="/activities"
+                shallow={true}
+              >
                 activities
               </Link>
             </NavItem>

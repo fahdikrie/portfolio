@@ -45,7 +45,7 @@ export default function Home() {
               <br/><br/>
 
               All the funsies aside 🎭 Fahdii is a software engineer in the making 🧑‍💻
-              Having great interest in full-stack web development technologies 🌐 He looks forward to be able
+              Having great interest in full-stack web development 🌐 He looks forward to be able
               to do big things 💯 and partake in this vast & rapid growing world of tech-industry 🚀
             </About>
           </AboutSection>

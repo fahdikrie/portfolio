@@ -46,8 +46,6 @@ export const fetchGoodreads = async () => {
 
       const el = feed.items[i]
 
-      console.log(el.title)
-
       let html = document.createElement('html');
       html.innerHTML = el.content
 
@@ -122,7 +120,7 @@ export const fetchLetterboxd = async () => {
         el
           .title
           .split("-")[el.title.split("-").length - 1]
-        )
+      )
       movieData.date = (
         el
           .content
