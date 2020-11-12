@@ -65,7 +65,7 @@ export default function Activities() {
                 <PostersTitle>
                   <span>badi's recent reads<span className="purple">*</span></span>
 
-                  <span className="link"><a href="https://www.goodreads.com/review/list/100267901?shelf=read" target="_blank">see more<span className="purple">!</span></a></span>
+                  <span className="link"><a href="https://www.goodreads.com/review/list/100267901?shelf=read" target="_blank">see more</a></span>
                 </PostersTitle>
 
                 <hr/>
@@ -134,7 +134,7 @@ export default function Activities() {
                 <PostersTitle>
                   <span>badi's recent movies<span className="purple">*</span></span>
 
-                  <span className="link"><a href="https://letterboxd.com/fahdikrie/films/diary/" target="_blank">see more<span className="purple">!</span></a></span>
+                  <span className="link"><a href="https://letterboxd.com/fahdikrie/films/diary/" target="_blank">see more</a></span>
                 </PostersTitle>
 
                 <hr/>
