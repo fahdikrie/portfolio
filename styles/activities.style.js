@@ -71,7 +71,7 @@ export const PostersTitle = styled.h6`
   color: white;
 
   font-size: calc(0.5rem + 0.5vw);
-  font-family: 'San Francisco Pro Light';
+  font-family: 'San Francisco Pro Regular';
   letter-spacing: 2px;
 
   display: flex;
