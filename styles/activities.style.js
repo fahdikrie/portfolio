@@ -36,12 +36,8 @@ export const PosterCardsWrapper = styled.div`
     margin: 0 auto;
 
     & hr {
-      background-color: white;
-      height: 0.1px;
-      border: 0.1px solid white;
+      border: 0.1px solid rgb(191, 191, 191);
       border-bottom: 0px;
-
-      filter: opacity(75%);
     }
   }
 
@@ -73,7 +69,6 @@ export const PosterCardsWrapper = styled.div`
 export const PostersTitle = styled.h6`
   margin: 0;
   color: white;
-  filter: opacity(75%);
 
   font-size: calc(0.5rem + 0.5vw);
   font-family: 'San Francisco Pro Light';
@@ -111,7 +106,7 @@ export const PostersLoading = styled.div`
   align-items: center;
   text-align: center;
 
-  filter: opacity(75%);
+  color: rgb(191, 191, 191);
 
   @media (max-width: 768px) {
     height: calc(23.5vw * 3 / 2);
@@ -133,7 +128,7 @@ export const PostersError = styled.div`
   align-items: center;
   text-align: center;
 
-  filter: opacity(75%);
+  color: rgb(191, 191, 191);
 
   & h5 {
     width: 100%;
