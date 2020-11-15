@@ -30,7 +30,7 @@ export const PosterCardWrapper = styled.div`
 `
 
 export const Info = styled.p`
-  filter: opacity(70%);
+  color: rgb(191, 191, 191);
   margin: 5px 0 0;
 
   font-family: 'San Francisco Pro Regular';
