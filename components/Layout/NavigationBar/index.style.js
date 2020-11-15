@@ -16,23 +16,21 @@ export const NavSocialsWrapper = styled.div`
   & img {
     width: 30px;
     cursor: pointer;
-    /* filter: opacity(0.75); */
+    filter: opacity(0.75);
 
-    /* backface-visibility: hidden;
+    backface-visibility: hidden;
     transform: translateZ(0);
-    -webkit-font-smoothing: subpixel-antialiased; */
+    -webkit-font-smoothing: subpixel-antialiased;
 
     &:hover {
-      /* filter: opacity(1); */
+      filter: opacity(1);
 
-      /* backface-visibility: hidden;
+      backface-visibility: hidden;
       -webkit-font-smoothing: subpixel-antialiased;
       transform: translateZ(0);
 
       transform: scale(1.1);
-      -webkit-transform: scale(1.1); */
-
-      /* zoom: 1.05; */
+      -webkit-transform: scale(1.1);
     }
 
     &.nav-socials__nav-social.github {
