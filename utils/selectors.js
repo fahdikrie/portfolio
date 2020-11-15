@@ -120,20 +120,29 @@ export const fetchLetterboxd = async () => {
         el
           .title
           .split("-")[el.title.split("-").length - 1]
+          .split(" ")[1]
       )
       movieData.date = (
-        el
-          .content
-          .split("<p>")
-          .pop()
-          .split(" ")[3]
-          .substring(0, 3)
-        + " "
-        + el
-            .content
-            .split("<p>")
-            .pop()
-            .split(" ")[4].slice(0, -1)
+        el.contentSnippet.includes("Watched on ")
+          ? el
+              .content
+              .split("<p>")
+              .pop()
+              .split(" ")[3]
+              .substring(0, 3)
+            + " "
+            + el
+                .content
+                .split("<p>")
+                .pop()
+                .split(" ")[4].slice(0, -1)
+          : el
+              .pubDate
+              .split(" ")[2]
+            + " "
+            + el
+                .pubDate
+                .split(" ")[1]
       )
 
       data.items.push(movieData)
