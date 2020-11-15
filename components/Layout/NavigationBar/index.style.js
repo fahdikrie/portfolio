@@ -16,6 +16,9 @@ export const NavSocialsWrapper = styled.div`
   & img {
     width: 30px;
     filter: opacity(0.75);
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
     cursor: pointer;
 
     &:hover {
@@ -39,11 +42,11 @@ export const NavItemsWrapper = styled.ul`
   & li.nav-items__nav-item {
     margin-left: 50px;
     letter-spacing: 1px;
-    filter: opacity(0.75);
+    color: rgb(191, 191, 191);
     cursor: pointer;
 
     &:hover {
-      filter: opacity(1);
+      color: white;
       transform: scale(1.1);
       -webkit-transform: scale(1.1);
     }
