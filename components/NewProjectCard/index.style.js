@@ -25,7 +25,7 @@ export const Overlay = styled.div`
   padding: 5%;
 
   overflow: hidden;
-  border-radius: 0.5vw;
+  border-radius: 2%;
 
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(0px);
