@@ -30,10 +30,10 @@ export const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(0px);
 
-  -webkit-transition: background-color 1s ease-in-out, backdrop-filter 0.5s linear;
-  -moz-transition: background-color 1s ease-in-out, backdrop-filter 0.5s linear;
-  -o-transition: background-color 1s ease-in-out, backdrop-filter 0.5s linear;
-  transition: background-color 1s ease-in-out, backdrop-filter 0.5s linear;
+  -webkit-transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
+  -moz-transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
+  -o-transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
+  transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
 
   &:hover {
     background-color: ${props => props.overlay};
