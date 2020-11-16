@@ -69,6 +69,7 @@ export default function Home() {
                             name={el.name}
                             time={el.time}
                             desc={el.desc}
+                            descpoints={el.descpoints}
                             stacks={el.stacks}
                           />)}
                         </div>

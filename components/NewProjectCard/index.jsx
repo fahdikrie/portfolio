@@ -7,6 +7,7 @@ import {
   Title,
   Time,
   Desc,
+  Points,
   Stacks
 } from './index.style'
 
@@ -15,7 +16,8 @@ const ProjectCard = ({
   name,
   time,
   desc,
-  stacks
+  stacks,
+  descpoints
 }) => {
   console.log(time)
 
@@ -36,7 +38,9 @@ const ProjectCard = ({
           <Title>{name}</Title>
           <Time>{time}</Time>
 
-          {/* <Desc dangerouslySetInnerHTML={{__html: desc}} /> */}
+          <div className="overlay__hidden">
+            {/* <Stacks>{stacks.join(" ⋅ ")}</Stacks> */}
+          </div>
         </Overlay>
       </ProjectCardWrapper>
     </>

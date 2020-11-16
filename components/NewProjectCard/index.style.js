@@ -4,6 +4,7 @@ export const ProjectCardWrapper = styled.div`
   width: 100%;
   position: relative;
   color: white;
+  overflow: hidden;
 
   & .project-card__image {
     display: block;
@@ -22,13 +23,30 @@ export const Overlay = styled.div`
   height: calc(100% - 10%);
   width: calc(100.1% - 10%);
   padding: 5%;
+
+  overflow: hidden;
   border-radius: 10px;
 
-  transition: backdrop-filter 0.2s ease-in;
+  background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(0px);
 
+  -webkit-transition: background-color 1s ease-in-out, backdrop-filter 0.5s linear;
+  -moz-transition: background-color 1s ease-in-out, backdrop-filter 0.5s linear;
+  -o-transition: background-color 1s ease-in-out, backdrop-filter 0.5s linear;
+  transition: background-color 1s ease-in-out, backdrop-filter 0.5s linear;
+
   &:hover {
-    backdrop-filter: blur(30px);
+    background-color: rgba(30, 0, 70, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  & .overlay__hidden {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+
+  &:hover .overlay__hidden {
+    opacity: 1;
   }
 `
 
@@ -90,9 +108,61 @@ export const Time = styled.h5`
 `
 
 export const Desc = styled.p`
+  width: 95%;
+  margin: 20px 0 5px;
+  line-height: 2;
+  letter-spacing: 0.5px;
 
+  font-family: 'San Francisco Pro Light';
+  font-size: calc(1rem + 0.25vw);
+
+  @media (max-width: 1200px) {
+    font-size: calc(0.9rem + 0.15vw);
+  }
+
+  @media (max-width: 900px) {
+    font-size: calc(0.75rem + 0.1vw);
+  }
+
+  @media (max-width: 768px) {
+    font-size: calc(1rem + 0.5vw);
+  }
+
+  @media (max-width: 525px) {
+    font-size: calc(0.9rem + 0.35vw);
+  }
+
+  @media (max-width: 380px) {
+    font-size: calc(0.5rem + 0.3vw);
+  }
 `
 
 export const Stacks = styled.p`
+  width: 95%;
+  margin: 10px 0;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
 
+  font-family: 'San Francisco Pro Light';
+  font-size: calc(1rem + 0.25vw);
+
+  @media (max-width: 1200px) {
+    font-size: calc(0.9rem + 0.15vw);
+  }
+
+  @media (max-width: 900px) {
+    font-size: calc(0.75rem + 0.1vw);
+  }
+
+  @media (max-width: 768px) {
+    font-size: calc(1rem + 0.5vw);
+  }
+
+  @media (max-width: 525px) {
+    font-size: calc(0.9rem + 0.25vw);
+  }
+
+  @media (max-width: 380px) {
+    font-size: calc(0.5rem + 0.2vw);
+  }
 `
