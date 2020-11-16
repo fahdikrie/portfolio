@@ -45,7 +45,7 @@ const Layout = (props) => {
   return (
     <>
       <HeadTags/>
-      {props.currentPage === "index" ? <VantaLayout/> : null}
+      {/* {props.currentPage === "index" ? <VantaLayout/> : null} */}
       <NavigationBar currentPage={props.currentPage}/>
 
       {props.children}

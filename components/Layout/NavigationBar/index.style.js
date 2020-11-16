@@ -16,14 +16,14 @@ export const NavSocialsWrapper = styled.div`
   & img {
     width: 30px;
     cursor: pointer;
-    filter: opacity(0.75);
+    opacity: 75%;
 
     backface-visibility: hidden;
     transform: translateZ(0);
     -webkit-font-smoothing: subpixel-antialiased;
 
     &:hover {
-      filter: opacity(1);
+      opacity: 100%;
 
       backface-visibility: hidden;
       -webkit-font-smoothing: subpixel-antialiased;

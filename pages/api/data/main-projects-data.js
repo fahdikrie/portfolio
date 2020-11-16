@@ -1,5 +1,7 @@
-import SiputPNG from 'public/assets/projects/siput.png';
-import PmbPNG from 'public/assets/projects/pmb.png';
+// import SiputPNG from 'public/assets/projects/siput.png';
+// import PmbPNG from 'public/assets/projects/pmb.png';
+import SiputPNG from 'public/assets/projects/siput1.png';
+import PmbPNG from 'public/assets/projects/pmb1.png';
 
 const strongify = (string) => {
   return(
@@ -13,7 +15,7 @@ export const Projects = [
   {
     id: 1,
     image: SiputPNG,
-    name: "Sistem Informasi Publikasi Terpadu (SIPUT) — FUKI",
+    name: "Sistem Informasi Publikasi Terpadu",
     time: "Feb 2020 – Present",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
@@ -26,7 +28,7 @@ export const Projects = [
   {
     id: 2,
     image: PmbPNG,
-    name: "Website Pembinaan Mahasiswa Baru (Web PMB) — Ristek",
+    name: "Website Pembinaan Mahasiswa Baru",
     time: "July 2020 – Present",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,

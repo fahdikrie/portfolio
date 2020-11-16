@@ -49,7 +49,7 @@ export const About = styled.h3`
 `
 
 export const ProjectsSection = styled.section`
-  width: calc(85% - 8%);
+  width: calc(100% - 16%);
   padding-left: 8%;
   margin-top: 20rem;
 
@@ -85,9 +85,14 @@ export const ProjectsSection = styled.section`
 
 export const Heading = styled.h2`
   margin: 0 0 10px 0;
+  text-align: center;
 
   font-family: 'San Francisco Pro Black';
   font-size: calc(1rem + 2.5vw);
+
+  @media (max-width: 768px) {
+    text-align: left;
+  }
 
   @media (max-width: 525px) {
     font-size: calc(1rem + 7.5vw);
