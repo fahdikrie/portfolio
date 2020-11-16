@@ -25,7 +25,7 @@ export const Overlay = styled.div`
   padding: 5%;
 
   overflow: hidden;
-  border-radius: 7.5px;
+  border-radius: 0.5vw;
 
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(0px);
@@ -36,7 +36,7 @@ export const Overlay = styled.div`
   transition: background-color 1s ease-in-out, backdrop-filter 0.5s linear;
 
   &:hover {
-    background-color: rgba(30, 0, 70, 0.8);
+    background-color: ${props => props.overlay};
     backdrop-filter: blur(10px);
   }
 

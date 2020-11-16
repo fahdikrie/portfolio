@@ -29,7 +29,8 @@ export const Projects = [
       "html",
       "css",
       "jquery"
-    ]
+    ],
+    overlay:"rgba(41, 110, 115, 0.8)"
   },
   {
     id: 2,
@@ -46,6 +47,7 @@ export const Projects = [
       "react-hooks",
       "redux",
       "styled-components",
-    ]
+    ],
+    overlay:"rgba(11, 20, 130, 0.8)"
   },
 ]

@@ -17,7 +17,8 @@ const ProjectCard = ({
   time,
   desc,
   stacks,
-  descpoints
+  descpoints,
+  overlay
 }) => {
   console.log(time)
 
@@ -34,7 +35,9 @@ const ProjectCard = ({
           loading="eager"
         />
 
-        <Overlay>
+        <Overlay
+          overlay={overlay}
+        >
           <Title>{name}</Title>
           <Time>{time}</Time>
 

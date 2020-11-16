@@ -71,6 +71,7 @@ export default function Home() {
                             desc={el.desc}
                             descpoints={el.descpoints}
                             stacks={el.stacks}
+                            overlay={el.overlay}
                           />)}
                         </div>
                       ))
