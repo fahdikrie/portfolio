@@ -17,5 +17,8 @@
     "styled-components": "^5.2.0",
     "swr": "^0.3.8",
     "webpack": "^5.4.0"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.8.0"
   }
 }
