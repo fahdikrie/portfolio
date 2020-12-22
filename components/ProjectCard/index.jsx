@@ -1,48 +1,53 @@
-// import React from 'react'
-// import Image from 'next/image'
+import React, { useEffect, useRef } from 'react'
+import Image from 'next/image'
 
-// import {
-//   ProjectCardWrapper,
-//   // Image,
-//   Title,
-//   Time,
-//   Desc,
-//   Stacks
-// } from './index.style'
+import {
+  ProjectCardWrapper,
+  Overlay,
+  Title,
+  Time,
+  Desc,
+  Points,
+  Stacks
+} from './index.style'
 
-// const ProjectCard = ({
-//   image,
-//   name,
-//   time,
-//   desc,
-//   stacks
-// }) => {
-//   return (
-//     <ProjectCardWrapper className="project-card">
-//       <div
-//         className="project-card__image-wrapper"
-//       >
-//         <Image
-//           className="project-card__image"
-//           src={image}
-//           alt={name}
-//           layout="responsive"
-//           width="2"
-//           height="1"
-//           loading="lazy"
-//         />
-//       </div>
+const ProjectCard = ({
+  image,
+  name,
+  time,
+  desc,
+  stacks,
+  descpoints,
+  overlay
+}) => {
+  console.log(time)
 
-//       <div
-//         className="project-card__info"
-//       >
-//         <Title>{name}</Title>
-//         <Time>{time}</Time>
-//         <Desc dangerouslySetInnerHTML={{__html: desc}} />
-//         <Stacks>{stacks.join(" ⋅ ")}</Stacks>
-//       </div>
-//     </ProjectCardWrapper>
-//   )
-// }
+  return (
+    <>
+      <ProjectCardWrapper>
+        <Image
+          className="project-card__image"
+          src={image}
+          alt={name}
+          layout="responsive"
+          width="1"
+          height="1"
+          loading="eager"
+        />
 
-// export default ProjectCard
+        <Overlay
+          overlay={overlay}
+        >
+          <Title>{name}</Title>
+          <Time>{time}</Time>
+
+          <div className="overlay__hidden">
+            {/* <Stacks>{stacks.join(" ⋅ ")}</Stacks> */}
+          </div>
+        </Overlay>
+      </ProjectCardWrapper>
+    </>
+  )
+}
+
+export default ProjectCard

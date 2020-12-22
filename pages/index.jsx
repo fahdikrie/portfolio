@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Layout from 'components/Layout'
 // import ProjectCard from 'components/ProjectCard'
-import NewProjectCard from 'components/NewProjectCard'
+import ProjectCard from 'components/ProjectCard'
 import {
   HomepageWrapper,
   TitleSection,
@@ -63,7 +63,7 @@ export default function Home() {
                           key={el.id}
                         >
                           {(console.log(el.image),
-                          <NewProjectCard
+                          <ProjectCard
                             key={el.id}
                             image={el.image}
                             name={el.name}

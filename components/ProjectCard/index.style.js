@@ -2,113 +2,167 @@ import styled from 'styled-components'
 
 export const ProjectCardWrapper = styled.div`
   width: 100%;
-  border-radius: 10px;
+  position: relative;
+  color: white;
+  overflow: hidden;
 
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
-
-  & .project-card__image-wrapper {
-    width: calc(100% - 6px);
-    padding: 3px;
-
-    & .project-card__image {
-      width: calc(100% - 6px);
-
-      border-radius: 10px;
-      border: 3px solid transparent;
-
-      @media (max-width: 525px) {
-        border-radius: 3px;
-      }
-    }
-  }
-
-
-  & .project-card__info {
-    width: calc(100% - 20px);
-    padding: 10px 10px;
-  }
-
-  @media (max-width: 525px) {
-    border-radius: 3px;
-
-    & .project-card__info {
-      width: calc(100% - 6px);
-      padding: 5px 3px;
-    }
+  & .project-card__image {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 `
 
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: calc(100% - 10%);
+  width: calc(100.1% - 10%);
+  padding: 5%;
+
+  overflow: hidden;
+  border-radius: 2%;
+
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+
+  -webkit-transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
+  -moz-transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
+  -o-transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
+  transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
+
+  &:hover {
+    background-color: ${props => props.overlay};
+    backdrop-filter: blur(10px);
+  }
+
+  & .overlay__hidden {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+
+  &:hover .overlay__hidden {
+    opacity: 1;
+  }
+`
+
+
 export const Title = styled.h3`
-  margin: 0;
-  letter-spacing: 1.5px;
+  margin: 10px 0;
 
-  font-size: calc(1rem + 1vw);
-  font-family: 'San Francisco Pro Bold';
-  text-align: center;
+  font-family: 'San Francisco Pro Black';
+  font-size: calc(1rem + 2vw);
 
-  @media (min-width: 525px) and (max-width: 768px) {
-    font-size: calc(1.2rem + 1.1vw);
+  @media (max-width: 1200px) {
+    font-size: calc(1rem + 1.35vw);
+  }
+
+  @media (max-width: 900px) {
+    font-size: calc(1rem + 1vw);
+  }
+
+  @media (max-width: 768px) {
+    font-size: calc(1rem + 4vw);
   }
 
   @media (max-width: 525px) {
-    letter-spacing: 1px;
-    font-size: calc(1rem + 0.85vw);
+    margin: 5px 0;
+    font-size: calc(1rem + 3vw);
+  }
+
+  @media (max-width: 380px) {
+    font-size: calc(1rem + 2vw);
   }
 `
 
 export const Time = styled.h5`
-  margin: 10px 0px;
+  margin: 5px 0;
 
-  font-size: calc(0.5rem + 0.5vw);
   font-family: 'San Francisco Pro Bold';
+  font-size: calc(1rem + 0.25vw);
   font-style: italic;
-  text-align: center;
 
-  color: #BB19BB;
+  @media (max-width: 1200px) {
+    font-size: calc(0.9rem + 0.15vw);
+  }
 
-  @media (min-width: 525px) and (max-width: 768px) {
-    font-size: calc(0.75rem + 0.5vw);
+  @media (max-width: 900px) {
+    font-size: calc(0.75rem + 0.1vw);
+  }
+
+  @media (max-width: 768px) {
+    font-size: calc(1rem + 0.5vw);
   }
 
   @media (max-width: 525px) {
-    letter-spacing: 0.5px;
-    font-size: calc(0.65rem + 0.5vw);
+    font-size: calc(0.9rem + 0.15vw);
+  }
+
+  @media (max-width: 380px) {
+    font-size: calc(0.5rem + 0.1vw);
   }
 `
+
 export const Desc = styled.p`
-  margin: 10px 0px;
-  line-height: 1.5;
-  letter-spacing: 1px;
+  width: 95%;
+  margin: 20px 0 5px;
+  line-height: 2;
+  letter-spacing: 0.5px;
 
-  font-size: calc(0.5rem + 0.5vw);
   font-family: 'San Francisco Pro Light';
-  text-align: justify;
-  text-justify: inter-cluster;
+  font-size: calc(1rem + 0.25vw);
 
-  @media (min-width: 525px) and (max-width: 768px) {
-    font-size: calc(0.75rem + 0.5vw);
+  @media (max-width: 1200px) {
+    font-size: calc(0.9rem + 0.15vw);
+  }
+
+  @media (max-width: 900px) {
+    font-size: calc(0.75rem + 0.1vw);
+  }
+
+  @media (max-width: 768px) {
+    font-size: calc(1rem + 0.5vw);
   }
 
   @media (max-width: 525px) {
-    letter-spacing: 0.5px;
-    font-size: calc(0.65rem + 0.5vw);
+    font-size: calc(0.9rem + 0.35vw);
+  }
+
+  @media (max-width: 380px) {
+    font-size: calc(0.5rem + 0.3vw);
   }
 `
 
 export const Stacks = styled.p`
-  margin: 0;
+  width: 95%;
+  margin: 10px 0;
   line-height: 1.5;
+  letter-spacing: 0.5px;
 
-  font-size: calc(0.5rem + 0.5vw);
-  font-family: 'San Francisco Pro Regular';
+  font-family: 'San Francisco Pro Light';
+  font-size: calc(1rem + 0.25vw);
 
-  @media (min-width: 525px) and (max-width: 768px) {
-    font-size: calc(0.75rem + 0.5vw);
+  @media (max-width: 1200px) {
+    font-size: calc(0.9rem + 0.15vw);
+  }
+
+  @media (max-width: 900px) {
+    font-size: calc(0.75rem + 0.1vw);
+  }
+
+  @media (max-width: 768px) {
+    font-size: calc(1rem + 0.5vw);
   }
 
   @media (max-width: 525px) {
-    letter-spacing: 0.5px;
-    font-size: calc(0.65rem + 0.5vw);
+    font-size: calc(0.9rem + 0.25vw);
+  }
+
+  @media (max-width: 380px) {
+    font-size: calc(0.5rem + 0.2vw);
   }
 `
