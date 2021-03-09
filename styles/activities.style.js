@@ -34,11 +34,6 @@ export const PosterCardsWrapper = styled.div`
   & .letterboxd-cards__header {
     width: calc(100% - 4px);
     margin: 0 auto;
-
-    & hr {
-      border: 0.1px solid rgb(191, 191, 191);
-      border-bottom: 0px;
-    }
   }
 
   & .goodreads-cards__cards,
@@ -52,13 +47,6 @@ export const PosterCardsWrapper = styled.div`
   }
 
   @media (max-width: 525px) {
-    & .goodreads-cards__header,
-    & .letterboxd-cards__header {
-      & hr {
-        margin: 5px 0;
-      }
-    }
-
     & .goodreads-cards__cards,
     & .letterboxd-cards__cards {
       grid-gap: 3px;
@@ -67,7 +55,7 @@ export const PosterCardsWrapper = styled.div`
 `
 
 export const PostersTitle = styled.h6`
-  margin: 0;
+  margin: 0 0 0.75rem;
   color: white;
 
   font-size: calc(0.5rem + 0.5vw);
@@ -92,6 +80,7 @@ export const PostersTitle = styled.h6`
 
   @media (max-width: 525px) {
     letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
   }
 `
 

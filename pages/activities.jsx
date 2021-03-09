@@ -73,8 +73,6 @@ export default function Activities() {
 
                   <span className="link"><a href="https://www.goodreads.com/review/list/100267901?shelf=read" target="_blank">see more</a></span>
                 </PostersTitle>
-
-                <hr/>
               </div>
 
               <div className="goodreads-cards__cards">
@@ -142,8 +140,6 @@ export default function Activities() {
 
                   <span className="link"><a href="https://letterboxd.com/fahdikrie/films/diary/" target="_blank">see more</a></span>
                 </PostersTitle>
-
-                <hr/>
               </div>
 
               <div className="letterboxd-cards__cards">
