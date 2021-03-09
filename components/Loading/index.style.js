@@ -9,5 +9,5 @@ export const LoadingWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  filter: opacity(75%);
+  filter: opacity(100%);
 `
