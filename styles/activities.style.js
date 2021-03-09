@@ -98,7 +98,7 @@ export const PostersLoading = styled.div`
   color: rgb(191, 191, 191);
 
   @media (max-width: 768px) {
-    height: calc(23.5vw * 3 / 2);
+    height: calc(23.5vw * 3 / 1.975);
     letter-spacing: 1px;
   }
 
