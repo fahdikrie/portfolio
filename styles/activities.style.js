@@ -86,7 +86,7 @@ export const PostersTitle = styled.h6`
 
 export const PostersLoading = styled.div`
   width: calc(100% - 4px);
-  height: calc(10vw * 3 / 2);
+  height: calc(10vw * 3 / 1.925);
   margin: 0 auto;
 
   display: flex;
