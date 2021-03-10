@@ -1,7 +1,5 @@
-// import SiputPNG from 'public/assets/projects/siput.png';
-// import PmbPNG from 'public/assets/projects/pmb.png';
-import SiputPNG from 'public/assets/projects/siput1.png';
-import PmbPNG from 'public/assets/projects/pmb1.png';
+import SiputPNG from 'public/assets/projects/siput.png';
+import PmbPNG from 'public/assets/projects/pmb.png';
 
 const strongify = (string) => {
   return(

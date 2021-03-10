@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 
-import GithubIcon from 'public/assets/github1.svg'
-import LinkedInIcon from 'public/assets/linkedin1.svg'
+import GithubIcon from 'public/assets/github.svg'
+import LinkedInIcon from 'public/assets/linkedin.svg'
 
 import {
   NavWrapper,

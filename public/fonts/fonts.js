@@ -10,14 +10,6 @@ export const GlobalFonts = createGlobalStyle`
     font-display: block;
   }
 
-  /* @font-face {
-    font-family: 'San Francisco Pro Light';
-    font-style: italic;
-    font-weight: 400;
-    src: url('./fonts/San\ Francisco\ Pro/SF-Pro-Display-LightItalic.ttf');
-    font-display: block;
-  } */
-
   @font-face {
     font-family: 'San Francisco Pro Regular';
     font-style: normal;
@@ -25,14 +17,6 @@ export const GlobalFonts = createGlobalStyle`
     src: url('./fonts/San\ Francisco\ Pro/SF-Pro-Display-Regular.ttf');
     font-display: block;
   }
-
-  /* @font-face {
-    font-family: 'San Francisco Pro Regular';
-    font-style: italic;
-    font-weight: 500;
-    src: url('./fonts/San\ Francisco\ Pro/SF-Pro-Display-RegularItalic.ttf');
-    font-display: block;
-  } */
 
   @font-face {
     font-family: 'San Francisco Pro Bold';
