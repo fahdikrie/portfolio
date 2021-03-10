@@ -52,7 +52,6 @@ export default function Activities() {
     }
 
     fetchAsync()
-
     return () => mounted = false
   }, [])
 
@@ -145,6 +144,8 @@ export default function Activities() {
               </div>
             </PosterCardsWrapper>
           </PosterCardsContainer>
+
+          
         </ActivitiesWrapper>
       </Layout>
     </>
