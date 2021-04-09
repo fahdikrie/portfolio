@@ -4,6 +4,9 @@ import { Head } from 'next/head'
 const Fonts = () => (
   <Html>
     <Head>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+      />
       <link
         rel="preconnect"
         href="https://fonts.gstatic.com"
