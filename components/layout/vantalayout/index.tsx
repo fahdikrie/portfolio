@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 
-import Vanta from './components/Vanta/index';
+import Vanta from './components/vanta';
 
 const VantaLayout = () => {
   // Declare a new state variable with the "useState" Hook

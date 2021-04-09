@@ -31,6 +31,7 @@ module.exports = {
       '20': '20px',
       '16': '16px',
       '8': '8px',
+      '0': '0px',
     },
     extend: {
       fontFamily: {
