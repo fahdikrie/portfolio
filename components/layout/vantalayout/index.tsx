@@ -5,13 +5,13 @@ import Vanta from './components/vanta';
 
 const VantaLayout = () => {
   // Declare a new state variable with the "useState" Hook
-  const [width, setWidth] = useState(window.innerWidth)
-  const breakpoint = 525;
+  const [width, setWidth] = useState<number | null>(window.innerWidth)
+  const breakpoint: number = 525;
 
   useEffect(() => {
-    /* Set a variable "mounted" as an indicator 
+    /* Set a variable "mounted" as an indicator
        when a component is just mounted */
-    let mounted = true
+    let mounted: boolean = true
 
     /* Inside of a "useEffect" hook add an event listener that updates
        the "width" state variable when the window size changes */
@@ -25,8 +25,8 @@ const VantaLayout = () => {
     }
 
     /* passing an empty array as the dependencies of the effect will cause this
-       effect to only run when the component mounts, and not each time it updates.
-       We only want the listener to be added once */
+        effect to only run when the component mounts, and not each time it updates.
+        We only want the listener to be added once */
   }, []);
 
   return width > breakpoint
@@ -38,6 +38,6 @@ const VantaLayout = () => {
         />
       </>
     : null
-  }
+}
 
-  export default VantaLayout;
+export default VantaLayout

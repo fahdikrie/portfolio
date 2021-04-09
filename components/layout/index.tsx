@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
 import NavigationBar from 'components/layout/navigationbar'
@@ -9,7 +8,7 @@ const VantaLayout = dynamic(
   { ssr: false }
 )
 
-type LayoutProps = {
+interface LayoutProps {
   currentPage: string
   children: React.ReactNode
 }
