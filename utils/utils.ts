@@ -1,28 +1,11 @@
-export const intToStars = (rating) => {
-  switch (Number(rating)) {
-    case 5:
-      return "★★★★★"
-    case 4:
-      return "★★★★"
-    case 3:
-      return "★★★"
-    case 2:
-      return "★★"
-    case 1:
-      return "★"
-    default:
-      return "★★★★★"
-  }
-}
-
-export const getUncompressedURL = (url) => {
+export const getUncompressedURL = (url: string): string => {
   let imageUrl = url.split(".")
   imageUrl.splice(url.split(".").length - 2, 1)
 
   return imageUrl.join(".")
 }
 
-export const convertDateFormat = (date) => {
+export const convertDateFormat = (date: string): string => {
   const month = date.split("/")[1]
   const day = date.split("/")[2]
 
@@ -53,5 +36,22 @@ export const convertDateFormat = (date) => {
       return "Dec " + day
     default:
       return "Jan " + day
+  }
+}
+
+export const convertIntToStars = (rating: string): string => {
+  switch (Number(rating)) {
+    case 5:
+      return "★★★★★"
+    case 4:
+      return "★★★★"
+    case 3:
+      return "★★★"
+    case 2:
+      return "★★"
+    case 1:
+      return "★"
+    default:
+      return "★★★★★"
   }
 }

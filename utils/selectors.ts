@@ -1,9 +1,9 @@
-import useSWR from "swr"
+import useSWR from 'swr'
 import RSSParser from 'rss-parser'
 
 import {
-  intToStars,
   getUncompressedURL,
+  convertIntToStars,
   convertDateFormat
 } from 'utils/utils'
 import {
@@ -12,9 +12,14 @@ import {
   LETTERBOXD_RSS,
 } from 'utils/constants'
 
-const fetcher = url => fetch(url).then(res => res.json())
+interface Data {
+  items: Object[]
+  error: boolean
+}
 
-export const fetchMainProjects = path => {
+const fetcher = (url: string): Promise<Object> => fetch(url).then(res => res.json())
+
+export const fetchMainProjects = (path: string) => {
   if (!path) throw new Error("Path is required")
 
   const {
@@ -25,9 +30,9 @@ export const fetchMainProjects = path => {
   return { mainProjects, error }
 }
 
-export const fetchGoodreads = async () => {
+export const fetchGoodreads = async (): Promise<Object> => {
   let parser = new RSSParser()
-  let data = {
+  let data: Data = {
     items: [],
     error: false
   }
@@ -56,7 +61,7 @@ export const fetchGoodreads = async () => {
       )
       bookData.link = el.link
       bookData.title = el.title
-      bookData.rating = intToStars(
+      bookData.rating = convertIntToStars(
         el
           .content
           .split("<br/>")[5]
@@ -79,9 +84,9 @@ export const fetchGoodreads = async () => {
   return data
 }
 
-export const fetchLetterboxd = async () => {
+export const fetchLetterboxd = async (): Promise<Object> => {
   let parser = new RSSParser()
-  let data = {
+  let data: Data = {
     items: [],
     error: false
   }
