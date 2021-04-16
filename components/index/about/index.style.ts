@@ -1,5 +1,5 @@
-import styled from 'styled-components'
+import tw, { styled } from 'twin.macro'
 
-export const About = styled.div.attrs({
-  className: ``
-})``
+export const About = styled.div`
+
+`

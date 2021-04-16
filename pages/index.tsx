@@ -6,6 +6,8 @@ const Home = (): JSX.Element => {
   const { mainProjects } = fetchMainProjects('/api/main-projects')
 
   return (
-
+    <></>
   )
 }
+
+export default Home

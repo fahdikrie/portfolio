@@ -1,8 +1,7 @@
-import { Html } from 'next/document'
-import { Head } from 'next/head'
+import Head from 'next/head'
 
 const Fonts = () => (
-  <Html>
+  <>
     <Head>
       <script
         src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
@@ -30,7 +29,7 @@ const Fonts = () => (
         />
       </noscript>
     </Head>
-  </Html>
+  </>
 )
 
 export default Fonts
