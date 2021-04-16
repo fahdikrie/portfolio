@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 import HALO from '../../assets/vanta/vanta.halo'
-import {
-  VantaWrapper
-} from './index.style'
+import * as S from './index.style'
 
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
@@ -37,7 +35,7 @@ const Vanta = (props) => {
 
   // return <div ref={myRef} className={classes.vantablack}/>
   return (
-    <VantaWrapper ref={myRef} />
+    <S.Vanta ref={myRef} />
   )
 }
 
