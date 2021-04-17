@@ -29,11 +29,10 @@ const Vanta = (props) => {
       }))
     }
     return () => {
-      if (vantaEffect) vantaEffect.destroy()
+      if (vantaEffect) (vantaEffect as any).destroy()
     }
   }, [vantaEffect, backgroundColorVanta, sizeVanta, xOffsetVanta])
 
-  // return <div ref={myRef} className={classes.vantablack}/>
   return (
     <S.Vanta ref={myRef} />
   )
