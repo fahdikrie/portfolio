@@ -1,3 +1,4 @@
+import Index from 'components/index'
 import {
   fetchMainProjects
 } from 'utils/selectors'
@@ -7,6 +8,7 @@ const Home = (): JSX.Element => {
 
   return (
     <>
+      <Index />
     </>
   )
 }

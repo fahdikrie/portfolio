@@ -21,7 +21,6 @@ const NavigationBar = ({ currentPage }: AppProps ) => (
           alt="linkedin"
         />
       </Nav.Socials>
-
       <Nav.Items>
         {currentPage != "/" && (
           <Nav.Item>
@@ -30,7 +29,6 @@ const NavigationBar = ({ currentPage }: AppProps ) => (
             </Link>
           </Nav.Item>
         )}
-
         {currentPage != "/activities" && (
           <Nav.Item>
             <Link href="/activities">
@@ -38,11 +36,9 @@ const NavigationBar = ({ currentPage }: AppProps ) => (
             </Link>
           </Nav.Item>
         )}
-
         <Nav.Item>
           resume
         </Nav.Item>
-
         {currentPage != "/journal" && (
           <Nav.Item>
             <Link href="/journal">

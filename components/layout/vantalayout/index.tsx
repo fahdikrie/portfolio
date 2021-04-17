@@ -1,8 +1,7 @@
-import Vanta from './components/vanta'
+import Vanta from './vanta'
 import useWindowSize from 'hooks/usewindowsize'
 
 const VantaLayout = () => {
-  // Declare a new state variable with the "useState" Hook
   const width = useWindowSize()
   const breakpoint: number = 525
 

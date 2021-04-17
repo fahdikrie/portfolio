@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-import HALO from '../../assets/vanta/vanta.halo'
+import HALO from '../assets/vanta/vanta.halo'
 import * as S from './index.style'
-
-// Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
 const Vanta = (props) => {
   const [vantaEffect, setVantaEffect] = useState(0)

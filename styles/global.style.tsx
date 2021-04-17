@@ -59,9 +59,11 @@ const CustomStyles = createGlobalStyle`
   /* Set core body defaults */
   body {
     ${tw`
-      min-h-screen 
-      text-rendering[optimizeSpeed] 
-      leading-normal 
+      block
+      w-screen
+      min-h-screen
+      text-rendering[optimizeSpeed]
+      leading-normal
       bg-black
     `}
   }
