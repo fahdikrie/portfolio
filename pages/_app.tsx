@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 
+import 'styles/global.fallback.css'
 import GlobalStyles from 'styles/global.style'
 import Fonts from 'public/fonts/fonts'
 import Layout from 'components/layout'

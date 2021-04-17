@@ -17,15 +17,15 @@ export const Item = tw.li`
   cursor-pointer
   ml-16 md:ml-24 xl:ml-32
   my-5
-  text-white
+  text-white font-bold
   opacity-70 hover:opacity-95
   tracking-wide
-  text-sm-small md:text-small
+  text-sm-small md:text-md-small lg:text-small
 `
 
 export const Socials = tw.div`
-  fixed
-  w-full 2xl:max-width[1920px]
+  absolute md:fixed
+  w-full
   px-12 md:px-16
   py-16 md:py-32
   flex md:flex-col
@@ -34,7 +34,7 @@ export const Socials = tw.div`
 
 export const Social = tw.img`
   cursor-pointer
-  w-24 md:w-32
+  w-24 md:w-28 lg:w-32
   mr-12 md:mr-0
   mt-0 md:mt-12
   opacity-70 hover:opacity-100
