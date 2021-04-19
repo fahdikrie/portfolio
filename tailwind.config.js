@@ -23,7 +23,7 @@ module.exports = {
       'sm-header': ['32px', '140%'],
       'sm-subheader': ['24px', '140%'],
       'sm-large': ['17px', '140%'],
-      'sm-small': ['12px', '140%'],
+      'sm-small': ['12.5px', '140%'],
       'sm-tiny': ['8px', '140%'],
     },
     spacing: {

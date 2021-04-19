@@ -16,7 +16,7 @@ export const Items = tw.ul`
 export const Item = tw.li`
   cursor-pointer
   ml-16 md:ml-24 xl:ml-32
-  my-5
+  my-10
   text-white font-bold
   opacity-70 hover:opacity-95
   tracking-wide
