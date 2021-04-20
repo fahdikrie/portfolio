@@ -25,6 +25,8 @@ export const Item = tw.li`
 
 export const Socials = tw.div`
   absolute md:fixed
+  // uncomment this to implement fixed layout
+  md:2xl:max-width[1920px]
   w-full
   px-12 md:px-16
   py-16 md:py-32

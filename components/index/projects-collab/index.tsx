@@ -10,12 +10,13 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 const ProjectsCollab = ({ projects }): JSX.Element => {
 
   const settings = {
-    centeredSlides: true,
     spaceBetween: 15,
     slidesPerView: 1,
+    freeMode: true,
     breakpoints: {
       768: {
-        spaceBetween: 18,
+        freeMode: false,
+        spaceBetween: 15,
         slidesPerView: 3
       }
     }
