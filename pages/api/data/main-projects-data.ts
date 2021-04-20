@@ -48,4 +48,58 @@ export const Projects = [
     ],
     overlay:"rgba(11, 20, 130, 0.8)"
   },
+  {
+    id: 2,
+    image: PmbPNG,
+    name: "Website Pembinaan Mahasiswa Baru",
+    time: "Jul 2020 – Sep 2020 @ Ristek",
+    desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
+          `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
+    descpoints: [
+      ''
+    ],
+    stacks: [
+      "react",
+      "react-hooks",
+      "redux",
+      "styled-components",
+    ],
+    overlay:"rgba(11, 20, 130, 0.8)"
+  },
+  {
+    id: 2,
+    image: PmbPNG,
+    name: "Website Pembinaan Mahasiswa Baru",
+    time: "Jul 2020 – Sep 2020 @ Ristek",
+    desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
+          `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
+    descpoints: [
+      ''
+    ],
+    stacks: [
+      "react",
+      "react-hooks",
+      "redux",
+      "styled-components",
+    ],
+    overlay:"rgba(11, 20, 130, 0.8)"
+  },
+  {
+    id: 2,
+    image: PmbPNG,
+    name: "Website Pembinaan Mahasiswa Baru",
+    time: "Jul 2020 – Sep 2020 @ Ristek",
+    desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
+          `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
+    descpoints: [
+      ''
+    ],
+    stacks: [
+      "react",
+      "react-hooks",
+      "redux",
+      "styled-components",
+    ],
+    overlay:"rgba(11, 20, 130, 0.8)"
+  },
 ]

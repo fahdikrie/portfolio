@@ -2,52 +2,52 @@ import Link from 'next/link'
 
 import LinkedInIcon from 'public/assets/linkedin.svg'
 import GithubIcon from 'public/assets/github.svg'
-import * as Nav from './index.style'
+import * as S from './index.style'
 
-interface AppProps {
+interface NavigationBarProps {
   currentPage: string
 }
 
-const NavigationBar = ({ currentPage }: AppProps ) => (
+const NavigationBar = ({ currentPage }: NavigationBarProps ) => (
   <>
-    <Nav.Wrapper>
-      <Nav.Socials>
-        <Nav.Social
+    <S.Wrapper>
+      <S.Socials>
+        <S.Social
           src={GithubIcon}
           alt="github"
         />
-        <Nav.Social
+        <S.Social
           src={LinkedInIcon}
           alt="linkedin"
         />
-      </Nav.Socials>
-      <Nav.Items>
+      </S.Socials>
+      <S.Items>
         {currentPage != "/" && (
-          <Nav.Item>
+          <S.Item>
             <Link href="/">
               home
             </Link>
-          </Nav.Item>
+          </S.Item>
         )}
         {currentPage != "/activities" && (
-          <Nav.Item>
+          <S.Item>
             <Link href="/activities">
               activities
             </Link>
-          </Nav.Item>
+          </S.Item>
         )}
-        <Nav.Item>
+        <S.Item>
           resume
-        </Nav.Item>
+        </S.Item>
         {currentPage != "/journal" && (
-          <Nav.Item>
+          <S.Item>
             <Link href="/journal">
               journal
             </Link>
-          </Nav.Item>
+          </S.Item>
         )}
-      </Nav.Items>
-    </Nav.Wrapper>
+      </S.Items>
+    </S.Wrapper>
   </>
 )
 

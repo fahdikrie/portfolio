@@ -1,11 +1,11 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-import NavigationBar from 'components/layout/navigationbar'
+import NavigationBar from 'components/layout/navigation-bar'
 import * as S from './index.style'
 
 const VantaLayout = dynamic(
-  () => import('./vantalayout/index'),
+  () => import('./vanta-layout/index'),
   { ssr: false }
 )
 

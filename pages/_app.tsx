@@ -7,6 +7,7 @@ import Fonts from 'public/fonts/fonts'
 import Layout from 'components/layout'
 import 'styles/global.css'
 
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   return (
