@@ -10,6 +10,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
 const ProjectsCollab = ({ projects }): JSX.Element => {
 
   const settings = {
+    grabCursor: true,
     spaceBetween: 15,
     slidesPerView: 1,
     freeMode: true,
@@ -24,17 +25,32 @@ const ProjectsCollab = ({ projects }): JSX.Element => {
 
   return (
     <S.ProjectsCollab>
-      <Swiper {...settings}>
+      <S.SectionHeader>
+        Projects i've Participated in.
+      </S.SectionHeader>
+      <S.DesktopSwiper>
+        <Swiper {...settings}>
+          {projects?.map((el, i) => (
+            <SwiperSlide key={i}>
+              <img
+                key={i}
+                src={el.image}
+                alt={el.name}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </S.DesktopSwiper>
+      <S.MobileSwiper>
         {projects?.map((el, i) => (
-          <SwiperSlide key={i}>
-            <img
-              key={el.id}
-              src={el.image}
-              alt={el.name}
-            />
-          </SwiperSlide>
+          <img
+            key={i}
+            src={el.image}
+            alt={el.name}
+          />
         ))}
-      </Swiper>
+        <span>e</span>
+      </S.MobileSwiper>
     </S.ProjectsCollab>
   )
 }
