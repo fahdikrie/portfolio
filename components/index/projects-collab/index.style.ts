@@ -47,6 +47,7 @@ export const MobileSwiper = styled.div`
   & img {
     ${tw`
       width[320px]
+      height[320px]
       mr-10
       inline-block
     `}

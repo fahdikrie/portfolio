@@ -26,8 +26,7 @@ const ProjectsCollab = ({ projects }): JSX.Element => {
   return (
     <S.ProjectsCollab>
       <S.SectionHeader>
-        Projects i've <br/>
-        Participated in.
+        Projects i've Participated in.
       </S.SectionHeader>
       <S.DesktopSwiper>
         <Swiper {...settings}>

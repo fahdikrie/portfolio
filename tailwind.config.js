@@ -15,7 +15,7 @@ module.exports = {
       // medium breakpoints
       'md-jumbo': ['72px', '120%'],
       'md-wambo': ['56px', '120%'],
-      'md-header': ['48px', '140%'],
+      'md-header': ['50px', '140%'],
       'md-subheader': ['28px', '140%'],
       'md-large': ['18.5px', '140%'],
       'md-small': ['14px', '140%'],
