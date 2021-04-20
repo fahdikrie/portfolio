@@ -14,7 +14,7 @@ export const SectionHeader = tw.h2`
   text-left md:text-center
   text-sm-header md:text-md-header lg:text-header
   mx-24 md:mx-0
-  mb-20
+  mb-20 md:mb-24 lg:mb-28
 `
 
 export const DesktopSwiper = styled.div`
