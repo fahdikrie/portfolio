@@ -4,7 +4,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontSize: {
-      // large breakpoints
       'jumbo': ['96px', '120%'],
       'wambo': ['72px', '120%'],
       'header': ['56px', '140%'],
@@ -12,15 +11,13 @@ module.exports = {
       'large': ['20px', '140%'],
       'small': ['16px', '140%'],
       'tiny': ['14px', '140%'],
-      // medium breakpoints
       'md-jumbo': ['72px', '120%'],
       'md-wambo': ['56px', '120%'],
-      'md-header': ['50px', '140%'],
+      'md-header': ['44px', '140%'],
       'md-subheader': ['28px', '140%'],
       'md-large': ['18.5px', '140%'],
       'md-small': ['14px', '140%'],
       'md-tiny': ['12px', '140%'],
-      // small breakpoints
       'sm-jumbo': ['64px', '120%'],
       'sm-wambo': ['48px', '120%'],
       'sm-header': ['36px', '140%'],

@@ -27,7 +27,7 @@ export const DesktopSwiper = styled.div`
     & .swiper-wrapper {
       & .swiper-slide {
         ${tw`
-          max-width[calc(100% - 24px)!important]
+          max-width[calc(100% - 24px)]!
           md:max-w-full!
         `}
       }
@@ -38,16 +38,24 @@ export const DesktopSwiper = styled.div`
 export const MobileSwiper = styled.div`
   ${tw`
     overflow-x-scroll
+    scrollbar-width[none]
+    -ms-overflow-style[none]
     pl-24
 
     flex md:hidden
     w-full
   `}
 
+  &::-webkit-scrollbar {
+    ${tw`
+      w-0 h-0
+    `}
+  }
+
   & img {
     ${tw`
-      width[320px]
-      height[320px]
+      width[calc(100vw - 48px)!important]
+      max-height[400px]
       mr-10
       inline-block
     `}

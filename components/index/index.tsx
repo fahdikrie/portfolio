@@ -1,7 +1,7 @@
 import { fetchMainProjects } from 'utils/selectors'
 import Title from './title'
 import About from './about'
-import ProjectsCollab from './projects-collab'
+import ProjectsCollab from './projects'
 import * as S from './index.style'
 
 const Index = (): JSX.Element => {
