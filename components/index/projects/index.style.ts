@@ -40,6 +40,7 @@ export const MobileSwiper = styled.div`
     overflow-x-scroll
     scrollbar-width[none]
     -ms-overflow-style[none]
+    -webkit-overflow-scrolling[touch]
     pl-24
 
     flex md:hidden
@@ -48,6 +49,7 @@ export const MobileSwiper = styled.div`
 
   &::-webkit-scrollbar {
     ${tw`
+      hidden
       w-0 h-0
     `}
   }
@@ -55,7 +57,7 @@ export const MobileSwiper = styled.div`
   & img {
     ${tw`
       width[calc(100vw - 48px)!important]
-      max-height[400px]
+      max-height[calc(100vw - 48px)!]
       mr-10
       inline-block
     `}
