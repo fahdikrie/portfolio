@@ -56,8 +56,8 @@ export const MobileSwiper = styled.div`
 
   & img {
     ${tw`
-      width[calc(100vw - 48px)!important]
-      max-height[calc(100vw - 48px)!]
+      width[calc(100vw - 48px)]!
+      height[calc(100vw - 48px)]!
       mr-10
       inline-block
     `}
