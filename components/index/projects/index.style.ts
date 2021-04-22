@@ -61,11 +61,19 @@ export const MobileSwiper = styled.div`
       mr-10
       inline-block
     `}
+
+    &:nth-last-child(2) {
+      ${tw`
+        mr-0
+      `}
+    }
   }
 
-  & span {
+  & div {
     ${tw`
-      text-sm-tiny
+      pl-24
+      min-h-full
+      inline-block
       invisible
     `}
   }

@@ -1,18 +1,14 @@
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import ProjectCard from './project-card'
 import * as S from './index.style'
 import 'swiper/swiper-bundle.min.css'
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
-
 const ProjectsCollab = ({ projects }): JSX.Element => {
-
   const settings = {
-    grabCursor: true,
     spaceBetween: 15,
     slidesPerView: 1,
+    grabCursor: true,
     freeMode: true,
     breakpoints: {
       768: {
@@ -50,7 +46,7 @@ const ProjectsCollab = ({ projects }): JSX.Element => {
             alt={el.name}
           />
         ))}
-        <span>e</span>
+        <div></div>
       </S.MobileSwiper>
     </S.ProjectsCollab>
   )
