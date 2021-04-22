@@ -17,7 +17,7 @@ interface LayoutProps {
 const Layout = ({ currentPage, children }: LayoutProps) => {
   return (
     <S.Layout>
-      {currentPage === "/" ? <VantaLayout /> : null}
+      {/* {currentPage === "/" ? <VantaLayout /> : null} */}
       <NavigationBar currentPage={currentPage} />
       {children}
     </S.Layout>

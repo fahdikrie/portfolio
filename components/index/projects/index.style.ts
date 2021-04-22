@@ -22,6 +22,7 @@ export const DesktopSwiper = styled.div`
     ${tw`
       pl-24 md:pl-0
       hidden md:block
+      active:cursor[grabbing]
     `}
 
     & .swiper-wrapper {
@@ -54,7 +55,7 @@ export const MobileSwiper = styled.div`
     `}
   }
 
-  & img {
+  & div {
     ${tw`
       width[calc(100vw - 48px)]!
       height[calc(100vw - 48px)]!
@@ -69,7 +70,7 @@ export const MobileSwiper = styled.div`
     }
   }
 
-  & div {
+  & div.swiper__margin {
     ${tw`
       pl-24
       min-h-full

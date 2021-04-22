@@ -36,10 +36,12 @@ const ProjectsCollab = (): JSX.Element => {
         <Swiper {...settings}>
           {projects?.map((el, i) => (
             <SwiperSlide key={i}>
-              <img
+              <ProjectCard
                 key={i}
-                src={el.image}
-                alt={el.name}
+                image={el.image}
+                name={el.name}
+                time={el.time}
+                overlay={el.overlay}
               />
             </SwiperSlide>
           ))}
@@ -47,13 +49,15 @@ const ProjectsCollab = (): JSX.Element => {
       </S.DesktopSwiper>
       <S.MobileSwiper>
         {projects?.map((el, i) => (
-          <img
+          <ProjectCard
             key={i}
-            src={el.image}
-            alt={el.name}
+            image={el.image}
+            name={el.name}
+            time={el.time}
+            overlay={el.overlay}
           />
         ))}
-        <div></div>
+        <div className="swiper__margin"></div>
       </S.MobileSwiper>
     </S.ProjectsCollab>
   )
