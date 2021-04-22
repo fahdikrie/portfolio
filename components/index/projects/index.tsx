@@ -1,7 +1,7 @@
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-// import ProjectCard from 'components/project-card'
+import ProjectCard from './project-card'
 import * as S from './index.style'
 import 'swiper/swiper-bundle.min.css'
 
