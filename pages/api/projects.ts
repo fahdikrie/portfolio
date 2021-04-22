@@ -1,4 +1,4 @@
-import { Projects } from './data/main-projects-data'
+import { Projects } from './data/projects-data'
 
 export default function handler(req, res) {
   // Get data from your database

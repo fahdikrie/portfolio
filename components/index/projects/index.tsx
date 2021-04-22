@@ -1,10 +1,17 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
 
+import { fetchProjects } from 'utils/selectors'
 import ProjectCard from './project-card'
 import * as S from './index.style'
 import 'swiper/swiper-bundle.min.css'
 
-const ProjectsCollab = ({ projects }): JSX.Element => {
+interface ProjectsData {
+  projects: any[] | any
+}
+
+const ProjectsCollab = (): JSX.Element => {
+  const { projects }: ProjectsData = fetchProjects('/api/projects')
+
   const settings = {
     spaceBetween: 15,
     slidesPerView: 1,

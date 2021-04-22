@@ -19,15 +19,15 @@ interface Data {
 
 const fetcher = (url: string): Promise<Object> => fetch(url).then(res => res.json())
 
-export const fetchMainProjects = (path: string) => {
+export const fetchProjects = (path: string) => {
   if (!path) throw new Error("Path is required")
 
   const {
-    data: mainProjects,
+    data: projects,
     error
   } = useSWR(path, fetcher)
 
-  return { mainProjects, error }
+  return { projects, error }
 }
 
 export const fetchGoodreads = async (): Promise<Object> => {
