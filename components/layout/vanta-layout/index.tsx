@@ -6,7 +6,7 @@ const VantaLayout = () => {
   const breakpoint: number = 525
 
   if (width < breakpoint) return null
-  if (width > 1920) return null
+
   return (
     <Vanta
       sizeVanta={1.10}
