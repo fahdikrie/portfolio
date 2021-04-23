@@ -1,11 +1,7 @@
 import Index from 'components/index'
 
-const Home = (): JSX.Element => {
-  return (
-    <>
-      <Index />
-    </>
-  )
-}
+const Home = (): JSX.Element => (
+  <Index />
+)
 
 export default Home
