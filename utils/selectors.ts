@@ -30,7 +30,7 @@ export const fetchProjects = (path: string) => {
   return { projects, error }
 }
 
-export const fetchGoodreads = async (): Promise<Object> => {
+export const fetchGoodreads = async () => {
   let parser = new RSSParser()
   let data: Data = {
     items: [],
@@ -84,7 +84,7 @@ export const fetchGoodreads = async (): Promise<Object> => {
   return data
 }
 
-export const fetchLetterboxd = async (): Promise<Object> => {
+export const fetchLetterboxd = async () => {
   let parser = new RSSParser()
   let data: Data = {
     items: [],

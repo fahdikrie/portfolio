@@ -1,5 +1,5 @@
-import SiputPNG from 'public/assets/projects/siput.png';
-import PmbPNG from 'public/assets/projects/pmb.png';
+import SiputPNG from 'public/assets/projects/siput.png'
+import PmbPNG from 'public/assets/projects/pmb.png'
 
 const strongify = (string) => {
   return(
@@ -54,7 +54,7 @@ export const Projects = [
   },
   {
     image: SiputPNG,
-    name: "Sistem Informasi Publikasi Terpadu",
+    name: "Website Profil FUKI 2021",
     time: "Feb 2020 – Sep 2020 @ FUKI",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
@@ -73,7 +73,7 @@ export const Projects = [
   },
   {
     image: PmbPNG,
-    name: "Website Pembinaan Mahasiswa Baru",
+    name: "Web Pembinaan Mahasiswa Baru",
     time: "Jul 2020 – Sep 2020 @ Ristek",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
@@ -90,7 +90,7 @@ export const Projects = [
   },
   {
     image: SiputPNG,
-    name: "Sistem Informasi Publikasi Terpadu",
+    name: "Web Recruitment FUKI 2021",
     time: "Feb 2020 – Sep 2020 @ FUKI",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
@@ -109,7 +109,7 @@ export const Projects = [
   },
   {
     image: PmbPNG,
-    name: "Website Pembinaan Mahasiswa Baru",
+    name: "Web Recruitment Ristek 2021",
     time: "Jul 2020 – Sep 2020 @ Ristek",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
