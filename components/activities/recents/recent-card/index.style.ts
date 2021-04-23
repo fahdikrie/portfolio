@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import tw, { styled } from 'twin.macro'
 
-export const PosterCardWrapper = styled.div`
+export const RecentCard = styled.div`
   width: 100%;
   color: white;
 
