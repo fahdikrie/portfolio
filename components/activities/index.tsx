@@ -55,10 +55,14 @@ const Activities = (): JSX.Element => {
       <S.RecentsWrapper>
         <Recents
           data={goodreads.items}
+          loading={goodreads.loading}
+          link="https://www.goodreads.com/review/list/100267901?shelf=read"
           title="reads"
         />
         <Recents
           data={letterboxd.items}
+          loading={letterboxd.loading}
+          link="https://letterboxd.com/fahdikrie/films/diary/"
           title="watches"
         />
       </S.RecentsWrapper>

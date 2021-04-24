@@ -14,8 +14,7 @@ export const Overlay = styled.div<OverlayProps>`
     absolute
     cursor[grab] active:cursor[grabbing]
     top-0 right-0 bottom-0 left-0
-    px-14 md:px-16
-    py-16 md:py-20
+    padding[5%]
     border-radius[2%]
   `}
 

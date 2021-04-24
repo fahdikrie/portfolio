@@ -33,7 +33,6 @@ export const Info = styled.p`
   color: rgb(191, 191, 191);
   margin: 5px 0 0;
 
-  font-family: 'San Francisco Pro Regular';
   font-size: calc(0.1rem + 0.75vw);
 
   @media (max-width: 768px) {
