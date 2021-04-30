@@ -6,14 +6,14 @@ interface RecentsProps {
   data: any[] | any
   link: string
   title: string
-  loading: boolean
+  isLoading: boolean
 }
 
 const Recents = ({
   data,
   link,
   title,
-  loading
+  isLoading
 }: RecentsProps): JSX.Element => (
   <S.Recents>
     <S.Header>
@@ -31,11 +31,8 @@ const Recents = ({
     </S.Header>
 
     <S.RecentsCards
-      loading={loading}
+      isLoading={isLoading ? 1 : 0}
     >
-      {/* <S.Loading>
-        <Loading />
-      </S.Loading> */}
       {data.length != 0 ? (
         data.map((el, i) => (
           <RecentCard

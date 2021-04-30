@@ -9,20 +9,20 @@ import * as S from './index.style'
 
 interface Data {
   items: any[] | any
-  error: boolean | any
+  isError: boolean | any
 }
 
 const Activities = (): JSX.Element => {
   const [goodreads, setGoodreads] = useState({
     items: [],
-    error: false,
-    loading: true,
+    isError: false,
+    isLoading: true,
   })
 
   const [letterboxd, setLetterboxd] = useState({
     items: [],
-    error: false,
-    loading: true,
+    isError: false,
+    isLoading: true,
   })
 
   useEffect((): boolean | any => {
@@ -35,13 +35,13 @@ const Activities = (): JSX.Element => {
       if (mounted) {
         setGoodreads({
           items: goodreadsData.items,
-          error: goodreadsData.error,
-          loading: false,
+          isError: goodreadsData.isError,
+          isLoading: false,
         })
         setLetterboxd({
           items: letterboxdData.items,
-          error: letterboxdData.error,
-          loading: false,
+          isError: letterboxdData.isError,
+          isLoading: false,
         })
       }
     }
@@ -55,13 +55,13 @@ const Activities = (): JSX.Element => {
       <S.RecentsWrapper>
         <Recents
           data={goodreads.items}
-          loading={goodreads.loading}
+          isLoading={goodreads.isLoading}
           link="https://www.goodreads.com/review/list/100267901?shelf=read"
           title="reads"
         />
         <Recents
           data={letterboxd.items}
-          loading={letterboxd.loading}
+          isLoading={letterboxd.isLoading}
           link="https://letterboxd.com/fahdikrie/films/diary/"
           title="watches"
         />

@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 interface RecentsCardsProps {
-  loading: boolean
+  isLoading: boolean | any
 }
 
 export const Recents = tw.div`
@@ -35,8 +35,8 @@ export const RecentsCards = styled.div<RecentsCardsProps>`
     w-full
   `}
 
-  ${(loading) => (
-    !loading
+  ${(isLoading) => (
+    !isLoading
       ? tw`grid grid-cols-4 gap-5`
       : tw`flex flex-row`
   )}

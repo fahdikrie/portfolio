@@ -6,15 +6,10 @@ import {
   convertIntToStars,
   convertDateFormat
 } from 'utils/utils'
-import {
-  CORS_PROXY,
-  GOODREADS_RSS,
-  LETTERBOXD_RSS,
-} from 'utils/constants'
 
 interface Data {
   items: Object[]
-  error: boolean
+  isError: boolean | any
 }
 
 const fetcher = (url: string): Promise<Object> => fetch(url).then(res => res.json())
@@ -31,12 +26,10 @@ export const fetchProjects = (path: string) => {
 }
 
 export const fetchGoodreads = async () => {
-  console.log(process.env.NEXT_PUBLIC_CORS_PROXY)
-
   let parser = new RSSParser()
   let data: Data = {
     items: [],
-    error: false
+    isError: false
   }
 
   try {
@@ -81,7 +74,7 @@ export const fetchGoodreads = async () => {
       data.items.push(bookData)
     }
 
-  } catch (error) { data.error = error }
+  } catch (error) { data.isError = true }
 
   return data
 }
@@ -90,7 +83,7 @@ export const fetchLetterboxd = async () => {
   let parser = new RSSParser()
   let data: Data = {
     items: [],
-    error: false
+    isError: false
   }
 
   try {
@@ -155,7 +148,7 @@ export const fetchLetterboxd = async () => {
       data.items.push(movieData)
     }
 
-  } catch (error) { data.error = error }
+  } catch (error) { data.isError = true }
 
   return data
 }
