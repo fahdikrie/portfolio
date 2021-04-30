@@ -56,3 +56,19 @@ export const Loading = styled.div`
     height: calc((0.1155 * 1920px) * 3 / 1.925);
   }
 `
+
+export const Error = styled.div`
+  ${tw`
+    w-full
+    text-white text-center
+    flex justify-center items-center
+    tracking-wider md:tracking-widest
+    text-sm-small md:text-md-small lg:text-small
+    height[calc(22.5vw * 3 / 1.975)]
+    md:height[calc(10.775vw * 3 / 1.925)]
+  `}
+
+  @media (min-width: 1920px) {
+    height: calc((0.1155 * 1920px) * 3 / 1.925);
+  }
+`
