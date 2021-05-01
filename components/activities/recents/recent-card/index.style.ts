@@ -38,8 +38,8 @@ export const RecentCard = styled.div`
 
   & .recent-card__info {
     ${tw`
+      my-0
       text-white
-      my-0 mx-auto
       width[calc(100% - 4px)]
       flex justify-between items-center
     `}
