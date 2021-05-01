@@ -8,7 +8,8 @@ const Vanta = (props) => {
   const myRef = useRef(null)
 
   const sizeVanta = props.sizeVanta // desktop 1.00, mobile 0.50
-  const backgroundColorVanta = props.backgroundColorVanta // buat multi-theme
+  const baseColorVanta = props.baseColorVanta // #4C1D95 or #BB19BB
+  const backgroundColorVanta = props.backgroundColorVanta // for multi-theme
   const xOffsetVanta = props.xOffsetVanta
 
   useEffect(() => {
@@ -20,6 +21,7 @@ const Vanta = (props) => {
         gyroControls: false,
         minHeight: 200.00,
         minWidth: 200.00,
+        baseColor: baseColorVanta,
         backgroundColor: backgroundColorVanta,
         xOffset: xOffsetVanta,
         yOffset: 0.00,

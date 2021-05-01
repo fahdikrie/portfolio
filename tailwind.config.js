@@ -51,6 +51,9 @@ module.exports = {
       '0': '0px',
     },
     extend: {
+      colors: {
+        'magenta': '#bb19bb'
+      },
       fontFamily: {
         'sans': ['Inter', ...defaultTheme.fontFamily.sans]
       },

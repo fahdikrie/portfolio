@@ -10,6 +10,7 @@ const VantaLayout = () => {
   return (
     <Vanta
       sizeVanta={1.10}
+      baseColorVanta={0x4c1d95}
       backgroundColorVanta={0x0}
       xOffsetVanta={0.30}
     />
