@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 interface RecentsCardsProps {
-  isLoading: boolean | any
+  isLoading: boolean
 }
 
 export const Recents = tw.div`
@@ -10,6 +10,7 @@ export const Recents = tw.div`
 
 export const Header = tw.div`
   w-full
+  pl-2 pr-5
   flex flex-row
   justify-between
 `
@@ -19,7 +20,7 @@ export const Title = styled.h6`
     font-normal text-white
     text-sm-small md:text-md-small lg:text-small
     md:tracking-wide
-    mb-5 md:mb-8
+    mb-5 md:mb-10
     margin-left[2px]
   `}
 
@@ -35,9 +36,12 @@ export const RecentsCards = styled.div<RecentsCardsProps>`
     w-full
   `}
 
-  ${(isLoading) => (
-    !isLoading
-      ? tw`grid grid-cols-4 gap-5`
+  ${(props) => (
+    !props.isLoading
+      ? tw`
+          grid! grid-cols-4
+          gap-0 xl:gap-5
+        `
       : tw`flex flex-row`
   )}
 `

@@ -1,45 +1,47 @@
 import tw, { styled } from 'twin.macro'
 
-export const RecentCard = styled.div`
-  width: 100%;
-  color: white;
-
-  & .poster-card__image-wrapper {
-    width: calc(100% - 4px);
-    border: 2px solid transparent;
-    border-radius: 5px;
-  }
-
-  & .poster-card__image-wrapper:hover {
-    border-color: purple;
-  }
-
-  & .poster-card__image-wrapper .poster-card__image {
-    object-fit: cover;
-    border-radius: 3px;
-  }
-
-  & .poster-card__info {
-    width: calc(100% - 4px);
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+export const Info: any = tw.p`
+  mt-5 md:mt-3
+  text-white opacity-70
+  font-size[calc(0.25rem + 1vw)]
+  md:font-size[calc(0.075rem + 0.75vw)]
 `
 
-export const Info = styled.p`
-  color: rgb(191, 191, 191);
-  margin: 5px 0 0;
+export const RecentCard = styled.div`
+  ${tw`w-full`}
 
-  font-size: calc(0.1rem + 0.75vw);
+  &:hover {
+    .recent-card__image {
+      ${tw`border-purple-900`}
+    }
 
-  @media (max-width: 768px) {
-    font-size: calc(0.25rem + 1vw);
+    ${Info} {
+      ${tw`opacity-100`}
+    }
   }
 
-  @media (max-width: 525px) {
-    margin: 3px 0 0;
+  & .recent-card__image {
+    ${tw`
+      border-2
+      border-radius[5px]
+      border-transparent
+      width[calc(100% - 4px)]
+    `}
+  }
+
+  & .recent-card__image img {
+    ${tw`
+      object-cover
+      border-radius[3px]
+    `}
+  }
+
+  & .recent-card__info {
+    ${tw`
+      text-white
+      my-0 mx-auto
+      width[calc(100% - 4px)]
+      flex justify-between items-center
+    `}
   }
 `

@@ -35,7 +35,7 @@ const Recents = ({
     </S.Header>
 
     <S.RecentsCards
-      isLoading={isLoading ? 1 : 0}
+      isLoading={isLoading ? true : false}
     >
       {!isLoading || data.length != 0 ? (
         !isError ? (

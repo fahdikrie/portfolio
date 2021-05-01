@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 
 import * as S from './index.style'
@@ -21,10 +20,9 @@ const RecentCard = ({
   <S.RecentCard>
     <a href={link} target="_blank">
       <div
-        className="poster-card__image-wrapper"
+        className="recent-card__image"
       >
         <Image
-          className="poster-card__image"
           src={image}
           alt={title}
           layout="responsive"
@@ -36,7 +34,7 @@ const RecentCard = ({
     </a>
 
     <div
-      className="poster-card__info"
+      className="recent-card__info"
     >
       <S.Info>{rating}</S.Info>
       <S.Info>{date}</S.Info>

@@ -7,6 +7,7 @@ export const Activities = tw.div`
 `
 
 export const RecentsWrapper = tw.div`
-  grid gap-20
+  grid
+  gap-20 lg:gap-48
   grid-cols-1 md:grid-cols-2
 `
