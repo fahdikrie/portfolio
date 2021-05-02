@@ -1,12 +1,11 @@
 import tw, { styled } from 'twin.macro'
 
-export const ProjectsCollab = styled.div`
-  ${tw`
-    z-20 relative
-    margin[0px -24px]
-    md:mx-0
-    overflow-x-hidden
-  `}
+export const ProjectsCollab = tw.div`
+  z-20 relative
+  margin[0px -24px]
+  md:mx-0
+  mb-144
+  overflow-x-hidden
 `
 
 export const SectionHeader = tw.h2`

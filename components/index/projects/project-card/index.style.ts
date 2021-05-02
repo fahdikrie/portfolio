@@ -49,7 +49,7 @@ export const Time = tw.h3`
   font-bold text-white italic
   font-size[calc(0.25rem + 2.5vw)]
   md:font-size[calc(0.25rem + 0.5vw)]
-  lg:font-size[calc(0.5rem + 0.5vw)]
-  xl:font-size[calc(0.5rem + 0.65vw)]
-  2xl:font-size[calc(0.5rem + 0.70vw)]
+  lg:font-size[calc(0.5rem + 0.45vw)]
+  xl:font-size[calc(0.5rem + 0.5vw)]
+  2xl:font-size[calc(0.5rem + 0.6vw)]
 `

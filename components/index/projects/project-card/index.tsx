@@ -28,8 +28,8 @@ const ProjectCard = ({
     <S.Overlay
       overlay={overlay}
     >
-      <S.Name>{name}</S.Name>
-      <S.Time>{time}</S.Time>
+      <S.Name dangerouslySetInnerHTML={{__html: name}} />
+      <S.Time dangerouslySetInnerHTML={{__html: time}} />
     </S.Overlay>
   </S.ProjectCard>
 )

@@ -18,7 +18,7 @@ const strongify = (string) => {
 export const Projects = [
   {
     image: SiputPNG,
-    name: "Sistem Informasi Publikasi Terpadu",
+    name: "Sistem Informasi <br/> Publikasi Terpadu",
     time: "Feb 2020 – Sep 2020 @ FUKI",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
@@ -37,7 +37,7 @@ export const Projects = [
   },
   {
     image: PmbPNG,
-    name: "Website Pembinaan Mahasiswa Baru",
+    name: "Website Pembinaan <br/> Mahasiswa Baru",
     time: "Jul 2020 – Sep 2020 @ Ristek",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
@@ -54,7 +54,7 @@ export const Projects = [
   },
   {
     image: SiputPNG,
-    name: "Website Profil FUKI 2021",
+    name: "Website Profil <br/> FUKI 2021",
     time: "Feb 2020 – Sep 2020 @ FUKI",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
@@ -69,11 +69,11 @@ export const Projects = [
       "css",
       "jquery"
     ],
-    overlay:"rgba(41, 110, 115, 0.8)"
+    overlay:"rgba(97, 69, 165, 0.8)"
   },
   {
     image: PmbPNG,
-    name: "Web Pembinaan Mahasiswa Baru",
+    name: "Web Pembinaan <br/> Mahasiswa Baru",
     time: "Jul 2020 – Sep 2020 @ Ristek",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
@@ -90,7 +90,7 @@ export const Projects = [
   },
   {
     image: SiputPNG,
-    name: "Web Recruitment FUKI 2021",
+    name: "Web Recruitment <br/> FUKI 2021",
     time: "Feb 2020 – Sep 2020 @ FUKI",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
@@ -109,7 +109,7 @@ export const Projects = [
   },
   {
     image: PmbPNG,
-    name: "Web Recruitment Ristek 2021",
+    name: "Web Recruitment <br/> Ristek 2021",
     time: "Jul 2020 – Sep 2020 @ Ristek",
     desc: `Appointed as the project's PIC. Implemented new features, such as ${strongify('push notification')} using Django built-in SMTP, ` +
           `${strongify('issue posting feature')}, ${strongify('improved functionality')}, and ${strongify('revamped the front-end')}.`,
