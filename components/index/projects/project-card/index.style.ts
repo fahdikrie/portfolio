@@ -2,6 +2,7 @@ import tw, { styled } from 'twin.macro'
 
 interface OverlayProps {
   overlay: string
+  color: string
 }
 
 export const ProjectCard = tw.div`
@@ -18,6 +19,7 @@ export const Overlay = styled.div<OverlayProps>`
     border-radius[2%]
   `}
 
+  color: ${props => props.color};
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(0px);
 
@@ -34,7 +36,7 @@ export const Overlay = styled.div<OverlayProps>`
 
 export const Name = tw.h2`
   cursor[grab] active:cursor[grabbing]
-  font-black text-white
+  font-black color[inherit]
   leading-tight
   mb-3
   font-size[calc(0.95rem + 2.75vw)]
@@ -46,7 +48,7 @@ export const Name = tw.h2`
 
 export const Time = tw.h3`
   cursor[grab] active:cursor[grabbing]
-  font-bold text-white italic
+  font-bold color[inherit] italic
   font-size[calc(0.25rem + 2.5vw)]
   md:font-size[calc(0.25rem + 0.5vw)]
   lg:font-size[calc(0.5rem + 0.45vw)]

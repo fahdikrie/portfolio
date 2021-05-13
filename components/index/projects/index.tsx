@@ -17,6 +17,7 @@ const ProjectsCollab = (): JSX.Element => {
     slidesPerView: 1,
     grabCursor: true,
     freeMode: true,
+    loop: true,
     breakpoints: {
       768: {
         freeMode: false,
@@ -29,7 +30,7 @@ const ProjectsCollab = (): JSX.Element => {
   return (
     <S.ProjectsCollab>
       <S.SectionHeader>
-        Projects I've <br/>
+        Projects I've
         Participated in.
       </S.SectionHeader>
       <S.DesktopSwiper>
@@ -42,6 +43,7 @@ const ProjectsCollab = (): JSX.Element => {
                 name={el.name}
                 time={el.time}
                 overlay={el.overlay}
+                color={el.color}
               />
             </SwiperSlide>
           ))}
@@ -55,6 +57,7 @@ const ProjectsCollab = (): JSX.Element => {
             name={el.name}
             time={el.time}
             overlay={el.overlay}
+            color={el.color}
           />
         ))}
         <div className="swiper__margin"></div>
