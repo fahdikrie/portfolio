@@ -50,7 +50,7 @@ const ProjectsCollab = (): JSX.Element => {
         </Swiper>
       </S.DesktopSwiper>
       <S.MobileSwiper>
-        {projects?.map((el, i) => (
+        {projects?.reverse().map((el, i) => (
           <ProjectCard
             key={i}
             image={el.image}

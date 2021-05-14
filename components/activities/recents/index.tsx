@@ -36,6 +36,7 @@ const Recents = ({
 
     <S.RecentsCards
       isLoading={isLoading ? true : false}
+      isError={isError ? true : false}
     >
       {!isLoading || data.length != 0 ? (
         !isError ? (
