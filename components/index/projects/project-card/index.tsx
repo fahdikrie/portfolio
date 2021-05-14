@@ -25,6 +25,7 @@ const ProjectCard = ({
       width="1"
       height="1"
       loading="eager"
+      priority
     />
 
     <S.Overlay

@@ -3,20 +3,18 @@ import { useRouter } from 'next/router'
 
 import 'styles/global.fallback.css'
 import GlobalStyles from 'styles/global.style'
-import Fonts from 'public/fonts/fonts'
-import Layout from 'components/layout'
+import FontSans from 'public/fonts/font-sans'
 import 'styles/global.css'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
+
   return (
     <>
-      <Fonts />
+      <FontSans />
       <GlobalStyles />
-      <Layout currentPage={router.pathname}>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} router={router} />
     </>
   )
 }

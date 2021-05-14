@@ -55,7 +55,8 @@ module.exports = {
         'magenta': '#bb19bb'
       },
       fontFamily: {
-        'sans': ['Inter', ...defaultTheme.fontFamily.sans]
+        'sans': ['Inter', ...defaultTheme.fontFamily.sans],
+        'serif': ['Playfair Display', ...defaultTheme.fontFamily.serif]
       },
     },
   },

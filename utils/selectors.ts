@@ -33,8 +33,7 @@ export const fetchGoodreads = async () => {
   }
 
   try {
-    // let feed = await parser.parseURL(process.env.NEXT_PUBLIC_CORS_PROXY + process.env.NEXT_PUBLIC_GOODREADS_RSS)
-    let feed = await parser.parseURL(process.env.NEXT_PUBLIC_GOODREADS_RSS)
+    let feed = await parser.parseURL(process.env.NEXT_PUBLIC_CORS_PROXY + process.env.NEXT_PUBLIC_GOODREADS_RSS)
 
     for (let i = 0; i < 4; i++) {
       let bookData = {
@@ -88,8 +87,7 @@ export const fetchLetterboxd = async () => {
   }
 
   try {
-    // let feed = await parser.parseURL(process.env.NEXT_PUBLIC_CORS_PROXY + process.env.NEXT_PUBLIC_LETTERBOXD_RSS)
-    let feed = await parser.parseURL(process.env.NEXT_PUBLIC_LETTERBOXD_RSS)
+    let feed = await parser.parseURL(process.env.NEXT_PUBLIC_CORS_PROXY + process.env.NEXT_PUBLIC_LETTERBOXD_RSS)
 
     for (let i = 0; i < 4; i++) {
       let movieData = {
