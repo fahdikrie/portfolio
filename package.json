@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3000",
-    "permission": "chmod 777 ./vercel-submodule.sh && chmod +x ./vercel-submodule.sh",
-    "vercel-build": "yarn run permission && ./vercel-submodule.sh && yarn run build"
+    "start": "next start -p 3000"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
