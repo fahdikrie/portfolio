@@ -8,8 +8,8 @@ SUBMODULE_PATH=content
 # the reference of the submodule in .gitmodules (usually the path)
 SUBMODULE_REF=content
 
-if [ "$VERCEL_GITHUB_COMMIT_SHA" == "" ]; then
-    echo "Error: VERCEL_GITHUB_COMMIT_SHA is empty"
+if [ "$VERCEL_GIT_COMMIT_SHA" == "" ]; then
+    echo "Error: VERCEL_GIT_COMMIT_SHA is empty"
     exit 1
 fi
 
@@ -29,8 +29,8 @@ cd vercel-tmp
 # checkout the current commit
 git init
 git remote add origin https://$GITHUB_ACCESS_TOKEN@$MAIN_REPO
-git fetch --depth=1 origin $VERCEL_GITHUB_COMMIT_SHA
-git checkout $VERCEL_GITHUB_COMMIT_SHA
+git fetch --depth=1 origin $VERCEL_GIT_COMMIT_SHA
+git checkout $VERCEL_GIT_COMMIT_SHA
 
 # set the submodule repo path to one that vercel can access
 git config --file=.gitmodules "submodule.$SUBMODULE_REF.url" https://$GITHUB_ACCESS_TOKEN@$SUBMODULE_REPO
