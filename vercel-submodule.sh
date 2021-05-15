@@ -36,6 +36,7 @@ git checkout $VERCEL_GIT_COMMIT_SHA
 git config --file=.gitmodules "submodule.$SUBMODULE_REF.url" https://$GITHUB_ACCESS_TOKEN@$SUBMODULE_REPO
 
 # checkout the submodule
+git pull --recurse-submodules
 git submodule sync
 git submodule update --init --recursive --remote
 
