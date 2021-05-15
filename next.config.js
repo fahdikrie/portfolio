@@ -16,3 +16,9 @@ module.exports = withImages({
     domains: ['i.gr-assets.com', 'a.ltrbxd.com'],
   }
 })
+
+const cp = require('child_process');
+const gitSha = cp.execSync('git rev-parse HEAD', {
+  cwd: __dirname,
+  encoding: 'utf8'
+});
