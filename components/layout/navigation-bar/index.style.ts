@@ -1,4 +1,8 @@
-import tw from 'twin.macro'
+import tw, { styled } from 'twin.macro'
+
+interface ItemProps {
+  isActive: boolean
+}
 
 export const Wrapper = tw.div`
   absolute z-10
@@ -13,14 +17,25 @@ export const Items = tw.ul`
   flex flex-row justify-end
 `
 
-export const Item = tw.li`
-  cursor-pointer
-  ml-16 md:ml-24 xl:ml-32
-  my-10
-  text-white font-bold
-  opacity-70 hover:opacity-95
-  tracking-wide
-  text-sm-small md:text-md-small lg:text-small
+export const Item = styled.li<ItemProps>`
+  ${tw`
+    cursor-pointer
+    ml-16 md:ml-24 xl:ml-32
+    my-10
+    text-white font-bold
+    opacity-70 hover:opacity-95
+    tracking-wide
+    text-sm-small md:text-md-small lg:text-small
+  `}
+
+  ${(props) => (
+    props.isActive
+      ? tw`
+        opacity-95
+        hidden md:block
+      `
+      : ""
+  )}
 `
 
 export const Socials = tw.div`

@@ -22,30 +22,32 @@ const NavigationBar = ({ currentPage }: NavigationBarProps ) => (
         />
       </S.Socials>
       <S.Items>
-        {currentPage != "/" && (
-          <S.Item>
-            <Link href="/">
-              home
-            </Link>
-          </S.Item>
-        )}
-        {currentPage != "/activities" && (
-          <S.Item>
-            <Link href="/activities">
-              activities
-            </Link>
-          </S.Item>
-        )}
-        <S.Item>
+        <S.Item
+          isActive={currentPage == "/" ? true : false}
+        >
+          <Link href="/">
+            home
+          </Link>
+        </S.Item>
+        <S.Item
+          isActive={currentPage == "/activities" ? true : false}
+        >
+          <Link href="/activities">
+            activities
+          </Link>
+        </S.Item>
+        <S.Item
+          isActive={currentPage == "/resume" ? true : false}
+        >
           resume
         </S.Item>
-        {currentPage != "/journal" && (
-          <S.Item>
-            <Link href="/journal">
-              journal
-            </Link>
-          </S.Item>
-        )}
+        <S.Item
+          isActive={currentPage == "/journal" ? true : false}
+        >
+          <Link href="/journal">
+            journal
+          </Link>
+        </S.Item>
       </S.Items>
     </S.Wrapper>
   </>
