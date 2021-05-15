@@ -14,5 +14,6 @@ module.exports = withImages({
   },
   images: {
     domains: ['i.gr-assets.com', 'a.ltrbxd.com'],
-  }
+  },
+  target: 'serverless'
 })
