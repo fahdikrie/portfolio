@@ -11,15 +11,25 @@ export const ProjectsCollab = tw.div`
 `
 
 export const SectionHeader = tw.h2`
+  mx-24 md:mx-0
+  mb-20 md:mb-0
   text-white font-black
   text-left md:text-center
   text-sm-header md:text-md-header lg:text-header
-  mx-24 md:mx-0
-  mb-20 md:mb-24 lg:mb-28
+`
+
+export const SectionSubHeader = tw.h3`
+  mb-20
+  font-normal
+  md:text-center
+  hidden md:block
+  text-white opacity-70
+  text-sm-large md:text-small lg:text-large
 `
 
 export const Navigation = styled.div`
   ${tw`
+    invisible
     hidden md:block
     md:width[calc(64px - 15px)]
     lg:width[calc(80px - 15px)]

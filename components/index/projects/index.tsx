@@ -1,6 +1,6 @@
 import SwiperCore, { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 
 import { fetchProjects } from 'utils/selectors'
 import ProjectCard from './project-card'
@@ -39,9 +39,11 @@ const ProjectsCollab = (): JSX.Element => {
   return (
     <S.ProjectsCollab>
       <S.SectionHeader>
-        Projects I've
-        Participated in.
+        Projects I've Participated in
       </S.SectionHeader>
+      <S.SectionSubHeader>
+        Projects I did in collaboration with others, <u>drag to see more</u>
+      </S.SectionSubHeader>
       <S.DesktopSwiper>
         <S.Navigation
           ref={navigationPrevRef}
@@ -98,6 +100,5 @@ const ProjectsCollab = (): JSX.Element => {
     </S.ProjectsCollab>
   )
 }
-
 
 export default ProjectsCollab
