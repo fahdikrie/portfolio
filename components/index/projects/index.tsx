@@ -47,10 +47,10 @@ const ProjectsCollab = (): JSX.Element => {
           ref={navigationPrevRef}
         >
           <img
-          src={ChevronArrow}
-          alt="chevron-left"
-          className="chevron-left"
-        />
+            src={ChevronArrow}
+            alt="chevron-left"
+            className="chevron-left"
+          />
         </S.Navigation>
         <Swiper
           {...settings}
@@ -76,10 +76,10 @@ const ProjectsCollab = (): JSX.Element => {
           ref={navigationNextRef}
         >
           <img
-          src={ChevronArrow}
-          alt="chevron-right"
-          className="chevron-right"
-        />
+            src={ChevronArrow}
+            alt="chevron-right"
+            className="chevron-right"
+          />
         </S.Navigation>
       </S.DesktopSwiper>
       <S.MobileSwiper>
