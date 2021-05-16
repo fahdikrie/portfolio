@@ -9,7 +9,7 @@ const About = (): JSX.Element => (
     <br/><br/>
 
     Fahdii is very passionate when it comes to taking naps 💤
-    and watching movies 🍿 His current favorite movies are Good
+    and watching movies 🎬 Some of his favorite movies are Good
     Morning (1959) 🌄 and The Makioka Sisters (1983) 🎎
 
     <br/><br/>
