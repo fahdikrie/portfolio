@@ -58,7 +58,7 @@ export const DesktopSwiper = styled.div`
     ${tw`
       hidden md:block
       active:cursor[grabbing]
-      width[100%]
+      w-full
     `}
 
     & .swiper-pagination-bullet {
