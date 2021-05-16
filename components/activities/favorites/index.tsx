@@ -18,18 +18,18 @@ interface Favorites {
 
 const Favorites = (): JSX.Element => {
   const { favorites }: FavoritesData = fetchFavorites('/api/favorites')
-  const [activeImage, setActiveImage] = useState<Favorites | Object | any>()
+  const [activeIndex, setActiveIndex] = useState(null)
 
   useEffect(() => {
-    setActiveImage(favorites?.[1])
+    setActiveIndex(Math.floor(Math.random() * (favorites?.length - 0 + 1)) + 0)
   }, [favorites])
 
   useEffect(() => {
-    console.log(activeImage)
-  }, [activeImage])
+    console.log(activeIndex)
+  }, [activeIndex])
 
-  const handleOnClick = (i) => {
-    setActiveImage(favorites?.[i])
+  const handleThumbnailClick = (e) => {
+    setActiveIndex(e.target.alt)
   }
 
   const mainSettings = {
@@ -40,7 +40,6 @@ const Favorites = (): JSX.Element => {
 
   const thumbSettings = {
     slidesPerView: 3,
-    grabCursor: true,
   }
 
   return (
@@ -48,7 +47,7 @@ const Favorites = (): JSX.Element => {
       <Swiper
         {...mainSettings}
       >
-        {activeImage?.images.map((el, i) => (
+        {favorites?.[activeIndex]?.images.map((el, i) => (
           <SwiperSlide key={i}>
             <div>
               <Image
@@ -66,7 +65,10 @@ const Favorites = (): JSX.Element => {
         {...thumbSettings}
       >
         {favorites?.map((el, i) => (
-          <SwiperSlide key={i}>
+          <SwiperSlide
+            key={i}
+            onClick={handleThumbnailClick}
+          >
             <div
               // onClick={handleOnClick(i)}
             >
