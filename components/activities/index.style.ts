@@ -11,3 +11,7 @@ export const RecentsWrapper = tw.div`
   gap-20 lg:gap-48
   grid-cols-1 md:grid-cols-2
 `
+
+export const FavoritesWrapper = tw.div`
+
+`

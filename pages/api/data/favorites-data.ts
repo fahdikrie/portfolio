@@ -1,15 +1,24 @@
 interface Data {
-  id: number
   title: string
+  slug: string
   images: string[]
 }
 
-export const Movies: Data[] = [
+const MOVIE_DIR_PREFIX = "/assets/favorites/"
+
+export const Favorites: Data[] = [
   {
-    id: 1,
-    title: "title",
-    images: Array.apply("title", 4).map(
-      (el: string, i: number) => el = el + i + ".png"
+    title: "Eat Drink Man Woman",
+    slug: "eat-drink-man-woman",
+    images: Array(4).fill("eat-drink-man-woman").map(
+      (el: string, i: number) => el = MOVIE_DIR_PREFIX + el + "-" + i + ".png"
+    )
+  },
+  {
+    title: "Columbus",
+    slug: "columbus",
+    images: Array(4).fill("columbus").map(
+      (el: string, i: number) => el = MOVIE_DIR_PREFIX + el + "-" + i + ".png"
     )
   },
 ]

@@ -16,8 +16,8 @@ const useWindowSize = () => {
       /* Set the value of "mounted" as false
          and return it as a clean up for the function */
       return () => {
-      mounted = false
-      window.removeEventListener("resize", () => {})
+         mounted = false
+         window.removeEventListener("resize", () => {})
       }
 
       /* passing an empty array as the dependencies of the effect will cause this

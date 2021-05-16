@@ -25,6 +25,17 @@ export const fetchProjects = (path: string) => {
   return { projects, error }
 }
 
+export const fetchFavorites = (path: string) => {
+  if (!path) throw new Error("Path is required")
+
+  const {
+    data: favorites,
+    error
+  } = useSWR(path, fetcher)
+
+  return { favorites, error }
+}
+
 export const fetchGoodreads = async () => {
   let parser = new RSSParser()
   let data: Data = {
