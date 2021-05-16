@@ -1,6 +1,6 @@
-import SwiperCore, { Navigation } from 'swiper'
+import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react'
 
 import { fetchProjects } from 'utils/selectors'
 import ProjectCard from './project-card'
@@ -13,7 +13,7 @@ interface ProjectsData {
   projects: any[] | any
 }
 
-SwiperCore.use([Navigation])
+SwiperCore.use([Navigation, Pagination])
 
 const ProjectsCollab = (): JSX.Element => {
   const { projects }: ProjectsData = fetchProjects('/api/projects')
@@ -56,6 +56,7 @@ const ProjectsCollab = (): JSX.Element => {
         </S.Navigation>
         <Swiper
           {...settings}
+          pagination={{ clickable: true }}
           navigation={{
             prevEl: navigationPrevRef.current!,
             nextEl: navigationNextRef.current!,

@@ -60,6 +60,20 @@ export const DesktopSwiper = styled.div`
       active:cursor[grabbing]
       width[100%]
     `}
+
+    & .swiper-pagination-bullet {
+      ${tw`
+        md:(w-5 h-5 mx-2)
+        lg:(width[7.5px] height[7.5px] mx-3)
+        xl:(w-8 h-8 mx-5)
+      `}
+    }
+
+    & .swiper-pagination-bullet-active {
+      ${tw`
+        bg-black
+      `}
+    }
   }
 `
 
