@@ -50,6 +50,7 @@ export const Socials = tw.div`
 `
 
 export const Social = tw.img`
+  inline z-50
   cursor-pointer
   w-24 md:w-28 lg:w-32
   mr-12 md:mr-0

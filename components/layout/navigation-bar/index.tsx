@@ -12,26 +12,30 @@ const NavigationBar = ({ currentPage }: NavigationBarProps ) => (
   <>
     <S.Wrapper>
       <S.Socials>
-        <a
-          href="https://github.com/fahdikrie"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <S.Social
-            src={GithubIcon}
-            alt="github"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/fahdikrie/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <S.Social
-            src={LinkedInIcon}
-            alt="linkedin"
-          />
-        </a>
+        <div>
+          <a
+            href="https://github.com/fahdikrie"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <S.Social
+              src={GithubIcon}
+              alt="github"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/fahdikrie/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <S.Social
+              src={LinkedInIcon}
+              alt="linkedin"
+            />
+          </a>
+        </div>
       </S.Socials>
       <S.Items>
         <S.Item

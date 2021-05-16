@@ -3,9 +3,6 @@ import tw, { styled } from 'twin.macro'
 export const ProjectsCollab = tw.div`
   z-20 relative
   margin[0px -24px]
-  md:(margin-left[-64px] margin-right[-64px])
-  lg:(margin-left[-80px] margin-right[-80px])
-  xl:(margin-left[-100px] margin-right[-100px])
   mb-144
   overflow-x-hidden
 `
@@ -27,38 +24,11 @@ export const SectionSubHeader = tw.h3`
   text-sm-large md:text-small lg:text-large
 `
 
-export const Navigation = styled.div`
-  ${tw`
-    invisible
-    hidden md:block
-    md:width[calc(64px - 15px)]
-    lg:width[calc(80px - 15px)]
-    xl:width[calc(100px - 15px)]
-  `}
-
-  & img {
-    ${tw`
-      block mx-auto
-      cursor-pointer
-      md:w-24 lg:w-32 xl:w-36
-    `}
-
-    &.chevron-left {
-      transform: rotate(180deg);
-    }
-  }
-`
-
 export const DesktopSwiper = styled.div`
-  ${tw`
-    flex items-center
-  `}
-
   & .swiper-container {
     ${tw`
       hidden md:block
       active:cursor[grabbing]
-      w-full
     `}
 
     & .swiper-pagination-bullet {
