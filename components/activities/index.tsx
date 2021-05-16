@@ -5,7 +5,6 @@ import {
   fetchLetterboxd
 } from 'utils/selectors'
 import Recents from './recents'
-import Favorites from './favorites'
 import * as S from './index.style'
 
 interface Data {
@@ -71,9 +70,6 @@ const Activities = (): JSX.Element => {
           isLoading={letterboxd.isLoading}
         />
       </S.RecentsWrapper>
-      <S.FavoritesWrapper>
-        <Favorites />
-      </S.FavoritesWrapper>
     </S.Activities>
   )
 }
