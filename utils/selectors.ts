@@ -25,6 +25,17 @@ export const fetchProjects = (path: string) => {
   return { projects, error }
 }
 
+export const fetchSolos = (path: string) => {
+  if (!path) throw new Error("Path is required")
+
+  const {
+    data: solos,
+    error
+  } = useSWR(path, fetcher)
+
+  return { solos, error }
+}
+
 export const fetchFavoriteMovies = (path: string) => {
   if (!path) throw new Error("Path is required")
 

@@ -1,9 +1,9 @@
 import tw, { styled } from 'twin.macro'
 
-export const Projects = tw.div`
+export const Solos = tw.div`
   z-20 relative
   margin[0px -24px]
-  mb-64
+  mb-144
   overflow-x-hidden
 `
 
@@ -36,12 +36,14 @@ export const DesktopSwiper = styled.div`
         md:(w-5 h-5 mx-2)
         lg:(width[7.5px] height[7.5px] mx-3)
         xl:(w-8 h-8 mx-5)
+        bg-purple-400
+        opacity-40
       `}
     }
 
     & .swiper-pagination-bullet-active {
       ${tw`
-        bg-black
+        opacity-100
       `}
     }
   }
@@ -69,7 +71,6 @@ export const MobileSwiper = styled.div`
   & div {
     ${tw`
       width[calc(100vw - 48px)]!
-      height[calc(100vw - 48px)]!
       mr-10
       inline-block
     `}

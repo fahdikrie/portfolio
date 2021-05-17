@@ -53,12 +53,12 @@ export const Loading = styled.div`
     flex flex-col
     justify-center items-center
     width[calc(100% - 4px)]
-    height[calc(22.5vw * 3 / 1.975)]
-    md:height[calc(10.25vw * 3 / 1.975)]
+    height[calc(22.95vw * 3 / 1.975)]
+    md:height[calc(10.5vw * 3 / 1.975)]
   `}
 
   @media (min-width: 1920px) {
-    height: calc((0.1155 * 1920px) * 3 / 1.925);
+    height: calc((0.1105 * 1920px) * 3 / 1.925);
   }
 `
 

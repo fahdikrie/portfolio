@@ -28,8 +28,8 @@ const Activities = (): JSX.Element => {
     isLoading: true,
   })
 
-  const { favoriteMovies } = fetchFavoriteMovies('/api/favorite-movies')
   const { favoriteBooks } = fetchFavoriteBooks('/api/favorite-books')
+  const { favoriteMovies } = fetchFavoriteMovies('/api/favorite-movies')
 
   useEffect((): boolean | any => {
     let mounted = true
@@ -80,14 +80,12 @@ const Activities = (): JSX.Element => {
         <Favorites
           header="badi's fav 🎬"
           subheader="Top 20 movies, in no particular order."
-          link="https://letterboxd.com/fahdikrie/films/diary/"
           data={favoriteMovies}
           type="movie"
         />
         <Favorites
           header="badi's fav 📚"
           subheader="I haven't read that much book, so, yeah."
-          link="https://www.goodreads.com/review/list/100267901?shelf=read"
           data={favoriteBooks}
           type="book"
         />

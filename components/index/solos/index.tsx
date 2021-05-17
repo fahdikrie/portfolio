@@ -1,20 +1,19 @@
 import SwiperCore, { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useRef } from 'react'
 
-import { fetchProjects } from 'utils/selectors'
-import ProjectCard from './project-card'
+import { fetchSolos } from 'utils/selectors'
+import SoloCard from './solo-card'
 import * as S from './index.style'
 import 'swiper/swiper-bundle.min.css'
 
-interface ProjectsData {
-  projects: any[] | any
+interface SolosData {
+  solos: any[] | any
 }
 
 SwiperCore.use([Pagination])
 
-const Projects = (): JSX.Element => {
-  const { projects }: ProjectsData = fetchProjects('/api/projects')
+const Solos = (): JSX.Element => {
+  const { solos }: SolosData = fetchSolos('/api/solos')
 
   const settings = {
     loop: true,
@@ -22,27 +21,27 @@ const Projects = (): JSX.Element => {
       768: {
         freeMode: false,
         spaceBetween: 15,
-        slidesPerView: 3
+        slidesPerView: 3,
       }
     }
   }
 
   return (
-    <S.Projects>
+    <S.Solos>
       <S.Header>
-        Projects I've Participated in
+        Projects I did on my own
       </S.Header>
       <S.SubHeader>
-        Projects I did in collaboration with others, <u>drag to see more</u>
+        Side projects and college assignments. <u>drag to see more</u>
       </S.SubHeader>
       <S.DesktopSwiper>
         <Swiper
           {...settings}
           pagination={{ clickable: true }}
         >
-          {projects?.map((el, i) => (
+          {solos?.map((el, i) => (
             <SwiperSlide key={i}>
-              <ProjectCard
+              <SoloCard
                 key={i}
                 image={el.image}
                 name={el.name}
@@ -55,8 +54,8 @@ const Projects = (): JSX.Element => {
         </Swiper>
       </S.DesktopSwiper>
       <S.MobileSwiper>
-        {projects?.reverse().map((el, i) => (
-          <ProjectCard
+        {solos?.reverse().map((el, i) => (
+          <SoloCard
             key={i}
             image={el.image}
             name={el.name}
@@ -67,8 +66,8 @@ const Projects = (): JSX.Element => {
         ))}
         <div className="swiper__margin"></div>
       </S.MobileSwiper>
-    </S.Projects>
+    </S.Solos>
   )
 }
 
-export default Projects
+export default Solos
