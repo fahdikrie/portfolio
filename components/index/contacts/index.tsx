@@ -1,12 +1,12 @@
 import ContactCard from './contact-card'
 import * as S from './index.style'
 
-import LinkedInSvg from 'public/assets/socials/linkedin.svg'
-import EmailSvg from 'public/assets/socials/email.svg'
-import GithubSvg from 'public/assets/socials/github.svg'
-import GitlabSvg from 'public/assets/socials/gitlab.svg'
-import LetterboxdSvg from 'public/assets/socials/letterboxd.svg'
-import GoodreadsSvg from 'public/assets/socials/goodreads.svg'
+import LinkedInImg from 'public/assets/socials/linkedin.png'
+import EmailImg from 'public/assets/socials/email.png'
+import GithubImg from 'public/assets/socials/github.png'
+import GitlabImg from 'public/assets/socials/gitlab.png'
+import LetterboxdImg from 'public/assets/socials/letterboxd.png'
+import GoodreadsImg from 'public/assets/socials/goodreads.png'
 
 const Contacts = ():JSX.Element => (
   <S.Contacts>
@@ -15,32 +15,32 @@ const Contacts = ():JSX.Element => (
     <S.ContactCardWrapper>
       <ContactCard
         name="fahdiaf@ristek.cs.ui.ac.id"
-        image={EmailSvg}
+        image={EmailImg}
         link="mailto:fahdiaf@ristek.cs.ui.ac.id"
       />
       <ContactCard
         name="linkedin.com/in/fahdikrie"
-        image={LinkedInSvg}
+        image={LinkedInImg}
         link="https://www.linkedin.com/in/fahdikrie/"
       />
       <ContactCard
         name="github.com/fahdikrie"
-        image={GithubSvg}
+        image={GithubImg}
         link="https://github.com/fahdikrie"
       />
       <ContactCard
         name="gitlab.com/fahdikrie"
-        image={GitlabSvg}
+        image={GitlabImg}
         link="https://gitlab.com/fahdikrie/"
       />
       <ContactCard
         name="letterboxd.com/fahdikrie"
-        image={LetterboxdSvg}
+        image={LetterboxdImg}
         link="https://boxd.it/Up8H"
       />
       <ContactCard
         name="goodreads.com/fahdikrie"
-        image={GoodreadsSvg}
+        image={GoodreadsImg}
         link="https://www.goodreads.com/fahdikrie/"
       />
     </S.ContactCardWrapper>

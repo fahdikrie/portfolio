@@ -36,11 +36,12 @@ export const SubHeader = styled.h3`
 `
 
 export const ContactCardWrapper = tw.div`
+  w-full
+  md:mt-20
   mx-24 md:mx-auto
-  w-full mt-32
-  flex-wrap
-  flex items-start
+  flex flex-wrap items-start
   md:(justify-center)
-  gap-x-20 gap-y-16
-  md:(gap-x-32 gap-y-28)
+  gap-x-10 gap-y-20
+  md:(gap-x-20 gap-y-24)
+  lg:(gap-x-32)
 `
