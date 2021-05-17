@@ -43,7 +43,7 @@ export const Overlay = styled.div<OverlayProps>`
     backdrop-filter: blur(10px);
 
     h2, h3 {
-      ${tw`opacity-100`}
+      ${tw`opacity-100 hidden`}
     }
   }
 `

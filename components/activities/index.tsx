@@ -69,7 +69,7 @@ const Activities = (): JSX.Element => {
         />
         <Recents
           data={goodreads.items}
-          link="https://www.goodreads.com/review/list/100267901?shelf=read"
+          link="https://www.goodreads.com/review/list/100267901?shelf=read&sort=date_added"
           title="reads"
           service="goodreads"
           isError={goodreads.isError}

@@ -15,8 +15,8 @@ const Favorites = ({ header, subheader, data, type }):JSX.Element => (
             {el.title}
           </a>
           <span> ({el.year})</span> <br/>
-          <span> {type == "movie" ? "🎬" : "✍️"} {el.author},</span>
-          <span> ⭐️ {el.rating}/100</span>
+          <span> {type == "movie" ? "dir." : "by"} {el.author} </span>
+          <span className="list-item__rating">{el.rating}/100</span>
         </S.ListItem>
       ))}
     </S.List>

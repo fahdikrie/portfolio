@@ -53,5 +53,9 @@ export const ListItem = styled.li`
       opacity-80
       text-sm-small md:text-md-small lg:text-small
     `}
+
+    &.list-item__rating {
+      ${tw`bg-purple-900 px-2 rounded opacity-100`}
+    }
   }
 `

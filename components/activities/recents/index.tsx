@@ -23,7 +23,6 @@ const Recents = ({
     <S.Header>
       <S.Title>
         badi's recent {title}
-        <span>*</span>
       </S.Title>
       <S.Title>
         <a

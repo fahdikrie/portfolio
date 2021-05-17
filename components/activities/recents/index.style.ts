@@ -16,20 +16,12 @@ export const Header = tw.div`
   justify-between
 `
 
-export const Title = styled.h6`
-  ${tw`
-    font-normal text-white
-    text-sm-small md:text-md-small lg:text-small
-    md:tracking-wide
-    mb-5 md:mb-10
-    margin-left[2px]
-  `}
-
-  & span {
-    ${tw`
-      text-purple-900
-    `}
-  }
+export const Title = tw.h6`
+  font-normal text-white
+  text-sm-small md:text-md-small lg:text-small
+  md:tracking-wide
+  mb-5 md:mb-10
+  margin-left[2px]
 `
 
 export const RecentsCards = styled.div<RecentsCardsProps>`

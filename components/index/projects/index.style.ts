@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro'
 export const Projects = tw.div`
   z-20 relative
   margin[0px -24px] md:mx-0
-  mb-48 md:mb-64
+  mb-64
   overflow-x-hidden
 `
 
