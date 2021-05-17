@@ -39,9 +39,12 @@ export const ContactCardWrapper = tw.div`
   w-full
   md:mt-20
   mx-24 md:mx-auto
-  flex flex-wrap items-start
-  md:(justify-center)
-  gap-x-10 gap-y-20
+
+  flex flex-wrap
+  flex-col items-start
+  md:(flex-row justify-center)
+
+  gap-x-10
   md:(gap-x-20 gap-y-24)
   lg:(gap-x-32)
 `

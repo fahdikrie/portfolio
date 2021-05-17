@@ -3,6 +3,7 @@ import tw, { styled } from 'twin.macro'
 export const ContactCard = styled.a`
   ${tw`
     flex justify-center items-center
+    mb-20 md:mb-0
   `}
 
   & img {
