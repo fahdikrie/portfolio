@@ -2,8 +2,8 @@ import tw, { styled } from 'twin.macro'
 
 export const Solos = tw.div`
   z-20 relative
-  margin[0px -24px]
-  mb-144
+  margin[0px -24px] md:mx-0
+  mb-64 md:mb-144
   overflow-x-hidden
 `
 

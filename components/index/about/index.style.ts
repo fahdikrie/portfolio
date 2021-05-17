@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 
 export const About = tw.div`
-  mb-144
+  mb-64 md:mb-144
 `
 
 export const LargeText = tw.h5`

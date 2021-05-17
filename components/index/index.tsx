@@ -1,7 +1,8 @@
 import Title from './title'
 import About from './about'
 import Projects from './projects'
-import Solo from './solos'
+import Solos from './solos'
+import Contacts from './contacts'
 import * as S from './index.style'
 
 const Index = (): JSX.Element => (
@@ -9,7 +10,8 @@ const Index = (): JSX.Element => (
     <Title />
     <About />
     <Projects />
-    <Solo />
+    <Solos />
+    <Contacts />
   </S.Index>
 )
 
