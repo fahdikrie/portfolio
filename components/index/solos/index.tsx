@@ -29,7 +29,7 @@ const Solos = (): JSX.Element => {
   return (
     <S.Solos>
       <S.Header>
-        Projects I did on my own
+        Projects I <br/> did on my own
       </S.Header>
       <S.SubHeader>
         Side projects and college assignments. <u>drag to see more</u>

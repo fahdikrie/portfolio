@@ -30,10 +30,10 @@ const Projects = (): JSX.Element => {
   return (
     <S.Projects>
       <S.Header>
-        Projects I've Participated in
+        Projects I've <br/> participated in
       </S.Header>
       <S.SubHeader>
-        Projects I did in collaboration with others, <u>drag to see more</u>
+        Projects I did in collaboration with others. <u>drag to see more</u>
       </S.SubHeader>
       <S.DesktopSwiper>
         <Swiper

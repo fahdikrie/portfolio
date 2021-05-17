@@ -10,35 +10,13 @@ export const ProjectCard = tw.div`
   relative
 `
 
-export const Name = tw.h2`
-  cursor[grab] active:cursor[grabbing]
-  font-black color[inherit]
-  leading-tight
-  mb-3
-  font-size[calc(0.95rem + 2.75vw)]
-  md:font-size[calc(0.35rem + 0.4vw)]
-  lg:font-size[calc(0.75rem + 0.65vw)]
-  xl:font-size[calc(0.75rem + 0.95vw)]
-  2xl:font-size[calc(0.75rem + 1.1vw)]
-`
-
-export const Time = tw.h3`
-  cursor[grab] active:cursor[grabbing]
-  font-bold color[inherit]
-  font-size[calc(0.25rem + 2.5vw)]
-  md:font-size[calc(0.15rem + 0.5vw)]
-  lg:font-size[calc(0.5rem + 0.45vw)]
-  xl:font-size[calc(0.5rem + 0.5vw)]
-  2xl:font-size[calc(0.5rem + 0.6vw)]
-`
-
 export const Overlay = styled.div<OverlayProps>`
   ${tw`
     absolute
     cursor[grab] active:cursor[grabbing]
     top-0 right-0 bottom-0 left-0
     padding[4.5% 5%]
-    border-radius[2.25%]
+    border-radius[3%]
   `}
 
   color: ${props => props.color};
@@ -68,4 +46,26 @@ export const Overlay = styled.div<OverlayProps>`
       ${tw`opacity-100`}
     }
   }
+`
+
+export const Name = tw.h2`
+  cursor[grab] active:cursor[grabbing]
+  font-black color[inherit]
+  leading-tight
+  mb-3
+  font-size[calc(0.95rem + 2.75vw)]
+  md:font-size[calc(0.35rem + 0.4vw)]
+  lg:font-size[calc(0.75rem + 0.65vw)]
+  xl:font-size[calc(0.75rem + 0.95vw)]
+  2xl:font-size[calc(0.75rem + 1.1vw)]
+`
+
+export const Time = tw.h3`
+  cursor[grab] active:cursor[grabbing]
+  font-bold color[inherit]
+  font-size[calc(0.25rem + 2.5vw)]
+  md:font-size[calc(0.15rem + 0.5vw)]
+  lg:font-size[calc(0.5rem + 0.45vw)]
+  xl:font-size[calc(0.5rem + 0.5vw)]
+  2xl:font-size[calc(0.5rem + 0.6vw)]
 `

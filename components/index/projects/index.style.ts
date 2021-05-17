@@ -7,21 +7,32 @@ export const Projects = tw.div`
   overflow-x-hidden
 `
 
-export const Header = tw.h2`
-  mx-24 md:mx-0
-  mb-20 md:mb-0
-  text-white font-black
-  text-left md:text-center
-  text-sm-header md:text-md-header lg:text-header
-`
+export const Header = styled.h2`
+  ${tw`
+    mx-24 md:mx-0
+    mb-0
+    text-white font-black
+    text-left md:text-center
+    text-sm-header md:text-md-header lg:text-header
+  `}
 
-export const SubHeader = tw.h3`
-  mb-20
-  font-normal
-  md:text-center
-  hidden md:block
-  text-white opacity-70
-  text-sm-large md:text-small lg:text-large
+  & br {
+    ${tw`block md:hidden`}
+  }
+`
+export const SubHeader = styled.h3`
+  ${tw`
+    mb-20
+    font-normal
+    mx-24 md:mx-0
+    md:text-center
+    text-white opacity-70
+    text-sm-large md:text-small lg:text-large
+  `}
+
+  & u {
+    ${tw`hidden md:inline`}
+  }
 `
 
 export const DesktopSwiper = styled.div`
