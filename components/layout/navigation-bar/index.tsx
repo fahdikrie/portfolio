@@ -56,7 +56,7 @@ const NavigationBar = ({ currentPage }: NavigationBarProps ) => (
           isActive={currentPage == "/resume" ? true : false}
         >
           <Link href="/resume.pdf">
-            activities
+            resume
           </Link>
         </S.Item>
         <S.Item
