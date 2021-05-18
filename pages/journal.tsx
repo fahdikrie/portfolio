@@ -4,7 +4,7 @@ import Layout from 'components/layout'
 const Journal = ({ router }): JSX.Element => (
   <Layout
     currentPage={router.pathname}
-    pageTitle="journal | bbbadi"
+    pageTitle="journal"
     description="An internet-web journal of Fahdii Ajmalal Fikrie."
   >
     <Index />
