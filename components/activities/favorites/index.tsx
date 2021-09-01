@@ -5,8 +5,8 @@ const Favorites = ({ header, subheader, data, type }):JSX.Element => (
     <S.Header>{header}</S.Header>
     <S.SubHeader>{subheader}</S.SubHeader>
     <S.List>
-      {data?.map(el => (
-        <S.ListItem>
+      {data?.map((el, id) => (
+        <S.ListItem key={id}>
           <a
             href={el.link}
             target="_blank"
