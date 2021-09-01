@@ -113,7 +113,12 @@ export const fetchGoodreads = async () => {
 }
 
 export const fetchLetterboxd = async () => {
-  let parser = new RSSParser()
+  let parser = new RSSParser({
+    customFields: {
+      item: ['letterboxd:watchedDate']
+    }
+  })
+
   let data: Data = {
     items: [],
     isError: false
@@ -121,6 +126,8 @@ export const fetchLetterboxd = async () => {
 
   try {
     let feed = await parser.parseURL(process.env.NEXT_PUBLIC_CORS_PROXY + process.env.NEXT_PUBLIC_LETTERBOXD_RSS)
+
+    console.log(feed.items[0]['letterboxd:watchedDate'])
 
     for (let i = 0; i < 4; i++) {
       let movieData = {
@@ -132,6 +139,8 @@ export const fetchLetterboxd = async () => {
       }
 
       const el = feed.items[i]
+
+      console.log(el['letterboxd:watchedDate'])
 
       let html = document.createElement('html');
       html.innerHTML = el.content
@@ -155,28 +164,7 @@ export const fetchLetterboxd = async () => {
           .split("-")[el.title.split("-").length - 1]
           .split(" ")[1]
       )
-      movieData.date = (
-        el.contentSnippet.includes("Watched on ")
-          ? el
-              .content
-              .split("<p>")
-              .pop()
-              .split(" ")[3]
-              .substring(0, 3)
-            + " "
-            + el
-                .content
-                .split("<p>")
-                .pop()
-                .split(" ")[4].slice(0, -1)
-          : el
-              .pubDate
-              .split(" ")[2]
-            + " "
-            + el
-                .pubDate
-                .split(" ")[1]
-      )
+      movieData.date = el['letterboxd:watchedData']
 
       data.items.push(movieData)
     }

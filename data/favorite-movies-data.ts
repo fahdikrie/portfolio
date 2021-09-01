@@ -147,7 +147,7 @@ export const FavoriteMovies = [
     id: "19",
     year: "1997",
     title: "Taste of Cherry",
-    author: "Kwak Jae-yong",
+    author: "Abbas Kiarostami",
     rating: "95",
     link: "https://letterboxd.com/fahdikrie/film/taste-of-cherry/"
   },

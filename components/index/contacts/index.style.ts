@@ -36,9 +36,9 @@ export const SubHeader = styled.h3`
 `
 
 export const ContactCardWrapper = tw.div`
-  w-full
   md:mt-20
   mx-24 md:mx-auto
+  w-full 2xl:w-5/6
 
   flex flex-wrap
   flex-col items-start
