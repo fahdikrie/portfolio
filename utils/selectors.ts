@@ -131,8 +131,6 @@ export const fetchLetterboxd = async () => {
       process.env.NEXT_PUBLIC_CORS_PROXY + process.env.NEXT_PUBLIC_LETTERBOXD_RSS
     )
 
-    console.log(feed.items[0]['letterboxd:watchedDate'])
-
     for (let i = 0; i < 4; i++) {
       let movieData = {
         image: "",
@@ -143,8 +141,6 @@ export const fetchLetterboxd = async () => {
       }
 
       const el = feed.items[i]
-
-      console.log(el['letterboxd:watchedDate'])
 
       let html = document.createElement('html');
       html.innerHTML = el.content
@@ -168,7 +164,12 @@ export const fetchLetterboxd = async () => {
           .split("-")[el.title.split("-").length - 1]
           .split(" ")[1]
       )
-      movieData.date = el['letterboxd:watchedData']
+      movieData.date = (
+        new Date(el['letterboxd:watchedDate'])
+          .toLocaleString('en-us', { month: 'short' }) + ' ' +
+        new Date(el['letterboxd:watchedDate'])
+          .getDate()
+      )
 
       data.items.push(movieData)
     }
