@@ -8,6 +8,7 @@
     "start": "next start -p 3000"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "gray-matter": "^4.0.3",
     "next": "^10.2.0",
     "next-connect": "^0.10.2",
