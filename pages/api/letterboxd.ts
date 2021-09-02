@@ -13,14 +13,19 @@ const handler = nc<NextApiRequest, NextApiResponse>()
         }
       })
 
-      let feed = await parser.parseURL(process.env.NEXT_PUBLIC_LETTERBOXD_RSS)
-      console.log(feed)
-      return res.status(200).json(feed)
+      let feed = await parser.parseURL(
+        process.env.NEXT_PUBLIC_LETTERBOXD_RSS
+      )
 
+      return (
+        res.status(200).json(feed)
+      )
     } catch(err) {
-      return res.status(500).json({
-        message: "Failed to fetch Letterboxd data"
-      })
+      return (
+        res.status(500).json({
+          message: "Failed to fetch Letterboxd data"
+        })
+      )
     }
   })
 
