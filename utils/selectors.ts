@@ -127,6 +127,9 @@ export const fetchLetterboxd = async () => {
   }
 
   try {
+    const response = await fetch('/api/letterboxd');
+    console.log(response)
+
     let feed = await parser.parseURL(
       process.env.NEXT_PUBLIC_CORS_PROXY + process.env.NEXT_PUBLIC_LETTERBOXD_RSS
     )

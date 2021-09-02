@@ -15,5 +15,22 @@ module.exports = withImages({
   images: {
     domains: ['i.gr-assets.com', 'a.ltrbxd.com'],
   },
-  target: 'serverless'
+  target: 'serverless',
+  async headers() {
+    return [
+      {
+        source: '/api/letterboxd',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: process.env.NEXT_PUBLIC_LETTERBOXD_RSS,
+          },
+          {
+            key: 'Vary',
+            value: 'Origin',
+          },
+        ],
+      },
+    ]
+  },
 })
