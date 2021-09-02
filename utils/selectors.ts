@@ -127,12 +127,8 @@ export const fetchLetterboxd = async () => {
   }
 
   try {
-    const response = await fetch('/api/letterboxd');
-    console.log(response)
-
-    let feed = await parser.parseURL(
-      process.env.NEXT_PUBLIC_CORS_PROXY + process.env.NEXT_PUBLIC_LETTERBOXD_RSS
-    )
+    const feed = await fetch('/api/letterboxd/')
+      .then(res => res.json());
 
     for (let i = 0; i < 4; i++) {
       let movieData = {

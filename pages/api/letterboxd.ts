@@ -1,12 +1,11 @@
-import RSSParser from 'rss-parser'
+import { NextApiRequest, NextApiResponse } from "next";
+import RSSParser from 'rss-parser';
 import nc from "next-connect";
-import useSWR from "swr";
 import cors from "cors";
 
-const handler = nc()
-  // use connect based middleware
+const handler = nc<NextApiRequest, NextApiResponse>()
   .use(cors())
-  .get(async (req, res:any) => {
+  .get(async (_, res) => {
     try {
       let parser = new RSSParser({
         customFields: {
@@ -19,7 +18,9 @@ const handler = nc()
       return res.status(200).json(feed)
 
     } catch(err) {
-      console.log(err)
+      return res.status(500).json({
+        message: "Failed to fetch Letterboxd data"
+      })
     }
   })
 
