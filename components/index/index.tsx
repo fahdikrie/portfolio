@@ -1,9 +1,9 @@
-import Title from './title';
-import About from './about';
-import Projects from './projects';
-import Solos from './solos';
-import Contacts from './contacts';
-import * as S from './index.style';
+import Title from './title'
+import About from './about'
+import Projects from './projects'
+import Solos from './solos'
+import Contacts from './contacts'
+import * as S from './index.style'
 
 const Index = (): JSX.Element => (
   <S.Index>
@@ -13,6 +13,6 @@ const Index = (): JSX.Element => (
     <Solos />
     <Contacts />
   </S.Index>
-);
+)
 
-export default Index;
+export default Index
