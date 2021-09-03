@@ -5,7 +5,7 @@ import { useRef } from 'react'
 import { fetchProjects } from 'utils/selectors'
 import ProjectCard from './project-card'
 import * as S from './index.style'
-import 'swiper/swiper-bundle.min.css'
+import 'swiper/css'
 
 interface ProjectsData {
   projects: any[] | any

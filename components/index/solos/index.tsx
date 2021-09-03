@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { fetchSolos } from 'utils/selectors'
 import SoloCard from './solo-card'
 import * as S from './index.style'
-import 'swiper/swiper-bundle.min.css'
+import 'swiper/css'
 
 interface SolosData {
   solos: any[] | any
