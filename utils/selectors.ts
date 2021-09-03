@@ -59,16 +59,14 @@ export const fetchFavoriteBooks = (path: string) => {
 }
 
 export const fetchGoodreads = async () => {
-  let parser = new RSSParser()
   let data: Data = {
     items: [],
     isError: false
   }
 
   try {
-    let feed = await parser.parseURL(
-      process.env.NEXT_PUBLIC_CORS_PROXY + process.env.NEXT_PUBLIC_GOODREADS_RSS
-    )
+    let feed = await fetch('/api/goodreads/')
+      .then(res => res.json());
 
     for (let i = 0; i < 4; i++) {
       let bookData = {
@@ -115,12 +113,6 @@ export const fetchGoodreads = async () => {
 }
 
 export const fetchLetterboxd = async () => {
-  let parser = new RSSParser({
-    customFields: {
-      item: ['letterboxd:watchedDate']
-    }
-  })
-
   let data: Data = {
     items: [],
     isError: false
