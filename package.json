@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 3000",
-    "lint": "next lint",
-    "prettier": "prettier --write ."
+    "lint": "next lint"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -35,7 +34,6 @@
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "postcss": "^8.3.6",
-    "prettier": "2.3.2",
     "react-is": "^17.0.2",
     "tailwindcss": "^2.2.9",
     "twin.macro": "^2.7.0",
