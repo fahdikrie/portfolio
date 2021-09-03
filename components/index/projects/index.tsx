@@ -1,10 +1,10 @@
 import SwiperCore, { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useRef } from 'react'
 
 import { fetchProjects } from 'utils/selectors'
 import ProjectCard from './project-card'
 import * as S from './index.style'
-import 'swiper/css/pagination'
 import 'swiper/css'
 
 interface ProjectsData {

@@ -36,7 +36,7 @@ export const SubHeader = styled.h3`
 `
 
 export const DesktopSwiper = styled.div`
-  & .swiper {
+  & .swiper-container {
     ${tw`
       hidden md:block
       active:cursor[grabbing]
