@@ -1,11 +1,11 @@
-import tw, { styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro';
 
 export const Projects = tw.div`
   z-20 relative
   margin[0px -24px] md:mx-0
   mb-64
   overflow-x-hidden
-`
+`;
 
 export const Header = styled.h2`
   ${tw`
@@ -19,7 +19,7 @@ export const Header = styled.h2`
   & br {
     ${tw`block md:hidden`}
   }
-`
+`;
 export const SubHeader = styled.h3`
   ${tw`
     mb-20
@@ -33,7 +33,7 @@ export const SubHeader = styled.h3`
   & u {
     ${tw`hidden md:inline`}
   }
-`
+`;
 
 export const DesktopSwiper = styled.div`
   & .swiper-container {
@@ -56,7 +56,7 @@ export const DesktopSwiper = styled.div`
       `}
     }
   }
-`
+`;
 
 export const MobileSwiper = styled.div`
   ${tw`
@@ -100,4 +100,4 @@ export const MobileSwiper = styled.div`
       invisible
     `}
   }
-`
+`;

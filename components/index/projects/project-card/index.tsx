@@ -1,13 +1,13 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-import * as S from './index.style'
+import * as S from './index.style';
 
 interface ProjectCardProps {
-  image: string
-  name: string
-  time: string
-  overlay: string
-  color: string
+  image: string;
+  name: string;
+  time: string;
+  overlay: string;
+  color: string;
 }
 
 const ProjectCard = ({
@@ -15,7 +15,7 @@ const ProjectCard = ({
   name,
   time,
   overlay,
-  color
+  color,
 }: ProjectCardProps): JSX.Element => (
   <S.ProjectCard>
     <Image
@@ -28,14 +28,11 @@ const ProjectCard = ({
       priority
     />
 
-    <S.Overlay
-      overlay={overlay}
-      color={color}
-    >
-      <S.Name dangerouslySetInnerHTML={{__html: name}} />
-      <S.Time dangerouslySetInnerHTML={{__html: time}} />
+    <S.Overlay overlay={overlay} color={color}>
+      <S.Name dangerouslySetInnerHTML={{ __html: name }} />
+      <S.Time dangerouslySetInnerHTML={{ __html: time }} />
     </S.Overlay>
   </S.ProjectCard>
-)
+);
 
-export default ProjectCard
+export default ProjectCard;

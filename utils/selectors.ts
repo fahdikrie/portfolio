@@ -1,171 +1,143 @@
-import useSWR from 'swr'
-import RSSParser from 'rss-parser'
+import useSWR from 'swr';
+import RSSParser from 'rss-parser';
 
 import {
   getUncompressedURL,
   convertIntToStars,
-  convertDateFormat
-} from 'utils/utils'
+  convertDateFormat,
+} from 'utils/utils';
 
 interface Data {
-  items: Object[]
-  isError: boolean | any
+  items: Object[];
+  isError: boolean | any;
 }
 
-const fetcher = (url: string): Promise<Object> => fetch(url).then(res => res.json())
+const fetcher = (url: string): Promise<Object> =>
+  fetch(url).then((res) => res.json());
 
 export const fetchProjects = (path: string) => {
-  if (!path) throw new Error("Path is required")
+  if (!path) throw new Error('Path is required');
 
-  const {
-    data: projects,
-    error
-  } = useSWR(path, fetcher)
+  const { data: projects, error } = useSWR(path, fetcher);
 
-  return { projects, error }
-}
+  return { projects, error };
+};
 
 export const fetchSolos = (path: string) => {
-  if (!path) throw new Error("Path is required")
+  if (!path) throw new Error('Path is required');
 
-  const {
-    data: solos,
-    error
-  } = useSWR(path, fetcher)
+  const { data: solos, error } = useSWR(path, fetcher);
 
-  return { solos, error }
-}
+  return { solos, error };
+};
 
 export const fetchFavoriteMovies = (path: string) => {
-  if (!path) throw new Error("Path is required")
+  if (!path) throw new Error('Path is required');
 
-  const {
-    data: favoriteMovies,
-    error
-  } = useSWR(path, fetcher)
+  const { data: favoriteMovies, error } = useSWR(path, fetcher);
 
-  return { favoriteMovies, error }
-}
+  return { favoriteMovies, error };
+};
 
 export const fetchFavoriteBooks = (path: string) => {
-  if (!path) throw new Error("Path is required")
+  if (!path) throw new Error('Path is required');
 
-  const {
-    data: favoriteBooks,
-    error
-  } = useSWR(path, fetcher)
+  const { data: favoriteBooks, error } = useSWR(path, fetcher);
 
-  return { favoriteBooks, error }
-}
+  return { favoriteBooks, error };
+};
 
 export const fetchGoodreads = async () => {
   let data: Data = {
     items: [],
-    isError: false
-  }
+    isError: false,
+  };
 
   try {
-    let feed = await fetch('/api/goodreads/')
-      .then(res => res.json());
+    let feed = await fetch('/api/goodreads/').then((res) => res.json());
 
     for (let i = 0; i < 4; i++) {
       let bookData = {
-        image: "",
-        link: "",
-        title: "",
-        rating: "",
-        date: ""
-      }
+        image: '',
+        link: '',
+        title: '',
+        rating: '',
+        date: '',
+      };
 
-      const el = feed.items[i]
+      const el = feed.items[i];
 
       let html = document.createElement('html');
-      html.innerHTML = el.content
+      html.innerHTML = el.content;
 
       bookData.image = getUncompressedURL(
-        html
-          .getElementsByTagName('img')[0]
-          .src
-      )
-      bookData.link = el.link
-      bookData.title = el.title
+        html.getElementsByTagName('img')[0].src
+      );
+      bookData.link = el.link;
+      bookData.title = el.title;
       bookData.rating = convertIntToStars(
-        el
-          .content
-          .split("<br/>")[5]
-          .split(":")[1]
-          .trim()
-      )
+        el.content.split('<br/>')[5].split(':')[1].trim()
+      );
       bookData.date = convertDateFormat(
         html
           .getElementsByTagName('body')[0]
-          .innerHTML
-          .split("read at:")[1]
-          .split("<br>")[0]
-      )
+          .innerHTML.split('read at:')[1]
+          .split('<br>')[0]
+      );
 
-      data.items.push(bookData)
+      data.items.push(bookData);
     }
+  } catch (error) {
+    data.isError = true;
+  }
 
-  } catch (error) { data.isError = true }
-
-  return data
-}
+  return data;
+};
 
 export const fetchLetterboxd = async () => {
   let data: Data = {
     items: [],
-    isError: false
-  }
+    isError: false,
+  };
 
   try {
-    const feed = await fetch('/api/letterboxd/')
-      .then(res => res.json());
+    const feed = await fetch('/api/letterboxd/').then((res) => res.json());
 
     for (let i = 0; i < 4; i++) {
       let movieData = {
-        image: "",
-        link: "",
-        title: "",
-        rating: "",
-        date: ""
-      }
+        image: '',
+        link: '',
+        title: '',
+        rating: '',
+        date: '',
+      };
 
-      const el = feed.items[i]
+      const el = feed.items[i];
 
       let html = document.createElement('html');
-      html.innerHTML = el.content
+      html.innerHTML = el.content;
 
-      movieData.image = (
-        html
-          .getElementsByTagName('img')[0]
-          .src
-      )
-      movieData.link = el.link
-      movieData.title = (
-        el
-          .title
-          .split("-")
-          .splice(0, el.title.split("-").length - 1)
-          .join("-")
-      )
-      movieData.rating = (
-        el
-          .title
-          .split("-")[el.title.split("-").length - 1]
-          .split(" ")[1]
-      )
-      movieData.date = (
-        new Date(el['letterboxd:watchedDate'])
-          .toLocaleString('en-us', { month: 'short' }) + ' ' +
-        new Date(el['letterboxd:watchedDate'])
-          .getDate()
-      )
+      movieData.image = html.getElementsByTagName('img')[0].src;
+      movieData.link = el.link;
+      movieData.title = el.title
+        .split('-')
+        .splice(0, el.title.split('-').length - 1)
+        .join('-');
+      movieData.rating = el.title
+        .split('-')
+        [el.title.split('-').length - 1].split(' ')[1];
+      movieData.date =
+        new Date(el['letterboxd:watchedDate']).toLocaleString('en-us', {
+          month: 'short',
+        }) +
+        ' ' +
+        new Date(el['letterboxd:watchedDate']).getDate();
 
-      data.items.push(movieData)
+      data.items.push(movieData);
     }
+  } catch (error) {
+    data.isError = true;
+  }
 
-  } catch (error) { data.isError = true }
-
-  return data
-}
+  return data;
+};

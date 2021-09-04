@@ -1,5 +1,5 @@
-import { default as Index } from 'components/journal'
-import Layout from 'components/layout'
+import { default as Index } from 'components/journal';
+import Layout from 'components/layout';
 
 const Journal = ({ router }): JSX.Element => (
   <Layout
@@ -9,6 +9,6 @@ const Journal = ({ router }): JSX.Element => (
   >
     <Index />
   </Layout>
-)
+);
 
-export default Journal
+export default Journal;

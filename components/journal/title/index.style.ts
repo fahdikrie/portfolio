@@ -1,4 +1,4 @@
-import tw, { styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro';
 
 export const Title = styled.div`
   ${tw`
@@ -14,7 +14,7 @@ export const Title = styled.div`
       flex flex-col justify-center
     `}
   }
-`
+`;
 
 export const JumboText = tw.h1`
   font-serif
@@ -22,7 +22,7 @@ export const JumboText = tw.h1`
   text-white
   text-sm-wambo // md:text-wambo
   lg:text-sm-jumbo xl:text-jumbo
-`
+`;
 
 export const SubHeader = styled.h3`
   ${tw`
@@ -32,4 +32,4 @@ export const SubHeader = styled.h3`
     text-sm-large md:text-large
     lg:text-sm-subheader xl:text-subheader
   `}
-`
+`;

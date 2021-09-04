@@ -1,57 +1,57 @@
 export const getUncompressedURL = (url: string): string => {
-  let imageUrl = url.split(".")
-  imageUrl.splice(url.split(".").length - 2, 1)
+  let imageUrl = url.split('.');
+  imageUrl.splice(url.split('.').length - 2, 1);
 
-  return imageUrl.join(".")
-}
+  return imageUrl.join('.');
+};
 
 export const convertDateFormat = (date: string): string => {
-  const month = date.split("/")[1]
-  const day = date.split("/")[2]
+  const month = date.split('/')[1];
+  const day = date.split('/')[2];
 
   switch (Number(month)) {
     case 1:
-      return "Jan " + day
+      return 'Jan ' + day;
     case 2:
-      return "Feb " + day
+      return 'Feb ' + day;
     case 3:
-      return "Mar " + day
+      return 'Mar ' + day;
     case 4:
-      return "Apr " + day
+      return 'Apr ' + day;
     case 5:
-      return "May " + day
+      return 'May ' + day;
     case 6:
-      return "Jun " + day
+      return 'Jun ' + day;
     case 7:
-      return "Jul " + day
+      return 'Jul ' + day;
     case 8:
-      return "Aug " + day
+      return 'Aug ' + day;
     case 9:
-      return "Sep " + day
+      return 'Sep ' + day;
     case 10:
-      return "Oct " + day
+      return 'Oct ' + day;
     case 11:
-      return "Nov " + day
+      return 'Nov ' + day;
     case 12:
-      return "Dec " + day
+      return 'Dec ' + day;
     default:
-      return "Jan " + day
+      return 'Jan ' + day;
   }
-}
+};
 
 export const convertIntToStars = (rating: string): string => {
   switch (Number(rating)) {
     case 5:
-      return "★★★★★"
+      return '★★★★★';
     case 4:
-      return "★★★★"
+      return '★★★★';
     case 3:
-      return "★★★"
+      return '★★★';
     case 2:
-      return "★★"
+      return '★★';
     case 1:
-      return "★"
+      return '★';
     default:
-      return "★★★★★"
+      return '★★★★★';
   }
-}
+};

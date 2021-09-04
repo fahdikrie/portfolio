@@ -1,20 +1,20 @@
-import tw, { styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro';
 
 interface RecentsCardsProps {
-  isLoading: boolean
-  isError: boolean
+  isLoading: boolean;
+  isError: boolean;
 }
 
 export const Recents = tw.div`
   w-full z-20
-`
+`;
 
 export const Header = tw.div`
   w-full
   pl-2 pr-5
   flex flex-row
   justify-between
-`
+`;
 
 export const Title = tw.h6`
   font-normal text-white
@@ -22,22 +22,21 @@ export const Title = tw.h6`
   md:tracking-wide
   mb-5 md:mb-10
   margin-left[2px]
-`
+`;
 
 export const RecentsCards = styled.div<RecentsCardsProps>`
   ${tw`
     w-full
   `}
 
-  ${(props) => (
+  ${(props) =>
     !props.isLoading && !props.isError
       ? tw`
           grid! grid-cols-4
           gap-0 xl:gap-5
         `
-      : tw`flex flex-row`
-  )}
-`
+      : tw`flex flex-row`}
+`;
 
 export const Loading = styled.div`
   ${tw`
@@ -52,7 +51,7 @@ export const Loading = styled.div`
   @media (min-width: 1920px) {
     height: calc((0.1105 * 1920px) * 3 / 1.925);
   }
-`
+`;
 
 export const Error = styled.div`
   ${tw`
@@ -68,4 +67,4 @@ export const Error = styled.div`
   @media (min-width: 1920px) {
     height: calc((0.1155 * 1920px) * 3 / 1.925);
   }
-`
+`;

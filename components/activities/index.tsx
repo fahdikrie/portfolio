@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 import {
   fetchFavoriteBooks,
   fetchFavoriteMovies,
   fetchGoodreads,
-  fetchLetterboxd
-} from 'utils/selectors'
-import Recents from './recents'
-import Favorites from './favorites'
-import * as S from './index.style'
+  fetchLetterboxd,
+} from 'utils/selectors';
+import Recents from './recents';
+import Favorites from './favorites';
+import * as S from './index.style';
 
 interface Data {
-  items: any[] | any
-  isError: boolean | any
+  items: any[] | any;
+  isError: boolean | any;
 }
 
 const Activities = (): JSX.Element => {
@@ -20,41 +20,41 @@ const Activities = (): JSX.Element => {
     items: [],
     isError: false,
     isLoading: true,
-  })
+  });
 
   const [letterboxd, setLetterboxd] = useState({
     items: [],
     isError: false,
     isLoading: true,
-  })
+  });
 
-  const { favoriteBooks } = fetchFavoriteBooks('/api/favorite-books')
-  const { favoriteMovies } = fetchFavoriteMovies('/api/favorite-movies')
+  const { favoriteBooks } = fetchFavoriteBooks('/api/favorite-books');
+  const { favoriteMovies } = fetchFavoriteMovies('/api/favorite-movies');
 
   useEffect((): boolean | any => {
-    let mounted = true
+    let mounted = true;
 
     async function fetchAsync() {
-      const goodreadsData: Data = await fetchGoodreads()
-      const letterboxdData: Data = await fetchLetterboxd()
+      const goodreadsData: Data = await fetchGoodreads();
+      const letterboxdData: Data = await fetchLetterboxd();
 
       if (mounted) {
         setGoodreads({
           items: goodreadsData.items,
           isError: goodreadsData.isError,
           isLoading: false,
-        })
+        });
         setLetterboxd({
           items: letterboxdData.items,
           isError: letterboxdData.isError,
           isLoading: false,
-        })
+        });
       }
     }
 
-    fetchAsync()
-    return () => mounted = false
-  }, [])
+    fetchAsync();
+    return () => (mounted = false);
+  }, []);
 
   return (
     <S.Activities>
@@ -91,7 +91,7 @@ const Activities = (): JSX.Element => {
         />
       </S.FavoritesWrapper>
     </S.Activities>
-  )
-}
+  );
+};
 
-export default Activities
+export default Activities;

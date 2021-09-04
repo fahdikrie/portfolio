@@ -1,15 +1,15 @@
-import tw, { styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro';
 
 export const Favorites = tw.div`
   w-full h-full
-`
+`;
 
 export const Header = tw.h2`
   mb-0
   text-left
   text-white font-black
   text-sm-header md:text-md-header lg:text-header
-`
+`;
 
 export const SubHeader = styled.h3`
   ${tw`
@@ -26,13 +26,13 @@ export const SubHeader = styled.h3`
       cursor-pointer
     `}
   }
-`
+`;
 
 export const List = tw.ul`
   ml-28
   z-20 relative
   list-style-type[circle]
-`
+`;
 
 export const ListItem = styled.li`
   ${tw`
@@ -58,4 +58,4 @@ export const ListItem = styled.li`
       ${tw`bg-purple-900 px-2 rounded opacity-100`}
     }
   }
-`
+`;

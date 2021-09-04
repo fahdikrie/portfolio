@@ -1,14 +1,14 @@
-import Loading from 'components/loading'
-import RecentCard from './recent-card'
-import * as S from './index.style'
+import Loading from 'components/loading';
+import RecentCard from './recent-card';
+import * as S from './index.style';
 
 interface RecentsProps {
-  data: any[] | any
-  link: string
-  title: string
-  service: string
-  isError: boolean
-  isLoading: boolean
+  data: any[] | any;
+  link: string;
+  title: string;
+  service: string;
+  isError: boolean;
+  isLoading: boolean;
 }
 
 const Recents = ({
@@ -17,17 +17,13 @@ const Recents = ({
   title,
   service,
   isError,
-  isLoading
+  isLoading,
 }: RecentsProps): JSX.Element => (
   <S.Recents>
     <S.Header>
+      <S.Title>badi's recent {title}</S.Title>
       <S.Title>
-        badi's recent {title}
-      </S.Title>
-      <S.Title>
-        <a
-          href={link} target="_blank"
-        >
+        <a href={link} target="_blank">
           see more
         </a>
       </S.Title>
@@ -52,7 +48,8 @@ const Recents = ({
         ) : (
           <S.Error>
             <h5>
-              whoops! <br/><br/>
+              whoops! <br />
+              <br />
               there seem to be errors on {service}'s end 🤔
             </h5>
           </S.Error>
@@ -64,6 +61,6 @@ const Recents = ({
       )}
     </S.RecentsCards>
   </S.Recents>
-)
+);
 
-export default Recents
+export default Recents;

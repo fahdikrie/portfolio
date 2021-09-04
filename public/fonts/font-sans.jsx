@@ -1,11 +1,9 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 const FontSans = () => (
   <>
     <Head>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
-      />
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" />
       <link
         rel="preconnect"
         href="https://fonts.gstatic.com"
@@ -30,6 +28,6 @@ const FontSans = () => (
       </noscript>
     </Head>
   </>
-)
+);
 
-export default FontSans
+export default FontSans;

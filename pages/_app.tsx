@@ -1,15 +1,14 @@
-import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 
-import 'styles/global.fallback.css'
-import GlobalStyles from 'styles/global.style'
-import FontSans from 'public/fonts/font-sans'
-import FontSerif from 'public/fonts/font-serif'
-import 'styles/global.css'
-
+import 'styles/global.fallback.css';
+import GlobalStyles from 'styles/global.style';
+import FontSans from 'public/fonts/font-sans';
+import FontSerif from 'public/fonts/font-serif';
+import 'styles/global.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <>
@@ -18,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <Component {...pageProps} router={router} />
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
