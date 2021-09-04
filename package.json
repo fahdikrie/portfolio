@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3000"
+    "start": "next start -p 3000",
+    "prettier": "prettier --write \"{,!(.next)/**/}*.{js, jsx}\""
   },
   "dependencies": {
     "cors": "^2.8.5",
