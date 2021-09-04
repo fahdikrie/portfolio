@@ -1,5 +1,5 @@
 // next.config.js
-const withImages = require('next-images')
+const withImages = require('next-images');
 module.exports = withImages({
   webpack(config, { isServer }) {
     // Fixes npm packages that depend on `fs` module
@@ -7,13 +7,13 @@ module.exports = withImages({
       config.node = {
         // Unset client-side javascript that only works server-side
         // https://github.com/vercel/next.js/issues/7755#issuecomment-508633125
-      }
+      };
     }
 
-    return config
+    return config;
   },
   images: {
     domains: ['i.gr-assets.com', 'a.ltrbxd.com'],
   },
-  target: 'serverless'
-})
+  target: 'serverless',
+});

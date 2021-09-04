@@ -1,7 +1,7 @@
-import ShaderBase, {VANTA} from './_shaderBase.js'
+import ShaderBase, { VANTA } from './_shaderBase.js';
 
-const win = typeof window == 'object'
-let THREE = win && window.THREE
+const win = typeof window == 'object';
+let THREE = win && window.THREE;
 
 class Halo extends ShaderBase {
   getDefaultOptions() {
@@ -21,52 +21,56 @@ class Halo extends ShaderBase {
       // scale: window.devicePixelRatio,
       scaleMobile: 1,
       scale: 1,
-    }
+    };
   }
 
   onInit() {
-    const pars = { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, format: THREE.RGBFormat }
-    const ww = this.width * window.devicePixelRatio / this.scale
-    const hh = this.height * window.devicePixelRatio / this.scale
-    this.bufferTarget = new THREE.WebGLRenderTarget( ww, hh, pars )
-    this.bufferFeedback = new THREE.WebGLRenderTarget( ww, hh, pars )
+    const pars = {
+      minFilter: THREE.LinearFilter,
+      magFilter: THREE.LinearFilter,
+      format: THREE.RGBFormat,
+    };
+    const ww = (this.width * window.devicePixelRatio) / this.scale;
+    const hh = (this.height * window.devicePixelRatio) / this.scale;
+    this.bufferTarget = new THREE.WebGLRenderTarget(ww, hh, pars);
+    this.bufferFeedback = new THREE.WebGLRenderTarget(ww, hh, pars);
   }
   initBasicShader(fragmentShader, vertexShader) {
-    super.initBasicShader(fragmentShader, vertexShader)
+    super.initBasicShader(fragmentShader, vertexShader);
     this.uniforms.iBuffer = {
       type: 't',
       value: this.bufferTarget.texture,
-    }
+    };
   }
   onUpdate() {
-    this.uniforms.iBuffer.value = this.bufferFeedback.texture
+    this.uniforms.iBuffer.value = this.bufferFeedback.texture;
 
-    const renderer = this.renderer
-    renderer.setRenderTarget( this.bufferTarget )
+    const renderer = this.renderer;
+    renderer.setRenderTarget(this.bufferTarget);
     // renderer.clear()
-    renderer.render( this.scene, this.camera )
-    renderer.setRenderTarget( null )
-    renderer.clear()
+    renderer.render(this.scene, this.camera);
+    renderer.setRenderTarget(null);
+    renderer.clear();
 
     // Swap, to prevent shader using the same input as output
-    let temp = this.bufferTarget
-    this.bufferTarget = this.bufferFeedback
-    this.bufferFeedback = temp
+    let temp = this.bufferTarget;
+    this.bufferTarget = this.bufferFeedback;
+    this.bufferFeedback = temp;
   }
   onResize() {
     if (this.bufferTarget) {
-      const ww = this.width * window.devicePixelRatio / this.scale
-      const hh = this.height * window.devicePixelRatio / this.scale
-      this.bufferTarget.setSize( ww, hh )
-      this.bufferFeedback.setSize( ww, hh )
+      const ww = (this.width * window.devicePixelRatio) / this.scale;
+      const hh = (this.height * window.devicePixelRatio) / this.scale;
+      this.bufferTarget.setSize(ww, hh);
+      this.bufferFeedback.setSize(ww, hh);
     }
   }
   onDestroy() {
-    this.bufferTarget = null
-    this.bufferFeedback = null
+    this.bufferTarget = null;
+    this.bufferFeedback = null;
   }
 }
-export default VANTA.register('HALO', Halo)
+export default VANTA.register('HALO', Halo);
 
 Halo.prototype.fragmentShader = `\
 uniform vec2 iResolution;
@@ -282,4 +286,4 @@ void main() {
   // float nn = snoise(uv * 10.) * 0.01; // creepy!
   gl_FragColor = ring;
 }
-`
+`;
