@@ -1,20 +1,21 @@
 import SwiperCore, { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useRef } from 'react';
 
-import { fetchProjects } from 'utils/selectors';
+import fetcher from 'libs/fetcher';
 import ProjectCard from './project-card';
 import * as S from './index.style';
+
 import 'swiper/swiper-bundle.min.css';
 
-interface ProjectsData {
-  projects: any[] | any;
+interface Data {
+  data: any[] | any;
+  error?: any;
 }
 
 SwiperCore.use([Pagination]);
 
 const Projects = (): JSX.Element => {
-  const { projects }: ProjectsData = fetchProjects('/api/projects');
+  const { data: projects }: Data = fetcher('/api/projects');
 
   const settings = {
     loop: true,

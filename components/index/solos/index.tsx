@@ -1,19 +1,21 @@
 import SwiperCore, { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { fetchSolos } from 'utils/selectors';
+import fetcher from 'libs/fetcher';
 import SoloCard from './solo-card';
 import * as S from './index.style';
+
 import 'swiper/swiper-bundle.min.css';
 
-interface SolosData {
-  solos: any[] | any;
+interface Data {
+  data: any[] | any;
+  error?: any;
 }
 
 SwiperCore.use([Pagination]);
 
 const Solos = (): JSX.Element => {
-  const { solos }: SolosData = fetchSolos('/api/solos');
+  const { data: solos }: Data = fetcher('/api/solos');
 
   const settings = {
     loop: true,

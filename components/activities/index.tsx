@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
 import {
-  fetchFavoriteBooks,
-  fetchFavoriteMovies,
   fetchGoodreads,
   fetchLetterboxd,
-} from 'utils/selectors';
+} from 'libs/selectors';
+import fetcher from 'libs/fetcher'
+
 import Recents from './recents';
 import Favorites from './favorites';
 import * as S from './index.style';
@@ -28,8 +28,8 @@ const Activities = (): JSX.Element => {
     isLoading: true,
   });
 
-  const { favoriteBooks } = fetchFavoriteBooks('/api/favorite-books');
-  const { favoriteMovies } = fetchFavoriteMovies('/api/favorite-movies');
+  const { data: favoriteBooks } = fetcher('/api/favorite-books');
+  const { data: favoriteMovies } = fetcher('/api/favorite-movies');
 
   useEffect((): boolean | any => {
     let mounted = true;

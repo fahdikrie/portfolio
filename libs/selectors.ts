@@ -1,51 +1,21 @@
-import useSWR from 'swr';
-import RSSParser from 'rss-parser';
-
 import {
   getUncompressedURL,
   convertIntToStars,
   convertDateFormat,
-} from 'utils/utils';
+} from 'libs/utils';
 
 interface Data {
-  items: Object[];
-  isError: boolean | any;
+  items: Item[];
+  isError: boolean;
 }
 
-const fetcher = (url: string): Promise<Object> =>
-  fetch(url).then((res) => res.json());
-
-export const fetchProjects = (path: string) => {
-  if (!path) throw new Error('Path is required');
-
-  const { data: projects, error } = useSWR(path, fetcher);
-
-  return { projects, error };
-};
-
-export const fetchSolos = (path: string) => {
-  if (!path) throw new Error('Path is required');
-
-  const { data: solos, error } = useSWR(path, fetcher);
-
-  return { solos, error };
-};
-
-export const fetchFavoriteMovies = (path: string) => {
-  if (!path) throw new Error('Path is required');
-
-  const { data: favoriteMovies, error } = useSWR(path, fetcher);
-
-  return { favoriteMovies, error };
-};
-
-export const fetchFavoriteBooks = (path: string) => {
-  if (!path) throw new Error('Path is required');
-
-  const { data: favoriteBooks, error } = useSWR(path, fetcher);
-
-  return { favoriteBooks, error };
-};
+interface Item {
+  image: string;
+  link: string;
+  title: string;
+  rating: string;
+  date: string;
+}
 
 export const fetchGoodreads = async () => {
   let data: Data = {
@@ -57,7 +27,7 @@ export const fetchGoodreads = async () => {
     let feed = await fetch('/api/goodreads/').then((res) => res.json());
 
     for (let i = 0; i < 4; i++) {
-      let bookData = {
+      let bookData: Item = {
         image: '',
         link: '',
         title: '',
@@ -104,7 +74,7 @@ export const fetchLetterboxd = async () => {
     const feed = await fetch('/api/letterboxd/').then((res) => res.json());
 
     for (let i = 0; i < 4; i++) {
-      let movieData = {
+      let movieData: Item = {
         image: '',
         link: '',
         title: '',
