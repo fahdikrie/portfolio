@@ -30,8 +30,21 @@ const Layout = ({
         <meta name="author" content="Fahdii Ajmalal Fikrie"></meta>
         <meta charSet="utf-8" />
 
-        <meta property="og:title" content={pageTitle} key="ogtitle" />
-        <meta property="og:description" content={description} key="ogdesc" />
+        <meta
+          property="og:title"
+          content={pageTitle}
+          key="ogtitle"
+        />
+        <meta
+          property="og:description"
+          content={description}
+          key="ogdesc"
+        />
+        <meta
+          property="og:image"
+          content="/assets/solos/bbbadi.png"
+          key="ogimage"
+        />
         <meta
           property="og:site_name"
           content="badi's personal webpage"
