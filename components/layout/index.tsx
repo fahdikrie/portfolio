@@ -33,6 +33,7 @@ const Layout = ({
 
         <meta property="og:title" content={pageTitle} key="ogtitle" />
         <meta property="og:description" content={description} key="ogdesc" />
+        <meta property="og:image" content="/assets/solos/bbbadi.png" key="ogdesc" />
         <meta property="og:site_name" content="badi's personal webpage" key="ogsite" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
