@@ -1,10 +1,10 @@
-import * as S from './index.style'
+import * as S from './index.style';
 
 const Title = (): JSX.Element => (
   <S.Title>
     <div>
       <S.JumboText>
-        writing into <br/>
+        writing into <br />
         the void.
       </S.JumboText>
       <S.SubHeader>
@@ -12,6 +12,6 @@ const Title = (): JSX.Element => (
       </S.SubHeader>
     </div>
   </S.Title>
-)
+);
 
-export default Title
+export default Title;

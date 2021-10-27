@@ -1,5 +1,5 @@
-import Layout from 'components/layout'
-import Index from 'components/index'
+import Layout from 'components/layout';
+import Index from 'components/index';
 
 const DESCRIPTION = `
   Fahdii (or Badi) is a 20 years old sophomore student currently majoring
@@ -13,7 +13,7 @@ const DESCRIPTION = `
   Having great interest in full-stack web development 🌐 He looks forward to
   be able to do big things 💯 and take part in this vast & rapid growing
   world of tech-industry 🚀
-`
+`;
 
 const Home = ({ router }): JSX.Element => (
   <Layout
@@ -23,6 +23,6 @@ const Home = ({ router }): JSX.Element => (
   >
     <Index />
   </Layout>
-)
+);
 
-export default Home
+export default Home;

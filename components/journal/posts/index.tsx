@@ -1,6 +1,3 @@
-const Posts = (): JSX.Element => (
-  <>
-  </>
-)
+const Posts = (): JSX.Element => <></>;
 
-export default Posts
+export default Posts;

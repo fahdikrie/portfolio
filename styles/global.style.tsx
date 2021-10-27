@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro'
+import { createGlobalStyle } from 'styled-components';
+import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro';
 
 const CustomStyles = createGlobalStyle`
   /* Box sizing rules */
@@ -127,13 +127,13 @@ const CustomStyles = createGlobalStyle`
   ::-moz-selection {
     ${tw`bg-purple-900`}
   }
-`
+`;
 
 const GlobalStyles = () => (
   <>
     <BaseStyles />
     <CustomStyles />
   </>
-)
+);
 
-export default GlobalStyles
+export default GlobalStyles;

@@ -1,11 +1,11 @@
-import tw, { styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro';
 
 export const Contacts = tw.div`
   z-20 relative
   margin[0px -24px] md:mx-0
   overflow-x-hidden
   mb-64
-`
+`;
 
 export const Header = styled.h2`
   ${tw`
@@ -19,7 +19,7 @@ export const Header = styled.h2`
   & br {
     ${tw`block md:hidden`}
   }
-`
+`;
 export const SubHeader = styled.h3`
   ${tw`
     mb-20
@@ -33,7 +33,7 @@ export const SubHeader = styled.h3`
   & u {
     ${tw`hidden md:inline`}
   }
-`
+`;
 
 export const ContactCardWrapper = tw.div`
   md:mt-20
@@ -47,4 +47,4 @@ export const ContactCardWrapper = tw.div`
   gap-x-10
   md:(gap-x-20 gap-y-24)
   lg:(gap-x-32)
-`
+`;

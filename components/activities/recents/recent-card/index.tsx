@@ -1,13 +1,13 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-import * as S from './index.style'
+import * as S from './index.style';
 
 interface RecentCardProps {
-  image: string
-  link: string
-  title: string
-  rating: string
-  date: string
+  image: string;
+  link: string;
+  title: string;
+  rating: string;
+  date: string;
 }
 
 const RecentCard = ({
@@ -15,13 +15,11 @@ const RecentCard = ({
   link,
   title,
   rating,
-  date
+  date,
 }: RecentCardProps): JSX.Element => (
   <S.RecentCard>
     <a href={link} target="_blank">
-      <div
-        className="recent-card__image"
-      >
+      <div className="recent-card__image">
         <Image
           src={image}
           alt={title}
@@ -33,13 +31,11 @@ const RecentCard = ({
       </div>
     </a>
 
-    <div
-      className="recent-card__info"
-    >
+    <div className="recent-card__info">
       <S.Info>{rating}</S.Info>
       <S.Info>{date}</S.Info>
     </div>
   </S.RecentCard>
-)
+);
 
-export default RecentCard
+export default RecentCard;

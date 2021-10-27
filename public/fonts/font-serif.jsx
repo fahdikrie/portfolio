@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
 const FontSerif = () => (
   <>
@@ -27,6 +27,6 @@ const FontSerif = () => (
       </noscript>
     </Head>
   </>
-)
+);
 
-export default FontSerif
+export default FontSerif;

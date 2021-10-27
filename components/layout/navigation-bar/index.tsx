@@ -1,14 +1,14 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-import LinkedInIcon from 'public/assets/linkedin.svg'
-import GithubIcon from 'public/assets/github.svg'
-import * as S from './index.style'
+import LinkedInIcon from 'public/assets/linkedin.svg';
+import GithubIcon from 'public/assets/github.svg';
+import * as S from './index.style';
 
 interface NavigationBarProps {
-  currentPage: string
+  currentPage: string;
 }
 
-const NavigationBar = ({ currentPage }: NavigationBarProps ) => (
+const NavigationBar = ({ currentPage }: NavigationBarProps) => (
   <>
     <S.Wrapper>
       <S.Socials>
@@ -18,10 +18,7 @@ const NavigationBar = ({ currentPage }: NavigationBarProps ) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <S.Social
-              src={GithubIcon}
-              alt="github"
-            />
+            <S.Social src={GithubIcon} alt="github" />
           </a>
         </div>
         <div>
@@ -30,45 +27,26 @@ const NavigationBar = ({ currentPage }: NavigationBarProps ) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <S.Social
-              src={LinkedInIcon}
-              alt="linkedin"
-            />
+            <S.Social src={LinkedInIcon} alt="linkedin" />
           </a>
         </div>
       </S.Socials>
       <S.Items>
-        <S.Item
-          isActive={currentPage == "/" ? true : false}
-        >
-          <Link href="/">
-            home
-          </Link>
+        <S.Item isActive={currentPage == '/' ? true : false}>
+          <Link href="/">home</Link>
         </S.Item>
-        <S.Item
-          isActive={currentPage == "/activities" ? true : false}
-        >
-          <Link href="/activities">
-            activities
-          </Link>
+        <S.Item isActive={currentPage == '/activities' ? true : false}>
+          <Link href="/activities">activities</Link>
         </S.Item>
-        <S.Item
-          isActive={currentPage == "/resume" ? true : false}
-        >
-          <Link href="/resume.pdf">
-            resume
-          </Link>
+        <S.Item isActive={currentPage == '/resume' ? true : false}>
+          <Link href="/resume.pdf">resume</Link>
         </S.Item>
-        <S.Item
-          isActive={currentPage == "/journal" ? true : false}
-        >
-          <Link href="/journal">
-            journal
-          </Link>
+        <S.Item isActive={currentPage == '/journal' ? true : false}>
+          <Link href="/journal">journal</Link>
         </S.Item>
       </S.Items>
     </S.Wrapper>
   </>
-)
+);
 
-export default NavigationBar
+export default NavigationBar;

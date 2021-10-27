@@ -1,14 +1,14 @@
-import { default as Index } from 'components/journal'
-import Layout from 'components/layout'
+import { default as Index } from 'components/journal';
+import Layout from 'components/layout';
 
 const Journal = ({ router }): JSX.Element => (
   <Layout
+    description="An internet-web journal of Fahdii Ajmalal Fikrie."
     currentPage={router.pathname}
     pageTitle="journal"
-    description="An internet-web journal of Fahdii Ajmalal Fikrie."
   >
     <Index />
   </Layout>
-)
+);
 
-export default Journal
+export default Journal;

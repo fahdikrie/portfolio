@@ -1,19 +1,16 @@
-import SwiperCore, { Pagination } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { fetchSolos } from 'utils/selectors'
-import SoloCard from './solo-card'
-import * as S from './index.style'
-import 'swiper/swiper-bundle.min.css'
+import fetcher from 'libs/fetcher';
+import SoloCard from './solo-card';
+import * as S from './index.style';
 
-interface SolosData {
-  solos: any[] | any
-}
+import 'swiper/swiper-bundle.min.css';
 
-SwiperCore.use([Pagination])
+SwiperCore.use([Pagination]);
 
 const Solos = (): JSX.Element => {
-  const { solos }: SolosData = fetchSolos('/api/solos')
+  const { data: solos }: Solos = fetcher('/api/solos');
 
   const settings = {
     loop: true,
@@ -22,23 +19,20 @@ const Solos = (): JSX.Element => {
         freeMode: false,
         spaceBetween: 15,
         slidesPerView: 3,
-      }
-    }
-  }
+      },
+    },
+  };
 
   return (
     <S.Solos>
       <S.Header>
-        Projects I <br/> did on my own
+        Projects I <br /> did on my own
       </S.Header>
       <S.SubHeader>
         Side projects and college assignments. <u>drag to see more</u>
       </S.SubHeader>
       <S.DesktopSwiper>
-        <Swiper
-          {...settings}
-          pagination={{ clickable: true }}
-        >
+        <Swiper {...settings} pagination={{ clickable: true }}>
           {solos?.map((el, i) => (
             <SwiperSlide key={i}>
               <SoloCard
@@ -67,7 +61,7 @@ const Solos = (): JSX.Element => {
         <div className="swiper__margin"></div>
       </S.MobileSwiper>
     </S.Solos>
-  )
-}
+  );
+};
 
-export default Solos
+export default Solos;

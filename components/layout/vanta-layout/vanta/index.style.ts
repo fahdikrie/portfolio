@@ -1,4 +1,4 @@
-import tw, { styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro';
 
 export const Vanta = styled.div`
   ${tw`
@@ -12,4 +12,4 @@ export const Vanta = styled.div`
       2xl:max-width[1920px]
     `}
   }
-`
+`;

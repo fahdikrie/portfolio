@@ -1,4 +1,4 @@
-import tw, { styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro';
 
 export const ContactCard = styled.a`
   ${tw`
@@ -19,4 +19,4 @@ export const ContactCard = styled.a`
       text-sm-large md:text-small lg:text-large
     `}
   }
-`
+`;

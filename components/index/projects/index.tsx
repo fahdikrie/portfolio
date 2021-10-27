@@ -1,20 +1,16 @@
-import SwiperCore, { Pagination } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { useRef } from 'react'
+import SwiperCore, { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { fetchProjects } from 'utils/selectors'
-import ProjectCard from './project-card'
-import * as S from './index.style'
-import 'swiper/swiper-bundle.min.css'
+import fetcher from 'libs/fetcher';
+import ProjectCard from './project-card';
+import * as S from './index.style';
 
-interface ProjectsData {
-  projects: any[] | any
-}
+import 'swiper/swiper-bundle.min.css';
 
-SwiperCore.use([Pagination])
+SwiperCore.use([Pagination]);
 
 const Projects = (): JSX.Element => {
-  const { projects }: ProjectsData = fetchProjects('/api/projects')
+  const { data: projects }: Projects = fetcher('/api/projects');
 
   const settings = {
     loop: true,
@@ -22,24 +18,21 @@ const Projects = (): JSX.Element => {
       768: {
         freeMode: false,
         spaceBetween: 15,
-        slidesPerView: 3
-      }
-    }
-  }
+        slidesPerView: 3,
+      },
+    },
+  };
 
   return (
     <S.Projects>
       <S.Header>
-        Projects I've <br/> participated in
+        Projects I've <br /> participated in
       </S.Header>
       <S.SubHeader>
         Projects I did in collaboration with others. <u>drag to see more</u>
       </S.SubHeader>
       <S.DesktopSwiper>
-        <Swiper
-          {...settings}
-          pagination={{ clickable: true }}
-        >
+        <Swiper {...settings} pagination={{ clickable: true }}>
           {projects?.map((el, i) => (
             <SwiperSlide key={i}>
               <ProjectCard
@@ -68,7 +61,7 @@ const Projects = (): JSX.Element => {
         <div className="swiper__margin"></div>
       </S.MobileSwiper>
     </S.Projects>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
