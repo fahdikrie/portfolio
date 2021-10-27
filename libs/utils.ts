@@ -22,7 +22,7 @@ export const convertDateFormat = (date: string): string => {
 export const convertIntToStars = (rating: string): string => {
   const ratingInFloat = parseFloat(rating).toFixed(1);
 
-  const ratings = {
+  const RATINGS = {
     '5.0': '★★★★★',
     '4.5': '★★★★½',
     '4.0': '★★★★',
@@ -36,5 +36,5 @@ export const convertIntToStars = (rating: string): string => {
     '0.0': '—',
   };
 
-  return ratings[String(ratingInFloat)];
+  return RATINGS[String(ratingInFloat)];
 };
