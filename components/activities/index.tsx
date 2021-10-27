@@ -11,8 +11,8 @@ import Favorites from './favorites';
 import * as S from './index.style';
 
 interface Data {
-  items: any[] | any;
-  isError: boolean | any;
+  items: ActivityItem[];
+  isError: boolean;
 }
 
 const Activities = (): JSX.Element => {

@@ -1,57 +1,31 @@
-export const getUncompressedURL = (url: string): string => {
-  let imageUrl = url.split('.');
-  imageUrl.splice(url.split('.').length - 2, 1);
-
-  return imageUrl.join('.');
-};
-
 export const convertDateFormat = (date: string): string => {
-  const month = date.split('/')[1];
-  const day = date.split('/')[2];
+  const MONTHS = [
+    "Jan", "Feb", "Mar", "Apr",
+    "May", "Jun", "Jul", "Aug",
+    "Sep", "Oct", "Nov", "Dec",
+  ]
 
-  switch (Number(month)) {
-    case 1:
-      return 'Jan ' + day;
-    case 2:
-      return 'Feb ' + day;
-    case 3:
-      return 'Mar ' + day;
-    case 4:
-      return 'Apr ' + day;
-    case 5:
-      return 'May ' + day;
-    case 6:
-      return 'Jun ' + day;
-    case 7:
-      return 'Jul ' + day;
-    case 8:
-      return 'Aug ' + day;
-    case 9:
-      return 'Sep ' + day;
-    case 10:
-      return 'Oct ' + day;
-    case 11:
-      return 'Nov ' + day;
-    case 12:
-      return 'Dec ' + day;
-    default:
-      return 'Jan ' + day;
-  }
+  const dateObj = new Date(date)
+
+  return `${MONTHS[dateObj.getMonth()]} ${dateObj.getUTCDate()}`
 };
 
 export const convertIntToStars = (rating: string): string => {
-  switch (Number(rating)) {
-    case 5:
-      return '★★★★★';
-    case 4:
-      return '★★★★';
-    case 3:
-      return '★★★';
-    case 2:
-      return '★★';
-    case 1:
-      return '★';
-    default:
-      return '★★★★★';
+  const ratingInFloat = parseFloat(rating).toFixed(1)
+
+  const ratings = {
+    '5.0': '★★★★★',
+    '4.5': '★★★★½',
+    '4.0': '★★★★',
+    '3.5': '★★★½',
+    '3.0': '★★★',
+    '2.5': '★★½',
+    '2.0': '★★',
+    '1.5': '★½',
+    '1.0': '★',
+    '0.5': '½',
+    '0.0': '—',
   }
+
+  return ratings[String(ratingInFloat)]
 };

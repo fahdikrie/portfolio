@@ -7,7 +7,15 @@ const handler = nc<NextApiRequest, NextApiResponse>()
   .use(cors())
   .get(async (_, res) => {
     try {
-      let parser = new RSSParser();
+      let parser = new RSSParser({
+        customFields: {
+          item: [
+            'user_rating',
+            'user_read_at',
+            'book_large_image_url',
+          ],
+        },
+      });
 
       let feed = await parser.parseURL(process.env.NEXT_PUBLIC_GOODREADS_RSS);
 
