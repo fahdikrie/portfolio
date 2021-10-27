@@ -9,11 +9,7 @@ const handler = nc<NextApiRequest, NextApiResponse>()
     try {
       let parser = new RSSParser({
         customFields: {
-          item: [
-            'user_rating',
-            'user_read_at',
-            'book_large_image_url',
-          ],
+          item: ['user_rating', 'user_read_at', 'book_large_image_url'],
         },
       });
 

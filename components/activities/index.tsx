@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import {
-  fetchGoodreads,
-  fetchLetterboxd,
-} from 'libs/selectors';
-import fetcher from 'libs/fetcher'
+import { fetchGoodreads, fetchLetterboxd } from 'libs/selectors';
+import fetcher from 'libs/fetcher';
 
 import Recents from './recents';
 import Favorites from './favorites';

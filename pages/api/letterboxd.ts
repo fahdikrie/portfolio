@@ -12,7 +12,7 @@ const handler = nc<NextApiRequest, NextApiResponse>()
           item: [
             'letterboxd:watchedDate',
             'letterboxd:filmTitle',
-            'letterboxd:memberRating'
+            'letterboxd:memberRating',
           ],
         },
       });

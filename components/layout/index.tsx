@@ -30,16 +30,8 @@ const Layout = ({
         <meta name="description" content={description} />
         <meta charSet="utf-8" />
 
-        <meta
-          property="og:title"
-          content={pageTitle}
-          key="ogtitle"
-        />
-        <meta
-          property="og:description"
-          content={description}
-          key="ogdesc"
-        />
+        <meta property="og:title" content={pageTitle} key="ogtitle" />
+        <meta property="og:description" content={description} key="ogdesc" />
         <meta
           property="og:image"
           content="/assets/solos/bbbadi.png"

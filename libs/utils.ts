@@ -1,17 +1,26 @@
 export const convertDateFormat = (date: string): string => {
   const MONTHS = [
-    "Jan", "Feb", "Mar", "Apr",
-    "May", "Jun", "Jul", "Aug",
-    "Sep", "Oct", "Nov", "Dec",
-  ]
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
 
-  const dateObj = new Date(date)
+  const dateObj = new Date(date);
 
-  return `${MONTHS[dateObj.getMonth()]} ${dateObj.getUTCDate()}`
+  return `${MONTHS[dateObj.getMonth()]} ${dateObj.getUTCDate()}`;
 };
 
 export const convertIntToStars = (rating: string): string => {
-  const ratingInFloat = parseFloat(rating).toFixed(1)
+  const ratingInFloat = parseFloat(rating).toFixed(1);
 
   const ratings = {
     '5.0': '★★★★★',
@@ -25,7 +34,7 @@ export const convertIntToStars = (rating: string): string => {
     '1.0': '★',
     '0.5': '½',
     '0.0': '—',
-  }
+  };
 
-  return ratings[String(ratingInFloat)]
+  return ratings[String(ratingInFloat)];
 };

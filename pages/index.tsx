@@ -13,7 +13,7 @@ const DESCRIPTION = `
   Having great interest in full-stack web development 🌐 He looks forward to
   be able to do big things 💯 and take part in this vast & rapid growing
   world of tech-industry 🚀
-`
+`;
 
 const Home = ({ router }): JSX.Element => (
   <Layout
