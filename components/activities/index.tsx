@@ -7,11 +7,6 @@ import Recents from './recents';
 import Favorites from './favorites';
 import * as S from './index.style';
 
-interface Data {
-  items: ActivityItem[];
-  isError: boolean;
-}
-
 const Activities = (): JSX.Element => {
   const [goodreads, setGoodreads] = useState({
     items: [],
@@ -32,8 +27,8 @@ const Activities = (): JSX.Element => {
     let mounted = true;
 
     async function fetchAsync() {
-      const goodreadsData: Data = await fetchGoodreads();
-      const letterboxdData: Data = await fetchLetterboxd();
+      const goodreadsData: Activities = await fetchGoodreads();
+      const letterboxdData: Activities = await fetchLetterboxd();
 
       if (mounted) {
         setGoodreads({

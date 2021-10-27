@@ -1,9 +1,9 @@
-interface Data {
+interface Activities {
   items: Item[];
   isError: boolean;
 }
 
-interface ActivityItem {
+interface Activity {
   image: string;
   link: string;
   title: string;

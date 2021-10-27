@@ -7,15 +7,10 @@ import * as S from './index.style';
 
 import 'swiper/swiper-bundle.min.css';
 
-interface Data {
-  data: any[] | any;
-  error?: any;
-}
-
 SwiperCore.use([Pagination]);
 
 const Projects = (): JSX.Element => {
-  const { data: projects }: Data = fetcher('/api/projects');
+  const { data: projects }: Projects = fetcher('/api/projects');
 
   const settings = {
     loop: true,

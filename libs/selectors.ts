@@ -1,7 +1,7 @@
 import { convertIntToStars, convertDateFormat } from 'libs/utils';
 
 export const fetchGoodreads = async () => {
-  let data: Data = {
+  let data: Activities = {
     items: [],
     isError: false,
   };
@@ -30,7 +30,7 @@ export const fetchGoodreads = async () => {
 };
 
 export const fetchLetterboxd = async () => {
-  let data: Data = {
+  let data: Activities = {
     items: [],
     isError: false,
   };
