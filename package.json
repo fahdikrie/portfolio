@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 3000",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "vercel-install": "./submodule.sh && yarn --ignore-scripts --production=false"
   },
   "dependencies": {
     "cors": "^2.8.5",
