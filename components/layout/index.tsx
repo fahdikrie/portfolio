@@ -26,8 +26,8 @@ const Layout = ({
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content={description}></meta>
-        <meta name="author" content="Fahdii Ajmalal Fikrie"></meta>
+        <meta name="author" content="Fahdii Ajmalal Fikrie" />
+        <meta name="description" content={description} />
         <meta charSet="utf-8" />
 
         <meta
