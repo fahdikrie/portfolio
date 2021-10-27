@@ -2,7 +2,7 @@
 SUBMODULE_GITHUB=github.com/fahdikrie/content
 
 # .gitmodules submodule path
-SUBMODULE_PATH=library
+SUBMODULE_PATH=content
 
 # github access token is necessary
 # add it to Environment Variables on Vercel
