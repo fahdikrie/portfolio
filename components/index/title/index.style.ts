@@ -8,6 +8,6 @@ export const Title = tw.div`
 
 export const JumboText = tw.h1`
   font-black
-  text-white
+  text-gunmetal dark:text-white
   text-sm-jumbo xl:text-jumbo
 `;

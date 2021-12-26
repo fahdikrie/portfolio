@@ -5,7 +5,7 @@ export const About = tw.div`
 `;
 
 export const LargeText = tw.h5`
-  font-medium text-white
+  font-medium text-gunmetal dark:text-white
   text-sm-large md:text-md-large lg:text-large
   tracking-normal md:tracking-wide
   leading-7! md:leading-8! lg:leading-10!

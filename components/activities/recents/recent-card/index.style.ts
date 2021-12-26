@@ -1,8 +1,9 @@
 import tw, { styled } from 'twin.macro';
 
 export const Info: any = tw.p`
+  opacity-70
   mt-5 md:mt-3
-  text-white opacity-70
+  text-gunmetal dark:text-white
   font-size[calc(0.25rem + 1vw)]
   md:font-size[calc(0.075rem + 0.75vw)]
 `;
@@ -39,7 +40,7 @@ export const RecentCard = styled.div`
   & .recent-card__info {
     ${tw`
       my-0
-      text-white
+      text-gunmetal dark:text-white
       width[calc(100% - 4px)]
       flex justify-between items-center
     `}

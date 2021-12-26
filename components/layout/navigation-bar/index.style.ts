@@ -20,9 +20,10 @@ export const Items = tw.ul`
 export const Item = styled.li<ItemProps>`
   ${tw`
     my-10
+    font-bold
     tracking-wide
     cursor-pointer
-    text-white font-bold
+    text-gunmetal dark:text-white
     ml-16 md:ml-24 xl:ml-32
     opacity-70 hover:opacity-95
     text-sm-small md:text-md-small lg:text-small

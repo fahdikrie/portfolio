@@ -10,14 +10,15 @@ export const Recents = tw.div`
 `;
 
 export const Header = tw.div`
+pr-5
   w-full
-  pl-2 pr-5
   flex flex-row
   justify-between
 `;
 
 export const Title = tw.h6`
-  font-normal text-white
+  font-normal
+  text-gunmetal dark:text-white
   text-sm-small md:text-md-small lg:text-small
   md:tracking-wide
   mb-5 md:mb-10
@@ -56,7 +57,8 @@ export const Loading = styled.div`
 export const Error = styled.div`
   ${tw`
     w-full
-    text-white text-center
+    text-center
+    text-gunmetal dark:text-white
     flex justify-center items-center
     tracking-wider md:tracking-widest
     text-sm-small md:text-md-small lg:text-small

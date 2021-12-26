@@ -7,7 +7,8 @@ export const Favorites = tw.div`
 export const Header = tw.h2`
   mb-0
   text-left
-  text-white font-black
+  font-black
+  text-gunmetal dark:text-white
   text-sm-header md:text-md-header lg:text-header
 `;
 
@@ -15,9 +16,10 @@ export const SubHeader = styled.h3`
   ${tw`
     mb-20
     text-left
+    opacity-70
     font-normal
     z-20 relative
-    text-white opacity-70
+    text-gunmetal dark:text-white
     text-sm-large md:text-small lg:text-large
   `}
 
@@ -37,7 +39,7 @@ export const List = tw.ul`
 export const ListItem = styled.li`
   ${tw`
     mb-10
-    text-white
+    text-gunmetal dark:text-white
     text-sm-large md:text-small lg:text-large
   `}
 
@@ -55,7 +57,10 @@ export const ListItem = styled.li`
     `}
 
     &.list-item__rating {
-      ${tw`bg-purple-900 px-2 rounded opacity-100`}
+      ${tw`
+        bg-purple-900
+        text-white dark:text-gunmetal
+        px-2 rounded opacity-100`}
     }
   }
 `;
