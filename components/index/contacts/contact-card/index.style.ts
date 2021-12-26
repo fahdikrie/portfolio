@@ -15,7 +15,8 @@ export const ContactCard = styled.a`
 
   & h6 {
     ${tw`
-      text-white underline text-decoration-color[#4C1D95]
+      text-gunmetal dark:text-white
+      underline text-decoration-color[#4C1D95]
       text-sm-large md:text-small lg:text-large
     `}
   }

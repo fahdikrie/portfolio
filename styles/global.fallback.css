@@ -1,5 +1,13 @@
-html {
-  background-color: black;
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: black;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    background-color: #f7f7f7;
+  }
 }
 
 body {

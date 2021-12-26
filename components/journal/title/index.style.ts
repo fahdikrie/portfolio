@@ -19,7 +19,7 @@ export const Title = styled.div`
 export const JumboText = tw.h1`
   font-serif
   font-black
-  text-white
+  text-gunmetal dark:text-white
   text-sm-wambo // md:text-wambo
   lg:text-sm-jumbo xl:text-jumbo
 `;
@@ -28,7 +28,7 @@ export const SubHeader = styled.h3`
   ${tw`
     font-serif
     font-bold
-    text-white
+    text-gunmetal dark:text-white
     text-sm-large md:text-large
     lg:text-sm-subheader xl:text-subheader
   `}

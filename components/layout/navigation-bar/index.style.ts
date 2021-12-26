@@ -20,9 +20,10 @@ export const Items = tw.ul`
 export const Item = styled.li<ItemProps>`
   ${tw`
     my-10
+    font-bold
     tracking-wide
     cursor-pointer
-    text-white font-bold
+    text-gunmetal dark:text-white
     ml-16 md:ml-24 xl:ml-32
     opacity-70 hover:opacity-95
     text-sm-small md:text-md-small lg:text-small
@@ -45,6 +46,7 @@ export const Socials = tw.div`
   px-12 md:px-16
   py-16 md:py-32
   flex md:flex-col
+  items-start
   md:bottom-0
 `;
 
@@ -55,4 +57,42 @@ export const Social = tw.img`
   mr-12 md:mr-0
   mt-0 md:mt-12
   opacity-70 hover:opacity-100
+  flex[0 0 auto]
 `;
+
+export const ThemeButton = styled(Social)
+  .attrs({ as: "button" })<{ isLightTheme: boolean }>`
+    ${tw`
+      border-radius[50%]
+      h-24 md:h-28 lg:h-32
+      scale-100 hover:scale-105
+      overflow-hidden
+      relative
+
+      mt-2 md:mt-0
+      mb-0 md:mb-5
+
+      transition-all
+      ease-in-out
+      border[3px solid]
+      active:border[1px solid]
+
+      focus:outline-none
+
+      after:(
+        w-1/2
+        h-full
+        top-0 right-0
+        absolute
+        outline-none
+
+        text-transparent
+        content['-']
+      )
+    `}
+
+    ${(props) => props.isLightTheme
+        ? tw`bg-gunmetal border-gunmetal after:bg-seashell`
+        : tw`bg-seashell border-seashell after:bg-black`
+    }
+  `

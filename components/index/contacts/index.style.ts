@@ -4,15 +4,16 @@ export const Contacts = tw.div`
   z-20 relative
   margin[0px -24px] md:mx-0
   overflow-x-hidden
-  mb-64
+  pb-64
 `;
 
 export const Header = styled.h2`
   ${tw`
     mx-24 md:mx-0
     mb-0
-    text-white font-black
+    font-black
     text-left md:text-center
+    text-gunmetal dark:text-white
     text-sm-header md:text-md-header lg:text-header
   `}
 
@@ -26,7 +27,8 @@ export const SubHeader = styled.h3`
     font-normal
     mx-24 md:mx-0
     md:text-center
-    text-white opacity-70
+    opacity-70
+    text-gunmetal dark:text-white
     text-sm-large md:text-small lg:text-large
   `}
 
