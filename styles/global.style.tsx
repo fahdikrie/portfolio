@@ -114,7 +114,8 @@ const CustomStyles = createGlobalStyle`
   }
 
   /* Hide outline */
-  *:focus {
+  *:focus,
+  *:active {
     ${tw`outline-none`}
   }
 

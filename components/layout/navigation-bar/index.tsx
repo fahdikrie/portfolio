@@ -31,7 +31,7 @@ const NavigationBar = ({ currentPage }: NavigationBarProps) => {
         <S.Socials>
           <S.ThemeButton
             onClick={() => onSetTheme()}
-            isThemeLight={resolvedTheme === 'light'}
+            isLightTheme={resolvedTheme === 'light'}
           />
           <a
             href="https://github.com/fahdikrie"

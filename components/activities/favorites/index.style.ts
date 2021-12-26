@@ -58,9 +58,10 @@ export const ListItem = styled.li`
 
     &.list-item__rating {
       ${tw`
-        bg-purple-900
-        text-white dark:text-gunmetal
-        px-2 rounded opacity-100`}
+        text-white
+        bg-bronze dark:bg-purple-900
+        px-2 rounded opacity-100
+      `}
     }
   }
 `;

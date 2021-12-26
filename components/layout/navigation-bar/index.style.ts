@@ -61,7 +61,7 @@ export const Social = tw.img`
 `;
 
 export const ThemeButton = styled(Social)
-  .attrs({ as: "button" })<{ isThemeLight: boolean }>`
+  .attrs({ as: "button" })<{ isLightTheme: boolean }>`
     ${tw`
       border-radius[50%]
       h-24 md:h-28 lg:h-32
@@ -91,7 +91,7 @@ export const ThemeButton = styled(Social)
       )
     `}
 
-    ${(props) => props.isThemeLight
+    ${(props) => props.isLightTheme
         ? tw`bg-gunmetal border-gunmetal after:bg-seashell`
         : tw`bg-seashell border-seashell after:bg-black`
     }
