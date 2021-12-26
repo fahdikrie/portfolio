@@ -46,6 +46,7 @@ export const Socials = tw.div`
   px-12 md:px-16
   py-16 md:py-32
   flex md:flex-col
+  items-start
   md:bottom-0
 `;
 
@@ -56,6 +57,7 @@ export const Social = tw.img`
   mr-12 md:mr-0
   mt-0 md:mt-12
   opacity-70 hover:opacity-100
+  flex[0 0 auto]
 `;
 
 export const ThemeButton = styled(Social)
@@ -65,11 +67,15 @@ export const ThemeButton = styled(Social)
       h-24 md:h-28 lg:h-32
       scale-100 hover:scale-105
       overflow-hidden
-
-      border-gunmetal
-      active:border-0
-      border[3px solid]
       relative
+
+      mt-2 md:mt-0
+      mb-0 md:mb-5
+
+      transition-all
+      ease-in-out
+      border[3px solid]
+      active:border[1px solid]
 
       focus:outline-none
 
@@ -81,7 +87,7 @@ export const ThemeButton = styled(Social)
         outline-none
 
         text-transparent
-        content['1']
+        content['-']
       )
     `}
 
