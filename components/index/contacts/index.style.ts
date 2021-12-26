@@ -4,7 +4,7 @@ export const Contacts = tw.div`
   z-20 relative
   margin[0px -24px] md:mx-0
   overflow-x-hidden
-  pb-64
+  mb-64
 `;
 
 export const Header = styled.h2`
