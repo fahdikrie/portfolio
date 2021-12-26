@@ -1,11 +1,14 @@
 import Vanta from './vanta';
 import useWindowSize from 'hooks/usewindowsize';
+import { useTheme } from 'next-themes';
 
 const VantaLayout = () => {
-  const width = useWindowSize();
   const breakpoint: number = 525;
+  const width = useWindowSize();
+  const { resolvedTheme } = useTheme();
 
   if (width < breakpoint) return null;
+  if (resolvedTheme == 'light') return null
 
   return (
     <Vanta
