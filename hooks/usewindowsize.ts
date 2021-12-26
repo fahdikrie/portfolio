@@ -22,8 +22,8 @@ const useWindowSize = () => {
     };
 
     /* passing an empty array as the dependencies of the effect will cause this
-         effect to only run when the component mounts, and not each time it updates.
-         We only want the listener to be added once */
+        effect to only run when the component mounts, and not each time it updates.
+        We only want the listener to be added once */
   }, []);
 
   return width;
