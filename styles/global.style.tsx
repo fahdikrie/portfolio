@@ -65,8 +65,7 @@ const CustomStyles = createGlobalStyle`
       text-rendering[optimizeSpeed]
       leading-normal
 
-      bg-seashell
-      dark:bg-black
+      bg-seashell dark:bg-black
     `}
   }
 

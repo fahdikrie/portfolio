@@ -13,32 +13,40 @@ interface NavigationBarProps {
 }
 
 const NavigationBar = ({ currentPage }: NavigationBarProps) => {
-  const { resolvedTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const GithubIcon = resolvedTheme === 'light' ? GithubIconLight : GithubIconDark;
   const LinkedInIcon = resolvedTheme === 'light' ? LinkedInIconLight : LinkedInIconDark;
+
+  const onSetTheme = () => {
+    if (resolvedTheme === 'light') {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+  }
 
   return (
     <>
       <S.Wrapper>
         <S.Socials>
-          <div>
-            <a
-              href="https://github.com/fahdikrie"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <S.Social src={GithubIcon} alt="github" />
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://www.linkedin.com/in/fahdikrie/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <S.Social src={LinkedInIcon} alt="linkedin" />
-            </a>
-          </div>
+          <S.ThemeButton
+            onClick={() => onSetTheme()}
+            isThemeLight={resolvedTheme === 'light'}
+          />
+          <a
+            href="https://github.com/fahdikrie"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <S.Social src={GithubIcon} alt="github" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/fahdikrie/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <S.Social src={LinkedInIcon} alt="linkedin" />
+          </a>
         </S.Socials>
         <S.Items>
           <S.Item isActive={currentPage == '/' ? true : false}>

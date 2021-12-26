@@ -57,3 +57,36 @@ export const Social = tw.img`
   mt-0 md:mt-12
   opacity-70 hover:opacity-100
 `;
+
+export const ThemeButton = styled(Social)
+  .attrs({ as: "button" })<{ isThemeLight: boolean }>`
+    ${tw`
+      border-radius[50%]
+      h-24 md:h-28 lg:h-32
+      scale-100 hover:scale-105
+      overflow-hidden
+
+      border-gunmetal
+      active:border-0
+      border[3px solid]
+      relative
+
+      focus:outline-none
+
+      after:(
+        w-1/2
+        h-full
+        top-0 right-0
+        absolute
+        outline-none
+
+        text-transparent
+        content['1']
+      )
+    `}
+
+    ${(props) => props.isThemeLight
+        ? tw`bg-gunmetal border-gunmetal after:bg-seashell`
+        : tw`bg-seashell border-seashell after:bg-black`
+    }
+  `
