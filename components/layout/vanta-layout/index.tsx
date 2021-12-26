@@ -8,7 +8,7 @@ const VantaLayout = () => {
   const { resolvedTheme } = useTheme();
 
   if (width < breakpoint) return null;
-  if (resolvedTheme == 'light') return null
+  if (resolvedTheme === 'light') return null
 
   return (
     <Vanta
