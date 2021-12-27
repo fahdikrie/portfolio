@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from 'next-themes';
 
-import 'styles/global.fallback.css' ;
+import 'styles/global.fallback.css';
 import GlobalStyles from 'styles/global.style';
 import FontSans from 'public/fonts/font-sans';
 import FontSerif from 'public/fonts/font-serif';

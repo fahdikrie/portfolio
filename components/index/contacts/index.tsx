@@ -18,7 +18,8 @@ const Contacts = (): JSX.Element => {
 
   useEffect(() => {
     if (resolvedTheme) {
-      const GithubImg = resolvedTheme === 'light' ? GithubLightImg : GithubDarkImg;
+      const GithubImg =
+        resolvedTheme === 'light' ? GithubLightImg : GithubDarkImg;
       setGithubImg(GithubImg);
     }
   }, [resolvedTheme]);
@@ -62,7 +63,7 @@ const Contacts = (): JSX.Element => {
         />
       </S.ContactCardWrapper>
     </S.Contacts>
-  )
+  );
 };
 
 export default Contacts;

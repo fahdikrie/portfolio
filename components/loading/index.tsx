@@ -19,7 +19,13 @@ const Loading = () => {
         viewBox="0 0 24 30"
         xmlSpace="preserve"
       >
-        <rect x="0" y="13" width="4" height="5" fill={resolvedTheme === 'light' ? '#513203' : '#4C1D95'}>
+        <rect
+          x="0"
+          y="13"
+          width="4"
+          height="5"
+          fill={resolvedTheme === 'light' ? '#513203' : '#4C1D95'}
+        >
           <animate
             attributeName="height"
             attributeType="XML"
@@ -37,7 +43,13 @@ const Loading = () => {
             repeatCount="indefinite"
           />
         </rect>
-        <rect x="10" y="13" width="4" height="5" fill={resolvedTheme === 'light' ? '#513203' : '#4C1D95'}>
+        <rect
+          x="10"
+          y="13"
+          width="4"
+          height="5"
+          fill={resolvedTheme === 'light' ? '#513203' : '#4C1D95'}
+        >
           <animate
             attributeName="height"
             attributeType="XML"
@@ -55,7 +67,13 @@ const Loading = () => {
             repeatCount="indefinite"
           />
         </rect>
-        <rect x="20" y="13" width="4" height="5" fill={resolvedTheme === 'light' ? '#513203' : '#4C1D95'}>
+        <rect
+          x="20"
+          y="13"
+          width="4"
+          height="5"
+          fill={resolvedTheme === 'light' ? '#513203' : '#4C1D95'}
+        >
           <animate
             attributeName="height"
             attributeType="XML"

@@ -20,21 +20,23 @@ const NavigationBar = ({ currentPage }: NavigationBarProps) => {
 
   useEffect(() => {
     if (resolvedTheme) {
-      const GithubIcon = resolvedTheme === 'light' ? GithubIconLight : GithubIconDark;
-      const LinkedInIcon = resolvedTheme === 'light' ? LinkedInIconLight : LinkedInIconDark;
+      const GithubIcon =
+        resolvedTheme === 'light' ? GithubIconLight : GithubIconDark;
+      const LinkedInIcon =
+        resolvedTheme === 'light' ? LinkedInIconLight : LinkedInIconDark;
 
       setGithubIcon(GithubIcon);
       setLinkedInIcon(LinkedInIcon);
     }
-  }, [resolvedTheme])
+  }, [resolvedTheme]);
 
   const onSetTheme = () => {
     if (resolvedTheme === 'light') {
-      setTheme('dark')
+      setTheme('dark');
     } else {
-      setTheme('light')
+      setTheme('light');
     }
-  }
+  };
 
   return (
     <>
@@ -79,7 +81,7 @@ const NavigationBar = ({ currentPage }: NavigationBarProps) => {
         </S.Items>
       </S.Wrapper>
     </>
-  )
+  );
 };
 
 export default NavigationBar;
