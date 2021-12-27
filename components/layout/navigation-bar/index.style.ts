@@ -92,6 +92,7 @@ export const ThemeButton = styled(Social).attrs({ as: 'button' })<{
       focus:outline-none
       hover:outline-none
       active:outline-none
+      -webkit-tap-highlight-color[transparent]
     `}
 
   ${(props) =>
