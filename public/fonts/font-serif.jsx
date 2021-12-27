@@ -14,10 +14,11 @@ const FontSerif = () => (
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
       />
       <link
-        rel="stylesheet"
+        rel="stylesheet preload prefetch"
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
         media="print"
         onLoad="this.media='all'"
+        crossOrigin="true"
       />
       <noscript>
         <link
