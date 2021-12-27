@@ -78,8 +78,6 @@ export const ThemeButton = styled(Social).attrs({ as: 'button' })<{
       border[3px solid]
       active:border[2px solid]
 
-      focus:outline-none
-
       after:(
         w-1/2
         h-full
@@ -90,6 +88,10 @@ export const ThemeButton = styled(Social).attrs({ as: 'button' })<{
         text-transparent
         content['-']
       )
+
+      focus:outline-none
+      hover:outline-none
+      active:outline-none
     `}
 
   ${(props) =>
