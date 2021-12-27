@@ -13,7 +13,7 @@ export const RecentCard = styled.div`
 
   &:hover {
     .recent-card__image {
-      ${tw`border-purple-900`}
+      ${tw`border-bronze dark:border-purple-900`}
     }
 
     ${Info} {

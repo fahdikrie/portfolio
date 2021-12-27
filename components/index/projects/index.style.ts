@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro';
 export const Projects = tw.div`
   z-20 relative
   margin[0px -24px] md:mx-0
-  mb-64
+  mb-64 md:mb-144
   overflow-x-hidden
 `;
 
@@ -21,6 +21,7 @@ export const Header = styled.h2`
     ${tw`block md:hidden`}
   }
 `;
+
 export const SubHeader = styled.h3`
   ${tw`
     mb-20

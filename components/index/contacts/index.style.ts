@@ -21,6 +21,7 @@ export const Header = styled.h2`
     ${tw`block md:hidden`}
   }
 `;
+
 export const SubHeader = styled.h3`
   ${tw`
     mb-20

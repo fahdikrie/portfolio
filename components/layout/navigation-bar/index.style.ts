@@ -75,7 +75,7 @@ export const ThemeButton = styled(Social)
       transition-all
       ease-in-out
       border[3px solid]
-      active:border[1px solid]
+      active:border[2px solid]
 
       focus:outline-none
 
