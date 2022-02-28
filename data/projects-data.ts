@@ -1,9 +1,3 @@
-import SiputPNG from 'public/assets/projects/siput.png';
-import PmbPNG from 'public/assets/projects/pmb.png';
-import FukiPNG from 'public/assets/projects/fuki.png';
-import FukiOprecPNG from 'public/assets/projects/fuki-oprec.png';
-import RistekOprecPNG from 'public/assets/projects/ristek-oprec.png';
-
 const strongify = (string) => {
   return `
     <strong
@@ -19,7 +13,7 @@ const strongify = (string) => {
 
 export const Projects = [
   {
-    image: SiputPNG,
+    image: '/assets/projects/siput.png',
     name: 'Sistem Informasi <br/> Publikasi Terpadu',
     time: 'Feb 2020 – Sep 2020 @ FUKI',
     desc:
@@ -45,7 +39,7 @@ export const Projects = [
     color: '#f2d746',
   },
   {
-    image: PmbPNG,
+    image: '/assets/projects/pmb.png',
     name: 'Website Pembinaan <br/> Mahasiswa Baru',
     time: 'Jul 2020 – Sep 2020 @ Ristek',
     desc:
@@ -61,7 +55,7 @@ export const Projects = [
     color: '#bae0e6',
   },
   {
-    image: FukiPNG,
+    image: '/assets/projects/fuki.png',
     name: 'Website Profil <br/> FUKI 2021',
     time: 'Jan 2021 – Feb 2021 @ FUKI',
     desc:
@@ -87,7 +81,7 @@ export const Projects = [
     color: '#a5c255',
   },
   {
-    image: FukiOprecPNG,
+    image: '/assets/projects/fuki-oprec.png',
     name: 'Web Recruitment <br/> FUKI 2021',
     time: 'Feb 2021 @ FUKI',
     desc:
@@ -113,7 +107,7 @@ export const Projects = [
     color: '#262626',
   },
   {
-    image: RistekOprecPNG,
+    image: '/assets/projects/ristek-oprec.png',
     name: 'Web Recruitment <br/> Ristek 2021',
     time: 'Mar 2020 @ Ristek',
     desc:
