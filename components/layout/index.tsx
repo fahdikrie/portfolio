@@ -2,10 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
-import NavigationBar from 'components/layout/navigation-bar';
+import NavigationBar from './Navbar';
 import * as S from './index.style';
 
-const VantaLayout = dynamic(() => import('./vanta-layout/index'), {
+const VantaLayout = dynamic(() => import('./VantaLayout'), {
   ssr: false,
 });
 
@@ -61,7 +61,7 @@ const Layout = ({
           href="/favicon/favicon-16x16.png"
         />
 
-        <title>{pageTitle} | badi's personal webpage</title>
+        <title>{pageTitle} | badi&apos;s personal webpage</title>
       </Head>
       <S.Layout>
         {currentPage === '/' ? <VantaLayout /> : null}
