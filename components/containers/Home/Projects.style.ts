@@ -86,6 +86,7 @@ export const MobileSwiper = styled.div`
       height[calc(100vw - 48px)]!
       mr-10
       inline-block
+      flex-shrink-0
     `}
 
     &:nth-last-child(2) {
