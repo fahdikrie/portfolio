@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes';
 
 import Vanta from 'components/elements/Vanta';
-import useWindowSize from 'hooks/useWindowSize';
+import useWindowSize from 'hooks/usewindowsize';
 
 const VantaLayout = () => {
   const breakpoint = 525;
