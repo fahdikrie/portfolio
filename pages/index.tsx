@@ -1,5 +1,5 @@
 import Layout from 'components/layout';
-import Index from 'components/index';
+import Home from 'components/containers/Home';
 
 const DESCRIPTION = `
   Fahdii (or Badi) is a 20 years old sophomore student currently majoring
@@ -15,14 +15,14 @@ const DESCRIPTION = `
   world of tech-industry 🚀
 `;
 
-const Home = ({ router }): JSX.Element => (
+const HomePage = ({ router }): JSX.Element => (
   <Layout
     description={`A web portfolio of Fahdii Ajmalal Fikrie. ${DESCRIPTION}`}
     currentPage={router.pathname}
     pageTitle="home"
   >
-    <Index />
+    <Home />
   </Layout>
 );
 
-export default Home;
+export default HomePage;
