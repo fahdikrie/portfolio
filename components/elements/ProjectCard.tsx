@@ -74,7 +74,7 @@ const ProjectCard = ({
   overlay,
   color,
 }: ProjectCardProps): JSX.Element => (
-  <SProjectCard>
+  <SProjectCard className="project-card">
     <Image
       src={image}
       alt={name}

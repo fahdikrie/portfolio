@@ -80,7 +80,7 @@ export const MobileSwiper = styled.div`
     `}
   }
 
-  & div {
+  & div.project-card {
     ${tw`
       width[calc(100vw - 48px)]!
       height[calc(100vw - 48px)]!
@@ -99,9 +99,11 @@ export const MobileSwiper = styled.div`
   & div.swiper__margin {
     ${tw`
       pl-24
+      w-0
       min-h-full
       inline-block
       invisible
+      bg-red-100
     `}
   }
 `;
