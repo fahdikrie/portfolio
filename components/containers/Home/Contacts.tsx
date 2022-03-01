@@ -28,7 +28,7 @@ const Contacts = (): JSX.Element => {
     <S.Contacts>
       <S.Header>Hit me up!</S.Header>
       <S.SubHeader>
-        For any feedback, work opportunities, or even a simple "Hi!"
+        For any feedback, work opportunities, or even a simple &quot;Hi!&quot;
       </S.SubHeader>
       <S.ContactCardWrapper>
         <ContactCard

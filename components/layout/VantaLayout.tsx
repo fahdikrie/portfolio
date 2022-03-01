@@ -4,7 +4,7 @@ import Vanta from 'components/elements/Vanta';
 import useWindowSize from 'hooks/usewindowsize';
 
 const VantaLayout = () => {
-  const breakpoint: number = 525;
+  const breakpoint = 525;
   const width = useWindowSize();
   const { resolvedTheme } = useTheme();
 

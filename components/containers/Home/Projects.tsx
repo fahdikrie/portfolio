@@ -26,7 +26,7 @@ const Projects = (): JSX.Element => {
   return (
     <S.Projects>
       <S.Header>
-        Projects I've <br /> participated in
+        Projects I&apos;ve <br /> participated in
       </S.Header>
       <S.SubHeader>
         Projects I did in collaboration with others. <u>drag to see more</u>

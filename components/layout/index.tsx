@@ -61,7 +61,7 @@ const Layout = ({
           href="/favicon/favicon-16x16.png"
         />
 
-        <title>{pageTitle} | badi's personal webpage</title>
+        <title>{pageTitle} | badi&apos;s personal webpage</title>
       </Head>
       <S.Layout>
         {currentPage === '/' ? <VantaLayout /> : null}

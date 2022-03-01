@@ -7,13 +7,13 @@ const handler = nc<NextApiRequest, NextApiResponse>()
   .use(cors())
   .get(async (_, res) => {
     try {
-      let parser = new RSSParser({
+      const parser = new RSSParser({
         customFields: {
           item: ['user_rating', 'user_read_at', 'book_large_image_url'],
         },
       });
 
-      let feed = await parser.parseURL(process.env.NEXT_PUBLIC_GOODREADS_RSS);
+      const feed = await parser.parseURL(process.env.NEXT_PUBLIC_GOODREADS_RSS);
 
       return res.status(200).json(feed);
     } catch (err) {

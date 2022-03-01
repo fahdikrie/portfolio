@@ -7,7 +7,7 @@ const handler = nc<NextApiRequest, NextApiResponse>()
   .use(cors())
   .get(async (_, res) => {
     try {
-      let parser = new RSSParser({
+      const parser = new RSSParser({
         customFields: {
           item: [
             'letterboxd:watchedDate',
@@ -17,7 +17,7 @@ const handler = nc<NextApiRequest, NextApiResponse>()
         },
       });
 
-      let feed = await parser.parseURL(process.env.NEXT_PUBLIC_LETTERBOXD_RSS);
+      const feed = await parser.parseURL(process.env.NEXT_PUBLIC_LETTERBOXD_RSS);
 
       return res.status(200).json(feed);
     } catch (err) {
