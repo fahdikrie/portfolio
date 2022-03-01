@@ -3,7 +3,7 @@ import * as S from './About.style';
 const About = (): JSX.Element => (
   <S.About>
     <S.LargeText>
-      A 20 years old sophomore student currently majoring CS 💻 at the
+      A 21 years old sophomore student currently majoring CS 💻 at the
       University of Indonesia ‍🇮🇩 Meet Fahdii Ajmalal Fikrie! 👋
       <br />
       <br />
