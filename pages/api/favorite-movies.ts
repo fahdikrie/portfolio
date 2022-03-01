@@ -1,4 +1,4 @@
-import { FavoriteMovies } from 'content/data/favorite-movies-data';
+import { FavoriteMovies } from 'content/data/favorite-movies';
 
 export default function handler(req, res) {
   res.status(200).json(JSON.stringify(FavoriteMovies));

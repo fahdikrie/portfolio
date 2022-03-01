@@ -36,6 +36,7 @@ class Halo extends ShaderBase {
     this.bufferTarget = new THREE.WebGLRenderTarget(ww, hh, pars);
     this.bufferFeedback = new THREE.WebGLRenderTarget(ww, hh, pars);
   }
+
   initBasicShader(fragmentShader, vertexShader) {
     super.initBasicShader(fragmentShader, vertexShader);
     this.uniforms.iBuffer = {
@@ -43,6 +44,7 @@ class Halo extends ShaderBase {
       value: this.bufferTarget.texture,
     };
   }
+
   onUpdate() {
     this.uniforms.iBuffer.value = this.bufferFeedback.texture;
 
@@ -58,6 +60,7 @@ class Halo extends ShaderBase {
     this.bufferTarget = this.bufferFeedback;
     this.bufferFeedback = temp;
   }
+
   onResize() {
     if (this.bufferTarget) {
       const ww = (this.width * window.devicePixelRatio) / this.scale;
@@ -66,6 +69,7 @@ class Halo extends ShaderBase {
       this.bufferFeedback.setSize(ww, hh);
     }
   }
+
   onDestroy() {
     this.bufferTarget = null;
     this.bufferFeedback = null;
@@ -121,7 +125,7 @@ vec4 j2hue(float c) {
 vec3 permute(vec3 x) { return mod(((x*34.0)+1.0)*x, 289.0); }
 float snoise(vec2 v){
   const vec4 C = vec4(0.211324865405187, 0.366025403784439,
-           -0.577350269189626, 0.024390243902439);
+                -0.577350269189626, 0.024390243902439);
   vec2 i  = floor(v + dot(v, C.yy) );
   vec2 x0 = v -   i + dot(i, C.xx);
   vec2 i1;

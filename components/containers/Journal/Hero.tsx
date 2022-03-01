@@ -1,4 +1,4 @@
-import * as S from './index.style';
+import * as S from './Hero.style';
 
 const Title = (): JSX.Element => (
   <S.Title>
