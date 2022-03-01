@@ -4,7 +4,11 @@ import Head from 'next/head';
 const FontSerif = () => (
   <>
     <Head>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
       <link
         rel="stylesheet preload"
         as="style"

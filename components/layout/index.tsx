@@ -16,7 +16,12 @@ interface LayoutProps {
   description: string;
 }
 
-const Layout = ({ currentPage, children, pageTitle, description }: LayoutProps) => {
+const Layout = ({
+  currentPage,
+  children,
+  pageTitle,
+  description,
+}: LayoutProps) => {
   return (
     <>
       <Head>
@@ -27,12 +32,34 @@ const Layout = ({ currentPage, children, pageTitle, description }: LayoutProps) 
 
         <meta property="og:title" content={pageTitle} key="ogtitle" />
         <meta property="og:description" content={description} key="ogdesc" />
-        <meta property="og:image" content="/assets/solos/bbbadi.png" key="ogimage" />
-        <meta property="og:site_name" content="badi's personal webpage" key="ogsite" />
+        <meta
+          property="og:image"
+          content="/assets/solos/bbbadi.png"
+          key="ogimage"
+        />
+        <meta
+          property="og:site_name"
+          content="badi's personal webpage"
+          key="ogsite"
+        />
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon/favicon-16x16.png"
+        />
 
         <title>{pageTitle} | badi&apos;s personal webpage</title>
       </Head>

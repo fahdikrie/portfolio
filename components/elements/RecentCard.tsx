@@ -56,11 +56,24 @@ const SRecentCard = styled.div`
   }
 `;
 
-const RecentCard = ({ image, link, title, rating, date }: RecentCardProps): JSX.Element => (
+const RecentCard = ({
+  image,
+  link,
+  title,
+  rating,
+  date,
+}: RecentCardProps): JSX.Element => (
   <SRecentCard>
     <a href={link} target="_blank" rel="noreferrer">
       <div className="recent-card__image">
-        <Image src={image} alt={title} layout="responsive" width="2" height="3" loading="lazy" />
+        <Image
+          src={image}
+          alt={title}
+          layout="responsive"
+          width="2"
+          height="3"
+          loading="lazy"
+        />
       </div>
     </a>
 

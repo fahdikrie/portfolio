@@ -48,7 +48,13 @@ const Vanta = (props) => {
       // @ts-ignore
       if (vantaEffect) (vantaEffect as any).destroy();
     };
-  }, [vantaEffect, backgroundColorVanta, sizeVanta, xOffsetVanta, baseColorVanta]);
+  }, [
+    vantaEffect,
+    backgroundColorVanta,
+    sizeVanta,
+    xOffsetVanta,
+    baseColorVanta,
+  ]);
 
   return <SVanta ref={myRef} />;
 };

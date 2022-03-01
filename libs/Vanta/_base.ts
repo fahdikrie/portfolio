@@ -52,7 +52,9 @@ VANTA.VantaBase = class VantaBase {
     this.restart = this.restart.bind(this);
 
     const defaultOptions =
-      typeof this.getDefaultOptions === 'function' ? this.getDefaultOptions() : this.defaultOptions;
+      typeof this.getDefaultOptions === 'function'
+        ? this.getDefaultOptions()
+        : this.defaultOptions;
     this.options = extend(
       {
         mouseControls: true,
@@ -265,7 +267,9 @@ VANTA.VantaBase = class VantaBase {
     }
     const xNorm = x / this.width; // 0 to 1
     const yNorm = y / this.height; // 0 to 1
-    typeof this.onMouseMove === 'function' ? this.onMouseMove(xNorm, yNorm) : void 0;
+    typeof this.onMouseMove === 'function'
+      ? this.onMouseMove(xNorm, yNorm)
+      : void 0;
   }
 
   setSize() {
@@ -282,7 +286,8 @@ VANTA.VantaBase = class VantaBase {
     // Init mouseX and mouseY
     if (
       (!this.mouseX && !this.mouseY) ||
-      (this.mouseX === this.options.minWidth / 2 && this.mouseY === this.options.minHeight / 2)
+      (this.mouseX === this.options.minWidth / 2 &&
+        this.mouseY === this.options.minHeight / 2)
     ) {
       this.mouseX = this.width / 2;
       this.mouseY = this.height / 2;
@@ -310,7 +315,8 @@ VANTA.VantaBase = class VantaBase {
     const elRect = this.el.getBoundingClientRect();
     const scrollTop =
       window.pageYOffset ||
-      (document.documentElement || document.body.parentNode || document.body).scrollTop;
+      (document.documentElement || document.body.parentNode || document.body)
+        .scrollTop;
     const offsetTop = elRect.top + scrollTop;
     const minScrollTop = offsetTop - window.innerHeight;
     const maxScrollTop = offsetTop + elHeight;
@@ -331,7 +337,11 @@ VANTA.VantaBase = class VantaBase {
     if (this.options.mouseEase) {
       this.mouseEaseX = this.mouseEaseX || this.mouseX || 0;
       this.mouseEaseY = this.mouseEaseY || this.mouseY || 0;
-      if (Math.abs(this.mouseEaseX - this.mouseX) + Math.abs(this.mouseEaseY - this.mouseY) > 0.1) {
+      if (
+        Math.abs(this.mouseEaseX - this.mouseX) +
+          Math.abs(this.mouseEaseY - this.mouseY) >
+        0.1
+      ) {
         this.mouseEaseX += (this.mouseX - this.mouseEaseX) * 0.05;
         this.mouseEaseY += (this.mouseY - this.mouseEaseY) * 0.05;
         this.triggerMouseMove(this.mouseEaseX, this.mouseEaseY);
@@ -345,7 +355,10 @@ VANTA.VantaBase = class VantaBase {
       }
       if (this.scene && this.camera) {
         this.renderer.render(this.scene, this.camera);
-        this.renderer.setClearColor(this.options.backgroundColor, this.options.backgroundAlpha);
+        this.renderer.setClearColor(
+          this.options.backgroundColor,
+          this.options.backgroundAlpha
+        );
       }
       // if (this.stats) this.stats.update()
       // if (this.renderStats) this.renderStats.update(this.renderer)

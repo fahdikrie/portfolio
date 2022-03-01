@@ -9,11 +9,17 @@ const handler = nc<NextApiRequest, NextApiResponse>()
     try {
       const parser = new RSSParser({
         customFields: {
-          item: ['letterboxd:watchedDate', 'letterboxd:filmTitle', 'letterboxd:memberRating'],
+          item: [
+            'letterboxd:watchedDate',
+            'letterboxd:filmTitle',
+            'letterboxd:memberRating',
+          ],
         },
       });
 
-      const feed = await parser.parseURL(process.env.NEXT_PUBLIC_LETTERBOXD_RSS);
+      const feed = await parser.parseURL(
+        process.env.NEXT_PUBLIC_LETTERBOXD_RSS
+      );
 
       return res.status(200).json(feed);
     } catch (err) {

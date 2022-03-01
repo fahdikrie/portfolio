@@ -24,8 +24,10 @@ export const SOverlay = styled.div<OverlayProps>`
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(0px);
 
-  -webkit-transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
-  -moz-transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
+  -webkit-transition: background-color 0.5s ease-in-out,
+    backdrop-filter 0.25s linear;
+  -moz-transition: background-color 0.5s ease-in-out,
+    backdrop-filter 0.25s linear;
   -o-transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
   transition: background-color 0.5s ease-in-out, backdrop-filter 0.25s linear;
 
@@ -80,9 +82,23 @@ interface SoloCardProps {
   color: string;
 }
 
-const SoloCard = ({ image, name, time, overlay, color }: SoloCardProps): JSX.Element => (
+const SoloCard = ({
+  image,
+  name,
+  time,
+  overlay,
+  color,
+}: SoloCardProps): JSX.Element => (
   <SSoloCard>
-    <Image src={image} alt={name} layout="responsive" width="2" height="1" loading="eager" priority />
+    <Image
+      src={image}
+      alt={name}
+      layout="responsive"
+      width="2"
+      height="1"
+      loading="eager"
+      priority
+    />
 
     <SOverlay overlay={overlay} color={color}>
       <SName dangerouslySetInnerHTML={{ __html: name }} />

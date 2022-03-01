@@ -44,7 +44,10 @@ export default class ShaderBase extends VantaBase {
     super.setOptions(userOptions);
     this.updateUniforms();
   }
-  initBasicShader(fragmentShader = this.fragmentShader, vertexShader = this.vertexShader) {
+  initBasicShader(
+    fragmentShader = this.fragmentShader,
+    vertexShader = this.vertexShader
+  ) {
     if (!vertexShader) {
       vertexShader =
         'uniform float uTime;\nuniform vec2 uResolution;\nvoid main() {\n  gl_Position = vec4( position, 1.0 );\n}';

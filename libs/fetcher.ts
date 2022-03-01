@@ -1,6 +1,7 @@
 import useSWR from 'swr';
 
-const fetcher = (url: string): Promise<unknown> => fetch(url).then((res) => res.json());
+const fetcher = (url: string): Promise<unknown> =>
+  fetch(url).then((res) => res.json());
 
 const withSwr = <T>(path: string) => {
   if (!path) throw new Error('Path is required');

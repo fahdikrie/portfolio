@@ -17,13 +17,15 @@ export function extend(a, b) {
 export function mobileCheck() {
   if (typeof navigator !== 'undefined') {
     return (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-      window.innerWidth < 600
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      ) || window.innerWidth < 600
     );
   }
   return null;
 }
-export const sample = (items) => items[Math.floor(Math.random() * items.length)];
+export const sample = (items) =>
+  items[Math.floor(Math.random() * items.length)];
 
 export function rn(start, end) {
   if (start == null) start = 0;

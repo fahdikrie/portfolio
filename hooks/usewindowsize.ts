@@ -11,7 +11,8 @@ const useWindowSize = () => {
 
     /* Inside of a "useEffect" hook add an event listener that updates
     the "width" state variable when the window size changes */
-    if (mounted) window.addEventListener('resize', () => setWidth(window.innerWidth));
+    if (mounted)
+      window.addEventListener('resize', () => setWidth(window.innerWidth));
 
     /* Set the value of "mounted" as false
     and return it as a clean up for the function */
