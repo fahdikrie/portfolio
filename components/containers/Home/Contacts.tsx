@@ -18,8 +18,7 @@ const Contacts = (): JSX.Element => {
 
   useEffect(() => {
     if (resolvedTheme) {
-      const GithubImg =
-        resolvedTheme === 'light' ? GithubLightImg : GithubDarkImg;
+      const GithubImg = resolvedTheme === 'light' ? GithubLightImg : GithubDarkImg;
       setGithubImg(GithubImg);
     }
   }, [resolvedTheme]);
@@ -27,9 +26,7 @@ const Contacts = (): JSX.Element => {
   return (
     <S.Contacts>
       <S.Header>Hit me up!</S.Header>
-      <S.SubHeader>
-        For any feedback, work opportunities, or even a simple &quot;Hi!&quot;
-      </S.SubHeader>
+      <S.SubHeader>For any feedback, work opportunities, or even a simple &quot;Hi!&quot;</S.SubHeader>
       <S.ContactCardWrapper>
         <ContactCard
           name="fahdiaf@ristek.cs.ui.ac.id"
@@ -41,21 +38,9 @@ const Contacts = (): JSX.Element => {
           image={LinkedInImg}
           link="https://www.linkedin.com/in/fahdikrie/"
         />
-        <ContactCard
-          name="github.com/fahdikrie"
-          image={githubImg}
-          link="https://github.com/fahdikrie"
-        />
-        <ContactCard
-          name="gitlab.com/fahdikrie"
-          image={GitlabImg}
-          link="https://gitlab.com/fahdikrie/"
-        />
-        <ContactCard
-          name="letterboxd.com/fahdikrie"
-          image={LetterboxdImg}
-          link="https://boxd.it/Up8H"
-        />
+        <ContactCard name="github.com/fahdikrie" image={githubImg} link="https://github.com/fahdikrie" />
+        <ContactCard name="gitlab.com/fahdikrie" image={GitlabImg} link="https://gitlab.com/fahdikrie/" />
+        <ContactCard name="letterboxd.com/fahdikrie" image={LetterboxdImg} link="https://boxd.it/Up8H" />
         <ContactCard
           name="goodreads.com/fahdikrie"
           image={GoodreadsImg}

@@ -9,11 +9,7 @@ const handler = nc<NextApiRequest, NextApiResponse>()
     try {
       const parser = new RSSParser({
         customFields: {
-          item: [
-            'letterboxd:watchedDate',
-            'letterboxd:filmTitle',
-            'letterboxd:memberRating',
-          ],
+          item: ['letterboxd:watchedDate', 'letterboxd:filmTitle', 'letterboxd:memberRating'],
         },
       });
 

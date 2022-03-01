@@ -20,10 +20,8 @@ const NavigationBar = ({ currentPage }: NavigationBarProps) => {
 
   useEffect(() => {
     if (resolvedTheme) {
-      const GithubIcon =
-        resolvedTheme === 'light' ? GithubIconLight : GithubIconDark;
-      const LinkedInIcon =
-        resolvedTheme === 'light' ? LinkedInIconLight : LinkedInIconDark;
+      const GithubIcon = resolvedTheme === 'light' ? GithubIconLight : GithubIconDark;
+      const LinkedInIcon = resolvedTheme === 'light' ? LinkedInIconLight : LinkedInIconDark;
 
       setGithubIcon(GithubIcon);
       setLinkedInIcon(LinkedInIcon);
@@ -44,22 +42,11 @@ const NavigationBar = ({ currentPage }: NavigationBarProps) => {
         <S.Socials>
           {resolvedTheme && (
             <>
-              <S.ThemeButton
-                onClick={() => onSetTheme()}
-                isLightTheme={resolvedTheme === 'light'}
-              />
-              <a
-                href="https://github.com/fahdikrie"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <S.ThemeButton onClick={() => onSetTheme()} isLightTheme={resolvedTheme === 'light'} />
+              <a href="https://github.com/fahdikrie" target="_blank" rel="noopener noreferrer">
                 <S.Social src={githubIcon} alt="github" />
               </a>
-              <a
-                href="https://www.linkedin.com/in/fahdikrie/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.linkedin.com/in/fahdikrie/" target="_blank" rel="noopener noreferrer">
                 <S.Social src={linkedInIcon} alt="linkedin" />
               </a>
             </>

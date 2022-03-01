@@ -5,11 +5,7 @@ const FontSans = () => (
   <>
     <Head>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="true"
-      />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
       <link
         rel="stylesheet preload"
         as="style"
