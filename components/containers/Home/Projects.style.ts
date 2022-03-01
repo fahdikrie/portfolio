@@ -103,7 +103,6 @@ export const MobileSwiper = styled.div`
       min-h-full
       inline-block
       invisible
-      bg-red-100
     `}
   }
 `;
