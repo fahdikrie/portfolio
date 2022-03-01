@@ -15,8 +15,6 @@
     "next": "12",
     "next-connect": "^0.10.2",
     "next-images": "^1.7.0",
-    "next-mdx-remote": "^3.0.1",
-    "next-remote-watch": "^1.0.0",
     "next-themes": "^0.0.15",
     "prettier": "^2.3.2",
     "react": "17.0.2",
