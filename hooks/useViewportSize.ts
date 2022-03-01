@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const useWindowSize = () => {
+const useViewportSize = () => {
   // Declare a new state variable with the "useState" Hook
   const [width, setWidth] = useState<number | null>(window.innerWidth);
 
@@ -29,4 +29,4 @@ const useWindowSize = () => {
   return width;
 };
 
-export default useWindowSize;
+export default useViewportSize;
