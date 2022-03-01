@@ -2,8 +2,8 @@ import Layout from 'components/layout';
 import Home from 'components/containers/Home';
 
 const DESCRIPTION = `
-  Fahdii (or Badi) is a 20 years old sophomore student currently majoring
-  CS 💻 at the University of Indonesia ‍🇮🇩 Meet Fahdii Ajmalal Fikrie! 👋
+  Fahdii (or Badi) is a 21 years old sophomore student currently majoring
+  CS 💻 at the University of Indonesia ‍🇮🇩
 
   Fahdii is very passionate when it comes to taking naps 💤 and watching
   movies 🎬 Some of his favorite movies are Good Morning (1959) 🌄 and The
