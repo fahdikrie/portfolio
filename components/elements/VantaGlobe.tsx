@@ -32,12 +32,12 @@ const Vanta = (props) => {
         GLOBE({
           el: myRef.current,
           mouseControls: true,
-          touchControls: true,
+          touchControls: false,
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
           scale: sizeVanta,
-          scaleMobile: 1.0,
+          scaleMobile: 0,
           color: baseColorVanta,
           backgroundColor: backgroundColorVanta,
         })
