@@ -2,7 +2,7 @@
 import ShaderBase, { VANTA } from './_shaderBase';
 
 const win = typeof window == 'object';
-let THREE = win && window.THREE;
+const THREE = win && window.THREE;
 
 class Halo extends ShaderBase {
   getDefaultOptions() {
@@ -56,7 +56,7 @@ class Halo extends ShaderBase {
     renderer.clear();
 
     // Swap, to prevent shader using the same input as output
-    let temp = this.bufferTarget;
+    const temp = this.bufferTarget;
     this.bufferTarget = this.bufferFeedback;
     this.bufferFeedback = temp;
   }
