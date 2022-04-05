@@ -1,25 +1,13 @@
 import Layout from 'components/layout';
 import Home from 'components/containers/Home';
 
-const DESCRIPTION = `
-  Fahdii (or Badi) is a 21 years old sophomore student currently majoring
-  CS 💻 at the University of Indonesia ‍🇮🇩
-
-  Fahdii is very passionate when it comes to taking naps 💤 and watching
-  movies 🎬 Some of his favorite movies are Good Morning (1959) 🌄 and The
-  Makioka Sisters (1983) 🎎
-
-  All the funsies aside 🎭 Fahdii is a software engineer in the making 🧑‍💻
-  Having great interest in full-stack web development 🌐 He looks forward to
-  be able to do big things 💯 and take part in this vast & rapid growing
-  world of tech-industry 🚀
-`;
+const DESCRIPTION = `Fahdii Ajmalal Fikrie (goes by the name Fahdii, Badi, Fahdikrie, or Dikrie both IRL and on the internet-web) is a 21 years old sophomore student currently majoring CS at the University of Indonesia.`;
 
 const HomePage = ({ router }): JSX.Element => (
   <Layout
-    description={`A web portfolio of Fahdii Ajmalal Fikrie. ${DESCRIPTION}`}
+    pageDescription={`A web portfolio of Fahdii Ajmalal Fikrie. ${DESCRIPTION}`}
     currentPage={router.pathname}
-    pageTitle="home"
+    pageTitle="Home"
   >
     <Home />
   </Layout>
