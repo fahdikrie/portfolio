@@ -7,9 +7,10 @@ const About = (): JSX.Element => (
       of Indonesia ‍🇮🇩 Meet Fahdii Ajmalal Fikrie! 👋
       <br />
       <br />
-      Fahdii is very passionate when it comes to taking naps 💤 and watching
-      movies 🎬 Some of his favorite movies are Good Morning (1959) 🌄 and The
-      Makioka Sisters (1983) 🎎
+      Fahdii (also goes by the name Badi, Dikrie, or Fahdikrie) is very
+      passionate when it comes to taking naps 💤 and watching movies 🎬 Some of
+      his favorite movies are Good Morning (1959) 🌄 and The Makioka Sisters
+      (1983) 🎎
       <br />
       <br />
       All the funsies aside 🎭 Fahdii is a software engineer in the making 🧑‍💻
