@@ -44,7 +44,7 @@ const Layout = ({
           content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage.`}
         />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="/assets/solos/bbbadi.png" />
+        <meta property="og:image" content="/favicon/bbbadi-ogimage.png" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -54,7 +54,7 @@ const Layout = ({
           content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage.`}
         />
         <meta property="twitter:description" content={pageDescription} />
-        <meta property="twitter:image" content="/assets/solos/bbbadi.png" />
+        <meta property="twitter:image" content="/favicon/bbbadi-ogimage.png" />
 
         {/* <!-- Favicon --> */}
         <link
