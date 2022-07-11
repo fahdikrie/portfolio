@@ -42,9 +42,9 @@ const JournalPost = ({ router, post, postBlock }: JournalDetailProps) => {
 
   return (
     <Layout
-      pageDescription={post.summary}
+      pageDescription={post?.summary}
       currentPage={router.pathname}
-      pageTitle={`${post.title}`}
+      pageTitle={`${post?.title} | Badi's very own Journal`}
     >
       <NotionRenderer recordMap={postBlock} mapPageUrl={mapPageUrl} />
     </Layout>
