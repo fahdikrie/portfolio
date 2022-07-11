@@ -1,5 +1,12 @@
-import * as S from './Feed.style';
+import { ExtendedRecordMap } from 'notion-types';
+import { useEffect } from 'react';
 
-const Posts = (): JSX.Element => <S.Posts></S.Posts>;
+const Feed = ({ recordMap }: { recordMap: ExtendedRecordMap }) => {
+  useEffect(() => {
+    console.log(recordMap);
+  }, [recordMap]);
 
-export default Posts;
+  return <></>;
+};
+
+export default Feed;

@@ -1,13 +1,26 @@
+import notion from 'libs/notion';
+import { PageProps } from 'types/pages';
+
 import Journal from 'components/containers/Journal';
 import Layout from 'components/layout';
 
-const JournalPage = ({ router }): JSX.Element => (
+export const getStaticProps = async () => {
+  const pageId = '067dd719a912471ea9a3ac10710e7fdf';
+  const recordMap = await notion.getPage(pageId);
+
+  return {
+    props: { recordMap },
+    revalidate: 10,
+  };
+};
+
+const JournalPage = ({ router, recordMap }: PageProps): JSX.Element => (
   <Layout
     pageDescription="An internet-web journal of Fahdii Ajmalal Fikrie."
     currentPage={router.pathname}
     pageTitle="Journal"
   >
-    <Journal />
+    <Journal recordMap={recordMap} />
   </Layout>
 );
 

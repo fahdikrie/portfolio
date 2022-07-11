@@ -1,9 +1,11 @@
+import { PageProps } from 'types/pages';
+
 import Layout from 'components/layout';
 import Home from 'components/containers/Home';
 
 const DESCRIPTION = `A personal webpage of Fahdii Ajmalal Fikrie (goes by the name Fahdii, Badi, Fahdikrie, or Dikrie). Fahdii is a 21 y/o CS student at University of Indonesia.`;
 
-const HomePage = ({ router }): JSX.Element => (
+const HomePage = ({ router }: PageProps): JSX.Element => (
   <Layout
     pageDescription={DESCRIPTION}
     currentPage={router.pathname}
