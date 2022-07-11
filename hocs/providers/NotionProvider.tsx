@@ -2,9 +2,9 @@ import { createContext } from 'react';
 
 export const NotionContext = createContext(null);
 
-export function NotionProvider({ children, recordMap }) {
+export function NotionProvider({ children, posts }) {
   return (
-    <NotionContext.Provider value={{ recordMap }}>
+    <NotionContext.Provider value={{ posts }}>
       {children}
     </NotionContext.Provider>
   );

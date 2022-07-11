@@ -1,12 +1,12 @@
+import { useNotionData } from 'hooks/useNotionData';
 import { useEffect } from 'react';
-import { useNotionContext } from 'react-notion-x';
 
 const Feed = () => {
-  const { recordMap } = useNotionContext();
+  const { posts } = useNotionData();
 
   useEffect(() => {
-    console.log(recordMap);
-  }, [recordMap]);
+    console.log(posts);
+  }, [posts]);
 
   return <></>;
 };
