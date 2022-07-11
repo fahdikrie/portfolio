@@ -6,8 +6,7 @@ import { processRecordMap } from 'libs/notion/utils';
 import { JournalProps } from 'types/pages';
 
 export const getStaticProps = async () => {
-  const pageId = NOTION_JOURNAL_PAGE_ID;
-  const recordMap = await notion.getPage(pageId);
+  const recordMap = await notion.getPage(NOTION_JOURNAL_PAGE_ID);
   const posts = await processRecordMap(recordMap);
 
   return {

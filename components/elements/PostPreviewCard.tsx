@@ -50,7 +50,7 @@ const PostPreviewCard = ({ post }: { post: PostPreview }): JSX.Element => (
     <SPostPreviewCard>
       <div className="post-preview-card__date">{post?.date ?? '-'}</div>
       <div className="post-preview-card__title">{post?.title}</div>
-      <div className="post-preview-card__summary">{post?.summary ?? '-'}</div>
+      <div className="post-preview-card__summary">{post?.summary}</div>
     </SPostPreviewCard>
   </Link>
 );

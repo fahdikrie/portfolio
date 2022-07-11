@@ -36,8 +36,6 @@ export const getPageProperties = async (
         case 'date': {
           const dateProperty = getDateValue(val);
           delete dateProperty.type;
-          console.log('type', typeof dateProperty);
-          console.log(dateProperty);
           properties[schema[key].name] = convertLocaleDateFormat(
             dateProperty?.start_date
           );
