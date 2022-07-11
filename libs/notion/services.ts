@@ -1,6 +1,7 @@
 import notion from '.';
 import { getTextContent, getDateValue } from 'notion-utils';
-import { Block, NotionMap } from 'notion-types';
+import { Block, CollectionPropertySchemaMap, NotionMap } from 'notion-types';
+import { convertLocaleDateFormat } from 'libs/utils';
 
 export const getAllPostIds = (collectionQuery: { [s: string]: unknown }) => {
   const views = Object.values(collectionQuery)[0];
@@ -18,7 +19,7 @@ export const getAllPostIds = (collectionQuery: { [s: string]: unknown }) => {
 export const getPageProperties = async (
   id: string,
   block: NotionMap<Block>,
-  schema: any
+  schema: CollectionPropertySchemaMap
 ): Promise<PostPreview> => {
   const rawProperties = Object.entries(block?.[id]?.value?.properties || []);
   const excludeProperties = ['date', 'select', 'multi_select', 'person'];
@@ -35,7 +36,11 @@ export const getPageProperties = async (
         case 'date': {
           const dateProperty = getDateValue(val);
           delete dateProperty.type;
-          properties[schema[key].name] = dateProperty;
+          console.log('type', typeof dateProperty);
+          console.log(dateProperty);
+          properties[schema[key].name] = convertLocaleDateFormat(
+            dateProperty?.start_date
+          );
 
           break;
         }

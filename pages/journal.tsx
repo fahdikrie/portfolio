@@ -9,7 +9,6 @@ export const getStaticProps = async () => {
   const pageId = NOTION_JOURNAL_PAGE_ID;
   const recordMap = await notion.getPage(pageId);
   const posts = await processRecordMap(recordMap);
-  console.log(posts);
 
   return {
     props: { posts },

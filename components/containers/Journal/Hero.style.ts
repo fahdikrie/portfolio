@@ -1,6 +1,6 @@
 import tw, { styled } from 'twin.macro';
 
-export const Title = styled.div`
+export const Hero = styled.div`
   ${tw`
     w-full md:h-screen
     flex items-center

@@ -1,6 +1,6 @@
 interface PostPreview {
   id: string;
-  date?: { start_date: string };
+  date?: string;
   type?: string[];
   slug?: string;
   tags?: string[];

@@ -1,4 +1,9 @@
-import { Block, ExtendedRecordMap, NotionMap } from 'notion-types';
+import {
+  Block,
+  CollectionPropertySchemaMap,
+  ExtendedRecordMap,
+  NotionMap,
+} from 'notion-types';
 import { idToUuid } from 'notion-utils';
 import { getAllPostIds, getPageProperties } from './services';
 
@@ -22,7 +27,7 @@ export const processRecordMap = async (recordMap: ExtendedRecordMap) => {
   const pageIds = getAllPostIds(collectionQuery);
 
   // Get posts data
-  const schema = collection?.schema;
+  const schema: CollectionPropertySchemaMap = collection?.schema;
   const posts: PostPreview[] = [];
   pageIds.forEach(async (pageId) => {
     posts.push(await getPageProperties(pageId, block, schema));
