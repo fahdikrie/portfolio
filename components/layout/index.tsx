@@ -2,10 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
-import NavigationBar from 'components/layout/navigation-bar';
+import NavigationBar from './Navbar';
 import * as S from './index.style';
 
-const VantaLayout = dynamic(() => import('./vanta-layout/index'), {
+const VantaLayout = dynamic(() => import('./VantaLayout'), {
   ssr: false,
 });
 
@@ -13,36 +13,50 @@ interface LayoutProps {
   currentPage: string;
   children: React.ReactNode;
   pageTitle: string;
-  description: string;
+  pageDescription: string;
 }
 
 const Layout = ({
   currentPage,
   children,
   pageTitle,
-  description,
+  pageDescription,
 }: LayoutProps) => {
   return (
     <>
       <Head>
+        {/* <!-- Primary Meta Tags --> */}
+        <title>{`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage.`}</title>
+        <meta
+          name="title"
+          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage.`}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Fahdii Ajmalal Fikrie" />
-        <meta name="description" content={description} />
+        <meta name="description" content={pageDescription} />
         <meta charSet="utf-8" />
 
-        <meta property="og:title" content={pageTitle} key="ogtitle" />
-        <meta property="og:description" content={description} key="ogdesc" />
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://fahdikrie.com/" />
         <meta
-          property="og:image"
-          content="/assets/solos/bbbadi.png"
-          key="ogimage"
+          property="og:title"
+          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage.`}
         />
-        <meta
-          property="og:site_name"
-          content="badi's personal webpage"
-          key="ogsite"
-        />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content="/favicon/bbbadi-ogimage.png" />
 
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://fahdikrie.com/" />
+        <meta
+          property="twitter:title"
+          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage.`}
+        />
+        <meta property="twitter:description" content={pageDescription} />
+        <meta property="twitter:image" content="/favicon/bbbadi-ogimage.png" />
+
+        {/* <!-- Favicon --> */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -60,8 +74,6 @@ const Layout = ({
           sizes="16x16"
           href="/favicon/favicon-16x16.png"
         />
-
-        <title>{pageTitle} | badi's personal webpage</title>
       </Head>
       <S.Layout>
         {currentPage === '/' ? <VantaLayout /> : null}

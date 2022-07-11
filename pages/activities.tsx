@@ -1,14 +1,14 @@
-import { default as Index } from 'components/activities';
+import Activities from 'components/containers/Activities';
 import Layout from 'components/layout';
 
-const Activities = ({ router }): JSX.Element => (
+const ActivitiesPage = ({ router }): JSX.Element => (
   <Layout
-    description="A mini-page to showcase my interests; movies and books."
+    pageDescription="A mini-page to showcase my interests; movies and books."
     currentPage={router.pathname}
-    pageTitle="activities"
+    pageTitle="Activities"
   >
-    <Index />
+    <Activities />
   </Layout>
 );
 
-export default Activities;
+export default ActivitiesPage;

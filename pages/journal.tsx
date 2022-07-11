@@ -1,0 +1,14 @@
+import Journal from 'components/containers/Journal';
+import Layout from 'components/layout';
+
+const JournalPage = ({ router }): JSX.Element => (
+  <Layout
+    pageDescription="An internet-web journal of Fahdii Ajmalal Fikrie."
+    currentPage={router.pathname}
+    pageTitle="Journal"
+  >
+    <Journal />
+  </Layout>
+);
+
+export default JournalPage;
