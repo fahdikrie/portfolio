@@ -14,6 +14,17 @@ export const JournalNavbar = styled.div`
     flex justify-between items-center
   `}
 
+  & div {
+    ${tw`cursor-pointer`}
+
+    & img {
+      ${tw`
+        w-24 md:w-28 lg:w-32
+        h-24 md:h-28 lg:h-32
+      `}
+    }
+  }
+
   & ${ThemeButton} {
     ${tw`m-0`}
   }

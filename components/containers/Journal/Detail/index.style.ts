@@ -28,6 +28,8 @@ export const JournalDetail = styled.div`
   }
 
   a,
+  a.notion-hash-link,
+  a.notion-hash-link svg,
   img,
   div.notion-code-copy-button {
     ${tw`cursor-pointer!`}
