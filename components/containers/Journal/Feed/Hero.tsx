@@ -1,7 +1,7 @@
 import * as S from './Hero.style';
 
-const Title = (): JSX.Element => (
-  <S.Title>
+const Hero = (): JSX.Element => (
+  <S.Hero>
     <div>
       <S.JumboText>
         writing into <br />
@@ -11,7 +11,7 @@ const Title = (): JSX.Element => (
         an internet-web journal by <u>badi</u>
       </S.SubHeader>
     </div>
-  </S.Title>
+  </S.Hero>
 );
 
-export default Title;
+export default Hero;

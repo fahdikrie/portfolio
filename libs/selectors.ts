@@ -1,6 +1,6 @@
-import { convertIntToStars, convertDateFormat } from 'libs/utils';
+import { convertIntToStars, convertRecentDateFormat } from 'libs/utils';
 
-export const fetchGoodreads = async () => {
+export const getGoodreads = async () => {
   const data: Activities = {
     items: [],
     isError: false,
@@ -19,7 +19,7 @@ export const fetchGoodreads = async () => {
         link: el['link'],
         title: el['title'],
         rating: convertIntToStars(el['user_rating']),
-        date: convertDateFormat(el['user_read_at']),
+        date: convertRecentDateFormat(el['user_read_at']),
       });
     });
   } catch (error) {
@@ -29,7 +29,7 @@ export const fetchGoodreads = async () => {
   return data;
 };
 
-export const fetchLetterboxd = async () => {
+export const getLetterboxd = async () => {
   const data: Activities = {
     items: [],
     isError: false,
@@ -42,13 +42,14 @@ export const fetchLetterboxd = async () => {
     items.map((el) => {
       const html = document.createElement('html');
       html.innerHTML = el.content;
+      console.log(items);
 
       data.items.push({
         image: html.getElementsByTagName('img')[0].src,
         link: el['link'],
         title: el['letterboxd:filmTitle'],
         rating: convertIntToStars(el['letterboxd:memberRating']),
-        date: convertDateFormat(el['letterboxd:watchedDate']),
+        date: convertRecentDateFormat(el['letterboxd:watchedDate']),
       });
     });
   } catch (error) {

@@ -1,7 +1,9 @@
-import Activities from 'components/containers/Activities';
-import Layout from 'components/layout';
+import { PageProps } from 'types/pages';
 
-const ActivitiesPage = ({ router }): JSX.Element => (
+import Activities from 'components/containers/Activities';
+import Layout from 'components/layout/regular';
+
+const ActivitiesPage = ({ router }: PageProps): JSX.Element => (
   <Layout
     pageDescription="A mini-page to showcase my interests; movies and books."
     currentPage={router.pathname}

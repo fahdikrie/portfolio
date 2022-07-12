@@ -1,4 +1,6 @@
-export const convertDateFormat = (date: string): string => {
+import { format } from 'date-fns';
+
+export const convertRecentDateFormat = (date: string): string => {
   const MONTHS = [
     'Jan',
     'Feb',
@@ -37,4 +39,9 @@ export const convertIntToStars = (rating: string): string => {
   };
 
   return RATINGS[String(ratingInFloat)];
+};
+
+export const convertLocaleDateFormat = (date: string) => {
+  const dateObj = new Date(date);
+  return format(dateObj, 'cccc, MMMM d, yyyy');
 };

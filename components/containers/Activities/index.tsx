@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { fetchGoodreads, fetchLetterboxd } from 'libs/selectors';
+import { getGoodreads, getLetterboxd } from 'libs/selectors';
 import fetcher from 'libs/fetcher';
 
 import Recents from './Recents';
@@ -27,8 +27,8 @@ const Activities = (): JSX.Element => {
     let mounted = true;
 
     async function fetchAsync() {
-      const goodreadsData: Activities = await fetchGoodreads();
-      const letterboxdData: Activities = await fetchLetterboxd();
+      const goodreadsData: Activities = await getGoodreads();
+      const letterboxdData: Activities = await getLetterboxd();
 
       if (mounted) {
         setGoodreads({

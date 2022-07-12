@@ -5,7 +5,7 @@ interface ItemProps {
 }
 
 export const Wrapper = tw.div`
-  absolute z-10
+  absolute
   w-full h-full
   2xl:block 2xl:mx-auto
 `;
@@ -19,7 +19,7 @@ export const Items = tw.ul`
 
 export const Item = styled.li<ItemProps>`
   ${tw`
-    my-10
+    my-10 z-10
     font-bold
     tracking-wide
     cursor-pointer
@@ -39,10 +39,9 @@ export const Item = styled.li<ItemProps>`
 `;
 
 export const Socials = tw.div`
-  absolute md:fixed
+  absolute md:fixed z-10
   // uncomment this to implement fixed layout
   md:2xl:max-width[1920px]
-  w-full
   px-12 md:px-16
   py-16 md:py-32
   flex md:flex-col

@@ -9,11 +9,11 @@ import GithubIconDark from 'public/assets/github-dark.svg';
 
 import * as S from './Navbar.style';
 
-interface NavigationBarProps {
+interface NavbarProps {
   currentPage: string;
 }
 
-const NavigationBar = ({ currentPage }: NavigationBarProps) => {
+const Navbar = ({ currentPage }: NavbarProps) => {
   const { resolvedTheme, setTheme } = useTheme();
   const [githubIcon, setGithubIcon] = useState();
   const [linkedInIcon, setLinkedInIcon] = useState();
@@ -84,4 +84,4 @@ const NavigationBar = ({ currentPage }: NavigationBarProps) => {
   );
 };
 
-export default NavigationBar;
+export default Navbar;
