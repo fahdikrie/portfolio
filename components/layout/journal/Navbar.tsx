@@ -1,6 +1,6 @@
 import { useTheme } from 'next-themes';
-import { ThemeButton } from '../regular/Navbar.style';
 
+import { ThemeButton } from '../regular/Navbar.style';
 import * as S from './Navbar.style';
 
 const JournalNavbar = () => {
@@ -13,6 +13,8 @@ const JournalNavbar = () => {
       setTheme('light');
     }
   };
+
+  if (!resolvedTheme) return <></>;
 
   return (
     <S.JournalNavbar>

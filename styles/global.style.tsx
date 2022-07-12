@@ -109,7 +109,7 @@ const CustomStyles = createGlobalStyle`
   ::-webkit-scrollbar {
     ${tw`
       w-0
-      bg-transparent
+      opacity-0
     `}
   }
 

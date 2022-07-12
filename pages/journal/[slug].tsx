@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { JournalDetailProps } from 'types/pages';
 
 import JournalLayout from 'components/layout/journal';
@@ -30,7 +29,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   } as PostDetail;
 
   return {
-    props: { post, postRecordMap, postBlock },
+    props: { post, postRecordMap },
     revalidate: 10,
   };
 };
@@ -46,17 +45,7 @@ export async function getStaticPaths() {
   };
 }
 
-const JournalDetailPage = ({
-  post,
-  postRecordMap,
-  postBlock,
-}: JournalDetailProps) => {
-  useEffect(() => {
-    console.log(post);
-    console.log(postRecordMap);
-    console.log(postBlock);
-  }, [post, postRecordMap, postBlock]);
-
+const JournalDetailPage = ({ post, postRecordMap }: JournalDetailProps) => {
   return (
     <JournalLayout pageDescription={post?.summary} pageTitle={post?.title}>
       <JournalDetail
