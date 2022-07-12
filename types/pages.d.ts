@@ -1,5 +1,6 @@
 import { NextRouter } from 'next/router';
-import { Block, BlockMap } from 'notion-types';
+import { Block, BlockMap, ExtendedRecordMap } from 'notion-types';
+import { MapPageUrlFn } from 'react-notion-x';
 
 interface PageProps {
   router: NextRouter;
@@ -11,5 +12,12 @@ interface JournalProps extends PageProps {
 
 interface JournalDetailProps extends PageProps {
   post?: PostPreview | null;
+  postRecordMap?: ExtendedRecordMap | null;
   postBlock?: BlockMap<Block> | null;
+}
+
+interface JournalDetailComponentProps {
+  post?: PostPreview | null;
+  postRecordMap?: ExtendedRecordMap | null;
+  mapPageUrl?: MapPageUrlFn;
 }

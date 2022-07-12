@@ -1,9 +1,12 @@
-import Layout from '@/components/layout';
+import { useEffect } from 'react';
+import { JournalDetailProps } from 'types/pages';
+
+import JournalLayout from 'components/layout/journal';
 import notion, { NOTION_JOURNAL_PAGE_ID } from 'libs/notion';
 import { processRecordMap } from 'libs/notion/utils';
-import { useEffect } from 'react';
-import { NotionRenderer } from 'react-notion-x';
-import { JournalDetailProps } from 'types/pages';
+import JournalDetail from '@/components/containers/Journal/Detail';
+import { MapPageUrlFn } from 'react-notion-x';
+import { estimatePageReadTimeAsHumanizedString } from 'notion-utils';
 
 const mapPageUrl = (id: string) => {
   return 'https://www.notion.so/' + id.replace(/-/g, '');
@@ -13,12 +16,21 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const recordMap = await notion.getPage(NOTION_JOURNAL_PAGE_ID);
   const posts = await processRecordMap(recordMap);
 
-  const post = posts.find((post: PostPreview) => post.slug === slug);
-  const postBlock = await notion.getPage(post.id);
-  console.log(postBlock);
+  let post = posts.find((post: PostPreview) => post.slug === slug);
+  const postRecordMap = await notion.getPage(post.id);
+  const keys = Object.keys(postRecordMap?.block || {});
+  const postBlock = postRecordMap?.block?.[keys[0]].value;
+  post = {
+    readTime: estimatePageReadTimeAsHumanizedString(
+      postBlock,
+      postRecordMap,
+      {}
+    ),
+    ...post,
+  } as PostDetail;
 
   return {
-    props: { post, postBlock },
+    props: { post, postRecordMap, postBlock },
     revalidate: 10,
   };
 };
@@ -34,21 +46,26 @@ export async function getStaticPaths() {
   };
 }
 
-const JournalPost = ({ router, post, postBlock }: JournalDetailProps) => {
+const JournalDetailPage = ({
+  post,
+  postRecordMap,
+  postBlock,
+}: JournalDetailProps) => {
   useEffect(() => {
     console.log(post);
+    console.log(postRecordMap);
     console.log(postBlock);
-  }, [post, postBlock]);
+  }, [post, postRecordMap, postBlock]);
 
   return (
-    <Layout
-      pageDescription={post?.summary}
-      currentPage={router.pathname}
-      pageTitle={`${post?.title} | Badi's very own Journal`}
-    >
-      <NotionRenderer recordMap={postBlock} mapPageUrl={mapPageUrl} />
-    </Layout>
+    <JournalLayout pageDescription={post?.summary} pageTitle={post?.title}>
+      <JournalDetail
+        post={post}
+        postRecordMap={postRecordMap}
+        mapPageUrl={mapPageUrl as MapPageUrlFn}
+      />
+    </JournalLayout>
   );
 };
 
-export default JournalPost;
+export default JournalDetailPage;

@@ -8,3 +8,7 @@ interface PostPreview {
   title?: string;
   status?: string[];
 }
+
+interface PostDetail extends PostPreview {
+  readTime?: string;
+}

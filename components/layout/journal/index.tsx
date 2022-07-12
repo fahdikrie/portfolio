@@ -1,36 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
 
-import Navbar from './Navbar';
 import * as S from './index.style';
+import JournalNavbar from './Navbar';
 
-const VantaLayout = dynamic(() => import('./VantaLayout'), {
-  ssr: false,
-});
-
-interface LayoutProps {
-  currentPage: string;
-  children: React.ReactNode;
-  pageTitle: string;
-  pageDescription: string;
-}
-
-const Layout = ({
-  currentPage,
+const JournalLayout = ({
   children,
   pageTitle,
   pageDescription,
 }: LayoutProps) => {
+  const TITLE = `${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage`;
+
   return (
     <>
       <Head>
         {/* <!-- Primary Meta Tags --> */}
-        <title>{`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage`}</title>
-        <meta
-          name="title"
-          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage`}
-        />
+        <title>{TITLE}</title>
+        <meta name="title" content={TITLE} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Fahdii Ajmalal Fikrie" />
         <meta name="description" content={pageDescription} />
@@ -39,20 +25,14 @@ const Layout = ({
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fahdikrie.com/" />
-        <meta
-          property="og:title"
-          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage`}
-        />
+        <meta property="og:title" content={TITLE} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content="/favicon/bbbadi-ogimage.png" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://fahdikrie.com/" />
-        <meta
-          property="twitter:title"
-          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage`}
-        />
+        <meta property="twitter:title" content={TITLE} />
         <meta property="twitter:description" content={pageDescription} />
         <meta property="twitter:image" content="/favicon/bbbadi-ogimage.png" />
 
@@ -76,12 +56,11 @@ const Layout = ({
         />
       </Head>
       <S.Layout>
-        {currentPage === '/' ? <VantaLayout /> : null}
-        <Navbar currentPage={currentPage} />
+        <JournalNavbar />
         {children}
       </S.Layout>
     </>
   );
 };
 
-export default Layout;
+export default JournalLayout;
