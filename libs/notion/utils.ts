@@ -10,7 +10,7 @@ import { getAllPostIds, getPageProperties } from './services';
 export const processRecordMap = async (recordMap: ExtendedRecordMap) => {
   // Check if the given recordMap is a Database or not
   const block: NotionMap<Block> = recordMap.block;
-  const uuid = idToUuid('30cb0f29326440afb9f528e125fe8ca5');
+  const uuid = idToUuid('7d689ff0d95d42f2bc4f01fcf0c9b7b9');
   const rawMetadata = block[uuid]?.value;
 
   if (
