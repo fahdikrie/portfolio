@@ -55,9 +55,9 @@ module.exports = {
     extend: {
       colors: {
         magenta: '#bb19bb',
-        seashell: '#f7f7f7',
-        gunmetal: '#2d2d2d',
         bronze: '#513203',
+        gunmetal: '#2d2d2d',
+        seashell: '#f7f7f7',
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
