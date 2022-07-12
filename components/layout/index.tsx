@@ -26,10 +26,10 @@ const Layout = ({
     <>
       <Head>
         {/* <!-- Primary Meta Tags --> */}
-        <title>{`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage.`}</title>
+        <title>{`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage`}</title>
         <meta
           name="title"
-          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage.`}
+          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage`}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Fahdii Ajmalal Fikrie" />
@@ -41,7 +41,7 @@ const Layout = ({
         <meta property="og:url" content="https://fahdikrie.com/" />
         <meta
           property="og:title"
-          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage.`}
+          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage`}
         />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content="/favicon/bbbadi-ogimage.png" />
@@ -51,7 +51,7 @@ const Layout = ({
         <meta property="twitter:url" content="https://fahdikrie.com/" />
         <meta
           property="twitter:title"
-          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage.`}
+          content={`${pageTitle} | Fahdii Ajmalal Fikrie's personal webpage`}
         />
         <meta property="twitter:description" content={pageDescription} />
         <meta property="twitter:image" content="/favicon/bbbadi-ogimage.png" />
