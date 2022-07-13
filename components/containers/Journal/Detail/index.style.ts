@@ -42,4 +42,19 @@ export const JournalDetail = styled.div`
   article {
     ${tw`border-radius[20px]`}
   }
+
+  .notion-h {
+    ${tw`w-full`}
+  }
+
+  // Set Text element to use Gray Background to be centered
+  span.notion-gray_background {
+    ${tw`
+      bg-transparent
+      text-center!
+      mx-auto
+      w-full
+      block
+    `}
+  }
 `;

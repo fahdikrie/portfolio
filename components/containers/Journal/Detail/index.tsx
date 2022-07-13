@@ -1,19 +1,18 @@
+import { useMemo } from 'react';
 import { NotionRenderer } from 'react-notion-x';
 import ProgressBar from 'react-scroll-progress-bar';
 import TweetEmbed from 'react-tweet-embed';
 import { useTheme } from 'next-themes';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { useMemo } from 'react';
+import Link from 'next/link';
 
 import { JournalDetailComponentProps } from 'types/pages';
 import * as S from './index.style';
 import Header from './Header';
-import Link from 'next/link';
 
 const Code = dynamic(() =>
   import('react-notion-x/build/third-party/code').then(async (m) => {
-    // add / remove any prism syntaxes here
     await Promise.all([
       import('prismjs/components/prism-markup-templating.js'),
       import('prismjs/components/prism-markup.js'),
