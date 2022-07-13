@@ -10,7 +10,7 @@ const JournalHeader = ({ post }: { post: PostDetail }) => (
     </S.Info>
     <S.Summary>{post?.summary}</S.Summary>
     <S.Tags>
-      {post?.tags.map((tag, id) => (
+      {post?.tags?.map((tag, id) => (
         <S.Tag key={id}>{tag}</S.Tag>
       ))}
     </S.Tags>
