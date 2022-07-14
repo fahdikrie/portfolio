@@ -1,10 +1,10 @@
 import PostPreviewCard from '@/components/elements/PostPreviewCard';
-import { useNotionData } from 'hooks/useNotionData';
+import useNotionPreviewData from 'hooks/useNotionPreviewData';
 
 import * as S from './Feed.style';
 
 const Feed = () => {
-  const { posts } = useNotionData();
+  const { posts } = useNotionPreviewData();
 
   return (
     <S.FeedWrapper>
