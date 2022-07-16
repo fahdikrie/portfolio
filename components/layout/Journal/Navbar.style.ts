@@ -15,7 +15,10 @@ export const JournalNavbar = styled.div`
   `}
 
   & div {
-    ${tw`cursor-pointer`}
+    ${tw`
+      cursor-pointer
+      opacity-70 hover:opacity-95
+    `}
 
     & img {
       ${tw`

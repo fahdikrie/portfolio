@@ -20,7 +20,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const postRecordMap = await notion.getPage(post.id);
   const previewImageMap = await getPreviewImageMap(postRecordMap);
   (postRecordMap as any).preview_images = previewImageMap;
-  console.log(postRecordMap);
   const keys = Object.keys(postRecordMap?.block || {});
   const postBlock = postRecordMap?.block?.[keys[0]].value;
   post = {
