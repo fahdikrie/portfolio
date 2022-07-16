@@ -1,6 +1,6 @@
 import { JournalDetailProps } from 'types/pages';
 
-import JournalLayout from 'components/layout/journal';
+import JournalLayout from '@/components/layout/Journal';
 import notion, { NOTION_JOURNAL_PAGE_ID } from 'libs/notion';
 import { processRecordMap } from 'libs/notion/utils';
 import JournalDetail from '@/components/containers/Journal/Detail';
