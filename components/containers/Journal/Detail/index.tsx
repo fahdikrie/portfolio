@@ -115,6 +115,7 @@ const JournalDetail = ({
           mapPageUrl={mapPageUrl}
           components={components}
           darkMode={!isLightMode}
+          previewImages={!!postRecordMap.preview_images}
         />
       </S.JournalDetail>
     </>

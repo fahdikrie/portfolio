@@ -6,6 +6,7 @@ import { processRecordMap } from 'libs/notion/utils';
 import JournalDetail from '@/components/containers/Journal/Detail';
 import { MapPageUrlFn } from 'react-notion-x';
 import { estimatePageReadTimeAsHumanizedString } from 'notion-utils';
+import { getPreviewImageMap } from 'libs/notion/images';
 
 const mapPageUrl = (id: string) => {
   return 'https://www.notion.so/' + id.replace(/-/g, '');
@@ -17,6 +18,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   let post = posts.find((post: PostPreview) => post.slug === slug);
   const postRecordMap = await notion.getPage(post.id);
+  const previewImageMap = await getPreviewImageMap(postRecordMap);
+  (postRecordMap as any).preview_images = previewImageMap;
+  console.log(postRecordMap);
   const keys = Object.keys(postRecordMap?.block || {});
   const postBlock = postRecordMap?.block?.[keys[0]].value;
   post = {

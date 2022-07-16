@@ -1,4 +1,5 @@
 // next.config.js
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const withImages = require('next-images');
 module.exports = withImages({
   webpack(config, { isServer }) {
@@ -13,7 +14,13 @@ module.exports = withImages({
     return config;
   },
   images: {
-    domains: ['i.gr-assets.com', 'a.ltrbxd.com'],
+    domains: [
+      'i.gr-assets.com',
+      'a.ltrbxd.com',
+      'www.notion.so',
+      'notion.so',
+      's3.us-west-2.amazonaws.com',
+    ],
     disableStaticImages: true,
   },
   target: 'serverless',
