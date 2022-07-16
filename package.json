@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start -p 3000",
     "prettier": "prettier --write .",
-    "vercel-install": "chmod u+x submodule.sh && ./submodule.sh && yarn --ignore-scripts=false --production=false --verbose"
+    "vercel-install": "chmod u+x submodule.sh && ./submodule.sh && yarn"
   },
   "dependencies": {
     "cors": "^2.8.5",
