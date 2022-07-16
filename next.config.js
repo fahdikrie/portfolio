@@ -11,6 +11,15 @@ module.exports = withImages({
       };
     }
 
+    // Fixes sharp error
+    config.externals.push({
+      sharp: 'commonjs sharp',
+    });
+
+    // Fixes react-pdf error
+    config.resolve.alias.canvas = false;
+    config.resolve.alias.encoding = false;
+
     return config;
   },
   images: {
