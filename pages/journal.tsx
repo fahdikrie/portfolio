@@ -1,6 +1,6 @@
 import Journal from 'components/containers/Journal/Feed';
 import Layout from 'components/layout/regular';
-import { NotionProvider } from 'hocs/providers/NotionProvider';
+import NotionPreviewProvider from 'hocs/providers/NotionPreviewProvider';
 import notion, { NOTION_JOURNAL_PAGE_ID } from 'libs/notion';
 import { processRecordMap } from 'libs/notion/utils';
 import { JournalProps } from 'types/pages';
@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
 };
 
 const JournalPage = ({ router, posts }: JournalProps): JSX.Element => (
-  <NotionProvider posts={posts}>
+  <NotionPreviewProvider posts={posts}>
     <Layout
       pageDescription="An internet-web journal of Fahdii Ajmalal Fikrie."
       currentPage={router.pathname}
@@ -24,7 +24,7 @@ const JournalPage = ({ router, posts }: JournalProps): JSX.Element => (
     >
       <Journal />
     </Layout>
-  </NotionProvider>
+  </NotionPreviewProvider>
 );
 
 export default JournalPage;

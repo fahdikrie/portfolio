@@ -1,4 +1,5 @@
 // next.config.js
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const withImages = require('next-images');
 module.exports = withImages({
   webpack(config, { isServer }) {
@@ -10,10 +11,25 @@ module.exports = withImages({
       };
     }
 
+    // Fixes sharp error
+    config.externals.push({
+      sharp: 'commonjs sharp',
+    });
+
+    // Fixes react-pdf error
+    config.resolve.alias.canvas = false;
+    config.resolve.alias.encoding = false;
+
     return config;
   },
   images: {
-    domains: ['i.gr-assets.com', 'a.ltrbxd.com'],
+    domains: [
+      'i.gr-assets.com',
+      'a.ltrbxd.com',
+      'www.notion.so',
+      'notion.so',
+      's3.us-west-2.amazonaws.com',
+    ],
     disableStaticImages: true,
   },
   target: 'serverless',
