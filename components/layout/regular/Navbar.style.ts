@@ -4,7 +4,7 @@ interface ItemProps {
   isActive: boolean;
 }
 
-export const Wrapper = tw.div`
+export const Navbar = tw.div`
   absolute
   w-full h-full
   2xl:block 2xl:mx-auto

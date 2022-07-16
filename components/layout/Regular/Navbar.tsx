@@ -19,8 +19,9 @@ export interface NavbarItemProps {
   text: string;
 }
 
-export interface SocialItemProps {
+interface SocialItemProps {
   href: string;
+  src: string;
   alt: string;
 }
 
@@ -33,6 +34,12 @@ const Navbar = ({ currentPage }: NavbarProps) => {
     <S.Item isActive={currentPage == href}>
       <Link href={href}>{text}</Link>
     </S.Item>
+  );
+
+  const SocialItem = ({ href, src, alt }: SocialItemProps) => (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <S.Social src={src} alt={alt} />
+    </a>
   );
 
   useEffect(() => {
@@ -48,15 +55,18 @@ const Navbar = ({ currentPage }: NavbarProps) => {
   }, [resolvedTheme]);
 
   const onSetTheme = () => {
-    if (resolvedTheme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
+    switch (resolvedTheme) {
+      case 'light':
+        setTheme('dark');
+        break;
+      case 'dark':
+        setTheme('light');
+        break;
     }
   };
 
   return (
-    <S.Wrapper>
+    <S.Navbar>
       <S.Socials>
         {resolvedTheme && (
           <>
@@ -64,20 +74,16 @@ const Navbar = ({ currentPage }: NavbarProps) => {
               onClick={() => onSetTheme()}
               isLightTheme={resolvedTheme === 'light'}
             />
-            <a
+            <SocialItem
               href="https://github.com/fahdikrie"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <S.Social src={githubIcon} alt="github" />
-            </a>
-            <a
+              src={githubIcon}
+              alt="github"
+            />
+            <SocialItem
               href="https://www.linkedin.com/in/fahdikrie/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <S.Social src={linkedInIcon} alt="linkedin" />
-            </a>
+              src={linkedInIcon}
+              alt="linkedin"
+            />
           </>
         )}
       </S.Socials>
@@ -86,7 +92,7 @@ const Navbar = ({ currentPage }: NavbarProps) => {
           <NavItem key={id} {...el} />
         ))}
       </S.Items>
-    </S.Wrapper>
+    </S.Navbar>
   );
 };
 
