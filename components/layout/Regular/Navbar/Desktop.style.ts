@@ -1,8 +1,6 @@
 import tw, { styled } from 'twin.macro';
 
-interface ItemProps {
-  isActive: boolean;
-}
+import { SSocialItem } from '@/components/elements/SocialItem';
 
 export const Navbar = tw.div`
   absolute
@@ -17,27 +15,6 @@ export const Items = tw.ul`
   flex flex-row justify-end
 `;
 
-export const Item = styled.li<ItemProps>`
-  ${tw`
-    my-10 z-10
-    font-bold
-    tracking-wide
-    cursor-pointer
-    text-gunmetal dark:text-white
-    ml-16 md:ml-24 xl:ml-32
-    opacity-70 hover:opacity-95
-    text-sm-small md:text-md-small lg:text-small
-  `}
-
-  ${(props) =>
-    props.isActive
-      ? tw`
-        opacity-95
-        hidden md:block
-      `
-      : ''}
-`;
-
 export const Socials = tw.div`
   absolute md:fixed z-10
   // uncomment this to implement fixed layout
@@ -49,17 +26,7 @@ export const Socials = tw.div`
   md:bottom-0
 `;
 
-export const Social = tw.img`
-  inline z-50
-  cursor-pointer
-  w-24 md:w-28 lg:w-32
-  mr-12 md:mr-0
-  mt-0 md:mt-12
-  opacity-70 hover:opacity-100
-  flex[0 0 auto]
-`;
-
-export const ThemeButton = styled(Social).attrs({ as: 'button' })<{
+export const ThemeButton = styled(SSocialItem).attrs({ as: 'button' })<{
   isLightTheme: boolean;
 }>`
   ${tw`

@@ -47,6 +47,10 @@ export const JournalDetail = styled.div`
     ${tw`w-full`}
   }
 
+  .notion-text {
+    ${tw`font-sans`}
+  }
+
   // Set Text element to use Gray Background to be centered
   span.notion-gray_background {
     ${tw`

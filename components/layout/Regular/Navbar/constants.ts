@@ -1,6 +1,4 @@
-import { NavbarItemProps } from './Navbar';
-
-export const NAVBAR_ITEMS: NavbarItemProps[] = [
+export const NAVBAR_ITEMS: NavbarData[] = [
   {
     href: '/',
     text: 'home',

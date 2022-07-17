@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 
-import { ThemeButton } from '../Regular/Navbar.style';
+import { ThemeButton } from '../Regular/Navbar/Desktop.style';
 import * as S from './Navbar.style';
 
 import BackArrowWhiteImg from 'public/assets/back-arrow-white.svg';
