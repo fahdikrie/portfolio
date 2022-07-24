@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 
 import { default as DesktopNavbar } from './Navbar/Desktop';
 import { default as MobileNavbar } from './Navbar/Mobile';
-import * as S from './index.style';
+import * as S from './index.styles';
 import useViewportSize from 'hooks/useViewportSize';
 
 const VantaLayout = dynamic(() => import('./VantaLayout'), {
