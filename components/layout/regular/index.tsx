@@ -7,7 +7,7 @@ import { default as MobileNavbar } from './Navbar/Mobile';
 import * as S from './index.style';
 import useViewportSize from 'hooks/useViewportSize';
 
-const VantaLayout = dynamic(() => import('./Vanta'), {
+const VantaLayout = dynamic(() => import('./VantaLayout'), {
   ssr: false,
 });
 
