@@ -6,7 +6,7 @@ import GithubIconLight from 'public/assets/github-light.svg';
 import LinkedInIconDark from 'public/assets/linkedin-dark.svg';
 import GithubIconDark from 'public/assets/github-dark.svg';
 
-import * as S from './Desktop.style';
+import * as S from 'components/layout/Regular/Navbar/Desktop.style';
 import { NAVBAR_ITEMS } from './constants';
 import NavbarItem from '@/components/elements/NavbarItem';
 import SocialItem from '@/components/elements/SocialItem';
