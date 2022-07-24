@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-import * as S from './index.styles';
+import * as S from './index.style';
 import JournalNavbar from './Navbar';
 
 const JournalLayout = ({
