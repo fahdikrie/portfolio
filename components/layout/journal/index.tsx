@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 import * as S from './index.style';
-import JournalNavbar from './Navbar';
+import JournalNavbar from './JournalNavbar';
 
 const JournalLayout = ({
   children,
