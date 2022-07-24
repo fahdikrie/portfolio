@@ -1,5 +1,5 @@
 import tw, { styled } from 'twin.macro';
-import { ThemeButton } from '../Regular/Navbar/DesktopNavbar.style';
+import { ThemeButton } from '../Regular/Navbar/Desktop.style';
 
 export const JournalNavbar = styled.div`
   ${tw`

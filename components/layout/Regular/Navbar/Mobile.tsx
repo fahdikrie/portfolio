@@ -1,7 +1,7 @@
 import NavbarItem from '@/components/elements/NavbarItem';
 import { useState } from 'react';
 import { NAVBAR_ITEMS } from './constants';
-import * as S from './MobileNavbar.style';
+import * as S from './Mobile.style';
 
 const Navbar = ({ currentPage }: NavbarProps) => {
   const [isNavbarOpen, setNavbarOpen] = useState<boolean>(false);
