@@ -5,7 +5,7 @@ import VantaHalo from '@/components/elements/VantaHalo';
 import useViewportSize from 'hooks/useViewportSize';
 
 const VantaLayout = () => {
-  const BREAKPOINT = 525;
+  const BREAKPOINT = 768;
   const width = useViewportSize();
   const { resolvedTheme } = useTheme();
 

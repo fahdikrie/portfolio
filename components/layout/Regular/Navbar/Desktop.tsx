@@ -29,13 +29,10 @@ const Navbar = ({ currentPage }: NavbarProps) => {
   }, [resolvedTheme]);
 
   const onSetTheme = () => {
-    switch (resolvedTheme) {
-      case 'light':
-        setTheme('dark');
-        break;
-      case 'dark':
-        setTheme('light');
-        break;
+    if (resolvedTheme == 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
     }
   };
 

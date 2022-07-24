@@ -2,7 +2,7 @@ import tw, { styled } from 'twin.macro';
 
 import { SSocialItem } from '@/components/elements/SocialItem';
 
-export const Navbar = tw.div`
+export const Navbar = tw.nav`
   absolute
   w-full h-full
   2xl:block 2xl:mx-auto

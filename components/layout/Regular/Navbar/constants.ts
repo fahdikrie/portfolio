@@ -4,12 +4,20 @@ export const NAVBAR_ITEMS: NavbarData[] = [
     text: 'home',
   },
   {
+    href: '/about',
+    text: 'about',
+  },
+  {
+    href: '/projects',
+    text: 'projects',
+  },
+  {
     href: '/activities',
     text: 'activities',
   },
   {
-    href: '/resume',
-    text: 'resume',
+    href: '/blog',
+    text: 'blog',
   },
   {
     href: '/journal',
