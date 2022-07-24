@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
-import { default as DesktopNavbar } from './Navbar/Desktop';
-import { default as MobileNavbar } from './Navbar/Mobile';
+import { default as DesktopNavbar } from 'components/layout/Regular/Navbar/Desktop';
+import { default as MobileNavbar } from 'components/layout/Regular/Navbar/Mobile';
 import * as S from 'components/layout/Regular/index.style';
 import useViewportSize from 'hooks/useViewportSize';
 
