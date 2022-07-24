@@ -2,7 +2,7 @@ import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 
 import { ThemeButton } from '../RegularLayout/Navbar/Desktop.style';
-import * as S from 'components/layout/Journal/Navbar.style';
+import * as S from '@/components/layout/JournalLayout/Navbar.style';
 
 import BackArrowWhiteImg from 'public/assets/back-arrow-white.svg';
 import BackArrowBlackImg from 'public/assets/back-arrow-black.svg';
