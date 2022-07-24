@@ -1,5 +1,5 @@
 import Journal from 'components/containers/Journal/Feed';
-import Layout from '@/components/layout/RegularLayout';
+import Layout from '@/components/layout/Regular';
 import NotionPreviewProvider from 'hocs/providers/NotionPreviewProvider';
 import notion, { NOTION_JOURNAL_PAGE_ID } from 'libs/notion';
 import { processRecordMap } from 'libs/notion/utils';

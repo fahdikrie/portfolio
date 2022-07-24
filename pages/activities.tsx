@@ -1,7 +1,7 @@
 import { PageProps } from 'types/pages';
 
 import Activities from 'components/containers/Activities';
-import Layout from '@/components/layout/RegularLayout';
+import Layout from '@/components/layout/Regular';
 
 const ActivitiesPage = ({ router }: PageProps): JSX.Element => (
   <Layout
