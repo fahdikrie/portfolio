@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import tw, { styled } from 'twin.macro';
 
-export const SItem = styled.li<NavbarItemStyleProps>`
+export const SItem = styled.div<NavbarItemStyleProps>`
   ${tw`
     my-10 z-10
     font-bold
