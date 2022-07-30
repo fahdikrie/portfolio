@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
+import { HiMenuAlt3, HiX } from 'react-icons/hi';
 
 import LinkedInIconLight from 'public/assets/linkedin-light.svg';
 import GithubIconLight from 'public/assets/github-light.svg';
@@ -18,6 +19,8 @@ const Navbar = ({ currentPage }: NavbarProps) => {
   const [githubIcon, setGithubIcon] = useState();
   const [linkedInIcon, setLinkedInIcon] = useState();
 
+  const isLightTheme = resolvedTheme === 'light';
+
   useEffect(() => {
     if (resolvedTheme) {
       const GithubIcon =
@@ -31,7 +34,7 @@ const Navbar = ({ currentPage }: NavbarProps) => {
   }, [resolvedTheme]);
 
   const onSetTheme = () => {
-    if (resolvedTheme == 'light') {
+    if (isLightTheme) {
       setTheme('dark');
     } else {
       setTheme('light');
@@ -56,9 +59,13 @@ const Navbar = ({ currentPage }: NavbarProps) => {
   }, []);
 
   return (
-    <>
+    <S.Wrapper>
       <S.Sidebar isNavbarOpen={isNavbarOpen}>
-        <button onClick={() => setNavbarOpen(false)}>Close</button>
+        <div className="navbar-items__header">
+          <button onClick={() => setNavbarOpen(false)}>
+            <HiX size={28} color={isLightTheme ? 'black' : 'white'} />
+          </button>
+        </div>
         <div className="navbar-items__wrapper">
           {NAVBAR_ITEMS.map((el, id) => (
             <NavbarItem key={id} currentPage={currentPage} {...el} />
@@ -86,9 +93,11 @@ const Navbar = ({ currentPage }: NavbarProps) => {
             </>
           )}
         </S.Socials>
-        <button onClick={() => setNavbarOpen((prev) => !prev)}>Open</button>
+        <button onClick={() => setNavbarOpen((prev) => !prev)}>
+          <HiMenuAlt3 size={28} color={isLightTheme ? 'black' : 'white'} />
+        </button>
       </S.Navbar>
-    </>
+    </S.Wrapper>
   );
 };
 

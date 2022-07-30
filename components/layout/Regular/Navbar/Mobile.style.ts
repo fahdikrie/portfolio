@@ -4,6 +4,12 @@ interface MobileNavbarStyleProps {
   isNavbarOpen: boolean;
 }
 
+export const Wrapper = styled.div`
+  svg {
+    ${tw`opacity-70 hover:opacity-100`}
+  }
+`;
+
 export const Sidebar = styled.div<MobileNavbarStyleProps>`
   ${tw`
     bg-seashell dark:bg-black
@@ -20,11 +26,18 @@ export const Sidebar = styled.div<MobileNavbarStyleProps>`
       ? tw`translate-x-0 visible`
       : 'visibility: hidden; transform: translateX(100vw);'}
 
+  .navbar-items__header {
+    ${tw`
+      w-full
+      px-12 py-16
+      flex justify-end
+    `}
+  }
+
   .navbar-items__wrapper {
     ${tw`
-      w-full py-24
-
-      flex flex-col
+      w-full py-12
+      flex flex-col gap-20
       justify-center items-center
     `}
   }
