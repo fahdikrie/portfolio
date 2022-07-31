@@ -1,5 +1,5 @@
 import tw, { styled } from 'twin.macro';
-import { ThemeButton } from '../regular/Navbar.style';
+import { ThemeButton } from '../Regular/Navbar/Desktop.style';
 
 export const JournalNavbar = styled.div`
   ${tw`
@@ -15,7 +15,10 @@ export const JournalNavbar = styled.div`
   `}
 
   & div {
-    ${tw`cursor-pointer`}
+    ${tw`
+      cursor-pointer
+      opacity-70 hover:opacity-95
+    `}
 
     & img {
       ${tw`

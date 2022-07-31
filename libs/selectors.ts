@@ -42,7 +42,6 @@ export const getLetterboxd = async () => {
     items.map((el) => {
       const html = document.createElement('html');
       html.innerHTML = el.content;
-      console.log(items);
 
       data.items.push({
         image: html.getElementsByTagName('img')[0].src,

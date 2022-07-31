@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
-import * as S from './index.style';
-import JournalNavbar from './Navbar';
+import * as S from '@/components/layout/Journal/index.style';
+import JournalNavbar from '@/components/layout/Journal/Navbar';
 
 const JournalLayout = ({
   children,

@@ -2,12 +2,17 @@ import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
-import Navbar from './Navbar';
-import * as S from './index.style';
+import { default as DesktopNavbar } from '@/components/layout/Regular/Navbar/Desktop';
+import { default as MobileNavbar } from '@/components/layout/Regular/Navbar/Mobile';
+import * as S from '@/components/layout/Regular/index.style';
+import useViewportSize from 'hooks/useViewportSize';
 
-const VantaLayout = dynamic(() => import('./VantaLayout'), {
-  ssr: false,
-});
+const VantaLayout = dynamic(
+  () => import('@/components/layout/Regular/VantaLayout'),
+  {
+    ssr: false,
+  }
+);
 
 const RegularLayout = ({
   currentPage,
@@ -15,6 +20,18 @@ const RegularLayout = ({
   pageTitle,
   pageDescription,
 }: RegularLayoutProps) => {
+  const width = useViewportSize();
+
+  const Navbar = ({ currentPage }: { currentPage: string }) => {
+    if (!width) return <></>;
+
+    if (width < 768) {
+      return <MobileNavbar currentPage={currentPage} />;
+    } else {
+      return <DesktopNavbar currentPage={currentPage} />;
+    }
+  };
+
   return (
     <>
       <Head>

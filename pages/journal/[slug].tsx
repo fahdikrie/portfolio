@@ -1,6 +1,6 @@
 import { JournalDetailProps } from 'types/pages';
 
-import JournalLayout from 'components/layout/journal';
+import JournalLayout from '@/components/layout/Journal';
 import notion, { NOTION_JOURNAL_PAGE_ID } from 'libs/notion';
 import { processRecordMap } from 'libs/notion/utils';
 import JournalDetail from '@/components/containers/Journal/Detail';
@@ -20,7 +20,6 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const postRecordMap = await notion.getPage(post.id);
   const previewImageMap = await getPreviewImageMap(postRecordMap);
   (postRecordMap as any).preview_images = previewImageMap;
-  console.log(postRecordMap);
   const keys = Object.keys(postRecordMap?.block || {});
   const postBlock = postRecordMap?.block?.[keys[0]].value;
   post = {

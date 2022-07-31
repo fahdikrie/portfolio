@@ -5,11 +5,11 @@ import VantaHalo from '@/components/elements/VantaHalo';
 import useViewportSize from 'hooks/useViewportSize';
 
 const VantaLayout = () => {
-  const breakpoint = 525;
+  const BREAKPOINT = 768;
   const width = useViewportSize();
   const { resolvedTheme } = useTheme();
 
-  if (width < breakpoint) return null;
+  if (width < BREAKPOINT) return null;
 
   if (resolvedTheme === 'light')
     return (
