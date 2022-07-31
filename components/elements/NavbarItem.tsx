@@ -17,6 +17,8 @@ export const SItem = styled.div<NavbarItemStyleProps>`
     props.isActive
       ? tw`
         opacity-95
+        pb-2 border-b-2
+        border-color[#513203] dark:border-color[#bb19bb]
       `
       : ''}
 `;
