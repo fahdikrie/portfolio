@@ -17,7 +17,6 @@ export const SItem = styled.div<NavbarItemStyleProps>`
     props.isActive
       ? tw`
         opacity-95
-        hidden md:block
       `
       : ''}
 `;

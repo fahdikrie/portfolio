@@ -18,7 +18,7 @@ export const Sidebar = styled.div<MobileNavbarStyleProps>`
 
     w-full h-screen
     transition-transform
-    ease-in-out
+    ease-linear
   `}
 
   ${(props) =>
