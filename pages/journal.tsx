@@ -7,7 +7,7 @@ import { JournalProps } from 'types/pages';
 
 export const getStaticProps = async () => {
   const recordMap = await notion.getPage(NOTION_JOURNAL_PAGE_ID);
-  const posts = await processRecordMap(recordMap);
+  const posts = await processRecordMap(recordMap, NOTION_JOURNAL_PAGE_ID);
 
   return {
     props: { posts },

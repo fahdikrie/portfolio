@@ -1,7 +1,11 @@
 import Link from 'next/link';
 import tw, { styled } from 'twin.macro';
 
-export const SPostPreviewCard = styled.div`
+interface SPostPreviewCardProps {
+  path: string;
+}
+
+export const SPostPreviewCard = styled.div<SPostPreviewCardProps>`
   ${tw`
     mb-32 md:mb-48
     cursor-pointer
@@ -26,9 +30,10 @@ export const SPostPreviewCard = styled.div`
   }
 
   & .post-preview-card__title {
+    ${(props) => props.path === 'blog' ? tw`font-sans` : tw`font-serif`}
+
     ${tw`
-      tracking-wider
-      font-serif font-bold
+      tracking-wider font-bold
       text-gunmetal dark:text-white
       text-sm-large md:text-md-large lg:text-large
       mb-8
@@ -45,9 +50,9 @@ export const SPostPreviewCard = styled.div`
   }
 `;
 
-const PostPreviewCard = ({ post }: { post: PostPreview }): JSX.Element => (
-  <Link href={`journal/${post.slug}`} passHref>
-    <SPostPreviewCard>
+const PostPreviewCard = ({ path, post }: { path: string, post: PostPreview }): JSX.Element => (
+  <Link href={`${path}/${post.slug}`} passHref>
+    <SPostPreviewCard path={path}>
       <div className="post-preview-card__date">{post?.date ?? '-'}</div>
       <div className="post-preview-card__title">{post?.title}</div>
       <div className="post-preview-card__summary">{post?.summary}</div>
