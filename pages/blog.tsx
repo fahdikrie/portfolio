@@ -8,7 +8,7 @@ import { BlogProps } from 'types/pages';
 export const getStaticProps = async () => {
   const recordMap = await notion.getPage(NOTION_BLOG_PAGE_ID);
   const posts = await processRecordMap(recordMap, NOTION_BLOG_PAGE_ID);
-  console.log(posts)
+  console.log(posts);
 
   return {
     props: { posts },

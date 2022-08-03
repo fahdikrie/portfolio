@@ -7,7 +7,10 @@ import {
 import { idToUuid } from 'notion-utils';
 import { getAllPostIds, getPageProperties } from './services';
 
-export const processRecordMap = async (recordMap: ExtendedRecordMap, pageId: string) => {
+export const processRecordMap = async (
+  recordMap: ExtendedRecordMap,
+  pageId: string
+) => {
   // Check if the given recordMap is a Database or not
   const block: NotionMap<Block> = recordMap.block;
   const uuid = idToUuid(pageId);

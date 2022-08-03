@@ -7,9 +7,7 @@ const Hero = (): JSX.Element => (
         out in <br />
         the open.
       </S.JumboText>
-      <S.SubHeader>
-        tech-blogs and learning notes
-      </S.SubHeader>
+      <S.SubHeader>tech-blogs and learning notes</S.SubHeader>
     </div>
   </S.Hero>
 );

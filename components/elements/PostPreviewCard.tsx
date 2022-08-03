@@ -30,7 +30,7 @@ export const SPostPreviewCard = styled.div<SPostPreviewCardProps>`
   }
 
   & .post-preview-card__title {
-    ${(props) => props.path === 'blog' ? tw`font-sans` : tw`font-serif`}
+    ${(props) => (props.path === 'blog' ? tw`font-sans` : tw`font-serif`)}
 
     ${tw`
       tracking-wider font-bold
@@ -50,7 +50,13 @@ export const SPostPreviewCard = styled.div<SPostPreviewCardProps>`
   }
 `;
 
-const PostPreviewCard = ({ path, post }: { path: string, post: PostPreview }): JSX.Element => (
+const PostPreviewCard = ({
+  path,
+  post,
+}: {
+  path: string;
+  post: PostPreview;
+}): JSX.Element => (
   <Link href={`${path}/${post.slug}`} passHref>
     <SPostPreviewCard path={path}>
       <div className="post-preview-card__date">{post?.date ?? '-'}</div>
