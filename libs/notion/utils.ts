@@ -7,10 +7,13 @@ import {
 import { idToUuid } from 'notion-utils';
 import { getAllPostIds, getPageProperties } from './services';
 
-export const processRecordMap = async (recordMap: ExtendedRecordMap) => {
+export const processRecordMap = async (
+  recordMap: ExtendedRecordMap,
+  pageId: string
+) => {
   // Check if the given recordMap is a Database or not
   const block: NotionMap<Block> = recordMap.block;
-  const uuid = idToUuid('7d689ff0d95d42f2bc4f01fcf0c9b7b9');
+  const uuid = idToUuid(pageId);
   const rawMetadata = block[uuid]?.value;
 
   if (
@@ -30,7 +33,11 @@ export const processRecordMap = async (recordMap: ExtendedRecordMap) => {
   const schema: CollectionPropertySchemaMap = collection?.schema;
   const posts: PostPreview[] = [];
   pageIds.forEach(async (pageId) => {
-    posts.push(await getPageProperties(pageId, block, schema));
+    const pageRow = await getPageProperties(pageId, block, schema);
+
+    if (pageRow?.status.includes('Published')) {
+      posts.push(pageRow);
+    }
   });
 
   return Promise.resolve(posts);

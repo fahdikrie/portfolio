@@ -10,7 +10,7 @@ const Feed = () => {
     <S.FeedWrapper>
       <S.Feed>
         {posts?.map((post: PostPreview, id: number) => {
-          return <PostPreviewCard key={id} path="journal" post={post} />;
+          return <PostPreviewCard key={id} path="blog" post={post} />;
         })}
       </S.Feed>
     </S.FeedWrapper>

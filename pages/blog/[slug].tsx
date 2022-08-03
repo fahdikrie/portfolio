@@ -1,9 +1,9 @@
-import { JournalDetailProps } from 'types/pages';
+import { BlogDetailProps } from 'types/pages';
 
-import JournalLayout from '@/components/layout/Journal';
-import notion, { NOTION_JOURNAL_PAGE_ID } from 'libs/notion';
+import BlogLayout from '@/components/layout/Blog';
+import notion, { NOTION_BLOG_PAGE_ID } from 'libs/notion';
 import { processRecordMap } from 'libs/notion/utils';
-import JournalDetail from '@/components/containers/Journal/Detail';
+import BlogDetail from '@/components/containers/Blog/Detail';
 import { MapPageUrlFn } from 'react-notion-x';
 import { estimatePageReadTimeAsHumanizedString } from 'notion-utils';
 import { getPreviewImageMap } from 'libs/notion/images';
@@ -13,8 +13,8 @@ const mapPageUrl = (id: string) => {
 };
 
 export const getStaticProps = async ({ params: { slug } }) => {
-  const recordMap = await notion.getPage(NOTION_JOURNAL_PAGE_ID);
-  const posts = await processRecordMap(recordMap, NOTION_JOURNAL_PAGE_ID);
+  const recordMap = await notion.getPage(NOTION_BLOG_PAGE_ID);
+  const posts = await processRecordMap(recordMap, NOTION_BLOG_PAGE_ID);
 
   let post = posts.find((post: PostPreview) => post.slug === slug);
   const postRecordMap = await notion.getPage(post.id);
@@ -38,9 +38,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
 };
 
 export async function getStaticPaths() {
-  const recordMap = await notion.getPage(NOTION_JOURNAL_PAGE_ID);
-  const posts = await processRecordMap(recordMap, NOTION_JOURNAL_PAGE_ID);
-  const paths = posts.map((post) => `/journal/${post.slug}`);
+  const recordMap = await notion.getPage(NOTION_BLOG_PAGE_ID);
+  const posts = await processRecordMap(recordMap, NOTION_BLOG_PAGE_ID);
+  const paths = posts.map((post) => `/blog/${post.slug}`);
 
   return {
     paths: paths,
@@ -48,16 +48,16 @@ export async function getStaticPaths() {
   };
 }
 
-const JournalDetailPage = ({ post, postRecordMap }: JournalDetailProps) => {
+const BlogDetailPage = ({ post, postRecordMap }: BlogDetailProps) => {
   return (
-    <JournalLayout pageDescription={post?.summary} pageTitle={post?.title}>
-      <JournalDetail
+    <BlogLayout pageDescription={post?.summary} pageTitle={post?.title}>
+      <BlogDetail
         post={post}
         postRecordMap={postRecordMap}
         mapPageUrl={mapPageUrl as MapPageUrlFn}
       />
-    </JournalLayout>
+    </BlogLayout>
   );
 };
 
-export default JournalDetailPage;
+export default BlogDetailPage;
