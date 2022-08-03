@@ -14,7 +14,7 @@ const mapPageUrl = (id: string) => {
 
 export const getStaticProps = async ({ params: { slug } }) => {
   const recordMap = await notion.getPage(NOTION_JOURNAL_PAGE_ID);
-  const posts = await processRecordMap(recordMap);
+  const posts = await processRecordMap(recordMap, NOTION_JOURNAL_PAGE_ID);
 
   let post = posts.find((post: PostPreview) => post.slug === slug);
   const postRecordMap = await notion.getPage(post.id);
@@ -39,7 +39,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
 export async function getStaticPaths() {
   const recordMap = await notion.getPage(NOTION_JOURNAL_PAGE_ID);
-  const posts = await processRecordMap(recordMap);
+  const posts = await processRecordMap(recordMap, NOTION_JOURNAL_PAGE_ID);
   const paths = posts.map((post) => `/journal/${post.slug}`);
 
   return {

@@ -33,7 +33,11 @@ export const processRecordMap = async (
   const schema: CollectionPropertySchemaMap = collection?.schema;
   const posts: PostPreview[] = [];
   pageIds.forEach(async (pageId) => {
-    posts.push(await getPageProperties(pageId, block, schema));
+    const pageRow = await getPageProperties(pageId, block, schema);
+
+    if (pageRow?.status.includes('Published')) {
+      posts.push(pageRow);
+    }
   });
 
   return Promise.resolve(posts);
