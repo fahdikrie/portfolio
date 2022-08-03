@@ -5,7 +5,7 @@ export const Header = tw.div`
 `;
 
 export const Title = tw.h1`
-  font-serif font-black
+  font-sans font-black
   text-gunmetal dark:text-white
   text-sm-wambo md:text-md-wambo xl:text-wambo
 
