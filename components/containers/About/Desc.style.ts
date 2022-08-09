@@ -39,7 +39,13 @@ export const Paragraph = styled.p`
     font-sans font-normal
     text-gunmetal dark:text-white
     text-sm-small md:text-md-small
+    select-text!
+    cursor-text!
   `}
+
+  u {
+    ${tw`select-text!`}
+  }
 
   a {
     ${tw`
@@ -60,6 +66,13 @@ export const SkillRow = styled.div`
     text-sm-small md:text-md-small
   `}
 
+  * {
+    ${tw`
+      cursor-text!
+      select-text!
+    `}
+  }
+
   div.skill_type {
     ${tw`font-medium md:mb-5`}
   }
@@ -74,6 +87,13 @@ export const ExperienceRow = styled.div`
       text-gunmetal dark:text-white
       text-sm-small md:text-md-small
   `}
+
+  * {
+    ${tw`
+      cursor-text!
+      select-text!
+    `}
+  }
 
   span.flex {
     ${tw`
