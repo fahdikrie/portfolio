@@ -9,8 +9,6 @@ import EmailImg from 'public/assets/socials/email.png';
 import GithubLightImg from 'public/assets/socials/github-light.png';
 import GithubDarkImg from 'public/assets/socials/github-dark.png';
 import GitlabImg from 'public/assets/socials/gitlab.png';
-import LetterboxdImg from 'public/assets/socials/letterboxd.png';
-import GoodreadsImg from 'public/assets/socials/goodreads.png';
 
 const Contacts = (): JSX.Element => {
   const { resolvedTheme } = useTheme();
@@ -50,16 +48,6 @@ const Contacts = (): JSX.Element => {
           name="gitlab.com/fahdikrie"
           image={GitlabImg}
           link="https://gitlab.com/fahdikrie/"
-        />
-        <ContactCard
-          name="letterboxd.com/fahdikrie"
-          image={LetterboxdImg}
-          link="https://boxd.it/Up8H"
-        />
-        <ContactCard
-          name="goodreads.com/fahdikrie"
-          image={GoodreadsImg}
-          link="https://www.goodreads.com/fahdikrie/"
         />
       </S.ContactCardWrapper>
     </S.Contacts>

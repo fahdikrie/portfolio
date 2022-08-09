@@ -17,7 +17,7 @@ export const Hero = styled.div`
 `;
 
 export const JumboText = tw.h1`
-  font-serif
+  font-sans
   font-black
   text-gunmetal dark:text-white
   text-sm-wambo // md:text-wambo
@@ -26,7 +26,7 @@ export const JumboText = tw.h1`
 
 export const SubHeader = styled.h3`
   ${tw`
-    font-serif
+    font-sans
     font-bold
     text-gunmetal dark:text-white
     text-sm-large md:text-large
