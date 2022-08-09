@@ -30,6 +30,6 @@ export const SubHeader = styled.h3`
     font-bold
     text-gunmetal dark:text-white
     text-sm-large md:text-large
-    lg:text-sm-subheader xl:text-subheader
+    lg:text-sm-subheader xl:font-size[28px]
   `}
 `;
