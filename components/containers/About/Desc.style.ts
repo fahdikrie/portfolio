@@ -18,13 +18,19 @@ export const Section = styled.div`
   `}
 `;
 
-export const Header = tw.h2`
-  mb-5
-  text-left
-  font-black
-  text-gunmetal dark:text-white
-  text-sm-large md:text-large
-  lg:text-sm-subheader xl:font-size[28px]
+export const Header = styled.h2`
+  ${tw`
+    mb-5
+    text-left
+    font-black
+    text-gunmetal dark:text-white
+    text-sm-large md:text-large
+    lg:text-sm-subheader xl:font-size[28px]
+  `}
+
+  span {
+    ${tw`font-normal`}
+  }
 `;
 
 export const Paragraph = styled.p`

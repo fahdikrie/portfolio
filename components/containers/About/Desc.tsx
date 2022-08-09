@@ -25,7 +25,9 @@ const Desc = () => {
   return (
     <S.Wrapper>
       <S.Section>
-        <S.Header>short bio</S.Header>
+        <S.Header>
+          <span>––– </span>short bio 👤
+        </S.Header>
         <S.Paragraph>
           Fahdii (or Badi) is a final year <a href="https://cs.ui.ac.id/">CS</a>{' '}
           student at the <a href="https://ui.ac.id/">University of Indonesia</a>
@@ -34,7 +36,9 @@ const Desc = () => {
         </S.Paragraph>
       </S.Section>
       <S.Section>
-        <S.Header>skills & tools</S.Header>
+        <S.Header>
+          <span>––– </span>skills & tools 🛠
+        </S.Header>
         <S.SubSection>
           <S.SkillRow>
             <div className="skill_type">Languages:</div>
@@ -61,7 +65,9 @@ const Desc = () => {
         </S.SubSection>
       </S.Section>
       <S.Section>
-        <S.Header>experiences</S.Header>
+        <S.Header>
+          <span>––– </span>experiences 📜
+        </S.Header>
         <S.SubSection>
           <S.ExperienceRow>
             <div className="position">Android Developer Apprenticeship</div>
@@ -136,7 +142,9 @@ const Desc = () => {
         </S.SubSection>
       </S.Section>
       <S.Section>
-        <S.Header>educations</S.Header>
+        <S.Header>
+          <span>––– </span>educations 🎓
+        </S.Header>
         <S.SubSection>
           <S.ExperienceRow>
             <div className="position">Android Developer Learning Path</div>
@@ -168,7 +176,9 @@ const Desc = () => {
         </S.SubSection>
       </S.Section>
       <S.Section>
-        <S.Header>contacts</S.Header>
+        <S.Header>
+          <span>––– </span>contacts ☎️
+        </S.Header>
         <S.Contacts>
           <ContactCard
             name="fahdiaf@ristek.cs.ui.ac.id"
