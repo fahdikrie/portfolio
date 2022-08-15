@@ -1,4 +1,4 @@
-import { IoMdDocument } from 'react-icons/io';
+import { IoMdDownload } from 'react-icons/io';
 
 import * as S from './Hero.style';
 
@@ -11,13 +11,13 @@ const Hero = (): JSX.Element => {
         <S.HStack>
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             <S.ButtonFilled>
-              <IoMdDocument />
+              <IoMdDownload />
               <span>Resume</span>
             </S.ButtonFilled>
           </a>
           <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
             <S.ButtonOutlined>
-              <IoMdDocument />
+              <IoMdDownload />
               <span>CV</span>
             </S.ButtonOutlined>
           </a>

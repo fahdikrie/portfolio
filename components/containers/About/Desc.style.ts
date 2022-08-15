@@ -14,22 +14,28 @@ export const Wrapper = styled.div`
 
 export const Section = styled.div`
   ${tw`
-    mb-16 lg:mb-32
+    mb-32 lg:mb-56
   `}
 `;
 
 export const Header = styled.h2`
   ${tw`
-    mb-5
+    mb-8 md:mb-10
     text-left
     font-black
     text-gunmetal dark:text-white
     text-sm-large md:text-large
     lg:text-sm-subheader xl:font-size[28px]
+
+    flex items-center gap-10
   `}
 
   span {
-    ${tw`font-normal`}
+    ${tw`min-w-max`}
+  }
+
+  div.separator {
+    ${tw`w-full h-2 bg-gunmetal dark:bg-white`}
   }
 `;
 
@@ -130,7 +136,6 @@ export const ExperienceRow = styled.div`
     ${tw`
       opacity-80
       text-tiny md:text-md-small
-      line-height[1.75]!
     `}
 
     ul {

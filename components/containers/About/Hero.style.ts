@@ -79,7 +79,7 @@ export const ButtonOutlined = styled.button`
     flex gap-10
     justify-center items-center
 
-    text-bronze dark:text-magenta
+    text-gunmetal dark:text-white
     font-semibold font-sans
     text-sm-small md:text-md-small lg:text-small
 

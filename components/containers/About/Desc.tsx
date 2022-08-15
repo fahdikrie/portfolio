@@ -26,7 +26,7 @@ const Desc = () => {
     <S.Wrapper>
       <S.Section>
         <S.Header>
-          <span>––– </span>short bio 👤
+          <span>short bio</span> <div className="separator"></div>
         </S.Header>
         <S.Paragraph>
           Fahdii (or Badi) is a final year <a href="https://cs.ui.ac.id/">CS</a>{' '}
@@ -37,7 +37,7 @@ const Desc = () => {
       </S.Section>
       <S.Section>
         <S.Header>
-          <span>––– </span>skills & tools 🛠
+          <span>skills & tools</span> <div className="separator"></div>
         </S.Header>
         <S.SubSection>
           <S.SkillRow>
@@ -66,24 +66,23 @@ const Desc = () => {
       </S.Section>
       <S.Section>
         <S.Header>
-          <span>––– </span>experiences 📜
+          <span>experiences</span> <div className="separator"></div>
         </S.Header>
         <S.SubSection>
           <S.ExperienceRow>
-            <div className="position">Android Developer Apprenticeship</div>
+            <div className="position">Android Developer Apprentice</div>
             <span className="flex gap-10">
               <div className="company">Traveloka Singapore</div>
               <div className="time">Jun 2022</div>
             </span>
             <div className="description">
               This apprenticeship program is part of Bangkit Academy 2022’s
-              company capstone project.
-              {/* <ul>
-                <li><div>•</div><div>Selected as <b>the best team of the topic</b> out of four groups.</div></li>
-                <li><div>•</div><div>Involved in the mock-up and prototype design process.</div></li>
-                <li><div>•</div><div>Implemented the Onboarding, Settings, and Chatroom (demo is available on the Github repository).</div></li>
-                <li><div>•</div><div>Tech-stacks: <b>Figma</b>, <b>Kotlin</b>, <b>Android Jetpack</b> (LiveData, ViewModel, DataStore), <b>Android Volley</b>, <b>Github Workflow</b>, <b>Firebase App Distribution</b>.</div></li>
-              </ul> */}
+              company capstone project. The topic chosen is based on the problem
+              statement of “Automated answer chatbot for customer operations in
+              handling numerous and urgent complaints”, and was meant to be done
+              by a group of 3 developers from each of Bangkit Academy’s learning
+              paths. Our team provided a solution in the form of an
+              Android-based mobile chatbot app named Siloka.
             </div>
           </S.ExperienceRow>
           <S.ExperienceRow>
@@ -95,7 +94,9 @@ const Desc = () => {
             <div className="description">
               RISTEK is an independent organization in the Faculty of Computer
               Science, Universitas Indonesia, that aims to foster students’
-              interest and talent in technology.
+              interest and talent in technology. Web Development SIG is one of
+              Ristek’s SIG that focuses on learning and building projects using
+              the latest and modern web technologies.
             </div>
           </S.ExperienceRow>
           <S.ExperienceRow>
@@ -106,9 +107,10 @@ const Desc = () => {
             </span>
             <div className="description">
               FUKI is an independent muslim organization in the Faculty of
-              Computer Science, University of Indonesia. IT Force Bureau is an
-              organizational unit within FUKI whose job is to develop and
-              maintain FUKI’s IT system.
+              Computer Science, University of Indonesia, that serves as a place
+              for the muslim students to study and together spread the teachings
+              of Islam. IT Force Bureau is an organizational unit within FUKI
+              whose job is to develop and maintain FUKI’s IT system.
             </div>
           </S.ExperienceRow>
           <S.ExperienceRow>
@@ -143,7 +145,7 @@ const Desc = () => {
       </S.Section>
       <S.Section>
         <S.Header>
-          <span>––– </span>educations 🎓
+          <span>educations</span> <div className="separator"></div>
         </S.Header>
         <S.SubSection>
           <S.ExperienceRow>
@@ -177,7 +179,7 @@ const Desc = () => {
       </S.Section>
       <S.Section>
         <S.Header>
-          <span>––– </span>contacts ☎️
+          <span>contacts</span> <div className="separator"></div>
         </S.Header>
         <S.Contacts>
           <ContactCard
