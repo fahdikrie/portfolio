@@ -115,7 +115,7 @@ const BlogDetail = ({
           mapPageUrl={mapPageUrl}
           components={components}
           darkMode={!isLightMode}
-          previewImages={!!postRecordMap.preview_images}
+          // previewImages={!!postRecordMap.preview_images}
         />
       </S.BlogDetail>
     </>
