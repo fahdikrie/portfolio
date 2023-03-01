@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import tw, { styled } from 'twin.macro';
 
 interface SPostPreviewCardProps {
@@ -57,13 +56,13 @@ const PostPreviewCard = ({
   path: string;
   post: PostPreview;
 }): JSX.Element => (
-  <Link href={`${path}/${post.slug}`} passHref>
+  <a href={`${path}/${post.slug}`}>
     <SPostPreviewCard path={path}>
       <div className="post-preview-card__date">{post?.date ?? '-'}</div>
       <div className="post-preview-card__title">{post?.title}</div>
       <div className="post-preview-card__summary">{post?.summary}</div>
     </SPostPreviewCard>
-  </Link>
+  </a>
 );
 
 export default PostPreviewCard;
