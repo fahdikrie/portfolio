@@ -29,10 +29,11 @@ const Desc = () => {
           <span>short bio</span> <div className="separator"></div>
         </S.Header>
         <S.Paragraph>
-          Fahdii (or Badi) is a final year <a href="https://cs.ui.ac.id/">CS</a>{' '}
-          student at the <a href="https://ui.ac.id/">University of Indonesia</a>
-          . He mostly focuses on <u>full-stack web development</u>, while also
-          having some experiences on <u>android development</u>.
+          Fahdii (or Badi) is a CS fresh grad.{' '}
+          <a href="https://cs.ui.ac.id/">CS</a> student at the{' '}
+          <a href="https://ui.ac.id/">University of Indonesia</a>. He mostly
+          focuses on <u>full-stack web development</u>, while also having some
+          experiences on <u>android development</u>.
         </S.Paragraph>
       </S.Section>
       <S.Section>
@@ -51,8 +52,8 @@ const Desc = () => {
             <div className="skill_type">Libraries/Frameworks:</div>
             <div className="skill_desc">
               React (Next.js, create-react-app, Gatsby), Redux, Django (Django
-              REST Framework), NodeJS, ExpressJS, Spring Boot, Tailwind CSS,
-              Chakra UI, twin.macro
+              REST Framework), NodeJS, ExpressJS, GraphQL, Apollo Client, Spring
+              Boot, Tailwind CSS, Chakra UI, twin.macro
             </div>
           </S.SkillRow>
           <S.SkillRow>
@@ -69,6 +70,24 @@ const Desc = () => {
           <span>experiences</span> <div className="separator"></div>
         </S.Header>
         <S.SubSection>
+          <S.ExperienceRow>
+            <div className="position">Software Engineer Intern</div>
+            <span className="flex gap-10">
+              <div className="company">SIRCLO</div>
+              <div className="time">Aug 2022 — Feb 2023</div>
+            </span>
+            <div className="description">
+              SIRCLO is an e-commerce enabler based on Indonesia. SIRCLO’s
+              services are made for entrepreneurs (SIRCLO Store), enterprises
+              (SIRCLO Commerce), and new retail enablement (Warung Pintar).
+              Helped develop features, investigate & fix bugs, and add Snowplow
+              event trackers on one of MeX’s (Merchant Experience Team)
+              projects: SIRCLO Chat Commerce (an omnichannel platform that
+              integrates with WhatsApp Business API, Tokopedia API, and Shopee
+              API) and SIRCLO Store Admin Panel (a CMS for SIRCLO Store V2
+              Website).
+            </div>
+          </S.ExperienceRow>
           <S.ExperienceRow>
             <div className="position">Android Developer Apprentice</div>
             <span className="flex gap-10">

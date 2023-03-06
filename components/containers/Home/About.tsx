@@ -3,8 +3,8 @@ import * as S from './About.style';
 const About = (): JSX.Element => (
   <S.About>
     <S.LargeText>
-      A 21 y/o final year student currently majoring CS 💻 at the University of
-      Indonesia ‍🇮🇩 Meet Fahdii Ajmalal Fikrie! 👋
+      A 22 y/o CS fresh grad. 💻 from the University of Indonesia ‍🇮🇩 Meet
+      Fahdii Ajmalal Fikrie! 👋
       <br />
       <br />
       Fahdii (also goes by the name Badi, Dikrie, or Fahdikrie) is very
