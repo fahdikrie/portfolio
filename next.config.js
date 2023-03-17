@@ -33,4 +33,7 @@ module.exports = withImages({
     disableStaticImages: true,
   },
   target: 'serverless',
+  experimental: {
+    appDir: true,
+  },
 });
