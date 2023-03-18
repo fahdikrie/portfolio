@@ -1,1 +1,2 @@
-*.config.(js|json)
+*.config.js
+*.config.json
