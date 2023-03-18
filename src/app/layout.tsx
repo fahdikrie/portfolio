@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 
-import './globals.css';
+import Navbar from '@/components/Navbar';
+import '@/styles/globals.css';
+import cls from '@/styles/layout.module.css';
 
 export const metadata: Metadata = {
   title: {
@@ -46,7 +48,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main className={cls.Main}>{children}</main>
+      </body>
     </html>
   );
 }

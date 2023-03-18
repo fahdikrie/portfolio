@@ -1,0 +1,19 @@
+.Navbar {
+  @apply
+    bg-gray-800
+
+    text-white
+    font-bold
+
+    p-4
+    mb-4
+    shadow
+
+    flex
+    justify-between
+    items-center
+}
+
+.Navbar {
+  
+}
