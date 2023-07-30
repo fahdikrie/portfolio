@@ -1,6 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import ThemeSwitch from './ThemeSwitch';
 
@@ -28,6 +30,8 @@ const NAVBAR_ITEMS = [
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <nav
       className={`
@@ -74,15 +78,28 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <a className="btn-ghost btn text-xl normal-case mix-blend-darken">
-          Badi
-        </a>
+        <Link
+          className="btn-ghost btn text-xl normal-case mix-blend-darken"
+          href="/"
+        >
+          <Image
+            src={`/assets/logo_rounded.svg`}
+            alt="badi-logo"
+            width={32}
+            height={32}
+          />
+        </Link>
       </div>
-      <div className="navbar-center mx-8 hidden w-fit lg:flex">
-        <ul className="menu menu-horizontal px-1">
+      <div className="navbar-center mx-4 hidden w-fit lg:flex">
+        <ul className="menu menu-horizontal gap-1 p-1">
           {NAVBAR_ITEMS.map((item) => (
             <li key={item.name}>
-              <Link className="mix-blend-darken" href={item.href}>
+              <Link
+                className={`mix-blend-darken ${
+                  pathname === item.href ? 'active' : ''
+                }`}
+                href={item.href}
+              >
                 {item.name}
               </Link>
             </li>
