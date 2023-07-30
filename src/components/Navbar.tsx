@@ -16,6 +16,10 @@ const NAVBAR_ITEMS = [
     href: '/about',
   },
   {
+    name: 'Projects',
+    href: '/projects',
+  },
+  {
     name: 'Activities',
     href: '/activities',
   },
@@ -25,7 +29,7 @@ const NAVBAR_ITEMS = [
   },
   {
     name: 'Journal',
-    href: '/projects',
+    href: '/journal',
   },
 ];
 
