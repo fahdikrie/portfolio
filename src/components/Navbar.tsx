@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import ThemeSwitch from './ThemeSwitch';
 
 const NAVBAR_ITEMS = [
@@ -29,12 +31,10 @@ const Navbar = () => {
   return (
     <nav
       className={`
-        navbar
-        fixed top-0 left-0 right-0
-        mx-auto mt-4 h-fit
-        min-h-fit w-[320px] justify-between rounded-xl
-        bg-base-100 bg-opacity-10
-        p-1 shadow-sm
+        navbar fixed top-0 left-0 right-0
+        mx-auto mt-4 h-fit min-h-fit w-[320px]
+        justify-between rounded-xl
+        bg-base-100 bg-opacity-10 p-1 shadow-sm
         backdrop-blur-sm backdrop-filter
         lg:w-fit
       `}
@@ -67,7 +67,9 @@ const Navbar = () => {
           >
             {NAVBAR_ITEMS.map((item) => (
               <li key={item.name}>
-                <a className="mix-blend-darken">{item.name}</a>
+                <Link className="mix-blend-darken" href={item.href}>
+                  {item.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -80,7 +82,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">
           {NAVBAR_ITEMS.map((item) => (
             <li key={item.name}>
-              <a className="mix-blend-darken">{item.name}</a>
+              <Link className="mix-blend-darken" href={item.href}>
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
