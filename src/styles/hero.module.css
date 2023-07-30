@@ -7,14 +7,14 @@
   left: 0;
 }
 
-:root[data-theme='light'] .gradient_canvas {
+body[data-theme='light'] .gradient_canvas {
   --gradient-color-1: #c3e4ff;
   --gradient-color-2: #6ec3f4;
   --gradient-color-3: #eae2ff;
   --gradient-color-4: #b9beff;
 }
 
-:root[data-theme='dark'] .gradient_canvas {
+body[data-theme='dark'] .gradient_canvas {
   --gradient-color-1: #a960ee;
   --gradient-color-2: #ff333d;
   --gradient-color-3: #90e0ff;

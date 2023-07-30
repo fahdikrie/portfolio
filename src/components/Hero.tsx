@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { useLocalStorage } from 'usehooks-ts';
 
 import { Gradient } from '@/components';
 import styles from '@/styles/hero.module.css';
@@ -11,12 +12,14 @@ interface HeroProps {
 }
 
 const Hero = ({ title, subtitle }: HeroProps) => {
+  const [theme] = useLocalStorage('theme', 'light');
+
   useEffect(() => {
     const gradient = new Gradient();
 
     // @ts-ignore
     gradient.initGradient('#gradient-canvas');
-  }, []);
+  }, [theme]);
 
   return (
     <div className="absolute top-0 -z-10 flex h-screen w-screen">
