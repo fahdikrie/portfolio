@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className="navbar bg-base-100 backdrop-filter backdrop-blur-sm bg-opacity-10 max-w-[600px] mx-auto rounded-xl shadow-sm mt-4">
+    <nav className="navbar bg-white backdrop-filter backdrop-blur-sm bg-opacity-10 max-w-[600px] ml-auto mr-4 rounded-xl shadow-sm mt-4">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
