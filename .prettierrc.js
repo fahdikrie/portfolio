@@ -6,8 +6,12 @@ module.exports = {
   semi: true,
   singleQuote: true,
 
+  plugins: [
+    require.resolve('@trivago/prettier-plugin-sort-imports'),
+    'prettier-plugin-tailwindcss',
+  ],
+
   // @trivago/prettier-plugin-sort-imports config
-  plugins: [require.resolve('@trivago/prettier-plugin-sort-imports')],
   importOrder: ['^@/(.*)$', '^[./]'],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,

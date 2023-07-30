@@ -1,19 +1,17 @@
 .Navbar {
-  @apply
-    bg-gray-800
-
-    text-white
-    font-bold
-
-    p-4
-    mb-4
-    shadow
+  @apply mb-4
 
     flex
-    justify-between
     items-center
+
+    justify-between
+    bg-gray-800
+    p-4
+
+    font-bold
+    text-white
+    shadow;
 }
 
 .Navbar {
-  
 }

@@ -1,9 +1,9 @@
 const Navbar = () => {
   return (
-    <nav className="navbar bg-white backdrop-filter backdrop-blur-sm bg-opacity-10 max-w-[600px] ml-auto mr-4 rounded-xl shadow-sm mt-4">
+    <nav className="navbar ml-auto mr-4 mt-4 max-w-[600px] rounded-xl bg-white bg-opacity-10 shadow-sm backdrop-blur-sm backdrop-filter">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className="btn-ghost btn lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -21,7 +21,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content menu rounded-box menu-sm z-[1] mt-3 w-52 bg-base-100 p-2 shadow"
           >
             <li>
               <a>Item 1</a>
@@ -42,7 +42,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="btn-ghost btn text-xl normal-case">daisyUI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

@@ -17,23 +17,23 @@ export default function Home() {
     <>
       {/* <div className="overflow-hidden w-screen h-screen"></div> */}
 
-      <div className="w-screen h-screen flex absolute top-0 -z-10">
-        <div className="w-[45%] h-full text-left flex items-center justify-start border-r-2 border-neutral">
+      <div className="absolute top-0 -z-10 flex h-screen w-screen">
+        <div className="flex h-full w-[45%] items-center justify-start border-r-2 border-neutral text-left">
           <canvas
             id="gradient3-canvas"
             className={styles.gradient3_canvas}
             data-transition-in
           />
-          <div className="absolute text-primary opacity-90 flex flex-col gap-2 ml-8">
-            <h1 className="font-black text-[100px] leading-[1.15] whitespace-pre">
+          <div className="absolute ml-8 flex flex-col gap-2 text-primary opacity-90">
+            <h1 className="whitespace-pre text-[100px] font-black leading-[1.15]">
               {`out in\nthe open.`}
             </h1>
-            <h6 className="font-bold text-3xl">
+            <h6 className="text-3xl font-bold">
               tech-blogs and learning notes
             </h6>
           </div>
         </div>
-        <div className="w-[55%] h-screen bg-base-100"></div>
+        <div className="h-screen w-[55%] bg-base-100"></div>
       </div>
     </>
   );
