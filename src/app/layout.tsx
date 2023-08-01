@@ -4,6 +4,8 @@ import Navbar from '@/components/Navbar';
 import '@/styles/globals.css';
 import cls from '@/styles/layout.module.css';
 
+import { inter } from './fonts';
+
 export const metadata: Metadata = {
   title: {
     default: "Fahdii Ajmalal Fikrie's personal webpage",
@@ -47,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" className={inter.className}>
       <body>
         <Navbar />
         <main className={cls.Main}>{children}</main>

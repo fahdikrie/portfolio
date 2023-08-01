@@ -9,9 +9,10 @@ import styles from '@/styles/hero.module.css';
 interface HeroProps {
   title: string;
   subtitle: string;
+  className?: React.ComponentProps<'div'>['className'];
 }
 
-const Hero = ({ title, subtitle }: HeroProps) => {
+const Hero = ({ title, subtitle, className }: HeroProps) => {
   const [theme] = useLocalStorage('theme', 'light');
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const Hero = ({ title, subtitle }: HeroProps) => {
   }, [theme]);
 
   return (
-    <div className="absolute top-0 -z-10 flex h-screen w-screen">
+    <div className={`absolute top-0 -z-10 flex h-screen w-screen ${className}`}>
       <div
         className={`
           relative flex h-full w-[45%] items-center
@@ -36,7 +37,7 @@ const Hero = ({ title, subtitle }: HeroProps) => {
           className={styles.gradient_canvas}
           data-transition-in
         />
-        <div className="absolute ml-8 flex flex-col gap-2 text-primary opacity-80">
+        <div className="absolute ml-8 flex flex-col gap-2 text-black opacity-90">
           <h1 className="whitespace-pre text-[100px] font-black leading-[1.15]">
             {title}
           </h1>

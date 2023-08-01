@@ -8,6 +8,7 @@ export default function About() {
       <Hero
         title={`writing into\nthe void.`}
         subtitle="an internet-web journal by badi"
+        className="font-serif"
       />
     </>
   );
