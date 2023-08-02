@@ -41,7 +41,12 @@ const Hero = ({ title, subtitle, className }: HeroProps) => {
           <h1 className="whitespace-pre text-[100px] font-black leading-[1.15]">
             {title}
           </h1>
-          {!!subtitle && <h6 className="text-3xl font-bold">{subtitle}</h6>}
+          {!!subtitle && (
+            <h6
+              className="text-3xl font-bold"
+              dangerouslySetInnerHTML={{ __html: subtitle }}
+            />
+          )}
         </div>
       </div>
       <div className="h-screen w-[55%] bg-base-100"></div>
