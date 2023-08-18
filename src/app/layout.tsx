@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 import '@/styles/globals.css';
 import cls from '@/styles/layout.module.css';
 
-import { inter } from './fonts';
+import { inter, playfair_display } from './fonts';
 
 export const metadata: Metadata = {
   title: {
@@ -49,7 +49,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html
+      lang="en"
+      className={`${playfair_display.variable} ${inter.variable}`}
+    >
       <body>
         <Navbar />
         <main className={cls.Main}>{children}</main>

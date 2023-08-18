@@ -10,9 +10,13 @@ interface HeroProps {
   title: string;
   subtitle: string;
   className?: React.ComponentProps<'div'>['className'];
+  classNames?: {
+    title: React.ComponentProps<'h1'>['className'];
+    subtitle: React.ComponentProps<'h1'>['className'];
+  };
 }
 
-const Hero = ({ title, subtitle, className }: HeroProps) => {
+const Hero = ({ title, subtitle, className, classNames }: HeroProps) => {
   const [theme] = useLocalStorage('theme', 'light');
 
   useEffect(() => {
@@ -27,9 +31,8 @@ const Hero = ({ title, subtitle, className }: HeroProps) => {
       <div
         className={`
           relative flex h-full w-[45%] items-center
-          justify-start border-r-2 border-primary
-          border-opacity-50
-          text-left
+          justify-start border-r-2 border-black
+          text-left dark:border-white
         `}
       >
         <canvas
@@ -37,13 +40,20 @@ const Hero = ({ title, subtitle, className }: HeroProps) => {
           className={styles.gradient_canvas}
           data-transition-in
         />
-        <div className="absolute ml-8 flex flex-col gap-2 text-black opacity-90">
-          <h1 className="whitespace-pre text-[100px] font-black leading-[1.15]">
+        <div className="absolute inset-0 dark:bg-black dark:opacity-30" />
+        <div className="absolute flex w-full flex-col gap-2 p-16 text-gray-900 opacity-95 dark:text-white">
+          <h1
+            className={`
+              whitespace-pre text-[40px] font-black
+              leading-[1.15] lg:text-[64px] xl:text-[96px]
+              ${classNames?.title}
+            `}
+          >
             {title}
           </h1>
           {!!subtitle && (
             <h6
-              className="text-3xl font-bold"
+              className={`text-3xl font-bold ${classNames?.subtitle}`}
               dangerouslySetInnerHTML={{ __html: subtitle }}
             />
           )}
