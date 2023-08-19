@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import ThemeSwitch from './ThemeSwitch';
 
@@ -35,6 +35,7 @@ const NAVBAR_ITEMS = [
 
 const Navbar = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   return (
     <nav
@@ -75,9 +76,12 @@ const Navbar = () => {
           >
             {NAVBAR_ITEMS.map((item) => (
               <li key={item.name}>
-                <Link className="mix-blend-darken" href={item.href}>
+                <span
+                  className="mix-blend-darken"
+                  onClick={() => router.push(item.href)}
+                >
                   {item.name}
-                </Link>
+                </span>
               </li>
             ))}
           </ul>
@@ -98,14 +102,14 @@ const Navbar = () => {
         <ul className="menu menu-horizontal gap-1 p-1">
           {NAVBAR_ITEMS.map((item) => (
             <li key={item.name}>
-              <Link
-                className={`mix-blend-darken ${
+              <span
+                className={`font-bold mix-blend-darken dark:!text-off-white ${
                   pathname === item.href ? 'active' : ''
                 }`}
-                href={item.href}
+                onClick={() => router.push(item.href)}
               >
                 {item.name}
-              </Link>
+              </span>
             </li>
           ))}
         </ul>

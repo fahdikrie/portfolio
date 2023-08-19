@@ -11,8 +11,8 @@ export default function Journal() {
         page="journal"
         className="font-serif"
         classNames={{
-          title: '!text-[84px]',
-          subtitle: '!text-3xl font-semi',
+          title: '!text-[72px]',
+          subtitle: '!text-2xl',
         }}
       />
     </>

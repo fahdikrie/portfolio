@@ -34,9 +34,9 @@ const Hero = ({ title, subtitle, className, classNames, page }: HeroProps) => {
     <div className={`absolute top-0 -z-10 flex h-screen w-screen ${className}`}>
       <div
         className={`
-          relative flex h-full w-[45%] items-center
-          justify-start border-r-2 border-black
-          text-left dark:border-white
+          relative flex h-full w-[40%] items-center
+          justify-start border-r-4 border-gray-900
+          border-opacity-95 text-left dark:border-off-white
         `}
       >
         <canvas
@@ -47,17 +47,17 @@ const Hero = ({ title, subtitle, className, classNames, page }: HeroProps) => {
           )}
           data-transition-in
         />
-        {/* <div className="absolute inset-0 dark:bg-black dark:opacity-25" /> */}
+        <div className="absolute inset-0 bg-white opacity-50 dark:bg-black dark:opacity-0" />
         <div
           className={`
-            absolute flex w-full flex-col gap-2 p-16
+            absolute flex h-full w-full flex-col justify-end gap-2 p-8
             text-gray-900 opacity-95 dark:text-off-white
           `}
         >
           <h1
             className={`
               whitespace-pre text-[40px] font-black
-              leading-[1.15] lg:text-[64px] xl:text-[96px]
+              leading-[1.15] lg:text-[64px] xl:text-[80px]
               ${classNames?.title}
             `}
           >
@@ -65,13 +65,13 @@ const Hero = ({ title, subtitle, className, classNames, page }: HeroProps) => {
           </h1>
           {!!subtitle && (
             <h6
-              className={`text-3xl font-bold ${classNames?.subtitle}`}
+              className={`text-base font-bold md:text-lg lg:text-2xl ${classNames?.subtitle}`}
               dangerouslySetInnerHTML={{ __html: subtitle }}
             />
           )}
         </div>
       </div>
-      <div className="h-screen w-[55%] bg-base-100"></div>
+      <div className="h-screen w-[60%] bg-base-100"></div>
     </div>
   );
 };
