@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import { useEffect } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
 
@@ -14,17 +15,20 @@ interface HeroProps {
     title: React.ComponentProps<'h1'>['className'];
     subtitle: React.ComponentProps<'h1'>['className'];
   };
+  page: string;
 }
 
-const Hero = ({ title, subtitle, className, classNames }: HeroProps) => {
+const Hero = ({ title, subtitle, className, classNames, page }: HeroProps) => {
   const [theme] = useLocalStorage('theme', 'light');
 
   useEffect(() => {
+    if (!theme || !page) return;
+
     const gradient = new Gradient();
 
     // @ts-ignore
-    gradient.initGradient('#gradient-canvas');
-  }, [theme]);
+    gradient.initGradient(`#gradient-canvas__${page}`);
+  }, [page, theme]);
 
   return (
     <div className={`absolute top-0 -z-10 flex h-screen w-screen ${className}`}>
@@ -36,12 +40,20 @@ const Hero = ({ title, subtitle, className, classNames }: HeroProps) => {
         `}
       >
         <canvas
-          id="gradient-canvas"
-          className={styles.gradient_canvas}
+          id={`gradient-canvas__${page}`}
+          className={clsx(
+            styles.gradient_canvas,
+            styles[`gradient_canvas__${page}`]
+          )}
           data-transition-in
         />
-        <div className="absolute inset-0 dark:bg-black dark:opacity-30" />
-        <div className="absolute flex w-full flex-col gap-2 p-16 text-gray-900 opacity-95 dark:text-white">
+        {/* <div className="absolute inset-0 dark:bg-black dark:opacity-25" /> */}
+        <div
+          className={`
+            absolute flex w-full flex-col gap-2 p-16
+            text-gray-900 opacity-95 dark:text-off-white
+          `}
+        >
           <h1
             className={`
               whitespace-pre text-[40px] font-black

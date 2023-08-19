@@ -7,16 +7,82 @@
   left: 0;
 }
 
-body[data-theme='winter'] .gradient_canvas {
+/* About Page */
+
+body[data-theme='winter'] .gradient_canvas__about {
   --gradient-color-1: #c3e4ff;
   --gradient-color-2: #6ec3f4;
   --gradient-color-3: #eae2ff;
   --gradient-color-4: #b9beff;
 }
 
-body[data-theme='night'] .gradient_canvas {
+body[data-theme='night'] .gradient_canvas__about {
+  --gradient-color-1: #043d5d;
+  --gradient-color-2: #032e46;
+  --gradient-color-3: #23b684;
+  --gradient-color-4: #0f595e;
+}
+
+/* Projects Page */
+
+body[data-theme='winter'] .gradient_canvas__projects {
+  --gradient-color-1: #a1d9f3;
+  --gradient-color-2: #c3e4ff;
+  --gradient-color-3: #88bde6;
+  --gradient-color-4: #b4cae9;
+}
+
+body[data-theme='night'] .gradient_canvas__projects {
+  --gradient-color-1: #0c1533;
+  --gradient-color-2: #192a56;
+  --gradient-color-3: #0c1533;
+  --gradient-color-4: #192a56;
+}
+
+/* Activities Page */
+
+body[data-theme='winter'] .gradient_canvas__activities {
   --gradient-color-1: #a960ee;
   --gradient-color-2: #ff333d;
   --gradient-color-3: #90e0ff;
   --gradient-color-4: #ffcb57;
+}
+
+body[data-theme='night'] .gradient_canvas__activities {
+  --gradient-color-1: #301b3f;
+  --gradient-color-2: #5f3781;
+  --gradient-color-3: #361d48;
+  --gradient-color-4: #735a8e;
+}
+
+/* Blog Page */
+
+body[data-theme='winter'] .gradient_canvas__blog {
+  --gradient-color-1: #b58e74;
+  --gradient-color-2: #ffe6cf;
+  --gradient-color-3: #9d7d6c;
+  --gradient-color-4: #ccab96;
+}
+
+body[data-theme='night'] .gradient_canvas__blog {
+  --gradient-color-1: #2a3241;
+  --gradient-color-2: #444e5d;
+  --gradient-color-3: #313d4e;
+  --gradient-color-4: #526070;
+}
+
+/* Journal Page */
+
+body[data-theme='winter'] .gradient_canvas__journal {
+  --gradient-color-1: #4a4e4d;
+  --gradient-color-2: #0e9aa7;
+  --gradient-color-3: #f6cd61;
+  --gradient-color-4: #3da4ab;
+}
+
+body[data-theme='night'] .gradient_canvas__journal {
+  --gradient-color-1: #15202b;
+  --gradient-color-2: #223344;
+  --gradient-color-3: #15202b;
+  --gradient-color-4: #223344;
 }

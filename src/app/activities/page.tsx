@@ -5,7 +5,11 @@ import { Hero } from '@/components';
 export default function Activities() {
   return (
     <>
-      <Hero title="activities." subtitle="things I do on the in-betweens" />
+      <Hero
+        title="activities."
+        subtitle="things I do on the in-betweens"
+        page="activities"
+      />
     </>
   );
 }
