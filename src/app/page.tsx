@@ -1,9 +1,11 @@
+'use client';
+
+import { Hero } from '@/components';
+
 export default function Home() {
   return (
     <>
-      <section className="h-screen w-screen">
-        <div></div>
-      </section>
+      <Hero title="Fahdii" subtitle="a software engineer" page="home" />
     </>
   );
 }

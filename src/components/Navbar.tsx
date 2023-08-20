@@ -1,16 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
 import ThemeSwitch from './ThemeSwitch';
 
 const NAVBAR_ITEMS = [
-  {
-    name: 'Home',
-    href: '/',
-  },
   {
     name: 'About',
     href: '/about',
@@ -40,12 +35,10 @@ const Navbar = () => {
   return (
     <nav
       className={`
-        navbar fixed top-0 left-0 right-0
-        mx-auto mt-4 h-fit min-h-fit w-[320px]
-        justify-between rounded-xl
-        bg-base-100 bg-opacity-10 p-1 shadow-sm
-        backdrop-blur-sm backdrop-filter
-        lg:w-fit
+        navbar fixed top-0 left-0 right-0 mx-auto mt-4
+        h-fit min-h-fit w-[320px] justify-between rounded-xl
+        bg-base-100 bg-opacity-10 p-1 !font-sans shadow-sm backdrop-blur-sm
+        backdrop-filter lg:static lg:w-fit
       `}
     >
       <div className="navbar-start w-fit">
@@ -86,9 +79,11 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <Link
-          className="btn-ghost btn text-xl normal-case mix-blend-darken"
-          href="/"
+        <button
+          className={`btn-ghost ${
+            pathname === '/' ? 'active' : ''
+          } btn text-xl normal-case mix-blend-darken`}
+          onClick={() => router.push('/')}
         >
           <Image
             src={`/assets/logo_rounded.svg`}
@@ -96,7 +91,7 @@ const Navbar = () => {
             width={32}
             height={32}
           />
-        </Link>
+        </button>
       </div>
       <div className="navbar-center mx-4 hidden w-fit lg:flex">
         <ul className="menu menu-horizontal gap-1 p-1">

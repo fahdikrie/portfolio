@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { useEffect } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
 
-import { Gradient } from '@/components';
+import { Gradient, Navbar } from '@/components';
 import styles from '@/styles/hero.module.css';
 
 interface HeroProps {
@@ -71,7 +71,9 @@ const Hero = ({ title, subtitle, className, classNames, page }: HeroProps) => {
           )}
         </div>
       </div>
-      <div className="h-screen w-[60%] bg-base-100"></div>
+      <div className="h-screen w-[60%] bg-base-100">
+        <Navbar />
+      </div>
     </div>
   );
 };

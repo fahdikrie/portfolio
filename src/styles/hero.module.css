@@ -7,6 +7,22 @@
   left: 0;
 }
 
+/* Home Page */
+
+body[data-theme='winter'] .gradient_canvas__home {
+  --gradient-color-1: #c3e4ff;
+  --gradient-color-2: #6ec3f4;
+  --gradient-color-3: #eae2ff;
+  --gradient-color-4: #b9beff;
+}
+
+body[data-theme='night'] .gradient_canvas__home {
+  --gradient-color-1: #043d5d;
+  --gradient-color-2: #032e46;
+  --gradient-color-3: #23b684;
+  --gradient-color-4: #0f595e;
+}
+
 /* About Page */
 
 body[data-theme='winter'] .gradient_canvas__about {

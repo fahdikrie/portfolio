@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 
-import Navbar from '@/components/Navbar';
 import '@/styles/globals.css';
 import cls from '@/styles/layout.module.css';
 
@@ -54,7 +53,6 @@ export default function RootLayout({
       className={`${playfair_display.variable} ${inter.variable}`}
     >
       <body>
-        <Navbar />
         <main className={cls.Main}>{children}</main>
       </body>
     </html>
