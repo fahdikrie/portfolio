@@ -80,7 +80,7 @@ const Navbar = () => {
           </ul>
         </div>
         <button
-          className={`btn-ghost ${
+          className={`btn-ghost lg:px-3 ${
             pathname === '/' ? 'active' : ''
           } btn text-xl normal-case mix-blend-darken`}
           onClick={() => router.push('/')}
@@ -98,7 +98,7 @@ const Navbar = () => {
           {NAVBAR_ITEMS.map((item) => (
             <li key={item.name}>
               <span
-                className={`font-bold mix-blend-darken dark:!text-off-white ${
+                className={`font-bold mix-blend-darken dark:!text-off-white lg:px-3 ${
                   pathname === item.href ? 'active' : ''
                 }`}
                 onClick={() => router.push(item.href)}

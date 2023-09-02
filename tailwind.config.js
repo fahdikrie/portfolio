@@ -1,7 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+
+const overrideBtnStyle = {
+  '.btn': {
+    'border-radius': '0.5rem',
+  },
+  '.menu > li > span': {
+    'border-radius': '0.5rem',
+  },
+};
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: ['class', '[data-theme="night"]'],
+  darkMode: ['class', '[data-theme="black"]'],
   theme: {
     extend: {
       colors: {
@@ -14,7 +24,20 @@ module.exports = {
     },
   },
   daisyui: {
-    themes: ['winter', 'night'],
+    themes: [
+      {
+        lofi: {
+          ...require('daisyui/src/theming/themes')['[data-theme=lofi]'],
+          ...overrideBtnStyle,
+        },
+      },
+      {
+        black: {
+          ...require('daisyui/src/theming/themes')['[data-theme=black]'],
+          ...overrideBtnStyle,
+        },
+      },
+    ],
   },
   plugins: [require('daisyui')],
 };

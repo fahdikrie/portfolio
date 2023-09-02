@@ -8,17 +8,25 @@ import { Gradient, Navbar } from '@/components';
 import styles from '@/styles/hero.module.css';
 
 interface HeroProps {
-  title: string;
-  subtitle: string;
+  title?: string;
+  subtitle?: string;
   className?: React.ComponentProps<'div'>['className'];
   classNames?: {
     title: React.ComponentProps<'h1'>['className'];
     subtitle: React.ComponentProps<'h1'>['className'];
   };
   page: string;
+  customChildren?: React.ReactNode | JSX.Element;
 }
 
-const Hero = ({ title, subtitle, className, classNames, page }: HeroProps) => {
+const Hero = ({
+  title,
+  subtitle,
+  className,
+  classNames,
+  page,
+  customChildren,
+}: HeroProps) => {
   const [theme] = useLocalStorage('theme', 'light');
 
   useEffect(() => {
@@ -26,6 +34,8 @@ const Hero = ({ title, subtitle, className, classNames, page }: HeroProps) => {
 
     const gradient = new Gradient();
 
+    // @ts-ignore
+    gradient.amp = 100;
     // @ts-ignore
     gradient.initGradient(`#gradient-canvas__${page}`);
   }, [page, theme]);
@@ -47,27 +57,31 @@ const Hero = ({ title, subtitle, className, classNames, page }: HeroProps) => {
           )}
           data-transition-in
         />
-        <div className="absolute inset-0 bg-white opacity-50 dark:bg-black dark:opacity-0" />
+        <div className="absolute inset-0 bg-gray-500 opacity-10 dark:bg-black dark:opacity-40" />
         <div
           className={`
             absolute flex h-full w-full flex-col justify-end gap-2 p-8
             text-gray-900 opacity-95 dark:text-off-white
           `}
         >
-          <h1
-            className={`
+          {customChildren ?? (
+            <>
+              <h1
+                className={`
               whitespace-pre text-[40px] font-black
               leading-[1.15] lg:text-[64px] xl:text-[80px]
               ${classNames?.title}
             `}
-          >
-            {title}
-          </h1>
-          {!!subtitle && (
-            <h6
-              className={`text-base font-bold md:text-lg lg:text-2xl ${classNames?.subtitle}`}
-              dangerouslySetInnerHTML={{ __html: subtitle }}
-            />
+              >
+                {title}
+              </h1>
+              {!!subtitle && (
+                <h6
+                  className={`text-base font-bold md:text-lg lg:text-2xl ${classNames?.subtitle}`}
+                  dangerouslySetInnerHTML={{ __html: subtitle }}
+                />
+              )}
+            </>
           )}
         </div>
       </div>

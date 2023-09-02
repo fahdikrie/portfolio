@@ -4,10 +4,10 @@ import { useCallback, useEffect } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
 
 const ThemeSwitch = () => {
-  const [theme, setTheme] = useLocalStorage('theme', 'winter');
+  const [theme, setTheme] = useLocalStorage('theme', 'lofi');
 
   const toggleTheme = useCallback(() => {
-    setTheme(theme === 'night' ? 'winter' : 'night');
+    setTheme(theme === 'black' ? 'lofi' : 'black');
   }, [setTheme, theme]);
 
   useEffect(() => {
