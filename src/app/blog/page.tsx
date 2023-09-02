@@ -6,8 +6,8 @@ export default function Blog() {
   return (
     <>
       <Hero
-        title={`out in\nthe open.`}
-        subtitle="tech-blogs and learning notes."
+        title={`out in <span>—</span>\nthe open.`}
+        subtitle="tech-blogs and learning notes"
         page="blog"
       />
     </>

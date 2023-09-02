@@ -6,8 +6,8 @@ export default function About() {
   return (
     <>
       <Hero
-        title="about me."
-        subtitle="bio, experience, education, etc."
+        title={`a little <span>—</span>\nabout me.`}
+        subtitle="short bio, experience, education, etc."
         page="about"
       />
     </>

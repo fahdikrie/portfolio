@@ -10,17 +10,17 @@
 /* Home Page */
 
 body[data-theme='lofi'] .gradient_canvas__home {
-  --gradient-color-1: #c3e4ff;
-  --gradient-color-2: #6ec3f4;
-  --gradient-color-3: #eae2ff;
-  --gradient-color-4: #b9beff;
+  --gradient-color-1: #ddeefc;
+  --gradient-color-2: #c0def7;
+  --gradient-color-3: #accde9;
+  --gradient-color-4: #70b3eb;
 }
 
 body[data-theme='black'] .gradient_canvas__home {
-  --gradient-color-1: #043d5d;
-  --gradient-color-2: #032e46;
-  --gradient-color-3: #23b684;
-  --gradient-color-4: #0f595e;
+  --gradient-color-1: #500f50;
+  --gradient-color-2: #72044f;
+  --gradient-color-3: #fa007b;
+  --gradient-color-4: #d20278;
 }
 
 /* About Page */
@@ -42,7 +42,7 @@ body[data-theme='black'] .gradient_canvas__about {
 /* Projects Page */
 
 body[data-theme='lofi'] .gradient_canvas__projects {
-  --gradient-color-1: #a1d9f3;
+  --gradient-color-1: #7ecdf2;
   --gradient-color-2: #c3e4ff;
   --gradient-color-3: #88bde6;
   --gradient-color-4: #b4cae9;
@@ -74,10 +74,10 @@ body[data-theme='black'] .gradient_canvas__activities {
 /* Blog Page */
 
 body[data-theme='lofi'] .gradient_canvas__blog {
-  --gradient-color-1: #b58e74;
-  --gradient-color-2: #ffe6cf;
-  --gradient-color-3: #9d7d6c;
-  --gradient-color-4: #ccab96;
+  --gradient-color-1: #e6b5f0;
+  --gradient-color-2: #f0d5e6;
+  --gradient-color-3: #f4ecf7;
+  --gradient-color-4: #deb6ec;
 }
 
 body[data-theme='black'] .gradient_canvas__blog {
@@ -90,10 +90,10 @@ body[data-theme='black'] .gradient_canvas__blog {
 /* Journal Page */
 
 body[data-theme='lofi'] .gradient_canvas__journal {
-  --gradient-color-1: #4a4e4d;
-  --gradient-color-2: #0e9aa7;
-  --gradient-color-3: #f6cd61;
-  --gradient-color-4: #3da4ab;
+  --gradient-color-1: #ffdc88;
+  --gradient-color-2: #ffdca5;
+  --gradient-color-3: #fff2cd;
+  --gradient-color-4: #f0d897;
 }
 
 body[data-theme='black'] .gradient_canvas__journal {

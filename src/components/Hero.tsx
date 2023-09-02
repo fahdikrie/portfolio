@@ -12,8 +12,9 @@ interface HeroProps {
   subtitle?: string;
   className?: React.ComponentProps<'div'>['className'];
   classNames?: {
-    title: React.ComponentProps<'h1'>['className'];
-    subtitle: React.ComponentProps<'h1'>['className'];
+    hero?: React.ComponentProps<'div'>['className'];
+    title?: React.ComponentProps<'h1'>['className'];
+    subtitle?: React.ComponentProps<'h1'>['className'];
   };
   page: string;
   customChildren?: React.ReactNode | JSX.Element;
@@ -41,12 +42,14 @@ const Hero = ({
   }, [page, theme]);
 
   return (
-    <div className={`absolute top-0 -z-10 flex h-screen w-screen ${className}`}>
+    <div className={`absolute top-0 -z-10 w-screen lg:flex ${className}`}>
       <div
         className={`
-          relative flex h-full w-[40%] items-center
-          justify-start border-r-4 border-gray-900
-          border-opacity-95 text-left dark:border-off-white
+          relative flex h-[230px] w-screen items-center justify-start border-b-2
+          border-gray-900 border-opacity-95 text-center
+          dark:border-off-white lg:h-screen lg:w-[40%]
+          lg:border-b-0 lg:border-r-2 lg:text-left
+          ${classNames?.hero}
         `}
       >
         <canvas
@@ -60,24 +63,23 @@ const Hero = ({
         <div className="absolute inset-0 bg-gray-500 opacity-10 dark:bg-black dark:opacity-40" />
         <div
           className={`
-            absolute flex h-full w-full flex-col justify-end gap-2 p-8
-            text-gray-900 opacity-95 dark:text-off-white
+            absolute flex h-full w-full flex-col justify-end gap-2 p-4 text-gray-900
+            opacity-95 dark:text-off-white lg:p-8
           `}
         >
           {customChildren ?? (
             <>
               <h1
                 className={`
-              whitespace-pre text-[40px] font-black
-              leading-[1.15] lg:text-[64px] xl:text-[80px]
-              ${classNames?.title}
-            `}
-              >
-                {title}
-              </h1>
+                  whitespace-pre text-[40px] font-black leading-[1.15] lg:text-[64px]
+                  xl:text-[80px] [&>span]:hidden lg:[&>span]:inline
+                  ${classNames?.title}
+                `}
+                dangerouslySetInnerHTML={{ __html: title ?? '' }}
+              />
               {!!subtitle && (
                 <h6
-                  className={`text-base font-bold md:text-lg lg:text-2xl ${classNames?.subtitle}`}
+                  className={`mt-1 whitespace-pre text-base font-medium md:text-lg lg:text-xl ${classNames?.subtitle}`}
                   dangerouslySetInnerHTML={{ __html: subtitle }}
                 />
               )}
@@ -85,7 +87,7 @@ const Hero = ({
           )}
         </div>
       </div>
-      <div className="h-screen w-[60%] bg-base-100">
+      <div className="h-screen w-screen bg-base-100 lg:w-[60%]">
         <Navbar />
       </div>
     </div>

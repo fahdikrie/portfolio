@@ -2,19 +2,17 @@
 
 import { Hero } from '@/components';
 
-const CustomHeroChildren = (
-  <>
-    <h1 className="text-6xl font-bold text-gray-900 dark:text-gray-100">
-      IKI DODOlan
-    </h1>
-    <p>nopo sodwaaqwooh</p>
-  </>
-);
-
 export default function Home() {
   return (
     <>
-      <Hero page="home" customChildren={CustomHeroChildren} />
+      <Hero
+        page="home"
+        title={`fahdii <span>—</span>\najmalal f.`}
+        subtitle={`software engineer based in jakarta 🇮🇩`}
+        classNames={{
+          hero: '!text-left !h-[calc(100dvh+4px)]',
+        }}
+      />
     </>
   );
 }

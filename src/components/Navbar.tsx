@@ -7,23 +7,23 @@ import ThemeSwitch from './ThemeSwitch';
 
 const NAVBAR_ITEMS = [
   {
-    name: 'About',
+    name: 'about',
     href: '/about',
   },
   {
-    name: 'Projects',
+    name: 'projects',
     href: '/projects',
   },
   {
-    name: 'Activities',
+    name: 'activities',
     href: '/activities',
   },
   {
-    name: 'Blog',
+    name: 'blog',
     href: '/blog',
   },
   {
-    name: 'Journal',
+    name: 'journal',
     href: '/journal',
   },
 ];
@@ -35,15 +35,15 @@ const Navbar = () => {
   return (
     <nav
       className={`
-        navbar fixed top-0 left-0 right-0 mx-auto mt-4
-        h-fit min-h-fit w-[320px] justify-between rounded-xl
-        bg-base-100 bg-opacity-10 p-1 !font-sans shadow-sm backdrop-blur-sm
-        backdrop-filter lg:static lg:w-fit
+        navbar fixed top-0 left-0 right-0 mx-4 mt-4 h-fit
+        min-h-fit w-[calc(100vw-32px)] justify-between rounded-xl bg-base-100
+        bg-opacity-10 p-1 font-sans shadow-sm backdrop-blur-sm
+        lg:static lg:mx-auto lg:w-fit
       `}
     >
       <div className="navbar-start w-fit">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn-ghost btn lg:hidden">
+        <details className="dropdown">
+          <summary tabIndex={0} className="btn-ghost btn lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -58,27 +58,22 @@ const Navbar = () => {
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
-          </label>
+          </summary>
           <ul
             tabIndex={0}
             className={`
-              dropdown-content menu
-              rounded-box menu-sm
-              z-[1] mt-3 w-52 bg-base-100 p-2 shadow
+              dropdown-content menu menu-sm
+              z-[1] -ml-2 mt-3 w-52 rounded-lg bg-base-100
+              bg-opacity-90 p-2 shadow backdrop-blur-sm
             `}
           >
             {NAVBAR_ITEMS.map((item) => (
               <li key={item.name}>
-                <span
-                  className="mix-blend-darken"
-                  onClick={() => router.push(item.href)}
-                >
-                  {item.name}
-                </span>
+                <span onClick={() => router.push(item.href)}>{item.name}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </details>
         <button
           className={`btn-ghost lg:px-3 ${
             pathname === '/' ? 'active' : ''
@@ -109,7 +104,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <div className="navbar-end w-fit">
+      <div className="w-fit">
         <ThemeSwitch />
       </div>
     </nav>

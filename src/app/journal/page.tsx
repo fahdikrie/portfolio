@@ -9,10 +9,8 @@ export default function Journal() {
         title={`writing into\nthe void.`}
         subtitle="an internet-web journal by <u>badi</u>"
         page="journal"
-        className="font-serif"
         classNames={{
-          title: '!text-[72px]',
-          subtitle: '!text-2xl',
+          title: 'lg:!text-[76px] font-serif',
         }}
       />
     </>

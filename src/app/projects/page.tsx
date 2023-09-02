@@ -6,8 +6,8 @@ export default function Projects() {
   return (
     <>
       <Hero
-        title="projects."
-        subtitle="a showcase to what I've helped built."
+        title={`tech <span>—</span>\nprojects.`}
+        subtitle="a showcase to what I've helped built"
         page="projects"
       />
     </>

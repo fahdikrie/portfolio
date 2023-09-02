@@ -6,7 +6,7 @@ export default function Activities() {
   return (
     <>
       <Hero
-        title="activities."
+        title={`side <span>—</span>\nactivities.`}
         subtitle="things I do on the in-betweens"
         page="activities"
       />
