@@ -35,10 +35,11 @@ const Navbar = () => {
   return (
     <nav
       className={`
-        navbar fixed top-0 left-0 right-0 mx-4 mt-4 h-fit
-        min-h-fit w-[calc(100vw-32px)] justify-between rounded-xl bg-base-100
-        bg-opacity-10 p-1 font-sans shadow-sm backdrop-blur-sm
-        lg:static lg:mx-auto lg:w-fit
+        navbar fixed left-0 right-0 top-4 z-10 mx-4
+        h-fit min-h-fit w-[calc(100vw-32px)] justify-between rounded-xl
+        bg-base-100 bg-opacity-10 p-1 font-sans shadow-sm
+        backdrop-blur-sm lg:sticky lg:mx-auto
+        lg:w-fit
       `}
     >
       <div className="navbar-start w-fit">
@@ -63,8 +64,8 @@ const Navbar = () => {
             tabIndex={0}
             className={`
               dropdown-content menu menu-sm
-              z-[1] -ml-2 mt-3 w-52 rounded-lg bg-base-100
-              bg-opacity-90 p-2 shadow backdrop-blur-sm
+              z-[1] -ml-1 mt-3 w-52 rounded-lg bg-base-100
+              bg-opacity-80 p-2 shadow backdrop-blur-sm
             `}
           >
             {NAVBAR_ITEMS.map((item) => (

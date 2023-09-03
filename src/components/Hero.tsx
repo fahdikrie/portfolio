@@ -17,6 +17,7 @@ interface HeroProps {
     subtitle?: React.ComponentProps<'h1'>['className'];
   };
   page: string;
+  children?: React.ReactNode | JSX.Element;
   customChildren?: React.ReactNode | JSX.Element;
 }
 
@@ -26,6 +27,7 @@ const Hero = ({
   className,
   classNames,
   page,
+  children,
   customChildren,
 }: HeroProps) => {
   const [theme] = useLocalStorage('theme', 'light');
@@ -42,12 +44,12 @@ const Hero = ({
   }, [page, theme]);
 
   return (
-    <div className={`absolute top-0 -z-10 w-screen lg:flex ${className}`}>
+    <div className={`top-0 -z-10 w-screen lg:flex ${className ?? ''}`}>
       <div
         className={`
-          relative flex h-[230px] w-screen items-center justify-start border-b-2
-          border-gray-900 border-opacity-95 text-center
-          dark:border-off-white lg:h-screen lg:w-[40%]
+          relative flex h-[280px] w-screen items-center justify-start border-b-2
+          border-gray-900 border-opacity-95 text-center dark:border-off-white
+          lg:h-screen lg:w-[40%] lg:max-w-[600px]
           lg:border-b-0 lg:border-r-2 lg:text-left
           ${classNames?.hero}
         `}
@@ -71,7 +73,7 @@ const Hero = ({
             <>
               <h1
                 className={`
-                  whitespace-pre text-[40px] font-black leading-[1.15] lg:text-[64px]
+                  whitespace-pre text-[56px] font-black leading-[1.15] lg:text-[64px]
                   xl:text-[80px] [&>span]:hidden lg:[&>span]:inline
                   ${classNames?.title}
                 `}
@@ -79,7 +81,7 @@ const Hero = ({
               />
               {!!subtitle && (
                 <h6
-                  className={`mt-1 whitespace-pre text-base font-medium md:text-lg lg:text-xl ${classNames?.subtitle}`}
+                  className={`mt-1 whitespace-pre text-lg font-medium lg:text-xl ${classNames?.subtitle}`}
                   dangerouslySetInnerHTML={{ __html: subtitle }}
                 />
               )}
@@ -87,8 +89,11 @@ const Hero = ({
           )}
         </div>
       </div>
-      <div className="h-screen w-screen bg-base-100 lg:w-[60%]">
+      <div className="relative right-0 h-screen w-screen overflow-scroll bg-base-100 lg:w-[60%] 2xl:w-full">
         <Navbar />
+        <div className="absolute left-0 right-0 top-0 px-4 lg:mx-auto lg:max-w-[600px] lg:px-0 2xl:max-w-[900px]">
+          {children}
+        </div>
       </div>
     </div>
   );
