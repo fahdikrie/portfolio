@@ -16,8 +16,8 @@ const ThemeSwitch = () => {
   }, [theme]);
 
   return (
-    <label className="swap btn-ghost swap-rotate btn">
-      <input type="checkbox" onChange={toggleTheme} />
+    <label className="swap btn-ghost btn swap-rotate">
+      <input type="checkbox" className="hidden" onChange={toggleTheme} />
       <svg
         className="swap-on h-6 w-6 fill-current"
         xmlns="http://www.w3.org/2000/svg"

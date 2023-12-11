@@ -13,7 +13,7 @@ export default function Home() {
       }}
     >
       <section>
-        <h1 className="dark:text-white lg:text-center">
+        <h1 className="font-normal dark:text-white lg:text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt expedita
           ducimus unde esse quo, aliquid porro earum quis, id minus
           reprehenderit. Non quia aperiam vero sit dolorum labore natus nisi,

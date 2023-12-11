@@ -76,9 +76,7 @@ const Navbar = () => {
           </ul>
         </details>
         <button
-          className={`btn-ghost lg:px-3 ${
-            pathname === '/' ? 'active' : ''
-          } btn text-xl normal-case mix-blend-darken`}
+          className="btn-ghost btn text-xl normal-case mix-blend-darken lg:px-3"
           onClick={() => router.push('/')}
         >
           <Image
