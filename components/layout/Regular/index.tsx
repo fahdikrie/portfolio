@@ -1,6 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 
 import { default as DesktopNavbar } from '@/components/layout/Regular/Navbar/Desktop';
 import { default as MobileNavbar } from '@/components/layout/Regular/Navbar/Mobile';

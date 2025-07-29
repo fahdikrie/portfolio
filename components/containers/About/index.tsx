@@ -1,5 +1,5 @@
-import Hero from './Hero';
 import Desc from './Desc';
+import Hero from './Hero';
 import * as S from './index.style';
 
 const About = (): JSX.Element => (
